@@ -91,4 +91,16 @@ class File(db.Model):
     upload_time = db.Column(db.DateTime, default=datetime.utcnow)  # 上传时间
 
     def __repr__(self):
-        return f'<File {self.original_filename}>' 
+        return f'<File {self.original_filename}>'
+
+class SystemLog(db.Model):
+    """系统日志表"""
+    id = db.Column(db.Integer, primary_key=True)
+    operation = db.Column(db.String(50), nullable=False)  # 操作类型
+    description = db.Column(db.Text, nullable=False)      # 操作描述
+    operator = db.Column(db.String(50))                   # 操作者
+    operation_time = db.Column(db.DateTime, default=datetime.utcnow)  # 操作时间
+    ip_address = db.Column(db.String(50))                # 操作者IP地址
+
+    def __repr__(self):
+        return f'<SystemLog {self.operation} by {self.operator}>' 

@@ -2,10 +2,13 @@ import os
 from flask import render_template, request, redirect, url_for, flash, current_app, jsonify, send_file
 from werkzeug.utils import secure_filename
 from app import app, db
-from app.models import Software, File, ProcessDocument
+from app.models import Software, File, ProcessDocument, SystemLog
 from app.utils import PDFTemplate
 from app.utils.markdown_processor import MarkdownProcessor
 from datetime import datetime
+
+# 系统管理密码（后续会替换为权限管理模块）
+ADMIN_PASSWORD = "admin123"
 
 def allowed_file(filename):
     """检查文件类型是否允许"""
@@ -48,6 +51,17 @@ def generate_coc_pdf(software, save_path, template_path=None):
     if template_path:
         pdf_template.load_template(template_path)
     pdf_template.generate(data, save_path)
+
+def log_operation(operation, description, operator="系统"):
+    """记录系统操作日志"""
+    log = SystemLog(
+        operation=operation,
+        description=description,
+        operator=operator,
+        ip_address=request.remote_addr
+    )
+    db.session.add(log)
+    db.session.commit()
 
 @app.route('/')
 def index():
@@ -208,6 +222,18 @@ def upload():
                 db.session.add(software)
                 db.session.add(file_record)
                 db.session.commit()
+                
+                # 记录上传操作日志
+                log_description = (
+                    f"上传软件：\n"
+                    f"类型：{software.type}\n"
+                    f"机型：{software.model}\n"
+                    f"厂家：{software.vendor}\n"
+                    f"名称：{software.name}\n"
+                    f"件号：{software.partnumber}\n"
+                    f"文件：{original_filename}"
+                )
+                log_operation("上传软件", log_description, operator=request.form.get('creator', '系统'))
                 
                 flash('软件上传成功')
                 return redirect(url_for('index'))
@@ -421,4 +447,54 @@ def add_document():
         flash('文档添加成功')
         return redirect(url_for('manage_documents'))
         
-    return render_template('add_document.html') 
+    return render_template('add_document.html')
+
+@app.route('/delete_software/<int:software_id>', methods=['POST'])
+def delete_software(software_id):
+    """删除软件记录"""
+    password = request.form.get('password')
+    if password != ADMIN_PASSWORD:
+        flash('密码错误，删除失败')
+        return redirect(url_for('index'))
+    
+    try:
+        # 获取软件记录
+        software = Software.query.get_or_404(software_id)
+        file_record = File.query.filter_by(software_id=software_id).first()
+        
+        if file_record:
+            # 删除软件文件
+            if os.path.exists(file_record.file_path):
+                os.remove(file_record.file_path)
+            
+            # 删除COC文件
+            if file_record.coc_path and os.path.exists(file_record.coc_path):
+                os.remove(file_record.coc_path)
+            
+            # 记录日志
+            log_description = (
+                f"删除软件记录：\n"
+                f"类型：{software.type}\n"
+                f"机型：{software.model}\n"
+                f"厂家：{software.vendor}\n"
+                f"名称：{software.name}\n"
+                f"件号：{software.partnumber}\n"
+                f"文件：{file_record.original_filename}"
+            )
+            
+            # 删除数据库记录
+            db.session.delete(file_record)
+        
+        db.session.delete(software)
+        db.session.commit()
+        
+        # 记录操作日志
+        log_operation("删除软件", log_description, operator="管理员")
+        
+        flash('软件记录删除成功')
+    except Exception as e:
+        db.session.rollback()
+        app.logger.error(f'删除失败: {str(e)}')
+        flash(f'删除失败: {str(e)}')
+    
+    return redirect(url_for('index')) 

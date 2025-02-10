@@ -278,6 +278,15 @@
                                     <i class="bi bi-file-earmark-pdf"></i>
                                 </button>
                                 {% endif %}
+                                <button type="button" 
+                                        class="btn btn-outline-secondary btn-sm delete-btn"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#deleteModal"
+                                        data-software-id="{{ software.id }}"
+                                        data-software-name="{{ software.name }}"
+                                        title="删除软件">
+                                    <i class="bi bi-trash"></i>
+                                </button>
                             </div>
                         </td>
                     </tr>
@@ -332,6 +341,31 @@
     </div>
 </div>
 
+<!-- 删除确认模态框 -->
+<div class="modal fade" id="deleteModal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">删除确认</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>确定要删除软件 <strong id="deleteSoftwareName"></strong> 吗？</p>
+                <form id="deleteForm" method="post">
+                    <div class="mb-3">
+                        <label for="password" class="form-label">请输入管理密码:</label>
+                        <input type="password" class="form-control form-control-sm" id="password" name="password" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-sm btn-danger" id="confirmDelete">删除</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% block extra_js %}
 <script>
 // 详情模态框处理
@@ -349,6 +383,34 @@ document.getElementById('detailModal').addEventListener('show.bs.modal', functio
     modal.querySelector('#detailCreator').textContent = button.dataset.softwareCreator || '-';
     modal.querySelector('#detailReleaseDate').textContent = button.dataset.softwareReleaseDate || '-';
     modal.querySelector('#detailDescription').textContent = button.dataset.softwareDescription || '无';
+});
+
+// 删除按钮悬停效果
+document.querySelectorAll('.delete-btn').forEach(btn => {
+    btn.addEventListener('mouseenter', function() {
+        this.classList.remove('btn-outline-secondary');
+        this.classList.add('btn-outline-danger');
+    });
+    
+    btn.addEventListener('mouseleave', function() {
+        this.classList.remove('btn-outline-danger');
+        this.classList.add('btn-outline-secondary');
+    });
+});
+
+// 删除确认模态框处理
+document.getElementById('deleteModal').addEventListener('show.bs.modal', function (event) {
+    const button = event.relatedTarget;
+    const softwareId = button.dataset.softwareId;
+    const softwareName = button.dataset.softwareName;
+    
+    document.getElementById('deleteSoftwareName').textContent = softwareName;
+    document.getElementById('deleteForm').action = `/delete_software/${softwareId}`;
+});
+
+// 删除确认按钮处理
+document.getElementById('confirmDelete').addEventListener('click', function() {
+    document.getElementById('deleteForm').submit();
 });
 </script>
 {% endblock %}

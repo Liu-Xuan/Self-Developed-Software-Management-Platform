@@ -86,8 +86,9 @@ class File(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     software_id = db.Column(db.Integer, db.ForeignKey('software.id'), nullable=False)
     file_path = db.Column(db.String(255), unique=True)  # 文件存储路径
+    original_filename = db.Column(db.String(255), nullable=False)  # 原始文件名
     coc_path = db.Column(db.String(255))               # COC文档路径
     upload_time = db.Column(db.DateTime, default=datetime.utcnow)  # 上传时间
 
     def __repr__(self):
-        return f'<File {self.file_path}>' 
+        return f'<File {self.original_filename}>' 

@@ -151,12 +151,25 @@ def upload():
                         flash(f'请填写{field}字段')
                         return redirect(request.url)
                 
-                # 生成唯一文件名
-                timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-                filename = f"{timestamp}_{secure_filename(file.filename)}"
-                file_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
+                # 检查文件名是否重复
+                original_filename = secure_filename(file.filename)
+                file_path = os.path.join(current_app.config['UPLOAD_FOLDER'], original_filename)
                 
-                # 保存上传的文件
+                # 检查文件是否已存在
+                existing_file = File.query.filter_by(original_filename=original_filename).first()
+                if existing_file:
+                    # 获取已存在文件的软件信息
+                    existing_software = Software.query.get(existing_file.software_id)
+                    flash(f'文件名 "{original_filename}" 已存在！\n'
+                          f'相关信息：\n'
+                          f'软件类型：{existing_software.type}\n'
+                          f'软件名称：{existing_software.name}\n'
+                          f'软件件号：{existing_software.partnumber}\n'
+                          f'上传时间：{existing_file.upload_time.strftime("%Y-%m-%d %H:%M:%S")}\n'
+                          f'请更改文件名后重新上传。')
+                    return redirect(request.url)
+                
+                # 保存上传的文件，使用原始文件名
                 file.save(file_path)
                 
                 # 获取表单数据
@@ -169,16 +182,15 @@ def upload():
                     mediapn=request.form.get('mediapn', ''),
                     description=request.form.get('description', ''),
                     creator=request.form.get('creator', '系统'),
-                    # 设置状态
                     status_release=True,  # 上传时自动设置为已发布
                     status_allow=False,
                     status_install=False,
                     status_receive=False,
-                    # 设置发布日期
                     release_date=datetime.now()
                 )
                 
-                # 生成COC PDF文件名
+                # 生成COC PDF文件名（这个可以保留时间戳，因为它是内部文档）
+                timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
                 pdf_filename = f"{software.type}_{software.model}_{software.vendor}_{software.name}_{software.partnumber}_COC_{timestamp}.pdf"
                 pdf_path = os.path.join(current_app.config['UPLOAD_FOLDER'], pdf_filename)
                 
@@ -188,6 +200,7 @@ def upload():
                 # 保存文件记录
                 file_record = File(
                     file_path=file_path,
+                    original_filename=original_filename,
                     coc_path=pdf_path,
                     software=software
                 )
@@ -201,7 +214,7 @@ def upload():
                 
             except Exception as e:
                 db.session.rollback()
-                app.logger.error(f'上传失败: {str(e)}')  # 添加日志记录
+                app.logger.error(f'上传失败: {str(e)}')
                 flash(f'上传失败: {str(e)}')
                 return redirect(request.url)
                 

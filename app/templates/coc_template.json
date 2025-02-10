@@ -1,0 +1,49 @@
+{
+    "title": {
+        "text": "软件合格证书 (COC)",
+        "font_size": 18,
+        "y": 750,
+        "centered": true
+    },
+    "content": {
+        "font_size": 12,
+        "start_y": 700,
+        "line_spacing": 30,
+        "left_margin": 100,
+        "sections": [
+            {
+                "name": "基本信息",
+                "fields": [
+                    {"label": "软件类型", "key": "type"},
+                    {"label": "适用机型", "key": "model"},
+                    {"label": "生产厂家", "key": "vendor"},
+                    {"label": "软件名称", "key": "name"},
+                    {"label": "软件件号", "key": "partnumber"},
+                    {"label": "媒体集号", "key": "mediapn"},
+                    {"label": "发布日期", "key": "release_date"},
+                    {"label": "创建者", "key": "creator"}
+                ]
+            },
+            {
+                "name": "软件状态",
+                "fields": [
+                    {"label": "允装状态", "key": "status_allow", "is_boolean": true},
+                    {"label": "实装状态", "key": "status_install", "is_boolean": true},
+                    {"label": "发布状态", "key": "status_release", "is_boolean": true},
+                    {"label": "接收状态", "key": "status_receive", "is_boolean": true}
+                ]
+            },
+            {
+                "name": "更新说明",
+                "key": "description",
+                "is_multiline": true
+            }
+        ]
+    },
+    "footer": {
+        "font_size": 10,
+        "y": 50,
+        "left_margin": 100,
+        "text": "生成日期: {generate_time}"
+    }
+} 

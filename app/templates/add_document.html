@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="bi bi-plus-circle"></i> 添加新文档</h5>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        <div class="mb-3">
+                            <label class="form-label">软件类型</label>
+                            <select name="type" class="form-select" required>
+                                <option value="">请选择软件类型</option>
+                                <option value="ORT">ORT软件</option>
+                                <option value="ACMS">ACMS软件</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">文档类型</label>
+                            <select name="doc_type" class="form-select" required>
+                                <option value="">请选择文档类型</option>
+                                <option value="general">通用指南</option>
+                                <option value="development">开发指南</option>
+                                <option value="test">测试指南</option>
+                                <option value="release">发布指南</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">文档标题</label>
+                            <input type="text" name="title" class="form-control" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">文档内容</label>
+                            <div id="editor"></div>
+                            <input type="hidden" name="content" id="content">
+                        </div>
+                        
+                        <div class="d-flex gap-2">
+                            <a href="{{ url_for('manage_documents') }}" class="btn btn-secondary">
+                                <i class="bi bi-arrow-left"></i> 返回
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-save"></i> 保存
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 引入富文本编辑器 -->
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+
+{% block extra_js %}
+<script>
+// 初始化富文本编辑器
+var quill = new Quill('#editor', {
+    theme: 'snow',
+    modules: {
+        toolbar: [
+            [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+            ['bold', 'italic', 'underline', 'strike'],
+            ['blockquote', 'code-block'],
+            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+            [{ 'script': 'sub'}, { 'script': 'super' }],
+            [{ 'indent': '-1'}, { 'indent': '+1' }],
+            [{ 'color': [] }, { 'background': [] }],
+            ['link'],
+            ['clean']
+        ]
+    }
+});
+
+// 表单提交前将编辑器内容保存到隐藏字段
+document.querySelector('form').addEventListener('submit', function() {
+    document.getElementById('content').value = quill.root.innerHTML;
+});
+</script>
+{% endblock %}
+{% endblock %} 

@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h4><i class="bi bi-file-text"></i> 流程文档管理</h4>
+        <a href="{{ url_for('add_document') }}" class="btn btn-success">
+            <i class="bi bi-plus-lg"></i> 添加新文档
+        </a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th>软件类型</th>
+                    <th>文档类型</th>
+                    <th>标题</th>
+                    <th>更新时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for doc in docs %}
+                <tr>
+                    <td>
+                        {% if doc.type == 'ORT' %}
+                        <span class="badge bg-info">{{ doc.type }}</span>
+                        {% elif doc.type == 'ACMS' %}
+                        <span class="badge bg-success">{{ doc.type }}</span>
+                        {% else %}
+                        <span class="badge bg-secondary">{{ doc.type }}</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if doc.doc_type == 'general' %}
+                        <span class="badge bg-primary">通用指南</span>
+                        {% elif doc.doc_type == 'development' %}
+                        <span class="badge bg-success">开发指南</span>
+                        {% elif doc.doc_type == 'test' %}
+                        <span class="badge bg-warning">测试指南</span>
+                        {% elif doc.doc_type == 'release' %}
+                        <span class="badge bg-info">发布指南</span>
+                        {% else %}
+                        <span class="badge bg-secondary">{{ doc.doc_type }}</span>
+                        {% endif %}
+                    </td>
+                    <td>{{ doc.title }}</td>
+                    <td>{{ doc.update_time.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                    <td>
+                        <div class="btn-group btn-group-sm">
+                            <a href="{{ url_for('edit_document', doc_id=doc.id) }}" 
+                               class="btn btn-outline-primary" title="编辑">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+                            <button type="button" class="btn btn-outline-danger" title="删除"
+                                    data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                    data-doc-id="{{ doc.id }}"
+                                    data-doc-title="{{ doc.title }}">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="5" class="text-center text-muted py-4">
+                        <i class="bi bi-inbox h1 d-block"></i>
+                        暂无文档数据
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- 删除确认模态框 -->
+<div class="modal fade" id="deleteModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">确认删除</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>确定要删除文档 "<span id="deleteDocTitle"></span>" 吗？</p>
+                <p class="text-danger"><small>此操作不可恢复！</small></p>
+            </div>
+            <div class="modal-footer">
+                <form action="{{ url_for('delete_document', doc_id=0) }}" method="POST" id="deleteForm">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-danger">确认删除</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+// 删除模态框处理
+document.getElementById('deleteModal').addEventListener('show.bs.modal', function (event) {
+    const button = event.relatedTarget;
+    const docId = button.dataset.docId;
+    const docTitle = button.dataset.docTitle;
+    
+    // 更新模态框内容
+    this.querySelector('#deleteDocTitle').textContent = docTitle;
+    
+    // 更新删除表单的action
+    const form = this.querySelector('#deleteForm');
+    form.action = form.action.replace('/0', '/' + docId);
+});
+</script>
+{% endblock %}
+{% endblock %} 

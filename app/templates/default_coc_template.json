@@ -1,0 +1,49 @@
+{
+    "title": {
+        "text": "软件合格证书",
+        "font_size": 24,
+        "position": [300, 750]
+    },
+    "content": {
+        "font_size": 12,
+        "start_position": [50, 700],
+        "line_spacing": 20,
+        "left_margin": 50,
+        "sections": {
+            "basic_info": {
+                "title": "基本信息",
+                "fields": [
+                    {"label": "软件类型", "field": "type"},
+                    {"label": "机型", "field": "model"},
+                    {"label": "厂家", "field": "vendor"},
+                    {"label": "软件名称", "field": "name"},
+                    {"label": "软件件号", "field": "partnumber"},
+                    {"label": "媒体集号", "field": "media_number"}
+                ]
+            },
+            "status": {
+                "title": "软件状态",
+                "fields": [
+                    {"label": "允装状态", "field": "allowed_status"},
+                    {"label": "实装状态", "field": "installed_status"},
+                    {"label": "创建者", "field": "creator"},
+                    {"label": "创建时间", "field": "created_at"}
+                ]
+            },
+            "update_description": {
+                "title": "更新说明",
+                "fields": [
+                    {"label": "更新内容", "field": "update_content"},
+                    {"label": "更新原因", "field": "update_reason"},
+                    {"label": "备注", "field": "remarks"}
+                ]
+            }
+        }
+    },
+    "footer": {
+        "font_size": 10,
+        "position": [50, 50],
+        "left_margin": 50,
+        "text": "生成日期：{generation_date}"
+    }
+} 

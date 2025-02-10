@@ -1,0 +1,355 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <!-- 筛选面板 -->
+    <div class="col-md-3">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="bi bi-funnel"></i> 筛选条件
+            </div>
+            <div class="card-body">
+                <form method="get">
+                    <div class="mb-3">
+                        <label class="form-label">软件类型</label>
+                        <select name="type" class="form-select">
+                            <option value="">全部</option>
+                            {% for type in types %}
+                            <option value="{{ type }}" {% if request.args.get('type') == type %}selected{% endif %}>
+                                {{ type }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">适用机型</label>
+                        <select name="model" class="form-select">
+                            <option value="">全部</option>
+                            {% for model in models %}
+                            <option value="{{ model }}" {% if request.args.get('model') == model %}selected{% endif %}>
+                                {{ model }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">机载设备厂家</label>
+                        <select name="vendor" class="form-select">
+                            <option value="">全部</option>
+                            {% for vendor in vendors %}
+                            <option value="{{ vendor }}" {% if request.args.get('vendor') == vendor %}selected{% endif %}>
+                                {{ vendor }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">软件状态</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="status_allow" id="status_allow" 
+                                   {% if request.args.get('status_allow') %}checked{% endif %}>
+                            <label class="form-check-label" for="status_allow">
+                                <span class="badge bg-success">允装</span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="status_install" id="status_install"
+                                   {% if request.args.get('status_install') %}checked{% endif %}>
+                            <label class="form-check-label" for="status_install">
+                                <span class="badge bg-info">实装</span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="status_release" id="status_release"
+                                   {% if request.args.get('status_release') %}checked{% endif %}>
+                            <label class="form-check-label" for="status_release">
+                                <span class="badge bg-primary">发布</span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="status_receive" id="status_receive"
+                                   {% if request.args.get('status_receive') %}checked{% endif %}>
+                            <label class="form-check-label" for="status_receive">
+                                <span class="badge bg-warning">接收</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex gap-2">
+                        <a href="{{ url_for('index') }}" class="btn btn-outline-secondary w-50">
+                            <i class="bi bi-x-circle"></i> 清除筛选
+                        </a>
+                        <button type="submit" class="btn btn-primary w-50">
+                            <i class="bi bi-search"></i> 筛选
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 软件列表 -->
+    <div class="col-md-9">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4><i class="bi bi-list-ul"></i> 软件列表</h4>
+            <div class="d-flex gap-2">
+                <a href="{{ url_for('assistant') }}" class="btn btn-info">
+                    <i class="bi bi-lightbulb"></i> 软件制作助手
+                </a>
+                <a href="{{ url_for('upload') }}" class="btn btn-success">
+                    <i class="bi bi-plus-lg"></i> 上传新软件
+                </a>
+            </div>
+        </div>
+        
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>
+                            <a href="{{ url_for('index', sort='type', order='desc' if sort_by == 'type' and sort_order == 'asc' else 'asc', 
+                                type=request.args.get('type'), 
+                                model=request.args.get('model'),
+                                vendor=request.args.get('vendor'),
+                                status_allow=request.args.get('status_allow'),
+                                status_install=request.args.get('status_install'),
+                                status_release=request.args.get('status_release'),
+                                status_receive=request.args.get('status_receive')) }}" 
+                                class="text-dark text-decoration-none">
+                                类型
+                                {% if sort_by == 'type' %}
+                                <i class="bi bi-arrow-{{ 'up' if sort_order == 'asc' else 'down' }}"></i>
+                                {% endif %}
+                            </a>
+                        </th>
+                        <th>
+                            <a href="{{ url_for('index', sort='model', order='desc' if sort_by == 'model' and sort_order == 'asc' else 'asc',
+                                type=request.args.get('type'),
+                                model=request.args.get('model'),
+                                vendor=request.args.get('vendor'),
+                                status_allow=request.args.get('status_allow'),
+                                status_install=request.args.get('status_install'),
+                                status_release=request.args.get('status_release'),
+                                status_receive=request.args.get('status_receive')) }}"
+                                class="text-dark text-decoration-none">
+                                机型
+                                {% if sort_by == 'model' %}
+                                <i class="bi bi-arrow-{{ 'up' if sort_order == 'asc' else 'down' }}"></i>
+                                {% endif %}
+                            </a>
+                        </th>
+                        <th>
+                            <a href="{{ url_for('index', sort='vendor', order='desc' if sort_by == 'vendor' and sort_order == 'asc' else 'asc',
+                                type=request.args.get('type'),
+                                model=request.args.get('model'),
+                                vendor=request.args.get('vendor'),
+                                status_allow=request.args.get('status_allow'),
+                                status_install=request.args.get('status_install'),
+                                status_release=request.args.get('status_release'),
+                                status_receive=request.args.get('status_receive')) }}"
+                                class="text-dark text-decoration-none">
+                                厂家
+                                {% if sort_by == 'vendor' %}
+                                <i class="bi bi-arrow-{{ 'up' if sort_order == 'asc' else 'down' }}"></i>
+                                {% endif %}
+                            </a>
+                        </th>
+                        <th>
+                            <a href="{{ url_for('index', sort='name', order='desc' if sort_by == 'name' and sort_order == 'asc' else 'asc',
+                                type=request.args.get('type'),
+                                model=request.args.get('model'),
+                                vendor=request.args.get('vendor'),
+                                status_allow=request.args.get('status_allow'),
+                                status_install=request.args.get('status_install'),
+                                status_release=request.args.get('status_release'),
+                                status_receive=request.args.get('status_receive')) }}"
+                                class="text-dark text-decoration-none">
+                                软件名称
+                                {% if sort_by == 'name' %}
+                                <i class="bi bi-arrow-{{ 'up' if sort_order == 'asc' else 'down' }}"></i>
+                                {% endif %}
+                            </a>
+                        </th>
+                        <th>
+                            <a href="{{ url_for('index', sort='partnumber', order='desc' if sort_by == 'partnumber' and sort_order == 'asc' else 'asc',
+                                type=request.args.get('type'),
+                                model=request.args.get('model'),
+                                vendor=request.args.get('vendor'),
+                                status_allow=request.args.get('status_allow'),
+                                status_install=request.args.get('status_install'),
+                                status_release=request.args.get('status_release'),
+                                status_receive=request.args.get('status_receive')) }}"
+                                class="text-dark text-decoration-none">
+                                软件件号
+                                {% if sort_by == 'partnumber' %}
+                                <i class="bi bi-arrow-{{ 'up' if sort_order == 'asc' else 'down' }}"></i>
+                                {% endif %}
+                            </a>
+                        </th>
+                        <th>状态</th>
+                        <th>
+                            <a href="{{ url_for('index', sort='release_date', order='desc' if sort_by == 'release_date' and sort_order == 'asc' else 'asc',
+                                type=request.args.get('type'),
+                                model=request.args.get('model'),
+                                vendor=request.args.get('vendor'),
+                                status_allow=request.args.get('status_allow'),
+                                status_install=request.args.get('status_install'),
+                                status_release=request.args.get('status_release'),
+                                status_receive=request.args.get('status_receive')) }}"
+                                class="text-dark text-decoration-none">
+                                发布日期
+                                {% if sort_by == 'release_date' %}
+                                <i class="bi bi-arrow-{{ 'up' if sort_order == 'asc' else 'down' }}"></i>
+                                {% endif %}
+                            </a>
+                        </th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for software in softwares %}
+                    <tr>
+                        <td>
+                            {% if software.type == 'ORT' %}
+                            <span class="badge bg-info">{{ software.type or '-' }}</span>
+                            {% elif software.type == 'ACMS' %}
+                            <span class="badge bg-success">{{ software.type or '-' }}</span>
+                            {% else %}
+                            <span class="badge bg-secondary">{{ software.type or '-' }}</span>
+                            {% endif %}
+                        </td>
+                        <td>{{ software.model or '-' }}</td>
+                        <td>{{ software.vendor or '-' }}</td>
+                        <td>{{ software.name }}</td>
+                        <td>
+                            <strong>{{ software.partnumber }}</strong>
+                        </td>
+                        <td>
+                            <div class="d-flex gap-1">
+                                <span class="badge {{ 'bg-success' if software.status_allow else 'bg-secondary' }}" 
+                                      title="允装状态">允装</span>
+                                <span class="badge {{ 'bg-info' if software.status_install else 'bg-secondary' }}"
+                                      title="实装状态">实装</span>
+                                <span class="badge {{ 'bg-primary' if software.status_release else 'bg-secondary' }}"
+                                      title="发布状态">发布</span>
+                                <span class="badge {{ 'bg-warning' if software.status_receive else 'bg-secondary' }}"
+                                      title="接收状态">接收</span>
+                            </div>
+                        </td>
+                        <td>{{ software.release_date.strftime('%Y-%m-%d') }}</td>
+                        <td>
+                            <div class="btn-group btn-group-sm">
+                                <button type="button" class="btn btn-outline-primary" 
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#detailModal"
+                                        data-software-id="{{ software.id }}"
+                                        data-software-type="{{ software.type }}"
+                                        data-software-model="{{ software.model }}"
+                                        data-software-vendor="{{ software.vendor }}"
+                                        data-software-name="{{ software.name }}"
+                                        data-software-partnumber="{{ software.partnumber }}"
+                                        data-software-mediapn="{{ software.mediapn }}"
+                                        data-software-description="{{ software.description }}"
+                                        data-software-creator="{{ software.creator }}"
+                                        data-software-release-date="{{ software.release_date.strftime('%Y-%m-%d %H:%M:%S') }}"
+                                        title="查看详情">
+                                    <i class="bi bi-info-circle"></i>
+                                </button>
+                                {% if software.files %}
+                                <a href="{{ url_for('download_software', software_id=software.id) }}" 
+                                   class="btn btn-outline-success" title="下载软件">
+                                    <i class="bi bi-download"></i>
+                                </a>
+                                {% else %}
+                                <button class="btn btn-outline-secondary" disabled title="无可下载文件">
+                                    <i class="bi bi-download"></i>
+                                </button>
+                                {% endif %}
+                                {% if software.files and software.files[0].coc_path %}
+                                <a href="{{ url_for('download_coc', software_id=software.id) }}" 
+                                   class="btn btn-outline-primary" title="下载COC">
+                                    <i class="bi bi-file-earmark-pdf"></i>
+                                </a>
+                                {% else %}
+                                <button class="btn btn-outline-secondary" disabled title="无COC文档">
+                                    <i class="bi bi-file-earmark-pdf"></i>
+                                </button>
+                                {% endif %}
+                            </div>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="8" class="text-center text-muted py-4">
+                            <i class="bi bi-inbox h1 d-block"></i>
+                            暂无软件数据
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- 软件详情模态框 -->
+<div class="modal fade" id="detailModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">软件详细信息</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><strong>软件类型：</strong><span id="detailType"></span></p>
+                        <p><strong>适用机型：</strong><span id="detailModel"></span></p>
+                        <p><strong>厂家：</strong><span id="detailVendor"></span></p>
+                        <p><strong>软件名称：</strong><span id="detailName"></span></p>
+                        <p><strong>软件件号：</strong><span id="detailPartnumber"></span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>媒体集号：</strong><span id="detailMediapn"></span></p>
+                        <p><strong>创建者：</strong><span id="detailCreator"></span></p>
+                        <p><strong>发布日期：</strong><span id="detailReleaseDate"></span></p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <p><strong>软件说明：</strong></p>
+                        <p id="detailDescription" class="text-muted"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+// 详情模态框处理
+document.getElementById('detailModal').addEventListener('show.bs.modal', function (event) {
+    const button = event.relatedTarget;
+    const modal = this;
+    
+    // 更新模态框内容
+    modal.querySelector('#detailType').textContent = button.dataset.softwareType || '-';
+    modal.querySelector('#detailModel').textContent = button.dataset.softwareModel || '-';
+    modal.querySelector('#detailVendor').textContent = button.dataset.softwareVendor || '-';
+    modal.querySelector('#detailName').textContent = button.dataset.softwareName || '-';
+    modal.querySelector('#detailPartnumber').textContent = button.dataset.softwarePartnumber || '-';
+    modal.querySelector('#detailMediapn').textContent = button.dataset.softwareMediapn || '-';
+    modal.querySelector('#detailCreator').textContent = button.dataset.softwareCreator || '-';
+    modal.querySelector('#detailReleaseDate').textContent = button.dataset.softwareReleaseDate || '-';
+    modal.querySelector('#detailDescription').textContent = button.dataset.softwareDescription || '无';
+});
+</script>
+{% endblock %}
+{% endblock %} 

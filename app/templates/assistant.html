@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- 左侧目录树 -->
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">软件制作流程</h5>
+                </div>
+                <div class="card-body">
+                    <div id="docs_tree"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 右侧内容区 -->
+        <div class="col-md-9">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0" id="doc_title">请选择文档</h5>
+                </div>
+                <div class="card-body">
+                    <div id="doc_content" class="markdown-body"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+$(document).ready(function() {
+    // 初始化目录树
+    $('#docs_tree').jstree({
+        'core': {
+            'data': {
+                'url': '/api/tree_data',
+                'dataType': 'json'
+            },
+            'themes': {
+                'name': 'default',
+                'responsive': true
+            }
+        },
+        'plugins': ['wholerow']  // 添加整行选择插件
+    });
+    
+    // 监听节点选择事件
+    $('#docs_tree').on('select_node.jstree', function(e, data) {
+        const node = data.node;
+        const nodeId = node.id;
+        
+        // 如果是机型节点，直接加载内容
+        if (nodeId.startsWith('model_')) {
+            const parts = nodeId.split('_');
+            const type = parts[1];
+            const model = parts[2];
+            
+            // 构建标题
+            const title = `${type} - ${model} 制作指南`;
+            
+            // 更新文档标题
+            $('#doc_title').text(title);
+            
+            // 构建请求参数
+            const params = {
+                type: type,
+                model: model
+            };
+            
+            // 加载文档内容
+            $.get('/api/document', params, function(response) {
+                $('#doc_content').html(response.content);
+            });
+        }
+    });
+    
+    // 点击节点文本时自动展开/收起
+    $('#docs_tree').on('click', '.jstree-anchor', function(e) {
+        var node = $('#docs_tree').jstree(true).get_node($(this));
+        $('#docs_tree').jstree(true).toggle_node(node);
+    });
+});
+</script>
+
+<style>
+.markdown-body {
+    padding: 15px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.markdown-body h1 { font-size: 2em; }
+.markdown-body h2 { font-size: 1.5em; }
+.markdown-body h3 { font-size: 1.25em; }
+
+.markdown-body ul,
+.markdown-body ol {
+    padding-left: 2em;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.markdown-body li {
+    margin: 0.25em 0;
+}
+
+.markdown-body p {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.markdown-body code {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27,31,35,0.05);
+    border-radius: 3px;
+}
+
+.markdown-body pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+}
+</style>
+{% endblock %} 

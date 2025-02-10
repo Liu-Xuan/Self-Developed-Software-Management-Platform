@@ -1,0 +1,20 @@
+aviation-software-platform/
+├── app/
+│   ├── __init__.py
+│   ├── models.py
+│   ├── routes.py
+│   ├── utils.py
+│   └── templates/
+│       ├── base.html
+│       ├── index.html
+│       └── upload.html
+├── static/
+│   ├── css/
+│   └── js/
+├── tests/
+│   └── __init__.py
+├── uploads/
+├── .gitignore
+├── config.py
+├── requirements.txt
+└── run.py 

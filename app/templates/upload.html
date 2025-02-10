@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="bi bi-cloud-upload"></i> 发布新软件
+                </h5>
+            </div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="type" class="form-label">软件类型 <span class="text-danger">*</span></label>
+                            <select class="form-select" id="type" name="type" required>
+                                <option value="">请选择类型</option>
+                                {% for type in type_list %}
+                                <option value="{{ type }}">{{ type }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="model" class="form-label">适用机型</label>
+                            <select class="form-select" id="model" name="model">
+                                <option value="">请选择机型</option>
+                                {% for model in model_list %}
+                                <option value="{{ model }}">{{ model }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="vendor" class="form-label">厂家</label>
+                            <input type="text" class="form-control" id="vendor" name="vendor"
+                                   placeholder="例如：Honeywell">
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="name" class="form-label">软件名称 <span class="text-danger">*</span></label>
+                            <select class="form-select" id="name" name="name" required>
+                                <option value="">请选择软件名称</option>
+                                {% for name in software_list %}
+                                <option value="{{ name }}">{{ name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="partnumber" class="form-label">软件件号 <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="partnumber" name="partnumber" 
+                                   placeholder="例如：XXXX-XXXX-XXXX" required
+                                   pattern="^[A-Za-z0-9]{4,5}-[A-Za-z0-9]{3,5}-[A-Za-z0-9]{4,5}$" 
+                                   title="请使用标准版本号格式：xxxx-xxxx-xxxx">
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="mediapn" class="form-label">媒体集号</label>
+                            <input type="text" class="form-control" id="mediapn" name="mediapn" 
+                                   placeholder="例如：XXXX-XXXX-XXXX"
+                                   title="如没有媒体集号，不需填写">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="file" class="form-label">软件文件 <span class="text-danger">*</span></label>
+                            <input type="file" class="form-control" id="file" name="file" required
+                                   accept=".zip,.rar,.7z,.tar,.gz">
+                            <div class="form-text">支持的格式：ZIP, RAR, 7Z, TAR, GZ</div>
+                        </div>
+                        
+                        <div class="col-12 mb-3">
+                            <label for="description" class="form-label">软件说明</label>
+                            <textarea class="form-control" id="description" name="description" 
+                                      rows="3" placeholder="请输入软件说明..."></textarea>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="creator" class="form-label">创建者</label>
+                            <input type="text" class="form-control" id="creator" name="creator" 
+                                   placeholder="请输入创建者姓名">
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between">
+                        <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">
+                            <i class="bi bi-arrow-left"></i> 返回
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-cloud-upload"></i> 上传软件
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+// 更新选择框选项的通用函数
+function updateSelect(selectElement, options, defaultText = "请选择") {
+    selectElement.innerHTML = `<option value="">${defaultText}</option>`;
+    options.forEach(value => {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = value;
+        selectElement.appendChild(option);
+    });
+}
+
+// 更新软件名称选项的函数
+async function updateSoftwareNames() {
+    const type = document.getElementById('type').value;
+    const model = document.getElementById('model').value;
+    const nameSelect = document.getElementById('name');
+    
+    // 构建查询参数
+    const params = new URLSearchParams();
+    if (type) params.append('type', type);
+    if (model) params.append('model', model);
+    
+    try {
+        const response = await fetch(`/api/software_options?${params.toString()}`);
+        if (!response.ok) throw new Error('网络请求失败');
+        
+        const data = await response.json();
+        updateSelect(nameSelect, data.names, "请选择软件名称");
+    } catch (error) {
+        console.error('获取软件名称失败:', error);
+        updateSelect(nameSelect, [], "获取选项失败");
+    }
+}
+
+// 当软件类型改变时更新机型和软件名称选项
+document.getElementById('type').addEventListener('change', async function() {
+    const type = this.value;
+    const modelSelect = document.getElementById('model');
+    
+    try {
+        const response = await fetch(`/api/software_options?type=${type}`);
+        if (!response.ok) throw new Error('网络请求失败');
+        
+        const data = await response.json();
+        updateSelect(modelSelect, data.models, "请选择机型");
+        
+        // 更新软件名称选项
+        await updateSoftwareNames();
+    } catch (error) {
+        console.error('获取机型失败:', error);
+        updateSelect(modelSelect, [], "获取选项失败");
+    }
+});
+
+// 当机型改变时更新软件名称选项
+document.getElementById('model').addEventListener('change', updateSoftwareNames);
+</script>
+{% endblock %}
+{% endblock %} 

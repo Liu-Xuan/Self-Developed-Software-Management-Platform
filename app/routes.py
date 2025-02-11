@@ -1,5 +1,5 @@
 import os
-from flask import render_template, request, redirect, url_for, flash, current_app, jsonify, send_file
+from flask import render_template, request, redirect, url_for, flash, current_app, jsonify, send_file, send_from_directory
 from werkzeug.utils import secure_filename
 from app import app, db
 from app.models import Software, File, ProcessDocument, SystemLog
@@ -374,6 +374,11 @@ def get_tree_data():
                     'id': 'doc_ACMS_通用',
                     'text': '系统概述',
                     'type': 'doc'
+                },
+                {
+                    'id': 'doc_ACMS_AGSiv',
+                    'text': 'AGSiv手册',
+                    'type': 'doc'
                 }
             ]
         }
@@ -497,4 +502,55 @@ def delete_software(software_id):
         app.logger.error(f'删除失败: {str(e)}')
         flash(f'删除失败: {str(e)}')
     
-    return redirect(url_for('index')) 
+    return redirect(url_for('index'))
+
+@app.after_request
+def add_security_headers(response):
+    """添加安全性和缓存控制头"""
+    response.headers['X-Content-Type-Options'] = 'nosniff'
+    response.headers['Content-Type'] = 'text/html; charset=utf-8'
+    
+    # 对静态资源添加缓存控制
+    if request.path.startswith(('/static/', '/docs/')):
+        response.headers['Cache-Control'] = 'public, max-age=31536000, immutable'
+    else:
+        response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, max-age=0'
+    
+    return response
+
+@app.route('/docs/ACMS/agsiv manual/<path:filename>')
+def serve_agsiv_manual(filename):
+    """提供AGSiv手册HTML文件"""
+    docs_dir = os.path.join(current_app.root_path, '..', 'docs', 'ACMS', 'agsiv manual')
+    try:
+        # 处理文件名大小写不敏感
+        actual_filename = None
+        for file in os.listdir(docs_dir):
+            if file.lower() == filename.lower():
+                actual_filename = file
+                break
+        
+        if actual_filename:
+            response = send_from_directory(
+                docs_dir,
+                actual_filename,
+                mimetype='text/html' if actual_filename.lower().endswith('.html') else None
+            )
+            return response
+        else:
+            app.logger.error(f'文件不存在: {filename}')
+            return f'文件不存在: {filename}', 404
+    except Exception as e:
+        app.logger.error(f'访问AGSiv手册文件失败: {str(e)}')
+        return f'文件访问错误: {str(e)}', 500
+
+@app.route('/docs/ACMS/agsiv manual/<path:subpath>/<path:filename>')
+def serve_agsiv_manual_resources(subpath, filename):
+    """提供AGSiv手册相关资源文件"""
+    docs_dir = os.path.join(current_app.root_path, '..', 'docs', 'ACMS', 'agsiv manual', subpath)
+    try:
+        response = send_from_directory(docs_dir, filename)
+        return response
+    except Exception as e:
+        app.logger.error(f'访问资源文件失败: {str(e)}')
+        return f'资源文件不存在或无法访问', 404 

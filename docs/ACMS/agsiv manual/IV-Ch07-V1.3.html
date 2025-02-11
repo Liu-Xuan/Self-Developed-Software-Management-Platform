@@ -1,0 +1,1045 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="IV-ch07-V1.3_files/filelist.xml">
+<link rel=Edit-Time-Data href="IV-ch07-V1.3_files/editdata.mso">
+<link rel=OLE-Object-Data href="IV-ch07-V1.3_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Chapter 7 - SAR Recording</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Site License</o:Author>
+  <o:Template>ch01-V2-f1.dot</o:Template>
+  <o:LastAuthor>dfreedman</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>25</o:TotalTime>
+  <o:LastPrinted>1999-05-16T21:13:00Z</o:LastPrinted>
+  <o:Created>2006-02-03T16:24:00Z</o:Created>
+  <o:LastSaved>2006-02-03T16:24:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1078</o:Words>
+  <o:Characters>6150</o:Characters>
+  <o:Company>Teledyne Controls</o:Company>
+  <o:Lines>51</o:Lines>
+  <o:Paragraphs>14</o:Paragraphs>
+  <o:CharactersWithSpaces>7214</o:CharactersWithSpaces>
+  <o:Version>11.6568</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="8" DLLVersion="513" NLCheck="0">1</w:ActiveWritingStyle>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Arial Narrow";
+	panose-1:2 11 5 6 2 2 2 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:"Heading 2";
+	margin-top:.5in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:-.8in;
+	page-break-before:always;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	border:none;
+	mso-border-top-alt:solid windowtext .5pt;
+	mso-border-bottom-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 0in 1.0pt 0in;
+	font-size:30.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:-.8in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	mso-list:skip;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h6
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-element:frame;
+	mso-element-frame-width:303.85pt;
+	mso-element-frame-height:31.4pt;
+	mso-element-frame-hspace:9.0pt;
+	mso-element-wrap:around;
+	mso-element-anchor-vertical:paragraph;
+	mso-element-anchor-horizontal:page;
+	mso-element-left:215.85pt;
+	mso-element-top:.75pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-alt:solid windowtext 1.5pt;
+	padding:0in;
+	mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt;
+	mso-border-shadow:yes;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("IV-ch07-V1.3_files/header.html") fs;
+	mso-footnote-continuation-separator:url("IV-ch07-V1.3_files/header.html") fcs;
+	mso-endnote-separator:url("IV-ch07-V1.3_files/header.html") es;
+	mso-endnote-continuation-separator:url("IV-ch07-V1.3_files/header.html") ecs;
+	mso-facing-pages:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-even-header:url("IV-ch07-V1.3_files/header.html") eh2;
+	mso-header:url("IV-ch07-V1.3_files/header.html") h2;
+	mso-even-footer:url("IV-ch07-V1.3_files/header.html") ef2;
+	mso-footer:url("IV-ch07-V1.3_files/header.html") f2;
+	mso-first-header:url("IV-ch07-V1.3_files/header.html") fh2;
+	mso-first-footer:url("IV-ch07-V1.3_files/header.html") ff2;
+	mso-paper-source:0;}
+div.Section2
+	{page:Section2;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:662320134;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<div style='mso-element:para-border-div;border-top:solid windowtext 1.0pt;
+border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+padding:1.0pt 0in 1.0pt 0in'>
+
+<h1 style='margin-left:0in'><a name="_Toc126037100">Chapter 7<br>
+SAR <span style='color:black'>RECORDING</span></a> </h1>
+
+</div>
+
+<h2 style='margin-left:0in'><a name="_Toc126037101">OVERVIEW</a></h2>
+
+<p class=MsoNormal>This chapter is not applicable to iDMU.<span
+style='mso-spacerun:yes'>  </span>SAR recording<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Report:Definition&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Report&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>is another method for collection of parameter
+values captured at critical or significant points of time during a flight or on
+the ground. Trigger Definitions enable the application developer to specify the
+conditions under which a <span style='color:black'>SAR</span> recording is to
+be generated. SAR recording Definition allows the developer to specify WHAT
+parameters are to be captured, WHEN, for HOW LONG and, HOW they should be
+formatted.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once generated, recording files are retained in the airborne
+unit for routing to either a Loader and/or Integrated Disk. The specification
+of which device(s) the file is sent to, in what format, and under what
+circumstances, is also part of the recording definition process.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>SAR recording files, once generated, are saved in the
+non-volatile memory of the ACMS and thus are not lost with power shutdowns.
+However, since non-volatile memory capacity is limited, it is necessary to
+specify, at the recording definition time, how many copies of a recording file
+are to be retained, for how long, and which copies are to be discarded when the
+limit is reached.</p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:374.25pt;
+ height:158.25pt' o:ole="">
+ <v:imagedata src="IV-ch07-V1.3_files/image002.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=499 height=211
+src="IV-ch07-V1.3_files/image002.jpg" v:shapes="_x0000_i1025"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1200460224">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 7.1: Main Menu and Toolbar with Define SAR selected.<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal>SAR recording definition<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Reports:Design&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>is usually done in conjunction with the
+recording trigger definition, but after the parameters needed for the recording
+are defined. SAR recording definition starts by selecting the SAR option from
+the Define menu (see Figure 7.1).</p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:410.25pt;height:171pt'
+ o:ole="">
+ <v:imagedata src="IV-ch07-V1.3_files/image004.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=547 height=228
+src="IV-ch07-V1.3_files/image004.jpg" v:shapes="_x0000_i1026"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1026"
+  DrawAspect="Content" ObjectID="_1200460225">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 7.2: SAR Channel Selection Window. </b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once the SAR recording selection is made, a list of all
+previously defined SAR channels appears (see Figure 7.2). The list of channel
+names can be sorted in ascending (or descending) order using the title bar at
+the top of the list (as described in the Introduction), or scrolled up or down
+in search of a known recording definition.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Next to this list are a set of buttons that allow the
+developer to:</p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='color:red'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span>define<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Reports:New&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-tab-count:
+1'>  </span><!--[if gte vml 1]><v:shape id="_x0000_i1027" type="#_x0000_t75"
+ style='width:56.25pt;height:15.75pt' o:ole="">
+ <v:imagedata src="IV-ch07-V1.3_files/image006.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=75 height=21
+src="IV-ch07-V1.3_files/image006.jpg" v:shapes="_x0000_i1027"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1027"
+  DrawAspect="Content" ObjectID="_1200460226">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>  </span>recording channel,</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1028" type="#_x0000_t75" style='width:56.25pt;height:15.75pt'
+ o:ole="">
+ <v:imagedata src="IV-ch07-V1.3_files/image008.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=75 height=21
+src="IV-ch07-V1.3_files/image008.jpg" v:shapes="_x0000_i1028"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1028"
+  DrawAspect="Content" ObjectID="_1200460227">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>  </span>a recording channel, </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1029" type="#_x0000_t75" style='width:57pt;height:15pt' o:ole="">
+ <v:imagedata src="IV-ch07-V1.3_files/image010.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=76 height=20
+src="IV-ch07-V1.3_files/image010.jpg" v:shapes="_x0000_i1029"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1029"
+  DrawAspect="Content" ObjectID="_1200460228">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>  </span>a recording channel,</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1030" type="#_x0000_t75" style='width:56.25pt;height:15pt' o:ole="">
+ <v:imagedata src="IV-ch07-V1.3_files/image012.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=75 height=20
+src="IV-ch07-V1.3_files/image012.jpg" v:shapes="_x0000_i1030"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1030"
+  DrawAspect="Content" ObjectID="_1200460229">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'> </span>an existing<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Reports:Open&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>channel,</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span></p>
+
+<p class=MsoNormal>view the <!--[if gte vml 1]><v:shape id="_x0000_i1031"
+ type="#_x0000_t75" style='width:55.5pt;height:16.5pt' o:ole="">
+ <v:imagedata src="IV-ch07-V1.3_files/image014.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=74 height=22
+src="IV-ch07-V1.3_files/image014.jpg" v:shapes="_x0000_i1031"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1031"
+  DrawAspect="Content" ObjectID="_1200460230">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'> </span>of<span
+style='mso-spacerun:yes'>  </span>recording definitions for inspection and
+modification,</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1032" type="#_x0000_t75" style='width:54.75pt;height:15pt' o:ole="">
+ <v:imagedata src="IV-ch07-V1.3_files/image016.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=73 height=20
+src="IV-ch07-V1.3_files/image016.jpg" v:shapes="_x0000_i1032"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1032"
+  DrawAspect="Content" ObjectID="_1200460231">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'> </span>this window.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1033" type="#_x0000_t75"
+ style='width:56.25pt;height:15.75pt' o:ole="">
+ <v:imagedata src="IV-ch07-V1.3_files/image006.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=75 height=21
+src="IV-ch07-V1.3_files/image006.jpg" v:shapes="_x0000_i1033"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1033"
+  DrawAspect="Content" ObjectID="_1200460232">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'> </span>- This selection asks
+for a SAR channel<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Reports:New&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>Title<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Reports:Name&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>and a few other characteristics (see Figure
+7.3). The channel title can be up to ten characters long. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1034" type="#_x0000_t75"
+ style='width:238.5pt;height:225pt'>
+ <v:imagedata src="IV-ch07-V1.3_files/image018.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=318 height=300
+src="IV-ch07-V1.3_files/image018.jpg" v:shapes="_x0000_i1034"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-no-proof:yes'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 7.3: SAR channel Name and other characteristics.</b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Here are explanations of the other fields:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Maximum Length</b>:
+should be specified to have a value between <b style='mso-bidi-font-weight:
+normal'><span style='color:black'>1 </span></b><span style='color:black'>and<b
+style='mso-bidi-font-weight:normal'> 32768 </b>in bytes increments of storage.
+So, if you want <b style='mso-bidi-font-weight:normal'>1</b> Kilobyte of
+recording, you need to input <b style='mso-bidi-font-weight:normal'>1024</b> in
+this field. <o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Max Copies:</b>
+Maximum number of copies kept before re-writing the oldest copy.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h6>History: <span style='font-weight:normal'>L</span><span style='font-weight:
+normal;mso-bidi-font-weight:bold'>ength of the buffer of previous samples to be
+recorded on triggering of next SAR recording(s).<span
+style='mso-spacerun:yes'>  </span>The maximum history allowed is 300
+seconds.<span style='mso-spacerun:yes'>  </span>The minimum is 2 seconds.<o:p></o:p></span></h6>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Loader</b> and <b
+style='mso-bidi-font-weight:normal'>PCMCIA: </b>Selection of the device to
+which the recordings are routed.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once the channel title and other characteristics are
+specified, the application developer should hit <!--[if gte vml 1]><v:shape
+ id="_x0000_i1035" type="#_x0000_t75" style='width:42.75pt;height:18.75pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch07-V1.3_files/image020.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=25
+src="IV-ch07-V1.3_files/image020.jpg" v:shapes="_x0000_i1035"><![endif]><span
+style='mso-spacerun:yes'> </span>and proceed with the definition of the
+recording, as described later in this chapter.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1036" type="#_x0000_t75"
+ style='width:56.25pt;height:15.75pt' o:ole="">
+ <v:imagedata src="IV-ch07-V1.3_files/image008.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=75 height=21
+src="IV-ch07-V1.3_files/image008.jpg" v:shapes="_x0000_i1036"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1036"
+  DrawAspect="Content" ObjectID="_1200460233">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>  </span>- To open<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Reports:Open&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>a channel definition for modification, it must
+be selected from the list of pre-defined recordings in the system and opened
+(see Figure 7.2). Once the channel definition is opened and its attributes are
+modified it should be <!--[if gte vml 1]><v:shape id="_x0000_i1037" type="#_x0000_t75"
+ style='width:42.75pt;height:18.75pt' fillcolor="window">
+ <v:imagedata src="IV-ch07-V1.3_files/image022.jpg" o:title="New_ok"/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=25
+src="IV-ch07-V1.3_files/image022.jpg" v:shapes="_x0000_i1037"><![endif]><span
+style='mso-spacerun:yes'> </span>ed and closed.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1038" type="#_x0000_t75"
+ style='width:57pt;height:15pt' o:ole="">
+ <v:imagedata src="IV-ch07-V1.3_files/image010.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=76 height=20
+src="IV-ch07-V1.3_files/image010.jpg" v:shapes="_x0000_i1038"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1038"
+  DrawAspect="Content" ObjectID="_1200460234">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'> </span>- To copy a channel,
+select (highlight) the channel, and press the <!--[if gte vml 1]><v:shape id="_x0000_i1039"
+ type="#_x0000_t75" style='width:57pt;height:15pt' o:ole="">
+ <v:imagedata src="IV-ch07-V1.3_files/image010.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=76 height=20
+src="IV-ch07-V1.3_files/image010.jpg" v:shapes="_x0000_i1039"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1039"
+  DrawAspect="Content" ObjectID="_1200460235">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'> </span>button.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1040" type="#_x0000_t75"
+ style='width:56.25pt;height:15pt' o:ole="">
+ <v:imagedata src="IV-ch07-V1.3_files/image012.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=75 height=20
+src="IV-ch07-V1.3_files/image012.jpg" v:shapes="_x0000_i1040"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1040"
+  DrawAspect="Content" ObjectID="_1200460236">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'> </span>- To delete<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Reports:Delete&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>a channel definition, select (highlight) the
+channel, press the <!--[if gte vml 1]><v:shape id="_x0000_i1041" type="#_x0000_t75"
+ style='width:56.25pt;height:15pt' o:ole="">
+ <v:imagedata src="IV-ch07-V1.3_files/image012.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=75 height=20
+src="IV-ch07-V1.3_files/image012.jpg" v:shapes="_x0000_i1041"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1041"
+  DrawAspect="Content" ObjectID="_1200460237">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'> </span>button, and confirm
+the deletion.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1042" type="#_x0000_t75"
+ style='width:55.5pt;height:16.5pt' o:ole="">
+ <v:imagedata src="IV-ch07-V1.3_files/image014.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=74 height=22
+src="IV-ch07-V1.3_files/image014.jpg" v:shapes="_x0000_i1042"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1042"
+  DrawAspect="Content" ObjectID="_1200460238">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>  </span>To open<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Reports:Open&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>a channel definition for modification, it must
+be selected from the list of pre-defined recordings in the system and opened
+(see Figure 7.2). Once the recording definition is opened, its attributes can
+be modified as described later in this chapter.<br clear=all style='mso-special-character:
+line-break;page-break-before:always'>
+</p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037102">Channel edit form</a></h2>
+
+<p class=MsoNormal>Once the channel <!--[if gte vml 1]><v:shape id="_x0000_i1043"
+ type="#_x0000_t75" style='width:55.5pt;height:16.5pt' o:ole="">
+ <v:imagedata src="IV-ch07-V1.3_files/image014.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=74 height=22
+src="IV-ch07-V1.3_files/image014.jpg" v:shapes="_x0000_i1043"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1043"
+  DrawAspect="Content" ObjectID="_1200460239">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>  </span>button is pressed, a
+dialogue box with several fields is presented to the developer (see Figure
+7.4). </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1044" type="#_x0000_t75" style='width:238.5pt;height:225pt'>
+ <v:imagedata src="IV-ch07-V1.3_files/image024.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=318 height=300
+src="IV-ch07-V1.3_files/image024.jpg" v:shapes="_x0000_i1044"><![endif]></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 7.4: A typical Channel Definition Dialogue Box.<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'>Any of these fields may
+be changed using the usual MS Windows techniques.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037103">channel</a><!--[if supportFields]><span
+style='mso-bookmark:_Toc126037103'></span><span style='mso-element:field-begin'></span><span
+style='mso-bookmark:_Toc126037103'> XE &quot;Reports:Design Form&quot; \i </span><![endif]--><span
+style='mso-bookmark:_Toc126037103'></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc126037103'></span><span style='mso-element:field-end'></span><![endif]--><span
+style='mso-bookmark:_Toc126037103'><span
+style='mso-spacerun:yes'> </span>DEFINITION FORM</span><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Report Design Form&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h2>
+
+<p class=MsoNormal>Once a channel is <!--[if gte vml 1]><v:shape id="_x0000_i1045"
+ type="#_x0000_t75" style='width:42.75pt;height:18.75pt' fillcolor="window">
+ <v:imagedata src="IV-ch07-V1.3_files/image026.jpg" o:title="New_open"/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=25
+src="IV-ch07-V1.3_files/image026.jpg" v:shapes="_x0000_i1045"><![endif]><span
+style='mso-spacerun:yes'> </span>ed, a dialogue box with a list of parameters
+is presented to the developer (see Figure 7.5). </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Next to this list are a set of buttons that allow the
+developer to:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Reports:New&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if gte vml 1]><v:shape
+ id="_x0000_i1046" type="#_x0000_t75" style='width:42.75pt;height:18.75pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch07-V1.3_files/image028.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=25
+src="IV-ch07-V1.3_files/image028.jpg" v:shapes="_x0000_i1046"><![endif]><span
+style='mso-spacerun:yes'>  </span>a new parameter to the channel,</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1047" type="#_x0000_t75" style='width:43.5pt;height:19.5pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch07-V1.3_files/image030.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=58 height=26
+src="IV-ch07-V1.3_files/image030.jpg" v:shapes="_x0000_i1047"><![endif]><span
+style='mso-spacerun:yes'>  </span>a selected (highlighted) parameter,</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1048" type="#_x0000_t75" style='width:42.75pt;height:18.75pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch07-V1.3_files/image032.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=25
+src="IV-ch07-V1.3_files/image032.jpg" v:shapes="_x0000_i1048"><![endif]><span
+style='mso-spacerun:yes'>  </span>a parameter from the channel, or</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><!--[if gte vml 1]><v:shape id="_x0000_i1049"
+ type="#_x0000_t75" style='width:42.75pt;height:18.75pt' fillcolor="window">
+ <v:imagedata src="IV-ch07-V1.3_files/image034.jpg" o:title="New_close"/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=25
+src="IV-ch07-V1.3_files/image034.jpg" v:shapes="_x0000_i1049"><![endif]><span
+style='mso-spacerun:yes'>  </span>the channel altogether.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1050" type="#_x0000_t75"
+ style='width:309.75pt;height:260.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch07-V1.3_files/image036.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=413 height=347
+src="IV-ch07-V1.3_files/image036.jpg" v:shapes="_x0000_i1050"><![endif]></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 7.5: SAR Channel Specification Dialogue Box (ALT entry
+high-lighted).<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=left style='text-align:left'>Following are
+explanations of each of these buttons, see Figure 7.4:</p>
+
+<p class=MsoNormal align=left style='text-align:left'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=left style='text-align:left'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1051" type="#_x0000_t75"
+ style='width:42.75pt;height:18.75pt' fillcolor="window">
+ <v:imagedata src="IV-ch07-V1.3_files/image038.jpg" o:title="New_add"/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=25
+src="IV-ch07-V1.3_files/image038.jpg" v:shapes="_x0000_i1051"><![endif]><span
+style='mso-spacerun:yes'> </span>- button is used to <!--[if gte vml 1]><v:shape
+ id="_x0000_i1052" type="#_x0000_t75" style='width:42.75pt;height:18.75pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch07-V1.3_files/image038.jpg" o:title="New_add"/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=25
+src="IV-ch07-V1.3_files/image038.jpg" v:shapes="_x0000_i1052"><![endif]><span
+style='mso-spacerun:yes'> </span>a new parameter to the selected channel’s
+parameter list.<span style='mso-spacerun:yes'>  </span>Once invoked, a dialogue
+box similar to the one shown in Figure 7.6 is displayed.<span
+style='mso-spacerun:yes'>  </span>At this point the developer has the option of
+either directly entering a predefined parameter name, or select one such name
+in the drop down list of parameters provided.<span style='mso-spacerun:yes'>  
+</span>Once a name is entered (or selected) use the OK button to close the dialogue
+box.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1053" type="#_x0000_t75" style='width:177pt;height:178.5pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch07-V1.3_files/image040.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=236 height=238
+src="IV-ch07-V1.3_files/image040.jpg" v:shapes="_x0000_i1053"><![endif]></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 7.6: A Dialogue Box for selecting and Adding a parameter to the
+list.<o:p></o:p></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1054" type="#_x0000_t75"
+ style='width:42.75pt;height:18.75pt' fillcolor="window">
+ <v:imagedata src="IV-ch07-V1.3_files/image042.jpg" o:title="New_edit"/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=25
+src="IV-ch07-V1.3_files/image042.jpg" v:shapes="_x0000_i1054"><![endif]><span
+style='mso-spacerun:yes'> </span>- button is used to specify and/or edit the
+parameter details. It is also used to define the amount of change that should
+happen before the next recording of the parameter value takes place.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=left style='text-align:left'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1055" type="#_x0000_t75" style='width:348.75pt;height:225.75pt'
+ o:ole="">
+ <v:imagedata src="IV-ch07-V1.3_files/image044.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=465 height=301
+src="IV-ch07-V1.3_files/image044.jpg" v:shapes="_x0000_i1055"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1055"
+  DrawAspect="Content" ObjectID="_1200460240">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 7.7: A Display of Parameter characteristics for Editing
+purposes.<o:p></o:p></b></p>
+
+<p class=MsoNormal>In response to the pressing of the <!--[if gte vml 1]><v:shape
+ id="_x0000_i1056" type="#_x0000_t75" style='width:42.75pt;height:18.75pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch07-V1.3_files/image042.jpg" o:title="New_edit"/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=25
+src="IV-ch07-V1.3_files/image042.jpg" v:shapes="_x0000_i1056"><![endif]><span
+style='mso-spacerun:yes'> </span>button, a dialogue box, similar to the one
+shown in Figure 7.7, is displayed. This box invites the developer to either
+specify (or re-specify) the parameter bits (DITS Frame) to be recorded and/or
+the amount of change needed to initiate the recording of a parameter value. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>To specify (or change) parameter bits, one should either:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo1;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>position and sweep (highlight) the cursor on DIT<span
+style='color:black'>S</span> Frame bits to be recorded or, </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo1;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>using the LSB and Length fields, directly
+specify the Least Significant Bit and Length (number of bits) of the selected
+field.<span style='mso-spacerun:yes'>  </span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>In either case, the result of the selection is reflected in
+both fields, see Figure 7.7.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>In the same dialogue box, the developer has the option of
+specifying the amount of change (Delta Value, in Engineering Units), that must
+occur in order to initiate the recording of the next value. Please note this
+change is from an expected value calculated by linearly extrapolating from the
+two latest recordings of the same parameter.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>SSM and Sign check boxes refer to the parameter definition
+bits that may be asked to be included.<span style='color:red'> <o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><!--[if gte vml 1]><v:shape id="_x0000_i1057" type="#_x0000_t75"
+ style='width:42.75pt;height:19.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch07-V1.3_files/image046.jpg" o:title="New_delete"/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=26
+src="IV-ch07-V1.3_files/image046.jpg" v:shapes="_x0000_i1057"><![endif]><span
+style='mso-spacerun:yes'> </span>- </b>is used to select (highlight) a parameter
+and <b style='mso-bidi-font-weight:normal'><!--[if gte vml 1]><v:shape id="_x0000_i1058"
+ type="#_x0000_t75" style='width:42.75pt;height:19.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch07-V1.3_files/image046.jpg" o:title="New_delete"/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=26
+src="IV-ch07-V1.3_files/image046.jpg" v:shapes="_x0000_i1058"><![endif]><span
+style='mso-spacerun:yes'> </span></b>it<b style='mso-bidi-font-weight:normal'> </b>from
+the list.</p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><!--[if gte vml 1]><v:shape id="_x0000_i1059" type="#_x0000_t75"
+ style='width:42.75pt;height:18.75pt' fillcolor="window">
+ <v:imagedata src="IV-ch07-V1.3_files/image034.jpg" o:title="New_close"/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=25
+src="IV-ch07-V1.3_files/image034.jpg" v:shapes="_x0000_i1059"><![endif]><span
+style='mso-spacerun:yes'> </span>- </b>closes the window.<b style='mso-bidi-font-weight:
+normal'><o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+</div>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always;
+mso-break-type:section-break'>
+</span>
+
+<div class=Section2>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

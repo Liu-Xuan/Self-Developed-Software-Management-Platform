@@ -1,0 +1,679 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="IV-ch14-V1.1_files/filelist.xml">
+<link rel=Edit-Time-Data href="IV-ch14-V1.1_files/editdata.mso">
+<link rel=OLE-Object-Data href="IV-ch14-V1.1_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Chapter 14 - Disk Utilities</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Site License</o:Author>
+  <o:Template>ch01-V2-f1.dot</o:Template>
+  <o:LastAuthor>dfreedman</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>35</o:TotalTime>
+  <o:LastPrinted>2003-03-19T19:18:00Z</o:LastPrinted>
+  <o:Created>2006-02-03T16:29:00Z</o:Created>
+  <o:LastSaved>2006-02-03T16:29:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>609</o:Words>
+  <o:Characters>3472</o:Characters>
+  <o:Company>Teledyne Controls</o:Company>
+  <o:Lines>28</o:Lines>
+  <o:Paragraphs>8</o:Paragraphs>
+  <o:CharactersWithSpaces>4073</o:CharactersWithSpaces>
+  <o:Version>11.6568</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="8" DLLVersion="513" NLCheck="0">1</w:ActiveWritingStyle>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:"Heading 2";
+	margin-top:.5in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:-.8in;
+	page-break-before:always;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	border:none;
+	mso-border-top-alt:solid windowtext .5pt;
+	mso-border-bottom-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 0in 1.0pt 0in;
+	font-size:30.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:-.8in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h6
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:7;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-element:frame;
+	mso-element-frame-width:303.85pt;
+	mso-element-frame-height:31.4pt;
+	mso-element-frame-hspace:9.0pt;
+	mso-element-wrap:around;
+	mso-element-anchor-vertical:paragraph;
+	mso-element-anchor-horizontal:page;
+	mso-element-left:215.85pt;
+	mso-element-top:.75pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:22.5pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-22.5pt;
+	mso-pagination:widow-orphan;
+	tab-stops:22.5pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.NormalText, li.NormalText, div.NormalText
+	{mso-style-name:"Normal Text";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:14.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	mso-bidi-language:AR-SA;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("IV-ch14-V1.1_files/header.html") fs;
+	mso-footnote-continuation-separator:url("IV-ch14-V1.1_files/header.html") fcs;
+	mso-endnote-separator:url("IV-ch14-V1.1_files/header.html") es;
+	mso-endnote-continuation-separator:url("IV-ch14-V1.1_files/header.html") ecs;
+	mso-facing-pages:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-header:url("IV-ch14-V1.1_files/header.html") h2;
+	mso-even-footer:url("IV-ch14-V1.1_files/header.html") ef2;
+	mso-footer:url("IV-ch14-V1.1_files/header.html") f2;
+	mso-first-footer:url("IV-ch14-V1.1_files/header.html") ff2;
+	mso-paper-source:0;}
+div.Section2
+	{page:Section2;}
+@page Section3
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-header:url("IV-ch14-V1.1_files/header.html") h3;
+	mso-even-footer:url("IV-ch14-V1.1_files/header.html") ef3;
+	mso-footer:url("IV-ch14-V1.1_files/header.html") f3;
+	mso-first-footer:url("IV-ch14-V1.1_files/header.html") ff3;
+	mso-paper-source:0;}
+div.Section3
+	{page:Section3;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<div style='mso-element:para-border-div;border-top:solid windowtext 1.0pt;
+border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+padding:1.0pt 0in 1.0pt 0in'>
+
+<h1 style='margin-left:0in'><a name="_Toc126037166">Chapter 14<br>
+DISK UTILITIES</a></h1>
+
+</div>
+
+<h2 style='margin-left:0in'><a name="_Toc126037167">overview</a></h2>
+
+<p class=MsoNormal>AGS IV has many utilities that enable the user to prepare
+media (either floppy disks or PCMCIA cards) that can be used to upload an
+application that was built with AGS IV or to allocate the file sizes on PCMCIA.
+</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span
+style='mso-spacerun:yes'> </span><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:301.5pt;
+ height:102pt'>
+ <v:imagedata src="IV-ch14-V1.1_files/image002.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=402 height=136
+src="IV-ch14-V1.1_files/image002.jpg" v:shapes="_x0000_i1025"><![endif]></p>
+
+<p class=MsoNormal style='text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:.5in'><b
+style='mso-bidi-font-weight:normal'>Figure 14.1a: FDIMU Main Menu with Disk
+Utilities option selected<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><!--[if gte vml 1]><v:shape id="_x0000_i1026"
+ type="#_x0000_t75" style='width:305.25pt;height:105pt'>
+ <v:imagedata src="IV-ch14-V1.1_files/image004.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=407 height=140
+src="IV-ch14-V1.1_files/image004.jpg" v:shapes="_x0000_i1026"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:.5in'><b
+style='mso-bidi-font-weight:normal'>Figure 14.1b: iDMU<span
+style='mso-spacerun:yes'>  </span>Main Menu with Disk Utilities option
+selected.<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>From the Disk Utilities menu, the following functions are
+available.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037168"></a><a name="_Toc459006713"></a><a
+name="_Toc458576189"></a><a name="_Toc454945611"></a><a name="_Toc454941787"></a><a
+name="_Toc418915205"></a><a name="_Toc418416251"></a><a name="_Toc416767937"><span
+style='mso-bookmark:_Toc418416251'><span style='mso-bookmark:_Toc418915205'><span
+style='mso-bookmark:_Toc454941787'><span style='mso-bookmark:_Toc454945611'><span
+style='mso-bookmark:_Toc458576189'><span style='mso-bookmark:_Toc459006713'><span
+style='mso-bookmark:_Toc126037168'>GENERATE UPLOAD media</span></span></span></span></span></span></span></a></h2>
+
+<p class=MsoNormal>After an application is built and verified (that no errors
+have been detected during the compile or build steps; see below), the
+executable image of the application may be transferred to an upload media for
+upload into the airborne unit. This menu selection performs the transfer function
+(see Figure 14.1).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><!--[if gte vml 1]><v:shape id="_x0000_i1028"
+ type="#_x0000_t75" style='width:214.5pt;height:307.5pt' o:ole="" fillcolor="window">
+ <v:imagedata src="IV-ch14-V1.1_files/image006.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=286 height=410
+src="IV-ch14-V1.1_files/image006.jpg" v:shapes="_x0000_i1028"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1028"
+  DrawAspect="Content" ObjectID="_1200460501">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoHeading7>Figure 14.2a: FDIMU Generate Upload Disk option of Disk
+Utilities Menu</p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once the selection is made, the developer is presented with
+a form (see Figure 14.2a for FDIMU and Figure 14.2b for iDMU) to enter the drive
+letter of the upload media.<span style='mso-spacerun:yes'>  </span>For FDIMU,
+the user can also has an opportunity to select validation for aircraft type,
+engine type, airline ID, or aircraft ID.<span style='mso-spacerun:yes'> 
+</span>If the ‘validate’ box is checked for any of these options, the
+application will not upload unless that option has been validated by the
+software.<span style='mso-spacerun:yes'>  </span>For example, if aircraft type
+‘A340’ is checked, then the application will only upload onto an A340 aircraft.</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal>In addition to the executable application, this step also
+stores, on the media, the configuration information that is used during the
+upload into the airborne unit.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><!--[if gte vml 1]><v:shape id="_x0000_i1027"
+ type="#_x0000_t75" style='width:155.25pt;height:107.25pt'>
+ <v:imagedata src="IV-ch14-V1.1_files/image008.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=207 height=143
+src="IV-ch14-V1.1_files/image008.jpg" v:shapes="_x0000_i1027"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoHeading7>Figure 14.2b: iDMU Generate Upload Disk option of Disk
+Utilities Menu</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037169">generate download disk</a></h2>
+
+<p class=MsoNormal>For FDIMU only.<span style='mso-spacerun:yes'>  </span>In
+order to save flight data using an airborne data loader on board the aircraft,
+a download disk must be prepared by AGS IV.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><!--[if gte vml 1]><v:shape id="_x0000_i1029"
+ type="#_x0000_t75" style='width:180.75pt;height:174.75pt' o:ole=""
+ fillcolor="window">
+ <v:imagedata src="IV-ch14-V1.1_files/image010.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=241 height=233
+src="IV-ch14-V1.1_files/image010.jpg" v:shapes="_x0000_i1029"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1029"
+  DrawAspect="Content" ObjectID="_1200460502">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<h5 style='text-indent:.5in'><span style='font-weight:normal'><o:p>&nbsp;</o:p></span></h5>
+
+<h6><span style='mso-bidi-font-weight:bold'>Figure 14.3: Generate Download Disk
+option of Disk Utilities Menu<o:p></o:p></span></h6>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>There are three types of download disk:<span
+style='mso-spacerun:yes'>  </span>Auto, Manual, and On-Line.<span
+style='mso-spacerun:yes'>  </span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>An Auto download disk will enable any reports that are
+defined as automatically routed to the Loader in AGS IV (via the Routing Tab of
+the report definition.<span style='mso-spacerun:yes'>  </span>See chapter 6,
+Reports) to be written to the floppy disk at the moment of generation.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>A Manual download disk will enable any reports that are
+defined as automatically or manually routed to the Loader in AGS IV to be
+written to the floppy disk whenever the report is manually generated on board
+the aircraft.<span style='mso-spacerun:yes'>  </span>If the disk is not in the
+loader at the time of manual generation, no file will be written to the disk if
+one is inserted later.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>An On-Line download disk will enable any reports that are
+defined as automatically routed to the Loader in AGS IV to be written to the
+floppy disk if the report had been generated but the disk was not in the loader
+at the time of generation.<span style='mso-spacerun:yes'>  </span>If a disk is
+inserted later, the report will still be written to the disk.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037170">allocate pcmcia</a></h2>
+
+<p class=MsoNormal>This function allows you to allocate the space that will be
+used on a PCMCIA card if one is inserted in the ACMS hardware on the aircraft
+(if an integrated disk drive is available).<span style='mso-spacerun:yes'> 
+</span>Allocation is specified in percentages.<span style='mso-spacerun:yes'> 
+</span>The total allocation must not exceed one hundred percent.<span
+style='mso-spacerun:yes'>  </span>AGS IV will not allow the user to exceed that
+amount.<span style='mso-spacerun:yes'>  </span>Next to the allocation of each
+file type, there is a ‘Wrap Enable’ checkbox.<span style='mso-spacerun:yes'> 
+</span>If checked, the recording device, if it reaches the maximum space
+allocated on the PCMCIA card, will start recording at the beginning again,
+overwriting any data that was previously recorded.<span
+style='mso-spacerun:yes'>  </span>For FDIMU, the minimum usable disk space
+mandates how much free space, in megabytes, is required on the PCMCIA
+card.<span style='mso-spacerun:yes'>  </span>The ‘Disable PC Card Fault’
+checkbox will prevent the DMU from outputting a fault if there is no PCMCIA
+card.<span style='mso-spacerun:yes'>  </span>Some aircraft systems record such
+a fault and this could cause inconvenience if no PCMCIA card is used during
+flight.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><!--[if gte vml 1]><v:shape id="_x0000_i1030"
+ type="#_x0000_t75" style='width:263.25pt;height:304.5pt' o:ole="" fillcolor="window">
+ <v:imagedata src="IV-ch14-V1.1_files/image012.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=351 height=406
+src="IV-ch14-V1.1_files/image012.jpg" v:shapes="_x0000_i1030"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1030"
+  DrawAspect="Content" ObjectID="_1200460503">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><b style='mso-bidi-font-weight:
+normal'>Figure 14.4a: FDIMU PC Card Allocation option of Disk Utilities menu.<o:p></o:p></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:.5in'><b
+style='mso-bidi-font-weight:normal'><!--[if gte vml 1]><v:shape id="_x0000_i1031"
+ type="#_x0000_t75" style='width:263.25pt;height:303.75pt'>
+ <v:imagedata src="IV-ch14-V1.1_files/image014.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=351 height=405
+src="IV-ch14-V1.1_files/image014.jpg" v:shapes="_x0000_i1031"><![endif]><o:p></o:p></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:.5in'><b
+style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:.5in'><b
+style='mso-bidi-font-weight:normal'>Figure 14.4b: iDMU PC Card Allocation
+option of Disk Utilities menu<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:auto;
+mso-break-type:section-break'>
+</span>
+
+<div class=Section2>
+
+<h3><a name="_Toc475168834"><o:p>&nbsp;</o:p></a></h3>
+
+<h3><span style='mso-bookmark:_Toc475168834'><o:p>&nbsp;</o:p></span></h3>
+
+<h3><span style='mso-bookmark:_Toc475168834'><o:p>&nbsp;</o:p></span></h3>
+
+<span style='mso-bookmark:_Toc475168834'></span>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:auto;
+mso-break-type:section-break'>
+</span>
+
+<div class=Section3>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

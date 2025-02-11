@@ -1,0 +1,727 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="IV-ch11-V1.1_files/filelist.xml">
+<link rel=Edit-Time-Data href="IV-ch11-V1.1_files/editdata.mso">
+<link rel=OLE-Object-Data href="IV-ch11-V1.1_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Chapter 11 - Merged Reports</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Site License</o:Author>
+  <o:Template>ch01-V2-f1.dot</o:Template>
+  <o:LastAuthor>dfreedman</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>63</o:TotalTime>
+  <o:LastPrinted>1999-06-16T22:42:00Z</o:LastPrinted>
+  <o:Created>2006-02-03T16:27:00Z</o:Created>
+  <o:LastSaved>2006-02-03T16:27:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>655</o:Words>
+  <o:Characters>3739</o:Characters>
+  <o:Company>Teledyne Controls</o:Company>
+  <o:Lines>31</o:Lines>
+  <o:Paragraphs>8</o:Paragraphs>
+  <o:CharactersWithSpaces>4386</o:CharactersWithSpaces>
+  <o:Version>11.6568</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="8" DLLVersion="513" NLCheck="0">1</w:ActiveWritingStyle>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Arial Narrow";
+	panose-1:2 11 5 6 2 2 2 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:"Heading 2";
+	margin-top:.5in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:-.8in;
+	page-break-before:always;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	border:none;
+	mso-border-top-alt:solid windowtext .5pt;
+	mso-border-bottom-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 0in 1.0pt 0in;
+	font-size:30.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:-.8in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	mso-list:skip;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-element:frame;
+	mso-element-frame-width:303.85pt;
+	mso-element-frame-height:31.4pt;
+	mso-element-frame-hspace:9.0pt;
+	mso-element-wrap:around;
+	mso-element-anchor-vertical:paragraph;
+	mso-element-anchor-horizontal:page;
+	mso-element-left:215.85pt;
+	mso-element-top:.75pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-alt:solid windowtext 1.5pt;
+	padding:0in;
+	mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt;
+	mso-border-shadow:yes;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:14.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	mso-bidi-language:AR-SA;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("IV-ch11-V1.1_files/header.html") fs;
+	mso-footnote-continuation-separator:url("IV-ch11-V1.1_files/header.html") fcs;
+	mso-endnote-separator:url("IV-ch11-V1.1_files/header.html") es;
+	mso-endnote-continuation-separator:url("IV-ch11-V1.1_files/header.html") ecs;
+	mso-facing-pages:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-even-header:url("IV-ch11-V1.1_files/header.html") eh2;
+	mso-header:url("IV-ch11-V1.1_files/header.html") h2;
+	mso-even-footer:url("IV-ch11-V1.1_files/header.html") ef2;
+	mso-footer:url("IV-ch11-V1.1_files/header.html") f2;
+	mso-first-header:url("IV-ch11-V1.1_files/header.html") fh2;
+	mso-first-footer:url("IV-ch11-V1.1_files/header.html") ff2;
+	mso-paper-source:0;}
+div.Section2
+	{page:Section2;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1901479173;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<div style='mso-element:para-border-div;border-top:solid windowtext 1.0pt;
+border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+padding:1.0pt 0in 1.0pt 0in'>
+
+<h1 style='margin-left:0in'><a name="_Toc126037142"></a><a name="_Toc459006738"></a><a
+name="_Toc458576214"></a><a name="_Toc454945638"></a><a name="_Toc454941814"></a><a
+name="_Toc418915229"></a><a name="_Toc418416275"><span style='mso-bookmark:
+_Toc418915229'><span style='mso-bookmark:_Toc454941814'><span style='mso-bookmark:
+_Toc454945638'><span style='mso-bookmark:_Toc458576214'><span style='mso-bookmark:
+_Toc459006738'><span style='mso-bookmark:_Toc126037142'>Chapter 11<br>
+MERGED REPORTS</span></span></span></span></span></span></a></h1>
+
+</div>
+
+<h2 style='margin-left:0in'><a name="_Toc126037143"></a><a name="_Toc459006739"></a><a
+name="_Toc458576215"></a><a name="_Toc454945639"></a><a name="_Toc454941815"></a><a
+name="_Toc418915230"></a><a name="_Toc418416276"><span style='mso-bookmark:
+_Toc418915230'><span style='mso-bookmark:_Toc454941815'><span style='mso-bookmark:
+_Toc454945639'><span style='mso-bookmark:_Toc458576215'><span style='mso-bookmark:
+_Toc459006739'><span style='mso-bookmark:_Toc126037143'>overview</span></span></span></span></span></span></a></h2>
+
+<p class=MsoNormal>A merged<!--[if supportFields]><span style='mso-element:
+field-begin'></span> XE &quot;Report:Merged:Definition&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Merged Report:Definition&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>report is a special case of an ACMS report
+where, in addition to the collection of parameter values, other reports are
+also collected and included with a report. This chapter describes the use of
+AGS IV in defining and changing merged reports<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Merged Report&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Report:Merged&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The following are examples of cases where merged reports may
+be used:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo1;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Different exceedances collected during the
+flight are combined into a single maintenance report at the end of the flight.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo1;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>A trend of all takeoff reports is collected into
+a single report.</p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037144"></a><a name="_Toc459006740"></a><a
+name="_Toc458576216"></a><a name="_Toc454945640"></a><a name="_Toc454941816"><span
+style='mso-bookmark:_Toc454945640'><span style='mso-bookmark:_Toc458576216'><span
+style='mso-bookmark:_Toc459006740'><span style='mso-bookmark:_Toc126037144'>Report
+Definition</span></span></span></span></a></h2>
+
+<p class=MsoNormal>In defining a merged report, in addition to its normal
+attributes (such as parameter collection, retention, etc. see the chapter on
+Reports), the “components” tab is used to call out other reports to be merged
+with the report (see Figure 11.1). These reports are called the components<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Report:Merged
+Report:Component&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Merged Report:Component&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>of the merged report and can be<span
+style='mso-spacerun:yes'>  </span><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1026" type="#_x0000_t75" style='width:42.75pt;
+ height:18.75pt' fillcolor="window">
+ <v:imagedata src="IV-ch11-V1.1_files/image002.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=25
+src="IV-ch11-V1.1_files/image002.jpg" v:shapes="_x0000_i1026"><![endif]><span
+style='mso-spacerun:yes'> </span></span>ed,<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Report:Merged:Add&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Merged Report:Add&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span><!--[if gte vml 1]><v:shape id="_x0000_i1027"
+ type="#_x0000_t75" style='width:42.75pt;height:19.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch11-V1.1_files/image004.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=26
+src="IV-ch11-V1.1_files/image004.jpg" v:shapes="_x0000_i1027"><![endif]><span
+style='mso-spacerun:yes'> </span>ed, <!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Report:Merged:Edit&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Merged Report:Edit&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if gte vml 1]><v:shape
+ id="_x0000_i1028" type="#_x0000_t75" style='width:41.25pt;height:15.75pt'
+ o:ole="" fillcolor="window">
+ <v:imagedata src="IV-ch11-V1.1_files/image006.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=55 height=21
+src="IV-ch11-V1.1_files/image006.jpg" v:shapes="_x0000_i1028"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1028"
+  DrawAspect="Content" ObjectID="_1200460401">
+ </o:OLEObject>
+</xml><![endif]-->ed, or <span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1029" type="#_x0000_t75" style='width:42.75pt;height:18.75pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch11-V1.1_files/image008.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=25
+src="IV-ch11-V1.1_files/image008.jpg" v:shapes="_x0000_i1029"><![endif]><span
+style='mso-spacerun:yes'> </span></span>ed<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Merged Report:Delete&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Report:Merged:Delete&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>from the list.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>In merging components with the parent report, hardcopy
+formats are always required for the components. Thus, in order to identify the
+component report, it is sufficient to call out the hardcopy formats of each
+component.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once a particular report is selected for <span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1030" type="#_x0000_t75"
+ style='width:42.75pt;height:18.75pt' fillcolor="window">
+ <v:imagedata src="IV-ch11-V1.1_files/image002.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=25
+src="IV-ch11-V1.1_files/image002.jpg" v:shapes="_x0000_i1030"><![endif]><span
+style='mso-spacerun:yes'> </span>ition</span> or <!--[if gte vml 1]><v:shape
+ id="_x0000_i1031" type="#_x0000_t75" style='width:42.75pt;height:19.5pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch11-V1.1_files/image004.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=26
+src="IV-ch11-V1.1_files/image004.jpg" v:shapes="_x0000_i1031"><![endif]><span
+style='mso-spacerun:yes'> </span>ion, a new window (see Figure 11.2) is opened
+where in addition to specifying the component report (through its hardcopy
+name), the following information must also be provided:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037145"></a><a name="_Toc459006741"></a><a
+name="_Toc458576217"></a><a name="_Toc454945641"></a><a name="_Toc454941817"></a><a
+name="_Toc418915231"></a><a name="_Toc418416277"><span style='mso-bookmark:
+_Toc418915231'><span style='mso-bookmark:_Toc454941817'><span style='mso-bookmark:
+_Toc454945641'><span style='mso-bookmark:_Toc458576217'><span style='mso-bookmark:
+_Toc459006741'><span style='mso-bookmark:_Toc126037145'>Flight Bias</span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Report:Merged:Flight
+Bias&quot; <![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span style='mso-spacerun:yes'> </span>XE
+&quot;Merged Report:Flight Bias&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal><!--[if gte vml 1]><o:wrapblock><v:shape id="_x0000_s1041"
+  type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+  margin-left:43.2pt;margin-top:0;width:330pt;height:217.5pt;z-index:1'
+  o:allowincell="f">
+  <v:imagedata src="IV-ch11-V1.1_files/image010.jpg" o:title=""/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0>
+  <tr>
+   <td width=58 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=440 height=290 src="IV-ch11-V1.1_files/image010.jpg" v:shapes="_x0000_s1041"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+For the component report included, this field specifies the flight leg from
+which the report should be picked (see Figure 11.2). The leg number is
+specified relative to the current flight, where 0 implies the current flight, 1
+the previous flight, and 2 implies two flights ago, etc.</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='mso-no-proof:yes'>Figure 11.1: Report Specification Window
+(Component Tab Shown).<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<h3><a name="_Toc126037146"></a><a name="_Toc459006742"></a><a
+name="_Toc458576218"></a><a name="_Toc454945642"></a><a name="_Toc454941818"></a><a
+name="_Toc418915232"></a><a name="_Toc418416278"><span style='mso-bookmark:
+_Toc418915232'><span style='mso-bookmark:_Toc454941818'><span style='mso-bookmark:
+_Toc454945642'><span style='mso-bookmark:_Toc458576218'><span style='mso-bookmark:
+_Toc459006742'><span style='mso-bookmark:_Toc126037146'>Copy Bias</span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Report:Merged:Copy Bias&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Merged Report:Copy Bias&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal>This field (used together with the Flight Bias) specifies
+the copy of the component report to include in the Merged Report (see Figure
+11.2). The selection is based on the copy number, where, 0 implies the most
+recent copy of the specified leg, 1 implies next oldest, etc. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037147"></a><a name="_Toc459006743"></a><a
+name="_Toc458576219"></a><a name="_Toc454945643"></a><a name="_Toc454941819"></a><a
+name="_Toc418915233"></a><a name="_Toc418416279"><span style='mso-bookmark:
+_Toc418915233'><span style='mso-bookmark:_Toc454941819'><span style='mso-bookmark:
+_Toc454945643'><span style='mso-bookmark:_Toc458576219'><span style='mso-bookmark:
+_Toc459006743'><span style='mso-bookmark:_Toc126037147'>Extension</span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Report:Merged:Extension&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Merged Report:Extension&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal>This field displays the extension of the selected hardcopy
+format name. The recommended extensions to use are the following:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>A<i style='mso-bidi-font-style:normal'>n</i><b
+style='mso-bidi-font-weight:normal'><span style='mso-spacerun:yes'>  </span>- </b>for
+ACARS, where <i style='mso-bidi-font-style:normal'>n </i>is between 0 and 9</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>M<i style='mso-bidi-font-style:normal'>n</i> - for display,
+where<i style='mso-bidi-font-style:normal'> n</i> is between 0 and 9</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>P<i style='mso-bidi-font-style:normal'>n</i><b
+style='mso-bidi-font-weight:normal'> </b>– for printer, where <i
+style='mso-bidi-font-style:normal'>n</i> is between 0 and 9.<span
+style='mso-spacerun:yes'>  </span>Numbers between 00 and 99 may also be used</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>R<i style='mso-bidi-font-style:normal'>n </i>- for recorder,
+such as QAR or OQAR or internal recorder</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>L<i style='mso-bidi-font-style:normal'>n</i> - Loader (ADL
+or PDL)</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>I<i style='mso-bidi-font-style:normal'>n</i><b
+style='mso-bidi-font-weight:normal'> </b>– IDD</p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span style='mso-no-proof:yes'><o:p>&nbsp;</o:p></span></b></p>
+
+<h3><a name="_Toc126037148"></a><a name="_Toc459006744"></a><a
+name="_Toc458576220"></a><a name="_Toc454945644"></a><a name="_Toc454941820"><span
+style='mso-bookmark:_Toc454945644'><span style='mso-bookmark:_Toc458576220'><span
+style='mso-bookmark:_Toc459006744'><span style='mso-bookmark:_Toc126037148'>Missing
+Report Text</span></span></span></span></a></h3>
+
+<p class=MsoNormal>As a component report, with the specified flight bias and
+copy, may not always be available, provisions are made for a filler where the
+component report would have appeared. As an example, if a merged report is
+defined to display 5 exceedances from the last 3 flight legs, a total of 15
+components, it would be very surprising to have all 15 exceedances available
+when the report is called out.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1032" type="#_x0000_t75"
+ style='width:312pt;height:249.75pt' fillcolor="window">
+ <v:imagedata src="IV-ch11-V1.1_files/image012.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=416 height=333
+src="IV-ch11-V1.1_files/image012.jpg" v:shapes="_x0000_i1032"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-no-proof:yes'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='mso-no-proof:yes'>Figure 11.2: Report Component
+Specification Tabs (General tab).</span></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>In Figure 11.2, the Missing Report Text<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Missing Report Text&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>and the associated options specify what should
+replace a component in such cases. The options may be selected independently
+for each output device.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>A check next to the name of the device indicates that a
+filler text is to be included. Otherwise it will be skipped. The text line field
+specifies the filler text, where needed.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>If the Pad is checked for a device, then the filler will be
+padded with blank characters to the length of the report being replaced.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1025" type="#_x0000_t75"
+ style='width:312pt;height:249.75pt' fillcolor="window">
+ <v:imagedata src="IV-ch11-V1.1_files/image014.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=416 height=333
+src="IV-ch11-V1.1_files/image014.jpg" v:shapes="_x0000_i1025"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-no-proof:yes'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='mso-no-proof:yes'>Figure 11.3: Report Component
+Specification Tabs (Missing Text tab).</span></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Hardcopy reports may contain new line characters. Checking
+the Concatenate box causes such characters to be skipped. This allows for
+designing merged reports where small component reports (of possibly one or two
+values) are placed on the same line, rather that having them occupy one or more
+lines.</p>
+
+</div>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always;
+mso-break-type:section-break'>
+</span>
+
+<div class=Section2>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

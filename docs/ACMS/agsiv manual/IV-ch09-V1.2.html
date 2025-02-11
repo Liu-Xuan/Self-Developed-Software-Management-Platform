@@ -1,0 +1,818 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="IV-ch09-V1.2_files/filelist.xml">
+<link rel=Edit-Time-Data href="IV-ch09-V1.2_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Chapter 9 - Build</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Site License</o:Author>
+  <o:Template>ch01-V2-f1.dot</o:Template>
+  <o:LastAuthor>dfreedman</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>12</o:TotalTime>
+  <o:LastPrinted>1999-06-15T20:38:00Z</o:LastPrinted>
+  <o:Created>2006-02-03T16:25:00Z</o:Created>
+  <o:LastSaved>2006-02-03T16:25:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>945</o:Words>
+  <o:Characters>5387</o:Characters>
+  <o:Company>Teledyne Controls</o:Company>
+  <o:Lines>44</o:Lines>
+  <o:Paragraphs>12</o:Paragraphs>
+  <o:CharactersWithSpaces>6320</o:CharactersWithSpaces>
+  <o:Version>11.6568</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="8" DLLVersion="513" NLCheck="0">1</w:ActiveWritingStyle>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Arial Narrow";
+	panose-1:2 11 5 6 2 2 2 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:"Heading 2";
+	margin-top:.5in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:-.8in;
+	page-break-before:always;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	border:none;
+	mso-border-top-alt:solid windowtext .5pt;
+	mso-border-bottom-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 0in 1.0pt 0in;
+	font-size:30.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:-.8in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	mso-list:skip;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-element:frame;
+	mso-element-frame-width:303.85pt;
+	mso-element-frame-height:31.4pt;
+	mso-element-frame-hspace:9.0pt;
+	mso-element-wrap:around;
+	mso-element-anchor-vertical:paragraph;
+	mso-element-anchor-horizontal:page;
+	mso-element-left:215.85pt;
+	mso-element-top:.75pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-alt:solid windowtext 1.5pt;
+	padding:0in;
+	mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt;
+	mso-border-shadow:yes;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("IV-ch09-V1.2_files/header.html") fs;
+	mso-footnote-continuation-separator:url("IV-ch09-V1.2_files/header.html") fcs;
+	mso-endnote-separator:url("IV-ch09-V1.2_files/header.html") es;
+	mso-endnote-continuation-separator:url("IV-ch09-V1.2_files/header.html") ecs;
+	mso-facing-pages:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-even-header:url("IV-ch09-V1.2_files/header.html") eh2;
+	mso-header:url("IV-ch09-V1.2_files/header.html") h2;
+	mso-even-footer:url("IV-ch09-V1.2_files/header.html") ef2;
+	mso-footer:url("IV-ch09-V1.2_files/header.html") f2;
+	mso-first-header:url("IV-ch09-V1.2_files/header.html") fh2;
+	mso-first-footer:url("IV-ch09-V1.2_files/header.html") ff2;
+	mso-paper-source:0;}
+div.Section2
+	{page:Section2;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:428505130;
+	mso-list-type:simple;
+	mso-list-template-ids:1312995208;}
+@list l0:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l0:level1 lfo2
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.25in;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050" fill="f" fillcolor="white"
+  stroke="f">
+  <v:fill color="white" on="f"/>
+  <v:stroke on="f"/>
+  <o:colormenu v:ext="edit" strokecolor="black"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<div style='mso-element:para-border-div;border-top:solid windowtext 1.0pt;
+border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+padding:1.0pt 0in 1.0pt 0in'>
+
+<h1 style='margin-left:0in'><a name="_Toc126037119"></a><a name="_Toc459006709"></a><a
+name="_Toc458576185"></a><a name="_Toc454945607"></a><a name="_Toc454941783"></a><a
+name="_Toc418915201"></a><a name="_Toc418416247"></a><a name="_Toc416767933"><span
+style='mso-bookmark:_Toc418416247'><span style='mso-bookmark:_Toc418915201'><span
+style='mso-bookmark:_Toc454941783'><span style='mso-bookmark:_Toc454945607'><span
+style='mso-bookmark:_Toc458576185'><span style='mso-bookmark:_Toc459006709'><span
+style='mso-bookmark:_Toc126037119'>Chapter 9<br>
+BUILD</span></span></span></span></span></span></span></a></h1>
+
+</div>
+
+<h2 style='margin-left:0in'><a name="_Toc126037120"></a><a name="_Toc459006710"></a><a
+name="_Toc458576186"></a><a name="_Toc454945608"></a><a name="_Toc454941784"></a><a
+name="_Toc418915202"></a><a name="_Toc418416248"></a><a name="_Toc416767934"><span
+style='mso-bookmark:_Toc418416248'><span style='mso-bookmark:_Toc418915202'><span
+style='mso-bookmark:_Toc454941784'><span style='mso-bookmark:_Toc454945608'><span
+style='mso-bookmark:_Toc458576186'><span style='mso-bookmark:_Toc459006710'><span
+style='mso-bookmark:_Toc126037120'>OVERVIEW</span></span></span></span></span></span></span></a></h2>
+
+<p class=MsoNormal>Once all the application requirements are entered into AGS
+IV, the application must be compiled<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Compile&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->, linked, and uploaded into
+the aircraft’s airborne unit. The transfer to the airborne unit is done by
+first copying the compiled and linked application to a media supported by the
+airborne unit, and then carrying the media to the aircraft. Most Teledyne
+airborne systems support floppy disk uploads through the Data Loader. Many also
+support faster uploads through integrated optical disk drives or PCMCIA cards.</p>
+
+<p class=MsoNormal style='mso-pagination:none'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-pagination:none'>The process of generating the
+upload media is initiated from the Build<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Application:Build&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>pull down menu selection of the Main Menu (see
+Figure 9.1).</p>
+
+<p class=MsoNormal style='mso-pagination:none'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in;mso-pagination:none'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1026" type="#_x0000_t75" style='width:261pt;
+ height:136.5pt'>
+ <v:imagedata src="IV-ch09-V1.2_files/image002.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=348 height=182
+src="IV-ch09-V1.2_files/image002.jpg" v:shapes="_x0000_i1026"><![endif]></p>
+
+<p class=MsoNormal style='mso-pagination:none'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-pagination:none'><b
+style='mso-bidi-font-weight:normal'>Figure 9.1: Main Menu with Build option
+selected.<o:p></o:p></b></p>
+
+<p class=MsoNormal style='mso-pagination:none'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-pagination:none'>The generation of an application
+for an aircraft type consists of the following steps:</p>
+
+<p class=MsoNormal style='mso-pagination:none'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-pagination:
+none;mso-list:l0 level1 lfo1'><![if !supportLists]><span style='mso-list:Ignore'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Entering<span
+style='mso-spacerun:yes'>  </span>(manually) the application requirements into
+AGS IV.</p>
+
+<p class=MsoNormal style='mso-pagination:none'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-pagination:
+none;mso-list:l0 level1 lfo2'><![if !supportLists]><span style='mso-list:Ignore'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Automatically
+translating the entered data into the C programming language, called “compile<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Application:Compile&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->” or “compilation”. </p>
+
+<p class=MsoNormal style='mso-pagination:none'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-pagination:
+none;mso-list:l0 level1 lfo2'><![if !supportLists]><span style='mso-list:Ignore'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Automatically
+translating the C language results into the machine language modules and
+linking the modules into one executable image, called “build” or “building”.</p>
+
+<p class=MsoNormal style='mso-pagination:none'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-pagination:
+none;mso-list:l0 level1 lfo2'><![if !supportLists]><span style='mso-list:Ignore'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Checking
+the results of the “compile” and “build” for any errors.</p>
+
+<p class=MsoNormal style='mso-pagination:none'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-pagination:
+none;mso-list:l0 level1 lfo2'><![if !supportLists]><span style='mso-list:Ignore'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Copying
+the results of the build onto the upload media.</p>
+
+<p class=MsoNormal style='mso-pagination:none'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-pagination:
+none;mso-list:l0 level1 lfo2'><![if !supportLists]><span style='mso-list:Ignore'>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Uploading
+the media into the airborne unit. The unit may be on the aircraft or in a test
+environment. </p>
+
+<p class=MsoNormal style='mso-pagination:none'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-pagination:none'>Usually, before using an
+application in a production environment, the application<span
+style='mso-spacerun:yes'>  </span>must be tested and verified (that it performs
+according to the desired specifications). Testing can be done in a lab or shop
+environment using simulators, on an aircraft as part of the ground check, or
+even a few legs of a flight check.</p>
+
+<p class=MsoNormal style='mso-pagination:none'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-pagination:none'>Even though all data entered
+into AGS IV are checked for validity at the time of data entry and the
+developer is notified of inconsistencies at that time, there are some cross
+checks that can be done only after all data is entered. This cross check is
+done as part of the compilation step (step 2 above). Any errors<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Application:Errors&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>found at this time are entered into a log file
+for inspection by the developer. </p>
+
+<h2 style='margin-left:0in;background:white'><a name="_Toc126037121"></a><a
+name="_Toc459006711"></a><a name="_Toc458576187"></a><a name="_Toc454945609"></a><a
+name="_Toc454941785"></a><a name="_Toc418915203"></a><a name="_Toc418416249"></a><a
+name="_Toc416767935"><span style='mso-bookmark:_Toc418416249'><span
+style='mso-bookmark:_Toc418915203'><span style='mso-bookmark:_Toc454941785'><span
+style='mso-bookmark:_Toc454945609'><span style='mso-bookmark:_Toc458576187'><span
+style='mso-bookmark:_Toc459006711'><span style='mso-bookmark:_Toc126037121'>CROSSCHECK
+DEFINITIONS</span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Crosscheck Definition&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h2>
+
+<p class=MsoNormal>This selection<!--[if supportFields]><span style='mso-element:
+field-begin'></span> XE &quot;Application:Crosscheck Definition&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>(see Figure 9.1) performs a compile<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Compile&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Application:Compile&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->-only step (step 2 above) and
+generates error messages<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Error Messages&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->, if any, in the log file.
+This allows the developer to see the error messages without having to wait for
+the build step to complete.</p>
+
+<p class=MsoNormal style='background:white'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='background:white'>If no errors are found, the full
+compile and build step must be performed before an upload diskette is
+generated.</p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037122"></a><a name="_Toc459006712"></a><a
+name="_Toc458576188"></a><a name="_Toc454945610"></a><a name="_Toc454941786"></a><a
+name="_Toc418915204"></a><a name="_Toc418416250"></a><a name="_Toc416767936"><span
+style='mso-bookmark:_Toc418416250'><span style='mso-bookmark:_Toc418915204'><span
+style='mso-bookmark:_Toc454941786'><span style='mso-bookmark:_Toc454945610'><span
+style='mso-bookmark:_Toc458576188'><span style='mso-bookmark:_Toc459006712'><span
+style='mso-bookmark:_Toc126037122'>BUILD</span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767936'><span style='mso-bookmark:_Toc418416250'><span
+style='mso-bookmark:_Toc418915204'><span style='mso-bookmark:_Toc454941786'><span
+style='mso-bookmark:_Toc454945610'><span style='mso-bookmark:_Toc458576188'><span
+style='mso-bookmark:_Toc459006712'><span style='mso-bookmark:_Toc126037122'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767936'><span
+style='mso-bookmark:_Toc418416250'><span style='mso-bookmark:_Toc418915204'><span
+style='mso-bookmark:_Toc454941786'><span style='mso-bookmark:_Toc454945610'><span
+style='mso-bookmark:_Toc458576188'><span style='mso-bookmark:_Toc459006712'><span
+style='mso-bookmark:_Toc126037122'> XE &quot;Build Application&quot; </span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767936'><span style='mso-bookmark:_Toc418416250'><span
+style='mso-bookmark:_Toc418915204'><span style='mso-bookmark:_Toc454941786'><span
+style='mso-bookmark:_Toc454945610'><span style='mso-bookmark:_Toc458576188'><span
+style='mso-bookmark:_Toc459006712'><span style='mso-bookmark:_Toc126037122'></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767936'><span style='mso-bookmark:_Toc418416250'><span
+style='mso-bookmark:_Toc418915204'><span style='mso-bookmark:_Toc454941786'><span
+style='mso-bookmark:_Toc454945610'><span style='mso-bookmark:_Toc458576188'><span
+style='mso-bookmark:_Toc459006712'><span style='mso-bookmark:_Toc126037122'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767936'><span style='mso-bookmark:_Toc418416250'><span style='mso-bookmark:
+_Toc418915204'><span style='mso-bookmark:_Toc454941786'><span style='mso-bookmark:
+_Toc454945610'><span style='mso-bookmark:_Toc458576188'><span style='mso-bookmark:
+_Toc459006712'><span style='mso-bookmark:_Toc126037122'></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767936'><span style='mso-bookmark:_Toc418416250'><span
+style='mso-bookmark:_Toc418915204'><span style='mso-bookmark:_Toc454941786'><span
+style='mso-bookmark:_Toc454945610'><span style='mso-bookmark:_Toc458576188'><span
+style='mso-bookmark:_Toc459006712'><span style='mso-bookmark:_Toc126037122'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767936'><span
+style='mso-bookmark:_Toc418416250'><span style='mso-bookmark:_Toc418915204'><span
+style='mso-bookmark:_Toc454941786'><span style='mso-bookmark:_Toc454945610'><span
+style='mso-bookmark:_Toc458576188'><span style='mso-bookmark:_Toc459006712'><span
+style='mso-bookmark:_Toc126037122'><span style='mso-spacerun:yes'> </span>XE
+&quot;Application:Build&quot; </span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767936'><span style='mso-bookmark:_Toc418416250'><span
+style='mso-bookmark:_Toc418915204'><span style='mso-bookmark:_Toc454941786'><span
+style='mso-bookmark:_Toc454945610'><span style='mso-bookmark:_Toc458576188'><span
+style='mso-bookmark:_Toc459006712'><span style='mso-bookmark:_Toc126037122'></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767936'><span style='mso-bookmark:_Toc418416250'><span
+style='mso-bookmark:_Toc418915204'><span style='mso-bookmark:_Toc454941786'><span
+style='mso-bookmark:_Toc454945610'><span style='mso-bookmark:_Toc458576188'><span
+style='mso-bookmark:_Toc459006712'><span style='mso-bookmark:_Toc126037122'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767936'><span style='mso-bookmark:_Toc418416250'><span style='mso-bookmark:
+_Toc418915204'><span style='mso-bookmark:_Toc454941786'><span style='mso-bookmark:
+_Toc454945610'><span style='mso-bookmark:_Toc458576188'><span style='mso-bookmark:
+_Toc459006712'><span style='mso-bookmark:_Toc126037122'><span
+style='mso-spacerun:yes'> </span>APPLICATION</span></span></span></span></span></span></span></span></h2>
+
+<p class=MsoNormal>This selection (see Figure 9.1) initiates a combined compile
+and build function (steps 2 and 3 above). The time needed to perform this
+request depends on the size of the application and the processing speed of the
+PC and may take from a few minutes to one or more hours. For a typical application
+on a modern Pentium processor this time would be less than 5 minutes. This step
+also generates the log file described later.</p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037123"></a><a name="_Toc459006714"></a><a
+name="_Toc458576190"></a><a name="_Toc454945612"></a><a name="_Toc454941788"></a><a
+name="_Toc418915206"></a><a name="_Toc418416252"></a><a name="_Toc416767938"><span
+style='mso-bookmark:_Toc418416252'><span style='mso-bookmark:_Toc418915206'><span
+style='mso-bookmark:_Toc454941788'><span style='mso-bookmark:_Toc454945612'><span
+style='mso-bookmark:_Toc458576190'><span style='mso-bookmark:_Toc459006714'><span
+style='mso-bookmark:_Toc126037123'><u>V</u>IEW BUILD</span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767938'><span style='mso-bookmark:_Toc418416252'><span
+style='mso-bookmark:_Toc418915206'><span style='mso-bookmark:_Toc454941788'><span
+style='mso-bookmark:_Toc454945612'><span style='mso-bookmark:_Toc458576190'><span
+style='mso-bookmark:_Toc459006714'><span style='mso-bookmark:_Toc126037123'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767938'><span
+style='mso-bookmark:_Toc418416252'><span style='mso-bookmark:_Toc418915206'><span
+style='mso-bookmark:_Toc454941788'><span style='mso-bookmark:_Toc454945612'><span
+style='mso-bookmark:_Toc458576190'><span style='mso-bookmark:_Toc459006714'><span
+style='mso-bookmark:_Toc126037123'> XE &quot;Build:Log&quot; </span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767938'><span style='mso-bookmark:_Toc418416252'><span
+style='mso-bookmark:_Toc418915206'><span style='mso-bookmark:_Toc454941788'><span
+style='mso-bookmark:_Toc454945612'><span style='mso-bookmark:_Toc458576190'><span
+style='mso-bookmark:_Toc459006714'><span style='mso-bookmark:_Toc126037123'></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767938'><span style='mso-bookmark:_Toc418416252'><span
+style='mso-bookmark:_Toc418915206'><span style='mso-bookmark:_Toc454941788'><span
+style='mso-bookmark:_Toc454945612'><span style='mso-bookmark:_Toc458576190'><span
+style='mso-bookmark:_Toc459006714'><span style='mso-bookmark:_Toc126037123'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767938'><span style='mso-bookmark:_Toc418416252'><span style='mso-bookmark:
+_Toc418915206'><span style='mso-bookmark:_Toc454941788'><span style='mso-bookmark:
+_Toc454945612'><span style='mso-bookmark:_Toc458576190'><span style='mso-bookmark:
+_Toc459006714'><span style='mso-bookmark:_Toc126037123'></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767938'><span style='mso-bookmark:_Toc418416252'><span
+style='mso-bookmark:_Toc418915206'><span style='mso-bookmark:_Toc454941788'><span
+style='mso-bookmark:_Toc454945612'><span style='mso-bookmark:_Toc458576190'><span
+style='mso-bookmark:_Toc459006714'><span style='mso-bookmark:_Toc126037123'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767938'><span
+style='mso-bookmark:_Toc418416252'><span style='mso-bookmark:_Toc418915206'><span
+style='mso-bookmark:_Toc454941788'><span style='mso-bookmark:_Toc454945612'><span
+style='mso-bookmark:_Toc458576190'><span style='mso-bookmark:_Toc459006714'><span
+style='mso-bookmark:_Toc126037123'><span style='mso-spacerun:yes'> </span>XE
+&quot;Build Log&quot; </span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767938'><span style='mso-bookmark:_Toc418416252'><span
+style='mso-bookmark:_Toc418915206'><span style='mso-bookmark:_Toc454941788'><span
+style='mso-bookmark:_Toc454945612'><span style='mso-bookmark:_Toc458576190'><span
+style='mso-bookmark:_Toc459006714'><span style='mso-bookmark:_Toc126037123'></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767938'><span style='mso-bookmark:_Toc418416252'><span
+style='mso-bookmark:_Toc418915206'><span style='mso-bookmark:_Toc454941788'><span
+style='mso-bookmark:_Toc454945612'><span style='mso-bookmark:_Toc458576190'><span
+style='mso-bookmark:_Toc459006714'><span style='mso-bookmark:_Toc126037123'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767938'><span style='mso-bookmark:_Toc418416252'><span style='mso-bookmark:
+_Toc418915206'><span style='mso-bookmark:_Toc454941788'><span style='mso-bookmark:
+_Toc454945612'><span style='mso-bookmark:_Toc458576190'><span style='mso-bookmark:
+_Toc459006714'><span style='mso-bookmark:_Toc126037123'><span
+style='mso-spacerun:yes'> </span>LOG</span></span></span></span></span></span></span></span></h2>
+
+<p class=MsoNormal>As part of the compile and build steps, a log of different
+actions taken during these steps is generated. This menu item (see Figure 9.1)
+activates the Word Pad utility of Windows and allows the developer to view this
+log file. Most lines in the log<!--[if supportFields]><span style='mso-element:
+field-begin'></span> XE &quot;Build:Log File&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>file<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Log File&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>are prefixed by the three character string “<span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>---</span>“.<span
+style='mso-spacerun:yes'>  </span>These are lines where the compilers or other
+AGS IV programs report on their normal activity.</p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal>Lines prefixed with the 3-character string “<span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>###</span>”
+are error<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Application:Error Messages&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Error Messages&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Build:Log File:Error Messages&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>messages indicating problems in the
+application. These errors must be corrected and the application compiled and
+built again before it is loaded into the airborne unit.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Lines prefixed with the 3-character string “<span
+style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>-##</span>”
+are warning<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Build:Log File:Warning Messages&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Warning Messages&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Application:Warning Messages&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>messages indicating possible problems in the
+application. These lines must be checked and if the application correctly
+reflects the developers’ intent they may be ignored, otherwise the application
+must be corrected.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>One common example of a warning is a missing hard-copy
+format for a report. If the developer does intend to send this report to all
+devices with no formatting, then this is not an error; otherwise the hard-copy
+format must be added to the application and the build process started again.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .75pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'>Lines prefixed by the
+3-character string “<span style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>--#</span>”
+are the counts of the number of errors and warnings. These numbers can be used
+to verify that all error counts are zero and all warning counts are the same as
+a prior build.<span style='mso-spacerun:yes'>  </span>If, for example, an
+application has 12 warnings (same as a prior build), and all 12 have been
+identified as acceptable in a prior build then, usually, they need not be checked
+in the current build.</p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Note that there are time stamps at critical points in the
+log file to allow timing analysis<!--[if supportFields]><span style='mso-element:
+field-begin'></span> XE &quot;Build:Log File:Analysis&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>of the build steps.</p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037124">view auto log</a></h2>
+
+<p class=MsoNormal>This option allows the user to view a text file that lists
+all changes made to the database, including parameters, triggers, reports,
+etc., with the date, time, and reason (modification, addition, deletion, when a
+build was attempted, when an upload disk was generated, etc.).</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:0in 4.0pt 1.0pt 4.0pt'>
+
+<h2 style='margin-left:0in;border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:0in 4.0pt 1.0pt 4.0pt'><a name="_Toc126037125"></a><a
+name="_Toc459006715"></a><a name="_Toc458576191"></a><a name="_Toc454945614"></a><a
+name="_Toc454941790"></a><a name="_Toc418915207"></a><a name="_Toc418416253"></a><a
+name="_Toc416767939"><span style='mso-bookmark:_Toc418416253'><span
+style='mso-bookmark:_Toc418915207'><span style='mso-bookmark:_Toc454941790'><span
+style='mso-bookmark:_Toc454945614'><span style='mso-bookmark:_Toc458576191'><span
+style='mso-bookmark:_Toc459006715'><span style='mso-bookmark:_Toc126037125'>GENERATE
+MAPS</span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Generate Maps&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Maps&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h2>
+
+</div>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoBodyText3 style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>AGS IV, in addition to
+generating an ACMS application for loading into an airborne unit, can also
+generate tables and maps that help with interpreting different outputs obtained
+from flight, such as the raw recorded data. These tables can also be used for
+driving customized test and simulation environments.<span
+style='mso-spacerun:yes'>   </span>Such maps are generated as part of the
+Build. This menu option toggles “on” and “off” the generation of such maps.
+Figure 9.2 shows the case where the generation of some maps are activated, as
+indicated by the check mark next to the menu option.</p>
+
+<p class=MsoBodyText3 style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoBodyText3 style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>Normally, the generation
+of the maps is turned off to reduce the build time and disk space, but can be
+turned on when needed.</p>
+
+<p class=MsoBodyText3 style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center;border:none;
+mso-border-alt:solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1025" type="#_x0000_t75"
+ style='width:111.75pt;height:87.75pt'>
+ <v:imagedata src="IV-ch09-V1.2_files/image004.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=149 height=117
+src="IV-ch09-V1.2_files/image004.jpg" v:shapes="_x0000_i1025"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;border:none;
+mso-border-alt:solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-no-proof:yes'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;border:none;
+mso-border-alt:solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><b
+style='mso-bidi-font-weight:normal'>Figure 9.2: Map Generation option of Build
+Menu.</b> </p>
+
+</div>
+
+</div>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always;
+mso-break-type:section-break'>
+</span>
+
+<div class=Section2>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoNormal align=center style='text-align:center;border:none;
+mso-border-alt:solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

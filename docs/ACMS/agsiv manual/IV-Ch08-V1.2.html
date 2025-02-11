@@ -1,0 +1,1451 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="IV-ch08-V1.2_files/filelist.xml">
+<link rel=Edit-Time-Data href="IV-ch08-V1.2_files/editdata.mso">
+<link rel=OLE-Object-Data href="IV-ch08-V1.2_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Chapter 8 - Triggers</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Site License</o:Author>
+  <o:Template>ch01-V2.3.dot</o:Template>
+  <o:LastAuthor>dfreedman</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>111</o:TotalTime>
+  <o:LastPrinted>2002-08-28T19:06:00Z</o:LastPrinted>
+  <o:Created>2006-02-03T16:25:00Z</o:Created>
+  <o:LastSaved>2006-02-03T16:25:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2031</o:Words>
+  <o:Characters>11579</o:Characters>
+  <o:Company>University of Waterloo</o:Company>
+  <o:Lines>96</o:Lines>
+  <o:Paragraphs>27</o:Paragraphs>
+  <o:CharactersWithSpaces>13583</o:CharactersWithSpaces>
+  <o:Version>11.6568</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:UpdateStylesOnOpen/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:"Heading 2";
+	margin-top:.5in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:-.8in;
+	page-break-before:always;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	border:none;
+	mso-border-top-alt:solid windowtext .5pt;
+	mso-border-bottom-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 0in 1.0pt 0in;
+	font-size:30.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:-.8in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-noshow:yes;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+span.MsoFootnoteReference
+	{mso-style-noshow:yes;
+	vertical-align:super;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-element:frame;
+	mso-element-frame-width:303.85pt;
+	mso-element-frame-height:31.4pt;
+	mso-element-frame-hspace:9.0pt;
+	mso-element-wrap:around;
+	mso-element-anchor-vertical:paragraph;
+	mso-element-anchor-horizontal:page;
+	mso-element-left:215.85pt;
+	mso-element-top:.75pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-noshow:yes;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:14.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	mso-bidi-language:AR-SA;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("IV-ch08-V1.2_files/header.html") fs;
+	mso-footnote-continuation-separator:url("IV-ch08-V1.2_files/header.html") fcs;
+	mso-endnote-separator:url("IV-ch08-V1.2_files/header.html") es;
+	mso-endnote-continuation-separator:url("IV-ch08-V1.2_files/header.html") ecs;
+	mso-facing-pages:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<div style='mso-element:para-border-div;border-top:solid windowtext 1.0pt;
+border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+padding:1.0pt 0in 1.0pt 0in'>
+
+<h1 style='margin-left:0in'><a name="_Toc126037104">Chapter 8<br clear=all>
+TRIGGERS</a></h1>
+
+</div>
+
+<h2 style='margin-left:0in'><a name="_Toc126037105"></a><a name="_Toc459006665"></a><a
+name="_Toc458576141"></a><a name="_Toc454945563"></a><a name="_Toc454941739"></a><a
+name="_Toc418915187"></a><a name="_Toc418416233"></a><a name="_Toc416767920"><span
+style='mso-bookmark:_Toc418416233'><span style='mso-bookmark:_Toc418915187'><span
+style='mso-bookmark:_Toc454941739'><span style='mso-bookmark:_Toc454945563'><span
+style='mso-bookmark:_Toc458576141'><span style='mso-bookmark:_Toc459006665'><span
+style='mso-bookmark:_Toc126037105'>OVERVIEW</span></span></span></span></span></span></span></a></h2>
+
+<p class=MsoNormal>Triggers<!--[if supportFields]><span style='mso-element:
+field-begin'></span> XE &quot;Trigger:Definition&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Triggers&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>are the user definable mechanisms that detect
+the occurrence of aircraft conditions requiring actions. Once the need for an
+action is detected, triggers also initiate those actions. Armed triggers are
+evaluated once every second. Evaluations<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Evaluations&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>are based on the value of the parameters
+acquired during that second or during previous seconds. Using the measured
+parameter values, triggers perform calculations and comparisons and, based on
+the results, may initiate actions such as activating reports, starting or
+stopping recording, routing reports to devices, sending messages to the ground
+or changing the text on display screens. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037106">Operational Details</a></h2>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'>To invoke the trigger
+definition </span>interface, select <u>T</u>rigger option from the <u>D</u>efine<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Menu:Define&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>pull down menu or click <i style='mso-bidi-font-style:
+normal'>Define-Trigger</i> button from the toolbar.<span
+style='mso-spacerun:yes'>  </span>A typical application window of AGSIV,
+indicating the position of the toolbar<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Toolbar&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>and the <i style='mso-bidi-font-style:normal'>trigger</i>
+button, is shown in Figure 8.1.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=left style='text-align:left'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1036" type="#_x0000_t75" style='width:174.75pt;
+ height:124.5pt'>
+ <v:imagedata src="IV-ch08-V1.2_files/image002.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=233 height=166
+src="IV-ch08-V1.2_files/image002.jpg" v:shapes="_x0000_i1036"><![endif]><span
+style='mso-spacerun:yes'>               </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1037" type="#_x0000_t75" style='width:178.5pt;height:121.5pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image004.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=238 height=162
+src="IV-ch08-V1.2_files/image004.jpg" v:shapes="_x0000_i1037"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 8.1: AGS IV Main Menu and Toolbar with <u>T</u>rigger Parameter
+selected.<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once the selection is made, a new window titled Trigger
+Selection, with a list of previously defined triggers is opened. Figure 8.2
+illustrates the trigger selection window where a typical trigger called
+CALCLOAD is shown being selected.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1025" type="#_x0000_t75" style='width:222.75pt;height:246pt'
+ o:ole="">
+ <v:imagedata src="IV-ch08-V1.2_files/image006.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=297 height=328
+src="IV-ch08-V1.2_files/image006.jpg" v:shapes="_x0000_i1025"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1200460270">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 8.2: A Dialogue Box for display of pre-defined triggers.<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span>Next to this list is
+a set of buttons that enable the user to:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span>define<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Define&quot;<![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--> <span style='mso-tab-count:
+1'> </span><!--[if gte vml 1]><v:shape id="_x0000_i1030" type="#_x0000_t75"
+ style='width:53.25pt;height:19.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image008.jpg" o:title="new"/>
+</v:shape><![endif]--><![if !vml]><img width=71 height=26
+src="IV-ch08-V1.2_files/image008.jpg" v:shapes="_x0000_i1030"><![endif]><span
+style='mso-spacerun:yes'>    </span>triggers<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:New&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->, </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1031" type="#_x0000_t75" style='width:52.5pt;height:18.75pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image010.jpg" o:title="open"/>
+</v:shape><![endif]--><![if !vml]><img width=70 height=25
+src="IV-ch08-V1.2_files/image010.jpg" v:shapes="_x0000_i1031"><![endif]><span
+style='mso-spacerun:yes'>    </span>existing<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Open&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>triggers for display or modification<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Modification&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->,</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1032" type="#_x0000_t75" style='width:52.5pt;height:19.5pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image012.jpg" o:title="copy"/>
+</v:shape><![endif]--><![if !vml]><img width=70 height=26
+src="IV-ch08-V1.2_files/image012.jpg" v:shapes="_x0000_i1032"><![endif]><span
+style='mso-spacerun:yes'>    </span>one trigger<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Copy&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>definition into another, </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1033" type="#_x0000_t75" style='width:52.5pt;height:19.5pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image014.jpg" o:title="delete"/>
+</v:shape><![endif]--><![if !vml]><img width=70 height=26
+src="IV-ch08-V1.2_files/image014.jpg" v:shapes="_x0000_i1033"><![endif]><span
+style='mso-spacerun:yes'>    </span>a defined trigger<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Delete&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->,</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1034" type="#_x0000_t75" style='width:53.25pt;height:18.75pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image016.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=71 height=25
+src="IV-ch08-V1.2_files/image016.jpg" v:shapes="_x0000_i1034"><![endif]><span
+style='mso-spacerun:yes'>    </span>an existing trigger,</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1035" type="#_x0000_t75" style='width:53.25pt;height:18.75pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image018.jpg" o:title="find"/>
+</v:shape><![endif]--><![if !vml]><img width=71 height=25
+src="IV-ch08-V1.2_files/image018.jpg" v:shapes="_x0000_i1035"><![endif]><span
+style='mso-spacerun:yes'>    </span>a trigger<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Find&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>or a group of triggers, or control of</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>the<span style='mso-spacerun:yes'>       </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:53.25pt;height:20.25pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image020.jpg" o:title="protection"/>
+</v:shape><![endif]--><![if !vml]><img width=71 height=27
+src="IV-ch08-V1.2_files/image020.jpg" v:shapes="_x0000_i1026"><![endif]><span
+style='mso-spacerun:yes'>   </span>status of a trigger definition.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Here are explanations of the functions of each of these
+buttons:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1027" type="#_x0000_t75"
+ style='width:53.25pt;height:19.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image008.jpg" o:title="new"/>
+</v:shape><![endif]--><![if !vml]><img width=71 height=26
+src="IV-ch08-V1.2_files/image008.jpg" v:shapes="_x0000_i1027"><![endif]><span
+style='mso-spacerun:yes'> </span>- This selection first inquires for a trigger<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Define&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Trigger:New&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>name (see Figure 8.3). The trigger name must
+be unique, starting with an alphabetic character, and may be followed by at most
+7 alphanumeric characters. Trigger<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Name&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>names starting with an under-score are defined
+by Teledyne.<span style='mso-spacerun:yes'>  </span>They are called reserved<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Reserved&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Reserved Triggers&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>triggers and may be modified by the
+application developer, but may not be deleted from the application. Once the
+trigger name is defined, the AGSIV software allows definition of the trigger as
+described later in this chapter.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Figure 8.3 below shows an example of a trigger name
+specification window.<span style='mso-spacerun:yes'>  </span>The developer
+should respond by entering a name (e.g. ‘CLIMB’) and clicking the OK button.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1028" type="#_x0000_t75" style='width:272.25pt;height:108.75pt'>
+ <v:imagedata src="IV-ch08-V1.2_files/image022.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=363 height=145
+src="IV-ch08-V1.2_files/image022.jpg" v:shapes="_x0000_i1028"><![endif]></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 8.3:A Dialogue Box for naming of a new trigger.<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1029" type="#_x0000_t75"
+ style='width:52.5pt;height:18.75pt' fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image010.jpg" o:title="open"/>
+</v:shape><![endif]--><![if !vml]><img width=70 height=25
+src="IV-ch08-V1.2_files/image010.jpg" v:shapes="_x0000_i1029"><![endif]><span
+style='mso-spacerun:yes'> </span>- To open<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Open&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>a trigger for inspection or modification<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Modification&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->, the trigger must be selected
+from the list of triggers in the system (see Figure 8.2). The list can be
+scrolled up or down using the arrows on the scroll bar. Once the trigger is
+opened, it can be modified, as described later in this chapter.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>If a trigger name is not known, the Find function, described
+below, can be used to find a particular trigger which may then be opened.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1038" type="#_x0000_t75"
+ style='width:52.5pt;height:19.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image012.jpg" o:title="copy"/>
+</v:shape><![endif]--><![if !vml]><img width=70 height=26
+src="IV-ch08-V1.2_files/image012.jpg" v:shapes="_x0000_i1038"><![endif]><span
+style='mso-spacerun:yes'> </span>- This function creates a new trigger while
+copying<!--[if supportFields]><span style='mso-element:field-begin'></span> XE
+&quot;Trigger:Copy&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>information from an existing trigger. First
+select the existing trigger, then select <!--[if gte vml 1]><v:shape id="_x0000_i1039"
+ type="#_x0000_t75" style='width:52.5pt;height:19.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image012.jpg" o:title="copy"/>
+</v:shape><![endif]--><![if !vml]><img width=70 height=26
+src="IV-ch08-V1.2_files/image012.jpg" v:shapes="_x0000_i1039"><![endif]><span
+style='mso-spacerun:yes'> </span>and enter the new trigger name when prompted
+(see Figure 8.3). The system will create a new trigger of specified name, with
+all other fields copied from the original trigger. The fields in the new
+trigger can now be modified as desired.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1040" type="#_x0000_t75"
+ style='width:52.5pt;height:19.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image014.jpg" o:title="delete"/>
+</v:shape><![endif]--><![if !vml]><img width=70 height=26
+src="IV-ch08-V1.2_files/image014.jpg" v:shapes="_x0000_i1040"><![endif]><span
+style='mso-spacerun:yes'> </span>- To delete<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Delete&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>a trigger, select the trigger, press <!--[if gte vml 1]><v:shape
+ id="_x0000_i1041" type="#_x0000_t75" style='width:52.5pt;height:19.5pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image014.jpg" o:title="delete"/>
+</v:shape><![endif]--><![if !vml]><img width=70 height=26
+src="IV-ch08-V1.2_files/image014.jpg" v:shapes="_x0000_i1041"><![endif]><span
+style='mso-spacerun:yes'> </span>and confirm the deletion.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1042" type="#_x0000_t75"
+ style='width:52.5pt;height:18.75pt' fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image024.jpg" o:title="rename"/>
+</v:shape><![endif]--><![if !vml]><img width=70 height=25
+src="IV-ch08-V1.2_files/image024.jpg" v:shapes="_x0000_i1042"><![endif]><span
+style='mso-spacerun:yes'> </span>-<span style='mso-spacerun:yes'>  </span>To
+rename<!--[if supportFields]><span style='mso-element:field-begin'></span> XE
+&quot;Trigger:Delete&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>a trigger, select the trigger and press <!--[if gte vml 1]><v:shape
+ id="_x0000_i1043" type="#_x0000_t75" style='width:52.5pt;height:18.75pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image024.jpg" o:title="rename"/>
+</v:shape><![endif]--><![if !vml]><img width=70 height=25
+src="IV-ch08-V1.2_files/image024.jpg" v:shapes="_x0000_i1043"><![endif]>. This
+opens a new window similar to the one in Figure 8.3. Here the new trigger name,
+starting with an alphabetic character, followed by at most 7 alphanumeric
+characters, must be specified. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1044" type="#_x0000_t75"
+ style='width:53.25pt;height:18.75pt' fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image018.jpg" o:title="find"/>
+</v:shape><![endif]--><![if !vml]><img width=71 height=25
+src="IV-ch08-V1.2_files/image018.jpg" v:shapes="_x0000_i1044"><![endif]><span
+style='mso-spacerun:yes'> </span>- This function allows searches<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Find&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Trigger:Search&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>of existing triggers, and creates a list of
+triggers that meet certain criteria. The list may consist of zero or more
+triggers.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The find function allows you to search for a trigger based
+on what you remember of its name or some particular text that exists in the
+trigger definition or the flight mode in which the trigger is active. In all
+cases, the known text should be entered in the relevant field and the <!--[if gte vml 1]><v:shape
+ id="_x0000_i1045" type="#_x0000_t75" style='width:50.25pt;height:19.5pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image025.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=26
+src="IV-ch08-V1.2_files/image025.gif" v:shapes="_x0000_i1045"><![endif]><span
+style='mso-spacerun:yes'> </span>button pressed. Note that two or even three of
+the above criteria might be specified at the same time. For example, it is
+possible to search for a trigger that contains the word “ENGINE” as part of the
+trigger name, contains the text “N1” and is active in flight mode 2 (see Figure
+8.4).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Note that it is possible to specify the words to match
+stand-alone text (by selecting the MATCH<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Search:Match&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>selection), or to accept the word even if it
+is contained as part of a larger string of text (by selecting the CONTAIN<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Search:Contain&quot;
+\i <![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>selection). In figure 8.4, if CONTAIN is
+selected then a trigger with the name ENGINE and containing the text N1SAVED
+would also be added to the list of triggers meeting the search criteria. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1046" type="#_x0000_t75" style='width:309pt;height:207pt'>
+ <v:imagedata src="IV-ch08-V1.2_files/image027.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=412 height=276
+src="IV-ch08-V1.2_files/image027.jpg" v:shapes="_x0000_i1046"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 8.4: A template Dialogue Box for selective search of a
+predefined parameter.<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span
+style='mso-spacerun:yes'>    </span><!--[if gte vml 1]><v:shape id="_x0000_i1047"
+ type="#_x0000_t75" style='width:53.25pt;height:20.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image020.jpg" o:title="protection"/>
+</v:shape><![endif]--><![if !vml]><img width=71 height=27
+src="IV-ch08-V1.2_files/image020.jpg" v:shapes="_x0000_i1047"><![endif]><span
+style='mso-spacerun:yes'>  </span>-<span style='mso-spacerun:yes'> 
+</span>Access to certain triggers requires a password.<span
+style='mso-spacerun:yes'>  </span>This button is used to activate a Dialogue
+Box,<span style='mso-spacerun:yes'>  </span>supply the password, and gain the
+needed access.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037107"></a><a name="_Toc459006675"></a><a
+name="_Toc458576151"></a><a name="_Toc454945573"></a><a name="_Toc454941749"></a><a
+name="_Toc418915198"></a><a name="_Toc418416244"></a><a name="_Toc416767930"><span
+style='mso-bookmark:_Toc418416244'><span style='mso-bookmark:_Toc418915198'><span
+style='mso-bookmark:_Toc454941749'><span style='mso-bookmark:_Toc454945573'><span
+style='mso-bookmark:_Toc458576151'><span style='mso-bookmark:_Toc459006675'><span
+style='mso-bookmark:_Toc126037107'>FLIGHT</span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767930'><span style='mso-bookmark:_Toc418416244'><span
+style='mso-bookmark:_Toc418915198'><span style='mso-bookmark:_Toc454941749'><span
+style='mso-bookmark:_Toc454945573'><span style='mso-bookmark:_Toc458576151'><span
+style='mso-bookmark:_Toc459006675'><span style='mso-bookmark:_Toc126037107'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767930'><span
+style='mso-bookmark:_Toc418416244'><span style='mso-bookmark:_Toc418915198'><span
+style='mso-bookmark:_Toc454941749'><span style='mso-bookmark:_Toc454945573'><span
+style='mso-bookmark:_Toc458576151'><span style='mso-bookmark:_Toc459006675'><span
+style='mso-bookmark:_Toc126037107'> XE &quot;Trigger:Flight Mode&quot; </span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767930'><span style='mso-bookmark:_Toc418416244'><span
+style='mso-bookmark:_Toc418915198'><span style='mso-bookmark:_Toc454941749'><span
+style='mso-bookmark:_Toc454945573'><span style='mso-bookmark:_Toc458576151'><span
+style='mso-bookmark:_Toc459006675'><span style='mso-bookmark:_Toc126037107'></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767930'><span style='mso-bookmark:_Toc418416244'><span
+style='mso-bookmark:_Toc418915198'><span style='mso-bookmark:_Toc454941749'><span
+style='mso-bookmark:_Toc454945573'><span style='mso-bookmark:_Toc458576151'><span
+style='mso-bookmark:_Toc459006675'><span style='mso-bookmark:_Toc126037107'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767930'><span style='mso-bookmark:_Toc418416244'><span style='mso-bookmark:
+_Toc418915198'><span style='mso-bookmark:_Toc454941749'><span style='mso-bookmark:
+_Toc454945573'><span style='mso-bookmark:_Toc458576151'><span style='mso-bookmark:
+_Toc459006675'><span style='mso-bookmark:_Toc126037107'><span
+style='mso-spacerun:yes'> </span>MODES</span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Flight Mode&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal>Some triggers need to be armed<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Arming&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>during the entire flight.<span
+style='mso-spacerun:yes'>  </span>Others may be needed only in certain flight
+modes. There are many reasons why a trigger might be armed only in selected
+flight modes; one reason is efficiency.<span style='mso-spacerun:yes'> 
+</span>For example, testing for hard landing conditions during cruise is
+obviously a needless load on the ACMS processor.<span
+style='mso-spacerun:yes'>  </span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>A second reason for disarming<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Disarming&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>a trigger in a flight mode is to prevent a
+nuisance activation. For example, a trigger that checks for low oil pressure,
+if active in a flight mode where the engines are off, might generate
+unnecessary low oil pressure reports.</p>
+
+<p class=MsoNormal>To select the flight<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Flight Mode:Selection&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>modes in which the trigger must be armed,
+click on the corresponding flight mode button(s)<span
+style='mso-spacerun:yes'>  </span>(see Figure 8.5). To disarm a trigger in a
+flight mode that it has been armed, click again on that flight mode button. The
+number of flight modes and their definitions are defined by the user, using the
+configure menu (described later in this manual). If actions are to be initiated
+only once after each condition is met, then the trigger must be disarmed after
+the actions are initiated.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Figure 8.5 shows an example of a trigger definition editor
+window with flight mode specification.<span style='mso-spacerun:yes'> 
+</span>The trigger named CLIMB is armed for execution during the 5 (Initial
+Climb) and 5.1 (Climb) flight modes.</p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1048" type="#_x0000_t75" style='width:410.25pt;height:192pt'
+ o:ole="">
+ <v:imagedata src="IV-ch08-V1.2_files/image029.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=547 height=256
+src="IV-ch08-V1.2_files/image029.jpg" v:shapes="_x0000_i1048"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1048"
+  DrawAspect="Content" ObjectID="_1200460271">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 8.5: Trigger Editor Window. The 5 and 5.1 flight modes during
+which the trigger is armed is shown selected (highlighted).<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<h3><a name="_Toc126037108"></a><a name="_Toc459006676"></a><a
+name="_Toc458576152"></a><a name="_Toc454945574"></a><a name="_Toc454941750"></a><a
+name="_Toc418915199"></a><a name="_Toc418416245"></a><a name="_Toc416767931"><span
+style='mso-bookmark:_Toc418416245'><span style='mso-bookmark:_Toc418915199'><span
+style='mso-bookmark:_Toc454941750'><span style='mso-bookmark:_Toc454945574'><span
+style='mso-bookmark:_Toc458576152'><span style='mso-bookmark:_Toc459006676'><span
+style='mso-bookmark:_Toc126037108'>PRIORIT</span></span></span></span></span></span></span></a><span
+style='mso-bookmark:_Toc454941750'><span style='mso-bookmark:_Toc454945574'><span
+style='mso-bookmark:_Toc458576152'><span style='mso-bookmark:_Toc459006676'><span
+style='mso-bookmark:_Toc126037108'>Y</span></span></span></span></span><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Priority&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Trigger Priority&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal>Once every second, during each flight mode, triggers that
+are armed for that flight mode execute<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Execution&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>from the beginning to the end. During this
+time the trigger conditions are tested and, when conditions hold, the
+corresponding actions will be initiated.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>In some instances the actions of one trigger depends on
+another trigger. In these cases, the order of execution<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Order of
+Execution&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-spacerun:yes'> </span>of the
+triggers becomes important. For example if one trigger is to calculate the
+value of a derived parameter and another trigger is to use that value, then the
+first trigger should be specified such that it is executed first. The trigger
+Priority, set by a sliding bar, is used to define the orders of execution (see
+Figure 8.5). Every second, all priority-one triggers are executed first. This
+is followed by the execution of priority two triggers and so on. Within a
+priority level there is no guarantee of the order of the execution of the
+triggers.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037109">Amtal Specifications</a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Toolbar&quot; \i <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h2>
+
+<p class=MsoNormal>Once a new trigger is opened, a trigger definition window<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Definition
+Window&quot; \i <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]-->, as shown in Figure 8.6, appears. A small part
+of the trigger definition text is shown below, the rest can be seen by
+scrolling the text.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>This trigger definition window has a toolbar at the top
+which permits the activation of a number of functions helpful to the
+composition of AMTAL triggers. Finally, there is a Description field, which
+carries commentary-type information about the trigger.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1049" type="#_x0000_t75" style='width:410.25pt;height:243.75pt'
+ o:ole="">
+ <v:imagedata src="IV-ch08-V1.2_files/image031.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=547 height=325
+src="IV-ch08-V1.2_files/image031.jpg" v:shapes="_x0000_i1049"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1049"
+  DrawAspect="Content" ObjectID="_1200460272">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 8.6: A typical Trigger Definition Window showing “power-on”
+triggering conditions.<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037110"></a><a name="_Toc459006668"></a><a
+name="_Toc458576144"></a><a name="_Toc454945566"></a><a name="_Toc454941742"></a><a
+name="_Toc418915191"></a><a name="_Toc418416237"></a><a name="_Toc416767924"><span
+style='mso-bookmark:_Toc418416237'><span style='mso-bookmark:_Toc418915191'><span
+style='mso-bookmark:_Toc454941742'><span style='mso-bookmark:_Toc454945566'><span
+style='mso-bookmark:_Toc458576144'><span style='mso-bookmark:_Toc459006668'><span
+style='mso-bookmark:_Toc126037110'>AIDS TO WRITING AMTAL</span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:AMTAL Aid&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;AMTAL&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;AMTAL:Aid&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h2>
+
+<p class=MsoNormal>In cases the trigger wizard is not powerful enough and AMTAL
+commands need to be entered in the trigger logic area (see Figure 8.6), the
+following seven buttons of the toolbar are used to help the application
+developer.<span style='mso-spacerun:yes'>  </span>The advantage of these
+buttons is to reduce the number of keystrokes and to refresh the developers’ memory.</p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037111"></a><a name="_Toc459006674"></a><a
+name="_Toc458576150"></a><a name="_Toc454945572"></a><a name="_Toc454941748"></a><a
+name="_Toc418915197"></a><a name="_Toc418416243"><span style='mso-bookmark:
+_Toc418915197'><span style='mso-bookmark:_Toc454941748'><span style='mso-bookmark:
+_Toc454945572'><span style='mso-bookmark:_Toc458576150'><span style='mso-bookmark:
+_Toc459006674'><span style='mso-bookmark:_Toc126037111'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1050" type="#_x0000_t75" style='width:21.75pt;height:19.5pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image032.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=29 height=26
+src="IV-ch08-V1.2_files/image032.gif" v:shapes="_x0000_i1050"><![endif]><span
+style='mso-spacerun:yes'>  </span>Insert</span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc418416243'><span style='mso-bookmark:_Toc418915197'><span
+style='mso-bookmark:_Toc454941748'><span style='mso-bookmark:_Toc454945572'><span
+style='mso-bookmark:_Toc458576150'><span style='mso-bookmark:_Toc459006674'><span
+style='mso-bookmark:_Toc126037111'></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc418416243'><span
+style='mso-bookmark:_Toc418915197'><span style='mso-bookmark:_Toc454941748'><span
+style='mso-bookmark:_Toc454945572'><span style='mso-bookmark:_Toc458576150'><span
+style='mso-bookmark:_Toc459006674'><span style='mso-bookmark:_Toc126037111'> XE
+&quot;AMTAL:AMTAL Aid:Insert Parameter Mnemonic&quot; </span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc418416243'><span style='mso-bookmark:_Toc418915197'><span
+style='mso-bookmark:_Toc454941748'><span style='mso-bookmark:_Toc454945572'><span
+style='mso-bookmark:_Toc458576150'><span style='mso-bookmark:_Toc459006674'><span
+style='mso-bookmark:_Toc126037111'></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc418416243'><span style='mso-bookmark:_Toc418915197'><span
+style='mso-bookmark:_Toc454941748'><span style='mso-bookmark:_Toc454945572'><span
+style='mso-bookmark:_Toc458576150'><span style='mso-bookmark:_Toc459006674'><span
+style='mso-bookmark:_Toc126037111'></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc418416243'><span style='mso-bookmark:_Toc418915197'><span style='mso-bookmark:
+_Toc454941748'><span style='mso-bookmark:_Toc454945572'><span style='mso-bookmark:
+_Toc458576150'><span style='mso-bookmark:_Toc459006674'><span style='mso-bookmark:
+_Toc126037111'><span style='mso-spacerun:yes'> </span>Parameter Mnemonic</span></span></span></span></span></span></span></h3>
+
+<p class=MsoNormal>Many commands need a parameter name to be typed in as part
+of the command. This button displays all parameters defined in the application,
+so that one may be selected (see Figure 8.7). The selected parameter name is
+automatically inserted at the cursor position.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoBodyText2 style='margin-left:1.0in;text-align:justify;text-indent:
+.5in'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1051"
+ type="#_x0000_t75" style='width:191.25pt;height:247.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image034.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=255 height=330
+src="IV-ch08-V1.2_files/image034.jpg" v:shapes="_x0000_i1051"><![endif]><span
+style='mso-spacerun:yes'>      </span><o:p></o:p></span></p>
+
+<p class=MsoBodyText2><span style='mso-no-proof:yes'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 8.7: Parameter selection insertion Dialogue Box.<o:p></o:p></b></p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037112"></a><a name="_Toc459006672"></a><a
+name="_Toc458576148"></a><a name="_Toc454945570"></a><a name="_Toc454941746"></a><a
+name="_Toc418915196"></a><a name="_Toc418416242"><span style='mso-bookmark:
+_Toc418915196'><span style='mso-bookmark:_Toc454941746'><span style='mso-bookmark:
+_Toc454945570'><span style='mso-bookmark:_Toc458576148'><span style='mso-bookmark:
+_Toc459006672'><span style='mso-bookmark:_Toc126037112'><span style='mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="_x0000_i1052" type="#_x0000_t75" style='width:21.75pt;
+ height:19.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image036.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=29 height=26
+src="IV-ch08-V1.2_files/image036.jpg" v:shapes="_x0000_i1052"><![endif]><span
+style='mso-spacerun:yes'>  </span></span>Insert</span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc418416242'><span style='mso-bookmark:_Toc418915196'><span
+style='mso-bookmark:_Toc454941746'><span style='mso-bookmark:_Toc454945570'><span
+style='mso-bookmark:_Toc458576148'><span style='mso-bookmark:_Toc459006672'><span
+style='mso-bookmark:_Toc126037112'></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc418416242'><span
+style='mso-bookmark:_Toc418915196'><span style='mso-bookmark:_Toc454941746'><span
+style='mso-bookmark:_Toc454945570'><span style='mso-bookmark:_Toc458576148'><span
+style='mso-bookmark:_Toc459006672'><span style='mso-bookmark:_Toc126037112'> XE
+&quot;AMTAL:AMTAL Aid:Insert Display Name&quot; </span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc418416242'><span style='mso-bookmark:_Toc418915196'><span
+style='mso-bookmark:_Toc454941746'><span style='mso-bookmark:_Toc454945570'><span
+style='mso-bookmark:_Toc458576148'><span style='mso-bookmark:_Toc459006672'><span
+style='mso-bookmark:_Toc126037112'></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc418416242'><span style='mso-bookmark:_Toc418915196'><span
+style='mso-bookmark:_Toc454941746'><span style='mso-bookmark:_Toc454945570'><span
+style='mso-bookmark:_Toc458576148'><span style='mso-bookmark:_Toc459006672'><span
+style='mso-bookmark:_Toc126037112'></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc418416242'><span style='mso-bookmark:_Toc418915196'><span style='mso-bookmark:
+_Toc454941746'><span style='mso-bookmark:_Toc454945570'><span style='mso-bookmark:
+_Toc458576148'><span style='mso-bookmark:_Toc459006672'><span style='mso-bookmark:
+_Toc126037112'><span style='mso-spacerun:yes'> </span>Screen Name</span></span></span></span></span></span></span></h3>
+
+<p class=MsoNormal>Some of the screen related commands in AMTAL need a screen
+name after the command. This button displays all the screens defined in the
+application so that one may be selected<span style='mso-spacerun:yes'> 
+</span>(see Figure 8.8). The selected screen name is automatically inserted at
+the cursor position.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1053" type="#_x0000_t75"
+ style='width:191.25pt;height:247.5pt'>
+ <v:imagedata src="IV-ch08-V1.2_files/image038.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=255 height=330
+src="IV-ch08-V1.2_files/image038.jpg" v:shapes="_x0000_i1053"><![endif]></span></p>
+
+<p class=MsoBodyText2><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 8.8: Screen selection insertion Dialogue Box.<o:p></o:p></b></p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037113"></a><a name="_Toc459006673"></a><a
+name="_Toc458576149"></a><a name="_Toc454945571"></a><a name="_Toc454941747"></a><a
+name="_Toc418915195"></a><a name="_Toc418416241"></a><a name="_Toc416767928"><span
+style='mso-bookmark:_Toc418416241'><span style='mso-bookmark:_Toc418915195'><span
+style='mso-bookmark:_Toc454941747'><span style='mso-bookmark:_Toc454945571'><span
+style='mso-bookmark:_Toc458576149'><span style='mso-bookmark:_Toc459006673'><span
+style='mso-bookmark:_Toc126037113'><!--[if gte vml 1]><v:shape id="_x0000_i1054"
+ type="#_x0000_t75" style='width:21.75pt;height:19.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image039.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=29 height=26
+src="IV-ch08-V1.2_files/image039.gif" v:shapes="_x0000_i1054"><![endif]><span
+style='mso-spacerun:yes'>  </span>Insert</span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767928'><span style='mso-bookmark:_Toc418416241'><span
+style='mso-bookmark:_Toc418915195'><span style='mso-bookmark:_Toc454941747'><span
+style='mso-bookmark:_Toc454945571'><span style='mso-bookmark:_Toc458576149'><span
+style='mso-bookmark:_Toc459006673'><span style='mso-bookmark:_Toc126037113'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767928'><span
+style='mso-bookmark:_Toc418416241'><span style='mso-bookmark:_Toc418915195'><span
+style='mso-bookmark:_Toc454941747'><span style='mso-bookmark:_Toc454945571'><span
+style='mso-bookmark:_Toc458576149'><span style='mso-bookmark:_Toc459006673'><span
+style='mso-bookmark:_Toc126037113'> XE &quot;AMTAL:AMTAL Aid:Insert Report
+Name&quot; </span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767928'><span style='mso-bookmark:_Toc418416241'><span
+style='mso-bookmark:_Toc418915195'><span style='mso-bookmark:_Toc454941747'><span
+style='mso-bookmark:_Toc454945571'><span style='mso-bookmark:_Toc458576149'><span
+style='mso-bookmark:_Toc459006673'><span style='mso-bookmark:_Toc126037113'></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767928'><span style='mso-bookmark:_Toc418416241'><span
+style='mso-bookmark:_Toc418915195'><span style='mso-bookmark:_Toc454941747'><span
+style='mso-bookmark:_Toc454945571'><span style='mso-bookmark:_Toc458576149'><span
+style='mso-bookmark:_Toc459006673'><span style='mso-bookmark:_Toc126037113'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767928'><span style='mso-bookmark:_Toc418416241'><span style='mso-bookmark:
+_Toc418915195'><span style='mso-bookmark:_Toc454941747'><span style='mso-bookmark:
+_Toc454945571'><span style='mso-bookmark:_Toc458576149'><span style='mso-bookmark:
+_Toc459006673'><span style='mso-bookmark:_Toc126037113'><span
+style='mso-spacerun:yes'> </span>Report Name</span></span></span></span></span></span></span></span></h3>
+
+<p class=MsoNormal>Some of the report related commands need a report ID to be
+typed in after the command. This button displays all report IDs defined in the
+application, so that one may be selected (see Figure 8.9). The selected report
+ID is automatically inserted at the cursor position.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in'><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1055" type="#_x0000_t75"
+ style='width:190.5pt;height:247.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image041.jpg" o:title="AGS95 #11"/>
+</v:shape><![endif]--><![if !vml]><img width=254 height=330
+src="IV-ch08-V1.2_files/image041.jpg" v:shapes="_x0000_i1055"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 8.9: Report selection insertion Dialogue Box.<o:p></o:p></b></p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037114"></a><a name="_Toc459006671"></a><a
+name="_Toc458576147"></a><a name="_Toc454945569"></a><a name="_Toc454941745"></a><a
+name="_Toc418915194"></a><a name="_Toc418416240"></a><a name="_Toc416767927"><span
+style='mso-bookmark:_Toc418416240'><span style='mso-bookmark:_Toc418915194'><span
+style='mso-bookmark:_Toc454941745'><span style='mso-bookmark:_Toc454945569'><span
+style='mso-bookmark:_Toc458576147'><span style='mso-bookmark:_Toc459006671'><span
+style='mso-bookmark:_Toc126037114'><!--[if gte vml 1]><v:shape id="_x0000_i1056"
+ type="#_x0000_t75" style='width:21.75pt;height:19.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image042.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=29 height=26
+src="IV-ch08-V1.2_files/image042.gif" v:shapes="_x0000_i1056"><![endif]><span
+style='mso-spacerun:yes'>  </span>Insert</span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767927'><span style='mso-bookmark:_Toc418416240'><span
+style='mso-bookmark:_Toc418915194'><span style='mso-bookmark:_Toc454941745'><span
+style='mso-bookmark:_Toc454945569'><span style='mso-bookmark:_Toc458576147'><span
+style='mso-bookmark:_Toc459006671'><span style='mso-bookmark:_Toc126037114'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767927'><span
+style='mso-bookmark:_Toc418416240'><span style='mso-bookmark:_Toc418915194'><span
+style='mso-bookmark:_Toc454941745'><span style='mso-bookmark:_Toc454945569'><span
+style='mso-bookmark:_Toc458576147'><span style='mso-bookmark:_Toc459006671'><span
+style='mso-bookmark:_Toc126037114'> XE &quot;AMTAL:AMTAL Aid:Insert Trigger
+Name&quot; </span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767927'><span style='mso-bookmark:_Toc418416240'><span
+style='mso-bookmark:_Toc418915194'><span style='mso-bookmark:_Toc454941745'><span
+style='mso-bookmark:_Toc454945569'><span style='mso-bookmark:_Toc458576147'><span
+style='mso-bookmark:_Toc459006671'><span style='mso-bookmark:_Toc126037114'></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767927'><span style='mso-bookmark:_Toc418416240'><span
+style='mso-bookmark:_Toc418915194'><span style='mso-bookmark:_Toc454941745'><span
+style='mso-bookmark:_Toc454945569'><span style='mso-bookmark:_Toc458576147'><span
+style='mso-bookmark:_Toc459006671'><span style='mso-bookmark:_Toc126037114'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767927'><span style='mso-bookmark:_Toc418416240'><span style='mso-bookmark:
+_Toc418915194'><span style='mso-bookmark:_Toc454941745'><span style='mso-bookmark:
+_Toc454945569'><span style='mso-bookmark:_Toc458576147'><span style='mso-bookmark:
+_Toc459006671'><span style='mso-bookmark:_Toc126037114'><span
+style='mso-spacerun:yes'> </span>Trigger</span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767927'><span style='mso-bookmark:_Toc418416240'><span
+style='mso-bookmark:_Toc418915194'><span style='mso-bookmark:_Toc454941745'><span
+style='mso-bookmark:_Toc454945569'><span style='mso-bookmark:_Toc458576147'><span
+style='mso-bookmark:_Toc459006671'><span style='mso-bookmark:_Toc126037114'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767927'><span
+style='mso-bookmark:_Toc418416240'><span style='mso-bookmark:_Toc418915194'><span
+style='mso-bookmark:_Toc454941745'><span style='mso-bookmark:_Toc454945569'><span
+style='mso-bookmark:_Toc458576147'><span style='mso-bookmark:_Toc459006671'><span
+style='mso-bookmark:_Toc126037114'> XE &quot;Trigger&quot; </span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767927'><span style='mso-bookmark:_Toc418416240'><span
+style='mso-bookmark:_Toc418915194'><span style='mso-bookmark:_Toc454941745'><span
+style='mso-bookmark:_Toc454945569'><span style='mso-bookmark:_Toc458576147'><span
+style='mso-bookmark:_Toc459006671'><span style='mso-bookmark:_Toc126037114'></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767927'><span style='mso-bookmark:_Toc418416240'><span
+style='mso-bookmark:_Toc418915194'><span style='mso-bookmark:_Toc454941745'><span
+style='mso-bookmark:_Toc454945569'><span style='mso-bookmark:_Toc458576147'><span
+style='mso-bookmark:_Toc459006671'><span style='mso-bookmark:_Toc126037114'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767927'><span style='mso-bookmark:_Toc418416240'><span style='mso-bookmark:
+_Toc418915194'><span style='mso-bookmark:_Toc454941745'><span style='mso-bookmark:
+_Toc454945569'><span style='mso-bookmark:_Toc458576147'><span style='mso-bookmark:
+_Toc459006671'><span style='mso-bookmark:_Toc126037114'><span
+style='mso-spacerun:yes'> </span>Name</span></span></span></span></span></span></span></span></h3>
+
+<p class=MsoNormal>The arm and disarm commands in AMTAL need a trigger name to
+be typed in after the command. This button displays all triggers defined in the
+application, so that one may be selected (see Figure 8.10, left). The selected
+trigger name is automatically inserted at the cursor position.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1057" type="#_x0000_t75" style='width:191.25pt;height:247.5pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image044.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=255 height=330
+src="IV-ch08-V1.2_files/image044.jpg" v:shapes="_x0000_i1057"><![endif]><span
+style='mso-spacerun:yes'>  </span><span style='mso-spacerun:yes'>    </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1058" type="#_x0000_t75" style='width:191.25pt;height:247.5pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image046.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=255 height=330
+src="IV-ch08-V1.2_files/image046.jpg" v:shapes="_x0000_i1058"><![endif]></span></p>
+
+<p class=MsoBodyText2><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 8.10: (left) Trigger selection insertion Dialogue Box. <o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>(right) Recording Map insertion selection Dialogue Box.<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037115"></a><a name="_Toc459006670"></a><a
+name="_Toc458576146"></a><a name="_Toc454945568"></a><a name="_Toc454941744"></a><a
+name="_Toc418915193"></a><a name="_Toc418416239"></a><a name="_Toc416767926"><span
+style='mso-bookmark:_Toc418416239'><span style='mso-bookmark:_Toc418915193'><span
+style='mso-bookmark:_Toc454941744'><span style='mso-bookmark:_Toc454945568'><span
+style='mso-bookmark:_Toc458576146'><span style='mso-bookmark:_Toc459006670'><span
+style='mso-bookmark:_Toc126037115'><!--[if gte vml 1]><v:shape id="_x0000_i1059"
+ type="#_x0000_t75" style='width:21.75pt;height:19.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image047.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=29 height=26
+src="IV-ch08-V1.2_files/image047.gif" v:shapes="_x0000_i1059"><![endif]><span
+style='mso-spacerun:yes'>  </span>Insert</span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767926'><span style='mso-bookmark:_Toc418416239'><span
+style='mso-bookmark:_Toc418915193'><span style='mso-bookmark:_Toc454941744'><span
+style='mso-bookmark:_Toc454945568'><span style='mso-bookmark:_Toc458576146'><span
+style='mso-bookmark:_Toc459006670'><span style='mso-bookmark:_Toc126037115'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767926'><span
+style='mso-bookmark:_Toc418416239'><span style='mso-bookmark:_Toc418915193'><span
+style='mso-bookmark:_Toc454941744'><span style='mso-bookmark:_Toc454945568'><span
+style='mso-bookmark:_Toc458576146'><span style='mso-bookmark:_Toc459006670'><span
+style='mso-bookmark:_Toc126037115'> XE &quot;AMTAL:AMTAL Aid:Insert Recording
+Map&quot; </span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767926'><span style='mso-bookmark:_Toc418416239'><span
+style='mso-bookmark:_Toc418915193'><span style='mso-bookmark:_Toc454941744'><span
+style='mso-bookmark:_Toc454945568'><span style='mso-bookmark:_Toc458576146'><span
+style='mso-bookmark:_Toc459006670'><span style='mso-bookmark:_Toc126037115'></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767926'><span style='mso-bookmark:_Toc418416239'><span
+style='mso-bookmark:_Toc418915193'><span style='mso-bookmark:_Toc454941744'><span
+style='mso-bookmark:_Toc454945568'><span style='mso-bookmark:_Toc458576146'><span
+style='mso-bookmark:_Toc459006670'><span style='mso-bookmark:_Toc126037115'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767926'><span style='mso-bookmark:_Toc418416239'><span style='mso-bookmark:
+_Toc418915193'><span style='mso-bookmark:_Toc454941744'><span style='mso-bookmark:
+_Toc454945568'><span style='mso-bookmark:_Toc458576146'><span style='mso-bookmark:
+_Toc459006670'><span style='mso-bookmark:_Toc126037115'><span
+style='mso-spacerun:yes'> </span>Recording Map</span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording Map&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal>Some of the recording commands in AMTAL need a recording map
+name after the command. This button displays all the recording maps defined in
+the application so that one may be selected<span style='mso-spacerun:yes'> 
+</span>(see Figure 8.12, right). The selected map name is automatically inserted
+at the cursor position.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037116"></a><a name="_Toc459006669"></a><a
+name="_Toc458576145"></a><a name="_Toc454945567"></a><a name="_Toc454941743"></a><a
+name="_Toc418915192"></a><a name="_Toc418416238"></a><a name="_Toc416767925"><span
+style='mso-bookmark:_Toc418416238'><span style='mso-bookmark:_Toc418915192'><span
+style='mso-bookmark:_Toc454941743'><span style='mso-bookmark:_Toc454945567'><span
+style='mso-bookmark:_Toc458576145'><span style='mso-bookmark:_Toc459006669'><span
+style='mso-bookmark:_Toc126037116'><!--[if gte vml 1]><v:shape id="_x0000_i1060"
+ type="#_x0000_t75" style='width:23.25pt;height:21pt' fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image048.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=31 height=28
+src="IV-ch08-V1.2_files/image048.gif" v:shapes="_x0000_i1060"><![endif]><span
+style='mso-spacerun:yes'>  </span>Insert</span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767925'><span style='mso-bookmark:_Toc418416238'><span
+style='mso-bookmark:_Toc418915192'><span style='mso-bookmark:_Toc454941743'><span
+style='mso-bookmark:_Toc454945567'><span style='mso-bookmark:_Toc458576145'><span
+style='mso-bookmark:_Toc459006669'><span style='mso-bookmark:_Toc126037116'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767925'><span
+style='mso-bookmark:_Toc418416238'><span style='mso-bookmark:_Toc418915192'><span
+style='mso-bookmark:_Toc454941743'><span style='mso-bookmark:_Toc454945567'><span
+style='mso-bookmark:_Toc458576145'><span style='mso-bookmark:_Toc459006669'><span
+style='mso-bookmark:_Toc126037116'> XE &quot;Trigger:AMTAL Aid:Insert AMTAL
+Statement&quot; </span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767925'><span style='mso-bookmark:_Toc418416238'><span
+style='mso-bookmark:_Toc418915192'><span style='mso-bookmark:_Toc454941743'><span
+style='mso-bookmark:_Toc454945567'><span style='mso-bookmark:_Toc458576145'><span
+style='mso-bookmark:_Toc459006669'><span style='mso-bookmark:_Toc126037116'></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767925'><span style='mso-bookmark:_Toc418416238'><span
+style='mso-bookmark:_Toc418915192'><span style='mso-bookmark:_Toc454941743'><span
+style='mso-bookmark:_Toc454945567'><span style='mso-bookmark:_Toc458576145'><span
+style='mso-bookmark:_Toc459006669'><span style='mso-bookmark:_Toc126037116'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767925'><span style='mso-bookmark:_Toc418416238'><span style='mso-bookmark:
+_Toc418915192'><span style='mso-bookmark:_Toc454941743'><span style='mso-bookmark:
+_Toc454945567'><span style='mso-bookmark:_Toc458576145'><span style='mso-bookmark:
+_Toc459006669'><span style='mso-bookmark:_Toc126037116'><span
+style='mso-spacerun:yes'> </span>AMTAL Statement</span></span></span></span></span></span></span></span></h3>
+
+<p class=MsoNormal>This button displays all of the AMTAL commands<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;AMTAL Commands&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>(see Figure 8.11). If one of the commands is
+selected, it will be copied to the current cursor position. The possible commands
+are grouped into Assignment<!--[if supportFields]><span style='mso-element:
+field-begin'></span> XE &quot;AMTAL Commands:Assignment&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->, Report Control<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;AMTAL Commands:Report
+Control&quot; <![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->,
+Recording<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;AMTAL Commands:Recording&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->, Flow Control<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;AMTAL Commands:Flow
+Control&quot; <![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->,
+Special Action<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;AMTAL Commands:Special Action&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->, Functions<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;AMTAL Commands:Functions&quot;
+<![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>and Calls<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;AMTAL Commands:Calls&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->. Since there are a large
+number of Called functions, the list is separated into the group starting with
+the letters ‘a’ to ‘d’ and another group starting with letters ‘e’ to ‘u’. The
+individual commands and their functions are described in the AMTAL Users
+Manual.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1061" type="#_x0000_t75"
+ style='width:185.25pt;height:225.75pt' fillcolor="window">
+ <v:imagedata src="IV-ch08-V1.2_files/image050.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=247 height=301
+src="IV-ch08-V1.2_files/image050.jpg" v:shapes="_x0000_i1061"><![endif]></span><b
+style='mso-bidi-font-weight:normal'><o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 8.11: AMTAL Trigger Command Dialogue Box.</b></p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3 style='margin-left:.25in;tab-stops:list .5in'><a name="_Toc416767929"></a><a
+name="_Toc126037117"><span style='mso-bookmark:_Toc416767929'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1062" type="#_x0000_t75" style='width:20.25pt;height:17.25pt'
+ o:ole="" o:bullet="t">
+ <v:imagedata src="IV-ch08-V1.2_files/image052.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=27 height=23
+src="IV-ch08-V1.2_files/image052.jpg" alt="*" v:shapes="_x0000_i1062"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1062"
+  DrawAspect="Content" ObjectID="_1200460274">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>  </span>Insert SAR</span></a><span
+style='mso-bookmark:_Toc416767929'></span></h3>
+
+<p class=MsoNormal style='margin-left:.25in;tab-stops:list .5in'><span
+style='mso-bookmark:_Toc416767929'>For FDIMU only.<span
+style='mso-spacerun:yes'>  </span>The SAR recording commands in AMTAL need a
+SAR map name after the command. This button displays all the SAR maps defined
+in the application so that one may be selected. The selected map name is
+automatically inserted at the cursor position (see figure 8.12).</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;tab-stops:list .5in'><span
+style='mso-bookmark:_Toc416767929'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;tab-stops:list .5in'><span
+style='mso-bookmark:_Toc416767929'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;tab-stops:list .5in'><span
+style='mso-bookmark:_Toc416767929'><span style='mso-tab-count:3'>                              </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1063" type="#_x0000_t75" style='width:191.25pt;height:247.5pt'>
+ <v:imagedata src="IV-ch08-V1.2_files/image054.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=255 height=330
+src="IV-ch08-V1.2_files/image054.jpg" v:shapes="_x0000_i1063"><![endif]></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;tab-stops:list .5in'><span
+style='mso-bookmark:_Toc416767929'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:_Toc416767929'><b style='mso-bidi-font-weight:normal'>Figure
+8.12: SAR Map Dialogue Box.</b></span></p>
+
+<p class=MsoNormal align=center style='margin-left:.25in;text-align:center;
+tab-stops:list .5in'><span style='mso-bookmark:_Toc416767929'><o:p>&nbsp;</o:p></span></p>
+
+<span style='mso-bookmark:_Toc416767929'></span>
+
+<h2 style='margin-left:0in'><a name="_Toc126037118"></a><a name="_Toc459006677"></a><a
+name="_Toc458576153"></a><a name="_Toc454945575"></a><a name="_Toc454941751"></a><a
+name="_Toc418915200"></a><a name="_Toc418416246"></a><a name="_Toc416767932"><span
+style='mso-bookmark:_Toc418416246'><span style='mso-bookmark:_Toc418915200'><span
+style='mso-bookmark:_Toc454941751'><span style='mso-bookmark:_Toc454945575'><span
+style='mso-bookmark:_Toc458576153'><span style='mso-bookmark:_Toc459006677'><span
+style='mso-bookmark:_Toc126037118'>TRIGGER LOGIC</span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Trigger:Logic&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Trigger Logic&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h2>
+
+<p class=MsoNormal>The white area at the lower end of the trigger definition
+window (see Figure 8.6) is for entering the actual trigger logic. This can be
+done by typing in the trigger logic using the keyboard and the insertion tools
+described above.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The AMTAL Users Manual should be used as a reference when
+writing the AMTAL trigger logic. As a style suggestion, we recommend that a
+history section, in the form of comments, be kept at the beginning of the
+trigger logic, for each change to the trigger. In this part, for each
+significant change in the trigger, a line should be added to the history
+indicating the date, author, and a description of the change. It is also
+advisable to include the version of the application where the change is made
+(see Figure 8.6)</p>
+
+</div>
+
+</body>
+
+</html>

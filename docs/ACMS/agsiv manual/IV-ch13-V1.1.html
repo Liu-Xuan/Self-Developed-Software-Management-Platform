@@ -1,0 +1,533 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="IV-ch13-V1.1_files/filelist.xml">
+<link rel=Edit-Time-Data href="IV-ch13-V1.1_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Chapter 13 - Advanced Maintenance</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Site License</o:Author>
+  <o:Template>ch01-V2-f1.dot</o:Template>
+  <o:LastAuthor>dfreedman</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>3</o:TotalTime>
+  <o:LastPrinted>1999-05-16T21:13:00Z</o:LastPrinted>
+  <o:Created>2006-02-03T16:28:00Z</o:Created>
+  <o:LastSaved>2006-02-03T16:28:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>258</o:Words>
+  <o:Characters>1475</o:Characters>
+  <o:Company>Teledyne Controls</o:Company>
+  <o:Lines>12</o:Lines>
+  <o:Paragraphs>3</o:Paragraphs>
+  <o:CharactersWithSpaces>1730</o:CharactersWithSpaces>
+  <o:Version>11.6568</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="8" DLLVersion="513" NLCheck="0">1</w:ActiveWritingStyle>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Arial Narrow";
+	panose-1:2 11 5 6 2 2 2 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:"Heading 2";
+	margin-top:.5in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:-.8in;
+	page-break-before:always;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	border:none;
+	mso-border-top-alt:solid windowtext .5pt;
+	mso-border-bottom-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 0in 1.0pt 0in;
+	font-size:30.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:-.8in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h6
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-element:frame;
+	mso-element-frame-width:303.85pt;
+	mso-element-frame-height:31.4pt;
+	mso-element-frame-hspace:9.0pt;
+	mso-element-wrap:around;
+	mso-element-anchor-vertical:paragraph;
+	mso-element-anchor-horizontal:page;
+	mso-element-left:215.85pt;
+	mso-element-top:.75pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:22.5pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-22.5pt;
+	mso-pagination:widow-orphan;
+	tab-stops:22.5pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("IV-ch13-V1.1_files/header.html") fs;
+	mso-footnote-continuation-separator:url("IV-ch13-V1.1_files/header.html") fcs;
+	mso-endnote-separator:url("IV-ch13-V1.1_files/header.html") es;
+	mso-endnote-continuation-separator:url("IV-ch13-V1.1_files/header.html") ecs;
+	mso-facing-pages:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-header:url("IV-ch13-V1.1_files/header.html") h1;
+	mso-footer:url("IV-ch13-V1.1_files/header.html") f1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-even-header:url("IV-ch13-V1.1_files/header.html") eh2;
+	mso-header:url("IV-ch13-V1.1_files/header.html") h2;
+	mso-even-footer:url("IV-ch13-V1.1_files/header.html") ef2;
+	mso-footer:url("IV-ch13-V1.1_files/header.html") f2;
+	mso-first-footer:url("IV-ch13-V1.1_files/header.html") ff2;
+	mso-paper-source:0;}
+div.Section2
+	{page:Section2;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<div style='mso-element:para-border-div;border-top:solid windowtext 1.0pt;
+border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+padding:1.0pt 0in 1.0pt 0in'>
+
+<h1 style='margin-left:0in'><a name="_Toc126037162"></a><a name="_Toc459006772"></a><a
+name="_Toc458576248"></a><a name="_Toc454945669"></a><a name="_Toc454941845"></a><a
+name="_Toc418915254"></a><a name="_Toc418416300"><span style='mso-bookmark:
+_Toc418915254'><span style='mso-bookmark:_Toc454941845'><span style='mso-bookmark:
+_Toc454945669'><span style='mso-bookmark:_Toc458576248'><span style='mso-bookmark:
+_Toc459006772'><span style='mso-bookmark:_Toc126037162'>Chapter 13<br>
+ADVANCED MAINTENANCE</span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;MAINTENANCE&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h1>
+
+</div>
+
+<h2 style='margin-left:0in'><a name="_Toc126037163"></a><a name="_Toc459006773"></a><a
+name="_Toc458576249"><span style='mso-bookmark:_Toc459006773'><span
+style='mso-bookmark:_Toc126037163'>overview</span></span></a></h2>
+
+<p class=MsoNormal>Inside the AGS IV startup window, and next to the <span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:84pt;
+ height:18pt' fillcolor="window">
+ <v:imagedata src="IV-ch13-V1.1_files/image002.jpg" o:title="AGS95 #03"/>
+</v:shape><![endif]--><![if !vml]><img width=112 height=24
+src="IV-ch13-V1.1_files/image002.jpg" v:shapes="_x0000_i1025"><![endif]></span><span
+style='mso-spacerun:yes'> </span>and <!--[if gte vml 1]><v:shape id="_x0000_i1026"
+ type="#_x0000_t75" style='width:85.5pt;height:19.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch13-V1.1_files/image004.jpg" o:title="AGS95 #01"/>
+</v:shape><![endif]--><![if !vml]><img width=114 height=26
+src="IV-ch13-V1.1_files/image004.jpg" v:shapes="_x0000_i1026"><![endif]><span
+style='mso-spacerun:yes'> </span>buttons (see Figure 13.1), there is also an <span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1027" type="#_x0000_t75"
+ style='width:84.75pt;height:18pt' fillcolor="window">
+ <v:imagedata src="IV-ch13-V1.1_files/image006.jpg" o:title="AGS95 #05"/>
+</v:shape><![endif]--><![if !vml]><img width=113 height=24
+src="IV-ch13-V1.1_files/image006.jpg" v:shapes="_x0000_i1027"><![endif]><span
+style='mso-spacerun:yes'> </span>button option that </span>provides several
+database<!--[if supportFields]><span style='mso-element:field-begin'></span> XE
+&quot;Database Maintenance&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>maintenance<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Maintenance&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>functions. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>This chapter describes the system functions made available
+through this button.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1030" type="#_x0000_t75" style='width:99pt;height:98.25pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch13-V1.1_files/image008.jpg" o:title="AGS95 #02"/>
+</v:shape><![endif]--><![if !vml]><img width=132 height=131
+src="IV-ch13-V1.1_files/image008.jpg" v:shapes="_x0000_i1030"><![endif]></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<h6>Figure 13.1: The AGS startup window options.</h6>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once the <!--[if gte vml 1]><v:shape id="_x0000_i1031"
+ type="#_x0000_t75" style='width:84.75pt;height:18pt' fillcolor="window">
+ <v:imagedata src="IV-ch13-V1.1_files/image006.jpg" o:title="AGS95 #05"/>
+</v:shape><![endif]--><![if !vml]><img width=113 height=24
+src="IV-ch13-V1.1_files/image006.jpg" v:shapes="_x0000_i1031"><![endif]><span
+style='mso-spacerun:yes'> </span>button is selected, the Advanced<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Advanced Options&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;AGS95 Advanced Options&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>menu option window is made available to the
+developer (see Figure 13.2).<span style='mso-spacerun:yes'>  </span>Following
+are the explanations of the Advanced menu options.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><o:wrapblock><v:shape
+  id="_x0000_s1044" type="#_x0000_t75" style='position:absolute;left:0;
+  text-align:left;margin-left:136.8pt;margin-top:0;width:138pt;height:175.5pt;
+  z-index:1' o:allowincell="f">
+  <v:imagedata src="IV-ch13-V1.1_files/image010.jpg" o:title=""/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0 align=left>
+  <tr>
+   <td width=182 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=184 height=234 src="IV-ch13-V1.1_files/image010.jpg" v:shapes="_x0000_s1044"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+<span style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-no-proof:yes'><o:p>&nbsp;</o:p></span></p>
+
+<h6>Figure 13.2: The AGS IV Advanced menu options.</h6>
+
+<h2 style='margin-left:0in'><a name="_Toc126037164"></a><a name="_Toc459006775"></a><a
+name="_Toc458576251"><span style='mso-bookmark:_Toc459006775'><span
+style='mso-bookmark:_Toc126037164'>repair</span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Advanced:Repair&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span style='mso-spacerun:yes'> </span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Repair&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h2>
+
+<p class=MsoNormal>The <!--[if gte vml 1]><v:shape id="_x0000_i1028" type="#_x0000_t75"
+ style='width:64.5pt;height:26.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch13-V1.1_files/image012.jpg" o:title="AGS95 #07"/>
+</v:shape><![endif]--><![if !vml]><img width=86 height=35
+src="IV-ch13-V1.1_files/image012.jpg" v:shapes="_x0000_i1028"><![endif]><span
+style='mso-spacerun:yes'> </span>option attempts to repair the Access database,
+where the application is stored. This should be attempted only if a problem in
+the structure of the database has been detected. As a failure during repair may
+leave the application database in an unrecoverable state, it is important to
+backup the application before initiating this function.</p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037165"></a><a name="_Toc459006776"></a><a
+name="_Toc458576252"><span style='mso-bookmark:_Toc459006776'><span
+style='mso-bookmark:_Toc126037165'>compact</span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Compact&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Advanced:Compact&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h2>
+
+<p class=MsoNormal>Using and maintaining an application over time can
+contribute to creation of wasted disk space in the database file. This is
+mostly due to the deletion of items from the database whose storage space
+cannot be reclaimed. </p>
+
+<p class=MsoNormal>The <!--[if gte vml 1]><v:shape id="_x0000_i1029" type="#_x0000_t75"
+ style='width:63.75pt;height:24.75pt' fillcolor="window">
+ <v:imagedata src="IV-ch13-V1.1_files/image014.jpg" o:title="AGS95 #09"/>
+</v:shape><![endif]--><![if !vml]><img width=85 height=33
+src="IV-ch13-V1.1_files/image014.jpg" v:shapes="_x0000_i1029"><![endif]><span
+style='mso-spacerun:yes'> </span>option of the Advanced maintenance menu
+initiates an automatic compression of the database, reducing the disk and
+memory usage, as well as increasing the execution efficiency of the program.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>As a failure during compression may leave the application
+database in an unrecoverable state, it is important to backup the application
+before initiating this function.</p>
+
+</div>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always;
+mso-break-type:section-break'>
+</span>
+
+<div class=Section2>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

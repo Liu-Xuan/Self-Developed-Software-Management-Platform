@@ -1,0 +1,1339 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="IV-ch12-V1.1_files/filelist.xml">
+<link rel=Edit-Time-Data href="IV-ch12-V1.1_files/editdata.mso">
+<link rel=OLE-Object-Data href="IV-ch12-V1.1_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Chapter 12 - Tools</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Site License</o:Author>
+  <o:Template>ch01-V2-f1.dot</o:Template>
+  <o:LastAuthor>dfreedman</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>172</o:TotalTime>
+  <o:LastPrinted>1999-08-06T17:29:00Z</o:LastPrinted>
+  <o:Created>2006-02-03T16:28:00Z</o:Created>
+  <o:LastSaved>2006-02-03T16:28:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2265</o:Words>
+  <o:Characters>12917</o:Characters>
+  <o:Company>Teledyne Controls</o:Company>
+  <o:Lines>107</o:Lines>
+  <o:Paragraphs>30</o:Paragraphs>
+  <o:CharactersWithSpaces>15152</o:CharactersWithSpaces>
+  <o:Version>11.6568</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="8" DLLVersion="513" NLCheck="0">1</w:ActiveWritingStyle>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:"Heading 2";
+	margin-top:.5in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:-.8in;
+	page-break-before:always;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	border:none;
+	mso-border-top-alt:solid windowtext .5pt;
+	mso-border-bottom-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 0in 1.0pt 0in;
+	font-size:30.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:-.8in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	mso-list:skip;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h6
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:7;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-element:frame;
+	mso-element-frame-width:303.85pt;
+	mso-element-frame-height:31.4pt;
+	mso-element-frame-hspace:9.0pt;
+	mso-element-wrap:around;
+	mso-element-anchor-vertical:paragraph;
+	mso-element-anchor-horizontal:page;
+	mso-element-left:215.85pt;
+	mso-element-top:.75pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-alt:solid windowtext 1.5pt;
+	padding:0in;
+	mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt;
+	mso-border-shadow:yes;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("IV-ch12-V1.1_files/header.html") fs;
+	mso-footnote-continuation-separator:url("IV-ch12-V1.1_files/header.html") fcs;
+	mso-endnote-separator:url("IV-ch12-V1.1_files/header.html") es;
+	mso-endnote-continuation-separator:url("IV-ch12-V1.1_files/header.html") ecs;
+	mso-facing-pages:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<div style='mso-element:para-border-div;border-top:solid windowtext 1.0pt;
+border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+padding:1.0pt 0in 1.0pt 0in'>
+
+<h1 style='margin-left:0in'><a name="_Toc454945645"></a><a name="_Toc454941821"></a><a
+name="_Toc126037149"></a><a name="_Toc118685888"></a><a name="_Toc459006745"></a><a
+name="_Toc458576221"><span style='mso-bookmark:_Toc459006745'><span
+style='mso-bookmark:_Toc118685888'><span style='mso-bookmark:_Toc126037149'><span
+style='mso-bookmark:_Toc454941821'><span style='mso-bookmark:_Toc454945645'>Chapter
+12<br>
+TOOLS</span></span></span></span></span></a><span style='mso-bookmark:_Toc454941821'><span
+style='mso-bookmark:_Toc454945645'></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc454941821'><span style='mso-bookmark:_Toc454945645'></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc454941821'><span
+style='mso-bookmark:_Toc454945645'> XE &quot;TOOLS&quot; </span></span><![endif]--><span
+style='mso-bookmark:_Toc454941821'><span style='mso-bookmark:_Toc454945645'></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc454941821'><span style='mso-bookmark:_Toc454945645'></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc454941821'><span style='mso-bookmark:_Toc454945645'></span></span></h1>
+
+</div>
+
+<h2 style='margin-left:0in'><a name="_Toc126037150"></a><a name="_Toc118685889"></a><a
+name="_Toc459006746"></a><a name="_Toc458576222"></a><a name="_Toc454945646"></a><a
+name="_Toc454941822"><span style='mso-bookmark:_Toc454945646'><span
+style='mso-bookmark:_Toc458576222'><span style='mso-bookmark:_Toc459006746'><span
+style='mso-bookmark:_Toc118685889'><span style='mso-bookmark:_Toc126037150'>OVERVIEW</span></span></span></span></span></a></h2>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>When a new application similar to an existing one is being
+built, in order to reduce the amount of work, a re-named copy of the database
+file of the existing application (*.mdb)<span style='mso-spacerun:yes'> 
+</span>may be made and placed in a new folder. Such transfer of definitions
+from one application to another is a common practice when similar applications
+or similar functions in different applications are being built. This new
+application can then be modified as needed.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1031" type="#_x0000_t75" style='width:354pt;
+ height:251.25pt'>
+ <v:imagedata src="IV-ch12-V1.1_files/image002.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=472 height=335
+src="IV-ch12-V1.1_files/image002.jpg" v:shapes="_x0000_i1031"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 12.1: Main Menu with Tools option selected.<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>When the two applications are not necessarily similar, or
+there is a need to copy a limited amount of information from one application to
+another, the “Export To New Database” and “Import From Existing Database”
+functions of the Tools menu of the AGS IV startup window may be used. The
+Export and Import functions provide the capability of copying selected
+Parameters, Screens, Reports, Triggers, Recording Maps, and Dits Buses (Import
+only) from one application to another.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037151"></a><a name="_Toc118685890"></a><a
+name="_Toc459006747"></a><a name="_Toc458576223"></a><a name="_Toc454945647"></a><a
+name="_Toc454941823"><span style='mso-bookmark:_Toc454945647'><span
+style='mso-bookmark:_Toc458576223'><span style='mso-bookmark:_Toc459006747'><span
+style='mso-bookmark:_Toc118685890'><span style='mso-bookmark:_Toc126037151'>EXPORT</span></span></span></span></span></a><span
+style='mso-bookmark:_Toc458576223'><span style='mso-bookmark:_Toc459006747'><span
+style='mso-bookmark:_Toc118685890'><span style='mso-bookmark:_Toc126037151'> TO
+NEW DATABASE</span></span></span></span></h2>
+
+<p class=MsoNormal>The Export To New Database function can be invoked from the
+Tools menu of the AGS IV startup window (see Figure 12.1). Once invoked, it
+enables the selected copying of components of the current (source) application
+to a target application.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The target application may be a new application under
+development or, as is usually the case, it may be an empty “holding” database
+into which the desired components are temporarily exported. In the latter case,
+once the results of the Export To New Database are verified, the items are then
+imported into the target application using the Import From Existing Database
+function.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>During a single Export To New Database session, any number
+of Parameters, Screens, Reports, Triggers, and Recording maps may be copied to
+the new application. The selection in each case is done similarly and is
+explained here only once, for the case of Parameters.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Upon selecting the Export To New Database dialogue box,
+similar to the one shown in Figure 12.2, the tabs for Parameters, Screens,
+Reports, Triggers and Recording Maps are presented. By selecting one or more of
+the tabs, the developer can specify the types of items to be exported.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1025" type="#_x0000_t75" style='width:383.25pt;height:237.75pt'
+ o:ole="">
+ <v:imagedata src="IV-ch12-V1.1_files/image004.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=511 height=317
+src="IV-ch12-V1.1_files/image004.jpg" v:shapes="_x0000_i1025"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1200460438">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<h5>Figure 12.2: Selection of Parameters for Export.</h5>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>In the case of the Parameters tab, the selection can begin
+by either entering the parameter name or, as is more common, calling out a
+group of parameters using a search criteria.<span style='mso-spacerun:yes'> 
+</span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>For example, in the case of Figure 12.2, the developer is
+looking for all parameters of “ALL” types, that start with the character “N”.
+After this initial specification, the developer may <!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:59.25pt;height:18.75pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch12-V1.1_files/image006.jpg" o:title="EXP05"/>
+</v:shape><![endif]--><![if !vml]><img width=79 height=25
+src="IV-ch12-V1.1_files/image006.jpg" v:shapes="_x0000_i1026"><![endif]><span
+style='mso-spacerun:yes'> </span>for the candidate parameters satisfying the
+above criteria. As the result of this search, a list of candidate parameters is
+presented in the left window of Figure 12.2. This is then followed by copying
+two of the candidates to the right window by first selecting them in the left
+window and pressing the <!--[if gte vml 1]><v:shape id="_x0000_i1027" type="#_x0000_t75"
+ style='width:59.25pt;height:18.75pt' fillcolor="window">
+ <v:imagedata src="IV-ch12-V1.1_files/image008.jpg" o:title="EXP06"/>
+</v:shape><![endif]--><![if !vml]><img width=79 height=25
+src="IV-ch12-V1.1_files/image008.jpg" v:shapes="_x0000_i1027"><![endif]><span
+style='mso-spacerun:yes'>  </span>button.<span style='mso-spacerun:yes'> 
+</span>Parameters can similarly be Removed from the Export list.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once all the parameters to be exported are identified, the
+exporting may be started by pressing the <!--[if gte vml 1]><v:shape id="_x0000_i1028"
+ type="#_x0000_t75" style='width:74.25pt;height:20.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch12-V1.1_files/image010.jpg" o:title="EXP07"/>
+</v:shape><![endif]--><![if !vml]><img width=99 height=27
+src="IV-ch12-V1.1_files/image010.jpg" v:shapes="_x0000_i1028"><![endif]><span
+style='mso-spacerun:yes'> </span>button. In this case the system will ask for
+the path name of the target application and start the Export To New Database
+function.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Two additional buttons in the form, <!--[if gte vml 1]><v:shape
+ id="_x0000_i1029" type="#_x0000_t75" style='width:74.25pt;height:20.25pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch12-V1.1_files/image012.jpg" o:title="EXP08"/>
+</v:shape><![endif]--><![if !vml]><img width=99 height=27
+src="IV-ch12-V1.1_files/image012.jpg" v:shapes="_x0000_i1029"><![endif]><span
+style='mso-spacerun:yes'> </span>and <!--[if gte vml 1]><v:shape id="_x0000_i1030"
+ type="#_x0000_t75" style='width:74.25pt;height:20.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch12-V1.1_files/image014.jpg" o:title="EXP09"/>
+</v:shape><![endif]--><![if !vml]><img width=99 height=27
+src="IV-ch12-V1.1_files/image014.jpg" v:shapes="_x0000_i1030"><![endif]><span
+style='mso-spacerun:yes'> </span>can be used to save and restore the LIST of
+parameters that are about to be exported. This is useful in cases where a large
+effort has gone into the selection process and a similar Export may become
+necessary in the future. This feature may also be used if a partial selection is
+made and is to be continued at a later session.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Export of Reports, Screens, Triggers, Recording Maps, and
+SAR channels is very similar to the export of Parameters described above.
+Additionally, in the case of Reports, Screens, Recording Maps, and SAR channels,
+once an item is selected for export, all the parameters associated with that
+item will also be exported (provided the same parameter name does not exist in
+the target application). </p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037152"></a><a name="_Toc118685891"></a><a
+name="_Toc459006748"></a><a name="_Toc458576224"></a><a name="_Toc454945648"></a><a
+name="_Toc454941824"><span style='mso-bookmark:_Toc454945648'><span
+style='mso-bookmark:_Toc458576224'><span style='mso-bookmark:_Toc459006748'><span
+style='mso-bookmark:_Toc118685891'><span style='mso-bookmark:_Toc126037152'>IMPORT</span></span></span></span></span></a><span
+style='mso-bookmark:_Toc458576224'><span style='mso-bookmark:_Toc459006748'><span
+style='mso-bookmark:_Toc118685891'><span style='mso-bookmark:_Toc126037152'>
+FROM EXISTING DATABASE</span></span></span></span></h2>
+
+<p class=MsoNormal>The Import From Existing Database function, selected from
+the Tools menu of the AGS IV startup window (as shown in Figure 12.1), is
+almost identical to the Export To New Database. The exception to this fact is
+that, unlike the Export to New Database that is activated from the sending (source)
+application, the Import From Existing Database is activated from the receiving
+(target) application.<span style='mso-spacerun:yes'>  </span>Also, this
+function allows the importing of the entire DITS bus table and entire ACARS
+broadcast table.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoBodyText2 style='text-align:justify'>Note that all movement of
+items from one application to another can be accomplished by either the Import
+or Export functions. The fact that both options are made available is only for
+the developer’s convenience.</p>
+
+<p class=MsoBodyText2 style='text-align:justify'><o:p>&nbsp;</o:p></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037153"></a><a name="_Toc118685892"><span
+style='mso-bookmark:_Toc126037153'>convert ags95 database to ags iv database</span></a></h2>
+
+<p class=MsoNormal>This function enables the user to convert a database that
+was created in AGS95 and convert it to the AGS IV format.<span
+style='mso-spacerun:yes'>  </span>See Figure 12.2a.</p>
+
+<p class=MsoBodyText2 style='text-align:justify'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoBodyText2 style='text-align:justify;text-indent:.5in'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1032" type="#_x0000_t75" style='width:263.25pt;height:214.5pt'>
+ <v:imagedata src="IV-ch12-V1.1_files/image016.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=351 height=286
+src="IV-ch12-V1.1_files/image016.jpg" v:shapes="_x0000_i1032"><![endif]></p>
+
+<p class=MsoBodyText2 style='text-align:justify;text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<h5><span style='font-size:11.0pt'>Figure 12.2a: Convert AGS95 to AGS IV
+Database function</span><span style='font-size:11.0pt;font-weight:normal'>.<o:p></o:p></span></h5>
+
+<p class=MsoBodyText2 style='text-align:justify;text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037154"></a><a name="_Toc118685893"><span
+style='mso-bookmark:_Toc126037154'>update baseline</span></a></h2>
+
+<p class=MsoNormal>This function enables the user to update a database with
+parameters, screens, reports, and triggers from a newer database.<span
+style='mso-spacerun:yes'>  </span>The purpose of this function is to take an
+older baseline database and update it to match a newer baseline database.<span
+style='mso-spacerun:yes'>  </span>Choosing ‘select baseline’ will bring up a
+dialog box where the newer baseline database can be selected.<span
+style='mso-spacerun:yes'>  </span>Once this is done, AGS IV will run a
+comparison of the newer baseline with the older one.<span
+style='mso-spacerun:yes'>  </span>It will determine which parameters are ‘no
+modify’ (these will be replaced automatically when the Update is done); which
+parameters are ‘no delete’ are in the newer database but are not in the older
+one (these will also be replaced automatically); which screens, reports, and
+trigger are ‘read only’ (will be replaced automatically).<span
+style='mso-spacerun:yes'>  </span>Any additional parameters can be selected for
+import (see figure 12.3). </p>
+
+<p class=MsoNormal style='margin-left:.5in'><!--[if gte vml 1]><v:shape id="_x0000_i1033"
+ type="#_x0000_t75" style='width:249.75pt;height:279pt' o:ole="">
+ <v:imagedata src="IV-ch12-V1.1_files/image018.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=333 height=372
+src="IV-ch12-V1.1_files/image018.jpg" v:shapes="_x0000_i1033"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1033"
+  DrawAspect="Content" ObjectID="_1200460439">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h5><span style='font-size:11.0pt;font-weight:normal;mso-bidi-font-weight:bold'>Figure
+12.3: Selection of Parameters for Export</span><span style='mso-bidi-font-size:
+12.0pt;font-weight:normal'>.<o:p></o:p></span></h5>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>When the ‘Do Update’ button is pressed, a warning message
+will appear indicating that you are about to overwrite parameters, screens,
+reports, and triggers.<span style='mso-spacerun:yes'>  </span>If<span
+style='mso-spacerun:yes'>  </span>OK is pressed, then the update will be done.</p>
+
+<b style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman";text-transform:uppercase;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA'><br clear=all
+style='page-break-before:always'>
+</span></b>
+
+<h2 style='margin-left:0in'><a name="_Toc126037155"></a><a name="_Toc118685894"><span
+style='mso-bookmark:_Toc126037155'>import dar</span></a></h2>
+
+<p class=MsoNormal>This function enables the user to take an existing
+comma-delimited text file and create a DAR map in AGSIV.<span
+style='mso-spacerun:yes'>  </span>When this function is chosen, the following
+dialogue box will appear.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><!--[if gte vml 1]><v:shape id="_x0000_i1034"
+ type="#_x0000_t75" style='width:243.75pt;height:123pt' o:ole="" fillcolor="window">
+ <v:imagedata src="IV-ch12-V1.1_files/image020.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=325 height=164
+src="IV-ch12-V1.1_files/image020.jpg" v:shapes="_x0000_i1034"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1034"
+  DrawAspect="Content" ObjectID="_1200460440">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<h5><span style='font-size:11.0pt;font-weight:normal;mso-bidi-font-weight:bold'>Figure
+12.4: Import DAR dialogue box</span><span style='mso-bidi-font-size:12.0pt;
+font-weight:normal'>.<o:p></o:p></span></h5>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal>The following describes the order and syntax of commands in
+the comma-delimited file that is required in AGS IV to Import a DAR map:</p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'>PAR,Mne,Desc,DataFmt,Lsb,Len,Rate,Sign,DsplyFmt,Offset,Slope,primBus,primSysId,primLbl,primSdi,bkupBus,bkupSysId,bkupLbl,bkupSdi<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Par</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: key word for adding new DITS parameter to the database.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Mne</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: parameter mnemonic. The setting of Mne is an alphanumeric string
+containing from 1 to 8 characters with the first character is an alpha
+character. Mne can NOT be a duplicated name of any existing parameter in the
+database. Mne is a <b style='mso-bidi-font-weight:normal'>mandatory</b> field.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Desc</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: parameter description. The setting of Desc is a string of up to
+40 characters. <b style='mso-bidi-font-weight:normal'>Default</b> value is a
+null string. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>DataFmt</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: data format. The settings for DataFmt are: BNR, BCD, DIS, ISO#5.
+<b style='mso-bidi-font-weight:normal'>Default</b> value is BNR<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Lsb</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Least significant bit. The settings for Lsb are: 9 - 29. If
+DataFmt = ISO#5, Lsb can go up to bit 31. <b style='mso-bidi-font-weight:normal'>Default</b>
+value is 11<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Len: </span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Length. The settings for Len are: 1 - 21. If DataFmt = ISO#5, Len
+can be set to 1 - 23. <b style='mso-bidi-font-weight:normal'>Default</b> value
+is 1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Rate</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Data acquisition rate. The settings for Rate are: 1, 2, 4, 8,
+16, 32. <b style='mso-bidi-font-weight:normal'>Default</b> value is 1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Sign</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Sign. The settings for sign are: Y, N. <b style='mso-bidi-font-weight:
+normal'>Default</b> value is N<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>DsplyFmt</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Display format. The setting for DsplyFmt is a string (up to 12
+characters) of the format like HHHH, AAAA, NNNN or NNNN.N. <b style='mso-bidi-font-weight:
+normal'>Default</b> value is NNNNNNN<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Offset</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: a numeric string. <b style='mso-bidi-font-weight:normal'>Default</b>
+value is 0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Slope</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: a numeric string. <b style='mso-bidi-font-weight:normal'>Default</b>
+value is 1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>primBus</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Primary Bus name. primBus has to be one of the existing Bus in
+the database. Primary Bus is a <b style='mso-bidi-font-weight:normal'>mandatory</b>
+field.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:571.5pt 8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>primSysId</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Primary System ID. The settings for primSysId are: 1, 2, 3, 4. <b
+style='mso-bidi-font-weight:normal'>Default</b> value is 1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>primLbl</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Primary label in <b style='mso-bidi-font-weight:normal'>octal</b>.
+The settings for primLbl is an octal number: 1 - 377. PrimLbl is a <b
+style='mso-bidi-font-weight:normal'>mandatory</b> field.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>primSdi</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Primary SDI. The settings for primSdi are: 00, 01, 10, 11, NA. <b
+style='mso-bidi-font-weight:normal'>Default</b> value is NA<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>bkupBus</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Backup Bus name. BkupBus has to be one of the existing Bus name
+in the database. Backup Bus is an <b style='mso-bidi-font-weight:normal'>optional</b>
+field. If backup Bus is NOT specified, the system will ignore bkupLbl, bkupSdi,
+and bkupSysId fields.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:571.5pt 8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>bkupSysId</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Backup System ID. The settings for bkupSysId are: 1, 2, 3, 4. <b
+style='mso-bidi-font-weight:normal'>Default</b> value is 1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>bkupLbl</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Backup label in <b style='mso-bidi-font-weight:normal'>octal</b>.
+The settings for bkupLbl is an octal number: 1 - 377. BkupLbl is a <b
+style='mso-bidi-font-weight:normal'>mandatory</b> field when bkupBus is
+specified, otherwise bkupLbl will be ignored.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:571.5pt 8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>bkupSdi</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Backup SDI. The settings for bkupSdi are: 00, 01, 10, 11, XX,
+NA. <b style='mso-bidi-font-weight:normal'>Default</b> value is NA.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'>Primary errors for Par line
+are:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'>Parm Mne already exists.
+Line discarded<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'>Syntax error. Line
+discarded<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>MAP,MapName,SfSize,History,Comment<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Map: </span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Key word for adding new map in the database<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>MapName</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Map Name, an alphanumeric string of one to 20 characters. If
+MapName is a duplicated name of an existing map name in the database, the Map
+line will be ignored.MapName is a <b style='mso-bidi-font-weight:normal'>mandatory</b>
+field<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Sfsize</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: number of words per subframe. The settings for Sfsize are: 64,
+128, 256, 512, 1024. <b style='mso-bidi-font-weight:normal'>Default</b> value
+is 1024<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>History</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Recording history depth. <b style='mso-bidi-font-weight:normal'>Default</b>
+value is 4<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Comment</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: a string of up to 20 characters. <b style='mso-bidi-font-weight:
+normal'>Default</b> value is a null string<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'>Primary errors for Map line
+are:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'>Map Name already exists.
+Line discarded<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'>Syntax error. Line
+discarded<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>REC,MapName,Mne,CorLsb,Reclsb,RecLen,Sign,SubFrame,Word,Age,Comment<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Rec:</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'> Key word for adding parameter mnemonic to map.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>MapName</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Map Name. MapName has to be one of the existing map name in the
+database. MapName is a <b style='mso-bidi-font-weight:normal'>mandatory</b>
+field.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Mne</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: parameter mnemonic. Mne has to be one of the existing parameter
+mnemonic in the database. Mne is a <b style='mso-bidi-font-weight:normal'>mandatory</b>
+field.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>CorLsb</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Corresponding Least significant bit number. <b style='mso-bidi-font-weight:
+normal'>Default</b> value is parameter LSB<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>RecLsb</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Recording Least significant bit number. <b style='mso-bidi-font-weight:
+normal'>Default</b> value is 1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:1.0in;tab-stops:8.0in 9.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>RecLen</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Recording length. The settings for RecLen are from 1 to 12 (if
+Sign=N) or from 1 to 11 (if sign=Y).<b style='mso-bidi-font-weight:normal'>Default</b>
+value is 1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Sign</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Recording sign. The settings for Sign are: Y, N. Sign can be set
+to Y only when Sign of acquired parameter Mne is set to Y. <b style='mso-bidi-font-weight:
+normal'>Default</b> value is N<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>SubFrame</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Sub frame number. The settings for SubFrame are: 0 (all
+subframes), 1, 2, 3, 4, 5 (1 &amp; 3), 6 (2 &amp; 4). <b style='mso-bidi-font-weight:
+normal'>Default</b> value is 0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Word</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Recording word number.<span style='mso-spacerun:yes'> 
+</span>The settings for Word are: 2 to the map subframe size. Word is a <b
+style='mso-bidi-font-weight:normal'>mandatory</b> field<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Age</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: age within second. 0 = most recent. The settings for Age are 0
+to acquisition rate minus 1 (rate-1). <b style='mso-bidi-font-weight:normal'>Default</b>
+value is 0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>Comment</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: a string of up to 40 characters. <b style='mso-bidi-font-weight:
+normal'>Default</b> value is a null string<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'>Primary errors for Rec line
+are:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'>Map Name does not exist.
+Line discarded<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'>Parm Mne does not exist.
+Line discarded<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'>Overlap. Line discarded<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'>Syntax error. Line
+discarded<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>REM This is a comment line<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>REM</span></b><span style='font-size:9.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman";
+color:black'>: Key word for comment line<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'>All fields in PAR line, MAP
+line, and REC line are separated by commas (&quot;,&quot;). Blank fields will
+be replaced by default values.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:-10.45pt;tab-stops:8.0in'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-bidi-font-family:"Times New Roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037156"></a><a name="_Toc118685895"></a><a
+name="_Toc459006749"></a><a name="_Toc458576225"></a><a name="_Toc454945613"></a><a
+name="_Toc454941789"><span style='mso-bookmark:_Toc454945613'><span
+style='mso-bookmark:_Toc458576225'><span style='mso-bookmark:_Toc459006749'><span
+style='mso-bookmark:_Toc118685895'><span style='mso-bookmark:_Toc126037156'>GENERATE
+SPECS</span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;<u>S</u>PECS&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h2>
+
+<p class=MsoNormal>Applications built for use on aircraft must usually be
+documented and the document saved while the application is in use. This option
+assists the developer in generating portions of the document that can
+automatically be extracted from the application database. The generation of the
+specification<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;specification&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>document can be initiated from the Generate
+Specs option of the Tools pull down menu selection of the main menu bar (see
+Figure 12.1).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once the selection is made, a checklist is presented to the
+developer, who can then</p>
+
+<p class=MsoNormal>select which sections of the document are to be generated
+(see Figure 12.5).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:.5in'><!--[if gte vml 1]><v:shape id="_x0000_i1035" type="#_x0000_t75"
+ style='width:263.25pt;height:244.5pt' o:ole="">
+ <v:imagedata src="IV-ch12-V1.1_files/image022.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=351 height=326
+src="IV-ch12-V1.1_files/image022.jpg" v:shapes="_x0000_i1035"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1035"
+  DrawAspect="Content" ObjectID="_1200460441">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b>Figure 12.5: Generate Specs option of Tools Menu<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>SAR Channel specs are only available for FDIMU.<span
+style='mso-spacerun:yes'>  </span>Once the selections are made and confirmed,
+the developer is presented with the standard Windows form for selecting the
+name and location of the output file. After this AGS IV automatically generates
+the requested sections of the specification in a text file with line breaks
+only.<span style='mso-spacerun:yes'>   </span>This file can now be opened by
+any word processor or editor and formatted as desired. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The format of the file also lends itself to processing by a
+program or word processor macros, as unambiguous delimiters are used to
+separate the sections and subsections of the document.</p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037157"></a><a name="_Toc118685896"></a><a
+name="_Toc459006750"></a><a name="_Toc458576226"></a><a name="_Toc454945615"></a><a
+name="_Toc454941791"><span style='mso-bookmark:_Toc454945615'><span
+style='mso-bookmark:_Toc458576226'><span style='mso-bookmark:_Toc459006750'><span
+style='mso-bookmark:_Toc118685896'><span style='mso-bookmark:_Toc126037157'>GENERATE
+PARM SIMULATION</span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Simulation&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h2>
+
+<p class=MsoNormal>Flight simulators used for testing of the applications need
+parameter information to correctly compile flight scenarios. Teledyne flight
+simulators extract the parameter definitions needed from the databases and AGS
+IV provides this option, in the Tools menu (see Figure 12.1).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once selected, this option prompts the developer for a file
+name, and then generates a file that can be used to populate a flight simulator
+parameter database, with the information of the AGS IV parameters. The flight
+simulators can now interface with this database and compile their
+scenarios.<span style='mso-spacerun:yes'>  </span>It should be noted that the
+SDIs of the parameters in this generated file have the format of bits
+9-10.<span style='mso-spacerun:yes'>   </span>For example, if the parameter is
+defined in AGS IV with an SDI of ‘01’ (bits 10-9), then the generated file will
+display that SDI as ‘10’ (bits 9-10).</p>
+
+<h2 style='margin-left:0in'><a name="_Toc459006751"></a><a name="_Toc458576227"></a><a
+name="_Toc126037158"></a><a name="_Toc118685897"><span style='mso-bookmark:
+_Toc126037158'><span style='mso-bookmark:_Toc458576227'><span style='mso-bookmark:
+_Toc459006751'>GENERATE FRCS file</span></span></span></a><span
+style='mso-bookmark:_Toc458576227'><span style='mso-bookmark:_Toc459006751'></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc458576227'><span style='mso-bookmark:_Toc459006751'></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc458576227'><span
+style='mso-bookmark:_Toc459006751'> XE &quot;Simulation&quot; </span></span><![endif]--><span
+style='mso-bookmark:_Toc458576227'><span style='mso-bookmark:_Toc459006751'></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc458576227'><span style='mso-bookmark:_Toc459006751'></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc458576227'><span style='mso-bookmark:_Toc459006751'></span></span></h2>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc458576227'><span
+style='mso-bookmark:_Toc459006751'>This will generate an FRCS file with
+extension *.CSV.<span style='mso-spacerun:yes'>  </span>This is a tab delimited
+spreadsheet file that contains all of the parameters in the specified recording
+map (see figure 12.6).</span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc458576227'><span
+style='mso-bookmark:_Toc459006751'><o:p>&nbsp;</o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='mso-bookmark:_Toc458576227'><span
+style='mso-bookmark:_Toc459006751'><!--[if gte vml 1]><v:shape id="_x0000_i1036"
+ type="#_x0000_t75" style='width:237pt;height:167.25pt' o:ole="" fillcolor="window">
+ <v:imagedata src="IV-ch12-V1.1_files/image024.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=316 height=223
+src="IV-ch12-V1.1_files/image024.jpg" v:shapes="_x0000_i1036"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1036"
+  DrawAspect="Content" ObjectID="_1200460442">
+ </o:OLEObject>
+</xml><![endif]--></span></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='mso-bookmark:_Toc458576227'><span
+style='mso-bookmark:_Toc459006751'><o:p>&nbsp;</o:p></span></span></p>
+
+<h6><span style='mso-bookmark:_Toc458576227'><span style='mso-bookmark:_Toc459006751'>Figure
+12.6: Generate FRCS File option of Tools Menu</span></span></h6>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='mso-bookmark:_Toc458576227'><span
+style='mso-bookmark:_Toc459006751'><o:p>&nbsp;</o:p></span></span></p>
+
+<h2 style='margin-left:0in'><span style='mso-bookmark:_Toc458576227'><span
+style='mso-bookmark:_Toc459006751'><a name="_Toc126037159"></a><a
+name="_Toc118685898"><span style='mso-bookmark:_Toc126037159'>FIND UNUSED
+PARAMETERS</span></a></span></span></h2>
+
+<p class=MsoNormal>The developer can generate a list of unused parameters by
+selecting the Find Unused Parameters selection from the Tools pull down menu of
+the main menu (see Figure 12.1).<span style='mso-spacerun:yes'>  </span>This
+function can be used to identify parameter candidates for deletion.<span
+style='mso-spacerun:yes'>  </span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>If an application has not yet been built, there will be a
+warning message stating that a Build Application or a Crosscheck Definition
+from the Build menu must be completed before the search.<span
+style='mso-spacerun:yes'>  </span>If this message is ignored, then only
+screens, reports, and maps will be searched for parameter usage.<span
+style='mso-spacerun:yes'>  </span>If a build or a crosscheck has been completed
+before this function, then the triggers will also be searched.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once the selections are made, the developer is presented
+with the standard Windows form for selecting the name and location of the
+output file. After this AGS IV automatically generates the requested list in a
+text file with line breaks only.<span style='mso-spacerun:yes'>  </span>This
+file can now be opened by any word processor or editor and formatted as
+desired. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=left style='text-align:left'><o:p>&nbsp;</o:p></p>
+
+<h2 align=left style='margin-left:0in;text-align:left'><a name="_Toc126037160"></a><a
+name="_Toc118685899"><span style='mso-bookmark:_Toc126037160'>part number
+checksum</span></a></h2>
+
+<p class=MsoBodyText2>A part number checksum can be created using this function
+(see figure 12.7).</p>
+
+<p class=MsoNormal align=left style='text-align:left'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=left style='text-align:left'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:.5in'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1037" type="#_x0000_t75" style='width:345pt;height:176.25pt'>
+ <v:imagedata src="IV-ch12-V1.1_files/image026.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=460 height=235
+src="IV-ch12-V1.1_files/image026.jpg" v:shapes="_x0000_i1037"><![endif]></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoHeading7 style='text-indent:.5in'>Figure 12.7: Part Number Checksum
+option of Tools Menu</p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037161"></a><a name="_Toc118685900"><span
+style='mso-bookmark:_Toc126037161'>manufacturer access</span></a></h2>
+
+<p class=MsoNormal>A manufacturer password is needed to use this function.<span
+style='mso-spacerun:yes'>  </span>This enables the user to create and edit
+protected parameters, triggers, screens, or reports.<span
+style='mso-spacerun:yes'>  </span>Password access is currently restricted to
+Teledyne Controls and is not for airline use (see figure 12.8).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:.5in'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1038" type="#_x0000_t75" style='width:237.75pt;height:185.25pt'
+ o:ole="">
+ <v:imagedata src="IV-ch12-V1.1_files/image028.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=317 height=247
+src="IV-ch12-V1.1_files/image028.jpg" v:shapes="_x0000_i1038"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1038"
+  DrawAspect="Content" ObjectID="_1200460443">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<h6 align=left style='text-align:left'>Figure 12.8: Manufacturer Access option
+of Tools Menu</h6>
+
+<b><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span></b>
+
+<h6 align=left style='text-align:left'><o:p>&nbsp;</o:p></h6>
+
+</div>
+
+</body>
+
+</html>

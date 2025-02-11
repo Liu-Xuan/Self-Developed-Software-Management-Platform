@@ -1,0 +1,1997 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="IV-ch10-V3.4_files/filelist.xml">
+<link rel=Edit-Time-Data href="IV-ch10-V3.4_files/editdata.mso">
+<link rel=OLE-Object-Data href="IV-ch10-V3.4_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Chapter 10 - Configuration</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Site License</o:Author>
+  <o:Template>ch01-V2-f1.dot</o:Template>
+  <o:LastAuthor>dfreedman</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>52</o:TotalTime>
+  <o:LastPrinted>1999-05-16T21:13:00Z</o:LastPrinted>
+  <o:Created>2006-02-03T16:26:00Z</o:Created>
+  <o:LastSaved>2006-02-03T16:26:00Z</o:LastSaved>
+  <o:Pages>13</o:Pages>
+  <o:Words>3392</o:Words>
+  <o:Characters>19336</o:Characters>
+  <o:Company>Teledyne Controls</o:Company>
+  <o:Lines>161</o:Lines>
+  <o:Paragraphs>45</o:Paragraphs>
+  <o:CharactersWithSpaces>22683</o:CharactersWithSpaces>
+  <o:Version>11.6568</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="8" DLLVersion="513" NLCheck="0">1</w:ActiveWritingStyle>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:"Arial Narrow";
+	panose-1:2 11 5 6 2 2 2 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:"Heading 2";
+	margin-top:.5in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:-.8in;
+	page-break-before:always;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	border:none;
+	mso-border-top-alt:solid windowtext .5pt;
+	mso-border-bottom-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 0in 1.0pt 0in;
+	font-size:30.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:-.8in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h6
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-element:frame;
+	mso-element-frame-width:303.85pt;
+	mso-element-frame-height:31.4pt;
+	mso-element-frame-hspace:9.0pt;
+	mso-element-wrap:around;
+	mso-element-anchor-vertical:paragraph;
+	mso-element-anchor-horizontal:page;
+	mso-element-left:215.85pt;
+	mso-element-top:.75pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-noshow:yes;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:14.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	mso-bidi-language:AR-SA;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("IV-ch10-V3.4_files/header.html") fs;
+	mso-footnote-continuation-separator:url("IV-ch10-V3.4_files/header.html") fcs;
+	mso-endnote-separator:url("IV-ch10-V3.4_files/header.html") es;
+	mso-endnote-continuation-separator:url("IV-ch10-V3.4_files/header.html") ecs;
+	mso-facing-pages:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-even-header:url("IV-ch10-V3.4_files/header.html") eh2;
+	mso-header:url("IV-ch10-V3.4_files/header.html") h2;
+	mso-even-footer:url("IV-ch10-V3.4_files/header.html") ef2;
+	mso-footer:url("IV-ch10-V3.4_files/header.html") f2;
+	mso-first-header:url("IV-ch10-V3.4_files/header.html") fh2;
+	mso-first-footer:url("IV-ch10-V3.4_files/header.html") ff2;
+	mso-paper-source:0;}
+div.Section2
+	{page:Section2;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-2;
+	mso-list-type:simple;
+	mso-list-template-ids:-1;}
+@list l0:level1
+	{mso-level-start-at:0;
+	mso-level-text:*;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l1
+	{mso-list-id:1217552419;
+	mso-list-type:simple;
+	mso-list-template-ids:-1;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:14.15pt;
+	text-indent:-14.15pt;
+	font-family:Symbol;}
+@list l0:level1 lfo1
+	{mso-level-start-at:1;
+	mso-level-number-format:bullet;
+	mso-level-numbering:continue;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<div style='mso-element:para-border-div;border-top:solid windowtext 1.0pt;
+border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+padding:1.0pt 0in 1.0pt 0in'>
+
+<h1 style='margin-left:0in'><a name="_Toc126037126"></a><a name="_Toc459006716"></a><a
+name="_Toc458576192"></a><a name="_Toc454945616"></a><a name="_Toc454941792"></a><a
+name="_Toc418915208"></a><a name="_Toc418416254"></a><a name="_Toc416767940"><span
+style='mso-bookmark:_Toc418416254'><span style='mso-bookmark:_Toc418915208'><span
+style='mso-bookmark:_Toc454941792'><span style='mso-bookmark:_Toc454945616'><span
+style='mso-bookmark:_Toc458576192'><span style='mso-bookmark:_Toc459006716'><span
+style='mso-bookmark:_Toc126037126'>Chapter 10<br>
+CONFIGURATION</span></span></span></span></span></span></span></a></h1>
+
+</div>
+
+<h2 style='margin-left:0in'><a name="_Toc126037127"></a><a name="_Toc459006717"></a><a
+name="_Toc458576193"><span style='mso-bookmark:_Toc459006717'><span
+style='mso-bookmark:_Toc126037127'>Overview</span></span></a></h2>
+
+<p class=MsoNormal>During its lifetime, an application goes through periodic
+changes.<span style='mso-spacerun:yes'>  </span>These changes are needed to
+better fit the application to the changing requirements of the airlines.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Despite this, there are parts of any application that
+seldom, if ever, change. Examples of this category of entries are the airline
+initials, or the name of the Teledyne airborne system for which the application
+is being developed.<span style='mso-spacerun:yes'>  </span>It is the goal of
+the configuration function of the ACMS to collect these relatively persistent
+data in a single phase of activities and “configure<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Configuration&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;System Configuration&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->” the system accordingly.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>We should note that, despite being discussed late in this
+manual, configuration activities are usually the first step of any ACMS
+development work.<span style='mso-spacerun:yes'>   </span>We discuss it at this
+point because, with the exception of version update, they are a less frequent
+development activity. The version information is an exception as it is updated
+every time a new version of the application is built.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><o:wrapblock><v:shapetype id="_x0000_t75"
+  coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+  filled="f" stroked="f">
+  <v:stroke joinstyle="miter"/>
+  <v:formulas>
+   <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+   <v:f eqn="sum @0 1 0"/>
+   <v:f eqn="sum 0 0 @1"/>
+   <v:f eqn="prod @2 1 2"/>
+   <v:f eqn="prod @3 21600 pixelWidth"/>
+   <v:f eqn="prod @3 21600 pixelHeight"/>
+   <v:f eqn="sum @0 0 1"/>
+   <v:f eqn="prod @6 1 2"/>
+   <v:f eqn="prod @7 21600 pixelWidth"/>
+   <v:f eqn="sum @8 21600 0"/>
+   <v:f eqn="prod @7 21600 pixelHeight"/>
+   <v:f eqn="sum @10 21600 0"/>
+  </v:formulas>
+  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+  <o:lock v:ext="edit" aspectratio="t"/>
+ </v:shapetype><v:shape id="_x0000_s1137" type="#_x0000_t75" style='position:absolute;
+  left:0;text-align:left;margin-left:86.4pt;margin-top:0;width:238.5pt;
+  height:142.5pt;z-index:7;visibility:visible;mso-wrap-edited:f' o:allowincell="f">
+  <v:imagedata src="IV-ch10-V3.4_files/image002.jpg" o:title=""/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![if gte mso 9]><o:OLEObject Type="Embed" ProgID="Word.Picture.8"
+  ShapeID="_x0000_s1137" DrawAspect="Content" ObjectID="_1200460365">
+ </o:OLEObject>
+ <![endif]><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0>
+  <tr>
+   <td width=115 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=318 height=190 src="IV-ch10-V3.4_files/image002.jpg" v:shapes="_x0000_s1137"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+The configuration operations can be accessed through the <u>C</u>onfigure pull
+down menu selection of the main menu bar (see Figure 10.1).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 10.1: Main Menu with <u>C</u>onfigure option selected.</b></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037128"></a><a name="_Toc459006718"></a><a
+name="_Toc458576194"></a><a name="_Toc454945618"></a><a name="_Toc454941794"></a><a
+name="_Toc418915210"></a><a name="_Toc418416256"></a><a name="_Toc416767942"><span
+style='mso-bookmark:_Toc418416256'><span style='mso-bookmark:_Toc418915210'><span
+style='mso-bookmark:_Toc454941794'><span style='mso-bookmark:_Toc454945618'><span
+style='mso-bookmark:_Toc458576194'><span style='mso-bookmark:_Toc459006718'><span
+style='mso-bookmark:_Toc126037128'><u>S</u>ystem</span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Configuration:System&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;System Configuration&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;System&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h2>
+
+<p class=MsoNormal>The <u>S</u>ystem menu selection displays a window with the
+following tabs:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037129">General</a></h3>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><a name="_Toc459006719"></a><a
+name="_Toc458576195"></a><a name="_Toc454945619"></a><a name="_Toc454941795"></a><a
+name="_Toc418915211"></a><a name="_Toc418416257"></a><a name="_Toc416767943"><span
+style='mso-bookmark:_Toc418416257'><span style='mso-bookmark:_Toc418915211'><span
+style='mso-bookmark:_Toc454941795'><span style='mso-bookmark:_Toc454945619'><span
+style='mso-bookmark:_Toc458576195'><span style='mso-bookmark:_Toc459006719'></span></span></span></span></span></span></a><a
+name="_Toc118683579"></a><a name="_Toc35930654"></a><a name="_Toc35748692"></a><a
+name="_Toc35748210"></a><a name="_Toc35747154"></a><a name="_Toc18381364"></a><a
+name="_Toc18380240"><span style='mso-bookmark:_Toc18381364'><span
+style='mso-bookmark:_Toc35747154'><span style='mso-bookmark:_Toc35748210'><span
+style='mso-bookmark:_Toc35748692'><span style='mso-bookmark:_Toc35930654'><span
+style='mso-bookmark:_Toc118683579'><span style='mso-bookmark:_Toc459006719'><span
+style='mso-bookmark:_Toc458576195'><span style='mso-bookmark:_Toc454945619'><span
+style='mso-bookmark:_Toc454941795'><span style='mso-bookmark:_Toc418915211'><span
+style='mso-bookmark:_Toc418416257'><span style='mso-bookmark:_Toc416767943'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1025" type="#_x0000_t75" style='width:316.5pt;height:193.5pt'
+ o:ole="" fillcolor="window">
+ <v:imagedata src="IV-ch10-V3.4_files/image004.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=422 height=258
+src="IV-ch10-V3.4_files/image004.jpg" v:shapes="_x0000_i1025"><![endif]></span></span></span></span></span></span></span></span></span></span></span></span></span></a><span
+style='mso-bookmark:_Toc459006719'><span style='mso-bookmark:_Toc458576195'><span
+style='mso-bookmark:_Toc454945619'><span style='mso-bookmark:_Toc454941795'><span
+style='mso-bookmark:_Toc418915211'><span style='mso-bookmark:_Toc418416257'><span
+style='mso-bookmark:_Toc416767943'><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1200460366">
+ </o:OLEObject>
+</xml><![endif]--></span></span></span></span></span></span></span><span
+style='mso-spacerun:yes'> </span><!--[if supportFields]><span style='mso-element:
+field-begin'></span><span style='mso-spacerun:yes'> </span>XE
+&quot;Configuration:System:General&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'>Figure 10.2a: FDIMU System Configuration Window (General Tab Shown).<o:p></o:p></b></p>
+
+<p class=MsoNormal style='text-indent:.5in'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal style='text-indent:.5in'><b style='mso-bidi-font-weight:
+normal'><!--[if gte vml 1]><v:shape id="_x0000_i1026" type="#_x0000_t75"
+ style='width:316.5pt;height:189.75pt'>
+ <v:imagedata src="IV-ch10-V3.4_files/image006.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=422 height=253
+src="IV-ch10-V3.4_files/image006.jpg" v:shapes="_x0000_i1026"><![endif]><o:p></o:p></b></p>
+
+<p class=MsoNormal style='text-indent:.5in'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'>Figure 10.2b: iDMU System Configuration Window (General Tab Shown).<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Within this tab the following values must be entered (see
+Figure 10.2):</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=left style='margin-left:.25in;text-align:left;
+text-indent:-.25in;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Airline Initials<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE
+&quot;Configuration:System:General:Airline Initials&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Airline Initials&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>- The string entered here should be the
+airline’s 3-letter code. This information is stored in the reserved parameter
+called 0VERAL and can be used anywhere a parameter is used (e.g. in reports,
+screens, triggers, etc.). This code is also used as a default for naming files
+on the upload disk, when an upload disk is generated.</p>
+
+<p class=MsoNormal align=left style='text-align:left'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=left style='margin-left:.25in;text-align:left;
+text-indent:-.25in;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Aircraft Type – For iDMU only.<span
+style='mso-spacerun:yes'>  </span>The aircraft type for which this application
+is to be used.<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]></p>
+
+<p class=MsoNormal style='margin-left:14.15pt;text-indent:-14.15pt;mso-list:
+l1 level1 lfo2'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><!--[if supportFields]><span style='mso-element:
+field-begin'></span><span style='mso-spacerun:yes'> </span>XE
+&quot;Configuration:System:General:Aircraft Type&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Aircraft Type&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->ACARS ID - The ACARS ID for
+which this application is being specified must be entered here. This
+information is stored in the reserved parameter called 0ALID and can be used
+anywhere a parameter is used.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Target System<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE
+&quot;Configuration:System:General:Target System&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Target System&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>- The part number<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Part Number&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>of the airborne system that will host the
+application must be selected from the list provided. This selection affects the
+types of parameters and capabilities available to the application.</p>
+
+<h3><a name="_Toc126037130"></a><a name="_Toc459006720"></a><a
+name="_Toc458576196"></a><a name="_Toc454945620"></a><a name="_Toc454941796"></a><a
+name="_Toc418915213"></a><a name="_Toc418416259"></a><a name="_Toc416767945"><span
+style='mso-bookmark:_Toc418416259'><span style='mso-bookmark:_Toc418915213'><span
+style='mso-bookmark:_Toc454941796'><span style='mso-bookmark:_Toc454945620'><span
+style='mso-bookmark:_Toc458576196'><span style='mso-bookmark:_Toc459006720'><span
+style='mso-bookmark:_Toc126037130'>Recorder</span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recorder Configuration&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Configuration:System:Recorder&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recorder&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal>This setting is only required for ACMS Applications. Older
+maintenance recorders (QARs<!--[if supportFields]><span style='mso-element:
+field-begin'></span> XE &quot;QAR&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>and DARs<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;DAR&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->) require a Block Size<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording:Block Size&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Configuration&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>specification, where the larger the block size
+(1536, 2304, 3072, or 4608), the more efficient the recording is (there are a
+smaller number of inter-block gaps). However, if there is a problem with
+retrieving data from a block, the disadvantage of a large block is that a large
+number of recorded words may be lost. The “Auto<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording:Auto Block
+Size&quot; <![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Auto Block Size&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->” selection for the block size
+allows the recorder to select the block size (see Figure 10.3). The recorder
+manufacturer usually recommends the appropriate block size options.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>As the ACMS recorders can be external<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recorder:External&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>(QAR, DAR, OQAR<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;OQAR&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>etc.) or internal<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recorder:Internal&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>(optical, PCMCIA<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;PCMCIA&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>etc.), the destination of the recorded Raw
+Data can be selected to be one, the other, or both. As the raw data is sent to
+the recorder with no handshake,</p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><o:wrapblock><v:shape
+  id="_x0000_s1131" type="#_x0000_t75" style='position:absolute;left:0;
+  text-align:left;margin-left:43.2pt;margin-top:0;width:318pt;height:194.25pt;
+  z-index:1' o:allowincell="f">
+  <v:imagedata src="IV-ch10-V3.4_files/image008.jpg" o:title=""/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0 align=left>
+  <tr>
+   <td width=58 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=424 height=259 src="IV-ch10-V3.4_files/image008.jpg" v:shapes="_x0000_s1131"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+</p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 10.3: System Configuration Window (Recorder Tab Shown).<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>it is possible to direct the output to both the internal and
+external recorders. This may be done for cross check, for redundancy, or for
+obtaining identical data on two media for two different groups in an
+organization (see Figure 10.3). On the other hand, because of the required
+handshake protocol for Message Data (reports), messages (reports) can go either
+to the internal or external recorder. Thus only one of the two destinations can
+be selected (see radio buttons of<span style='mso-spacerun:yes'>  </span>Figure
+10.3). </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .75pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'>“Miniframe<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording:Miniframe&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Miniframe&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->” also known as “Miniframe 4”
+or “Miniframe 7” is an airborne capability that allows the user to specify, on
+the aircraft, additional words to be acquired and recorded by the recorder. As
+there are different conventions for specifying the new word location in the
+frame, Miniframe bias<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Miniframe Bias&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>is used to select the desired convention.</p>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'>When Miniframe bias is set
+to zero, the miniframe words are referenced by numbers one to sixty four. If it
+is desired to refer to these words with their actual position in the subframe,
+then this value should be set to the word number of the first miniframe. </p>
+
+</div>
+
+<h3><a name="_Toc459006721"></a><a name="_Toc458576197"></a><a
+name="_Toc454945621"></a><a name="_Toc454941797"></a><a name="_Toc418915214"></a><a
+name="_Toc418416260"></a><a name="_Toc416767946"><span style='mso-bookmark:
+_Toc418416260'><span style='mso-bookmark:_Toc418915214'><span style='mso-bookmark:
+_Toc454941797'><span style='mso-bookmark:_Toc454945621'><span style='mso-bookmark:
+_Toc458576197'><span style='mso-bookmark:_Toc459006721'><o:p>&nbsp;</o:p></span></span></span></span></span></span></a></h3>
+
+<h3><span style='mso-bookmark:_Toc416767946'><span style='mso-bookmark:_Toc418416260'><span
+style='mso-bookmark:_Toc418915214'><span style='mso-bookmark:_Toc454941797'><span
+style='mso-bookmark:_Toc454945621'><span style='mso-bookmark:_Toc458576197'><span
+style='mso-bookmark:_Toc459006721'><a name="_Toc126037131">Desktop</a></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Desktop Configuration&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Configuration:System:Desktop&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Desktop&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'>  </span></h3>
+
+<p class=MsoNormal>AGS IV allows each application to have a distinct, developer
+selectable, background picture<!--[if supportFields]><span style='mso-element:
+field-begin'></span> XE &quot;Application:Background Picture&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Background Picture&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>(wallpaper<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Wallpaper&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->) in the main application
+window. It is advisable to select this screen to be a bitmap picture of the
+aircraft for which the application is being generated. In cases where more than
+one application resides on the same PC, this background picture will act as a
+reminder and reduce the chances of the data for one aircraft type to be entered
+for another aircraft type.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1027" type="#_x0000_t75"
+ style='width:316.5pt;height:189.75pt' fillcolor="window">
+ <v:imagedata src="IV-ch10-V3.4_files/image010.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=422 height=253
+src="IV-ch10-V3.4_files/image010.jpg" v:shapes="_x0000_i1027"><![endif]></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 10.4: System Configuration Window (Desktop Tab Shown).<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal>To select a background for the application, the desired
+bitmap can be specified in the Desktop tab, by selecting the drive, the folder,
+and the actual bitmap file to be displayed (see Figure 10.4).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>It is advisable to store the wallpaper<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Wallpaper&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>bitmap of each application in the application
+database folder, so that it may be backed up along with the application
+database.<span style='mso-spacerun:yes'>  </span></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037132"></a><a name="_Toc459006722"></a><a
+name="_Toc458576198"></a><a name="_Toc454945622"></a><a name="_Toc454941798"></a><a
+name="_Toc418915215"></a><a name="_Toc418416261"></a><a name="_Toc416767947"><span
+style='mso-bookmark:_Toc418416261'><span style='mso-bookmark:_Toc418915215'><span
+style='mso-bookmark:_Toc454941798'><span style='mso-bookmark:_Toc454945622'><span
+style='mso-bookmark:_Toc458576198'><span style='mso-bookmark:_Toc459006722'><span
+style='mso-bookmark:_Toc126037132'><u>V</u>ersions</span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Version&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h2>
+
+<p class=MsoNormal>Maintaining version<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Configuration:Version&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Version Configuration&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Application:Version&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>information is very important for the control
+of the application configurations. For this purpose AGS IV provides three
+parameters that can be assigned values by the developer. These parameters, as
+with any other parameter, are then used in recording data, designing screens,
+and generation of messages and reports. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1028" type="#_x0000_t75" style='width:378pt;height:197.25pt'
+ o:ole="" fillcolor="window">
+ <v:imagedata src="IV-ch10-V3.4_files/image012.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=504 height=263
+src="IV-ch10-V3.4_files/image012.jpg" v:shapes="_x0000_i1028"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1028"
+  DrawAspect="Content" ObjectID="_1200460367">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 10.5: Version Configuration Window.<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The three reserved parameters are 0VERDB00 (Major Version),
+0VERDB01 (Minor Version 1), and 0VERDB02 (Minor Version 2). Their value can be
+set from the <u>V</u>ersions<!--[if supportFields]><span style='mso-element:
+field-begin'></span> XE &quot;Versions&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>selection of the <u>C</u>onfiguration menu.
+0VERDB00 holds a 4-character alpha numeric string. 0VERDB01 and 0VERDB02 each
+may hold a two character alphanumeric string.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>It is important to increment a portion of the version number
+after every successful build of the application. This will force any later
+changes to go under the new version number. The version numbers are for the
+developer to use as necessary.<span style='mso-spacerun:yes'>  </span>The
+system, however, will automatically increment 0VERDB02 after every build, if
+the Auto Increment<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Configuration:Version:Auto Increment&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Application:Version:Auto
+Increment&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]--><!--[if supportFields]><span style='mso-element:
+field-begin'></span><span style='mso-spacerun:yes'> </span>XE
+&quot;Version:Auto Increment&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>selection is checked and the value entered for
+0VERDB02 is a two-digit number (see Figure 10.5).</p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037133"></a><a name="_Toc459006723"></a><a
+name="_Toc458576199"></a><a name="_Toc454945623"></a><a name="_Toc454941799"></a><a
+name="_Toc418915216"></a><a name="_Toc418416262"></a><a name="_Toc416767948"><span
+style='mso-bookmark:_Toc418416262'><span style='mso-bookmark:_Toc418915216'><span
+style='mso-bookmark:_Toc454941799'><span style='mso-bookmark:_Toc454945623'><span
+style='mso-bookmark:_Toc458576199'><span style='mso-bookmark:_Toc459006723'><span
+style='mso-bookmark:_Toc126037133'><u>A</u>CARS</span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;ACARS&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h2>
+
+<p class=MsoNormal>Here the Uplinks, Downlinks and Broadcast tabs define the
+ACMS to ACARS interface (see Figure 10.6). The Uplink and Downlink tabs are
+available for future expansion of AGS IV.</p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037134">Broadcast</a></h3>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Arinc 429 labels can be assigned in AGS IV to be broadcast
+through ACARS.<span style='mso-spacerun:yes'>  </span>The ACARS Broadcast tab
+is shown in figure 10.6.<span style='mso-spacerun:yes'>  </span>Within this tab
+is a list of the labels to be broadcast, along with SDI, Source, and Frequency.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1029" type="#_x0000_t75"
+ style='width:388.5pt;height:195.75pt'>
+ <v:imagedata src="IV-ch10-V3.4_files/image014.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=518 height=261
+src="IV-ch10-V3.4_files/image014.jpg" v:shapes="_x0000_i1029"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='mso-spacerun:yes'>                 </span>Figure 10.6: ACARS Broadcast
+Tab.<o:p></o:p></b></p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'>Next to this list are a set of buttons
+that enable the user to:</p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'>define<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Screen:New&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-tab-count:
+1'>   </span><!--[if gte vml 1]><v:shape id="_x0000_i1030" type="#_x0000_t75"
+ style='width:40.5pt;height:15pt' o:ole="" fillcolor="window">
+ <v:imagedata src="IV-ch10-V3.4_files/image016.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=54 height=20
+src="IV-ch10-V3.4_files/image016.jpg" v:shapes="_x0000_i1030"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1030"
+  DrawAspect="Content" ObjectID="_1200460369">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>    </span>broadcast label,</p>
+
+<p class=MsoNormal style='mso-list:skip'><span
+style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal style='mso-list:skip'><span style='mso-tab-count:1'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1031" type="#_x0000_t75" style='width:39.75pt;height:15pt' o:ole=""
+ fillcolor="window">
+ <v:imagedata src="IV-ch10-V3.4_files/image018.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=53 height=20
+src="IV-ch10-V3.4_files/image018.jpg" v:shapes="_x0000_i1031"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1031"
+  DrawAspect="Content" ObjectID="_1200460370">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>   </span>an existing<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Screen:Open&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>label for modification (see figure 10.7), </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span><span
+style='mso-tab-count:1'>          </span><!--[if gte vml 1]><v:shape id="_x0000_i1032"
+ type="#_x0000_t75" style='width:40.5pt;height:15pt' o:ole="" fillcolor="window">
+ <v:imagedata src="IV-ch10-V3.4_files/image020.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=54 height=20
+src="IV-ch10-V3.4_files/image020.jpg" v:shapes="_x0000_i1032"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1032"
+  DrawAspect="Content" ObjectID="_1200460371">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>  </span><span
+style='mso-spacerun:yes'> </span>an existing label.<span
+style='mso-spacerun:yes'>  </span>The user will be asked to confirm the
+deletion,</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><!--[if gte vml 1]><v:shape id="_x0000_i1033"
+ type="#_x0000_t75" style='width:40.5pt;height:14.25pt' o:ole="" fillcolor="window">
+ <v:imagedata src="IV-ch10-V3.4_files/image022.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=54 height=19
+src="IV-ch10-V3.4_files/image022.jpg" v:shapes="_x0000_i1033"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1033"
+  DrawAspect="Content" ObjectID="_1200460372">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>   </span>This will close the
+list,</p>
+
+<p class=MsoNormal style='text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><!--[if gte vml 1]><v:shape id="_x0000_i1034"
+ type="#_x0000_t75" style='width:40.5pt;height:15pt' o:ole="" fillcolor="window">
+ <v:imagedata src="IV-ch10-V3.4_files/image024.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=54 height=20
+src="IV-ch10-V3.4_files/image024.jpg" v:shapes="_x0000_i1034"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1034"
+  DrawAspect="Content" ObjectID="_1200460373">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>   </span>and close this list.</p>
+
+<p class=MsoNormal style='text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1035" type="#_x0000_t75"
+ style='width:234pt;height:180.75pt' o:ole="" fillcolor="window">
+ <v:imagedata src="IV-ch10-V3.4_files/image026.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=312 height=241
+src="IV-ch10-V3.4_files/image026.jpg" v:shapes="_x0000_i1035"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1035"
+  DrawAspect="Content" ObjectID="_1200460374">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Figure 10.7: ACARS
+Broadcast Edit Window.</b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc459006724"></a><a name="_Toc458576200"></a><a
+name="_Toc454945624"></a><a name="_Toc454941800"></a><a name="_Toc418915218"></a><a
+name="_Toc418416264"></a><a name="_Toc416767950"><span style='mso-bookmark:
+_Toc418416264'><span style='mso-bookmark:_Toc418915218'><span style='mso-bookmark:
+_Toc454941800'><span style='mso-bookmark:_Toc454945624'><span style='mso-bookmark:
+_Toc458576200'><span style='mso-bookmark:_Toc459006724'><o:p>&nbsp;</o:p></span></span></span></span></span></span></a></h3>
+
+<h3><span style='mso-bookmark:_Toc416767950'><span style='mso-bookmark:_Toc418416264'><span
+style='mso-bookmark:_Toc418915218'><span style='mso-bookmark:_Toc454941800'><span
+style='mso-bookmark:_Toc454945624'><span style='mso-bookmark:_Toc458576200'><span
+style='mso-bookmark:_Toc459006724'><a name="_Toc126037135">Uplinks</a></span></span></span></span></span></span></span><span
+style='mso-bookmark:_Toc126037135'> (for future expansion)</span><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;ACARS:Uplink&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;ACARS Uplink&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Uplink&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal>Uplinks<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;ACARS Configuration:Uplink&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Configuration:ACARS:Uplink&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>are commands and requests sent from the
+ground, through ACARS, to ACMS for different actions by the system. This window
+selection displays a list of possible uplink commands (see Figure 10.8).
+Security<!--[if supportFields]><span style='mso-element:field-begin'></span> XE
+&quot;Security Tokens&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>tokens<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;ACARS:Uplink Commands:Security
+Tokens&quot; <![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;ACARS:Uplink Commands&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>can be assigned to some or all of the
+commands. Once a security token is associated to a command, it becomes
+necessary to include a password (which has the token privilege) with the uplink
+command. The relationship between tokens and passwords is described in the
+section on password security, later in this chapter.</p>
+
+<p class=MsoNormal><!--[if gte vml 1]><o:wrapblock><v:shape id="_x0000_s1132"
+  type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+  margin-left:7.2pt;margin-top:-7.2pt;width:318pt;height:199.5pt;z-index:2'
+  o:allowincell="f">
+  <v:imagedata src="IV-ch10-V3.4_files/image028.jpg" o:title=""/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0>
+  <tr>
+   <td width=10 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=424 height=266 src="IV-ch10-V3.4_files/image028.jpg" v:shapes="_x0000_s1132"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+<b style='mso-bidi-font-weight:normal'><span style='color:red'><span
+style='mso-spacerun:yes'> </span><span style='mso-spacerun:yes'> </span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 10.8: ACARS Configuration Window (Uplink Tab Shown).<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc416767951"></a><a name="_Toc126037136"></a><a
+name="_Toc459006725"></a><a name="_Toc458576201"></a><a name="_Toc454945625"></a><a
+name="_Toc454941801"></a><a name="_Toc418915217"></a><a name="_Toc418416263"></a><a
+name="_Toc416767949"><span style='mso-bookmark:_Toc418416263'><span
+style='mso-bookmark:_Toc418915217'><span style='mso-bookmark:_Toc454941801'><span
+style='mso-bookmark:_Toc454945625'><span style='mso-bookmark:_Toc458576201'><span
+style='mso-bookmark:_Toc459006725'><span style='mso-bookmark:_Toc126037136'><span
+style='mso-bookmark:_Toc416767951'>Downlinks</span></span></span></span></span></span></span></span></a><span
+style='mso-bookmark:_Toc454941801'><span style='mso-bookmark:_Toc454945625'><span
+style='mso-bookmark:_Toc458576201'><span style='mso-bookmark:_Toc459006725'><span
+style='mso-bookmark:_Toc126037136'><span style='mso-bookmark:_Toc416767951'>
+(for future expansion)</span></span></span></span></span></span><span
+style='mso-bookmark:_Toc416767951'></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767951'></span><span style='mso-element:field-begin'></span><span
+style='mso-bookmark:_Toc416767951'> XE &quot;ACARS:Downlink&quot; </span><![endif]--><span
+style='mso-bookmark:_Toc416767951'></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767951'></span><span style='mso-element:field-end'></span><![endif]--><span
+style='mso-bookmark:_Toc416767951'></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767951'></span><span style='mso-element:field-begin'></span><span
+style='mso-bookmark:_Toc416767951'><span style='mso-spacerun:yes'> </span>XE
+&quot;Downlink&quot; </span><![endif]--><span style='mso-bookmark:_Toc416767951'></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767951'></span><span style='mso-element:field-end'></span><![endif]--><span
+style='mso-bookmark:_Toc416767951'></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc416767951'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc416767951'>Downlinks</span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767951'></span><span style='mso-element:field-begin'></span><span
+style='mso-bookmark:_Toc416767951'> XE &quot;ACARS Configuration:Downlink&quot;
+</span><![endif]--><span style='mso-bookmark:_Toc416767951'></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767951'></span><span style='mso-element:field-end'></span><![endif]--><span
+style='mso-bookmark:_Toc416767951'></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767951'></span><span style='mso-element:field-begin'></span><span
+style='mso-bookmark:_Toc416767951'><span style='mso-spacerun:yes'> </span>XE
+&quot;Configuration:ACARS:Downlink&quot; </span><![endif]--><span
+style='mso-bookmark:_Toc416767951'></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767951'></span><span style='mso-element:field-end'></span><![endif]--><span
+style='mso-bookmark:_Toc416767951'><span style='mso-spacerun:yes'> </span>are
+the reports sent to the ground through the ACARS. These reports or messages are
+broken into blocks (of about 200 characters) before being sent to the ACARS
+unit. On the ground the blocks are put together to reconstruct the
+message.<span style='mso-spacerun:yes'>  </span>The ‘Header on first block
+only’ check box will set the reserved parameter 0ACARSHO to ‘1’ if checked and
+to ‘0’ if unchecked.<span style='mso-spacerun:yes'>  </span>Checking this box
+will cause the ACARS header to be suppressed from message blocks greater than
+1.</span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc416767951'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc416767951'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:_Toc416767951'><!--[if gte vml 1]><v:shape id="_x0000_i1036"
+ type="#_x0000_t75" style='width:318pt;height:199.5pt'>
+ <v:imagedata src="IV-ch10-V3.4_files/image030.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=424 height=266
+src="IV-ch10-V3.4_files/image030.jpg" v:shapes="_x0000_i1036"><![endif]></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:_Toc416767951'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:_Toc416767951'><b style='mso-bidi-font-weight:normal'>Figure
+10.9: ACARS Configuration Window (Downlinks Tab Shown).</b></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc416767951'><o:p>&nbsp;</o:p></span></p>
+
+<h2 style='margin-left:0in'><span style='mso-bookmark:_Toc416767951'><a
+name="_Toc126037137"></a><a name="_Toc459006726"></a><a name="_Toc458576202"></a><a
+name="_Toc454945626"></a><a name="_Toc454941802"></a><a name="_Toc418915219"></a><a
+name="_Toc418416265"><span style='mso-bookmark:_Toc418915219'><span
+style='mso-bookmark:_Toc454941802'><span style='mso-bookmark:_Toc454945626'><span
+style='mso-bookmark:_Toc458576202'><span style='mso-bookmark:_Toc459006726'><span
+style='mso-bookmark:_Toc126037137'>DITS</span></span></span></span></span></span></a></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767951'><span style='mso-bookmark:_Toc418416265'><span
+style='mso-bookmark:_Toc418915219'><span style='mso-bookmark:_Toc454941802'><span
+style='mso-bookmark:_Toc454945626'><span style='mso-bookmark:_Toc458576202'><span
+style='mso-bookmark:_Toc459006726'><span style='mso-bookmark:_Toc126037137'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767951'><span
+style='mso-bookmark:_Toc418416265'><span style='mso-bookmark:_Toc418915219'><span
+style='mso-bookmark:_Toc454941802'><span style='mso-bookmark:_Toc454945626'><span
+style='mso-bookmark:_Toc458576202'><span style='mso-bookmark:_Toc459006726'><span
+style='mso-bookmark:_Toc126037137'> XE &quot;DITS Buses&quot; </span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767951'><span style='mso-bookmark:_Toc418416265'><span
+style='mso-bookmark:_Toc418915219'><span style='mso-bookmark:_Toc454941802'><span
+style='mso-bookmark:_Toc454945626'><span style='mso-bookmark:_Toc458576202'><span
+style='mso-bookmark:_Toc459006726'><span style='mso-bookmark:_Toc126037137'></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767951'><span style='mso-bookmark:_Toc418416265'><span
+style='mso-bookmark:_Toc418915219'><span style='mso-bookmark:_Toc454941802'><span
+style='mso-bookmark:_Toc454945626'><span style='mso-bookmark:_Toc458576202'><span
+style='mso-bookmark:_Toc459006726'><span style='mso-bookmark:_Toc126037137'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767951'><span style='mso-bookmark:_Toc418416265'><span style='mso-bookmark:
+_Toc418915219'><span style='mso-bookmark:_Toc454941802'><span style='mso-bookmark:
+_Toc454945626'><span style='mso-bookmark:_Toc458576202'><span style='mso-bookmark:
+_Toc459006726'><span style='mso-bookmark:_Toc126037137'><span
+style='mso-spacerun:yes'> </span><u>B</u>uses</span></span></span></span></span></span></span></span></h2>
+
+<p class=MsoNormal>The DITS<!--[if supportFields]><span style='mso-element:
+field-begin'></span> XE &quot;Configuration:DITS Buses&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;DITS Configuration&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>busses<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Bus:Configuration&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Bus Configuration&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>connected to the airborne system are the
+source of the ARINC 429 parameters received by the unit. In defining parameters,
+reference is made to this bus. In this window the characteristics of the bus
+are defined (see Figure 10.10). The bus name is user selectable, all other
+information must be obtained from the specification of the airborne unit. In
+addition to the standard busses connected on the aircraft, additional busses
+can be connected to the spare ports of the airborne unit. For these spare
+busses, the port, card and channel are still obtainable from the unit
+specification. The speed, however, must be defined by the user to match the
+speed of the device feeding data to the bus.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><o:wrapblock><v:shape
+  id="_x0000_s1133" type="#_x0000_t75" style='position:absolute;left:0;
+  text-align:left;margin-left:43.2pt;margin-top:0;width:324.75pt;height:166.5pt;
+  z-index:3' o:allowincell="f">
+  <v:imagedata src="IV-ch10-V3.4_files/image032.jpg" o:title=""/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0 align=left>
+  <tr>
+   <td width=58 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=433 height=222 src="IV-ch10-V3.4_files/image032.jpg" v:shapes="_x0000_s1133"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+</p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 10.10a: FDIMU DITS Bus Configuration Selection Window.<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><!--[if gte vml 1]><v:shape id="_x0000_i1037" type="#_x0000_t75"
+ style='width:333.75pt;height:225.75pt'>
+ <v:imagedata src="IV-ch10-V3.4_files/image034.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=445 height=301
+src="IV-ch10-V3.4_files/image034.jpg" v:shapes="_x0000_i1037"><![endif]><o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 10.10b: iDMU DITS Bus Configuration Selection Window.<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>For iDMU, at the lower portion of the DITS Bus Configuration
+screen, there is the capability of selecting a default<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Bus:Default&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>bus type. This is a facility to allow less key
+strokes when typing in parameter names at the AGS IV or the display unit on the
+aircraft</p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037138"></a><a name="_Toc459006727"></a><a
+name="_Toc458576203"></a><a name="_Toc454945627"></a><a name="_Toc454941803"></a><a
+name="_Toc418915220"></a><a name="_Toc418416266"></a><a name="_Toc416767952"><span
+style='mso-bookmark:_Toc418416266'><span style='mso-bookmark:_Toc418915220'><span
+style='mso-bookmark:_Toc454941803'><span style='mso-bookmark:_Toc454945627'><span
+style='mso-bookmark:_Toc458576203'><span style='mso-bookmark:_Toc459006727'><span
+style='mso-bookmark:_Toc126037138'><u>F</u>light</span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767952'><span style='mso-bookmark:_Toc418416266'><span
+style='mso-bookmark:_Toc418915220'><span style='mso-bookmark:_Toc454941803'><span
+style='mso-bookmark:_Toc454945627'><span style='mso-bookmark:_Toc458576203'><span
+style='mso-bookmark:_Toc459006727'><span style='mso-bookmark:_Toc126037138'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767952'><span
+style='mso-bookmark:_Toc418416266'><span style='mso-bookmark:_Toc418915220'><span
+style='mso-bookmark:_Toc454941803'><span style='mso-bookmark:_Toc454945627'><span
+style='mso-bookmark:_Toc458576203'><span style='mso-bookmark:_Toc459006727'><span
+style='mso-bookmark:_Toc126037138'> XE &quot;Flight Modes&quot; </span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767952'><span style='mso-bookmark:_Toc418416266'><span
+style='mso-bookmark:_Toc418915220'><span style='mso-bookmark:_Toc454941803'><span
+style='mso-bookmark:_Toc454945627'><span style='mso-bookmark:_Toc458576203'><span
+style='mso-bookmark:_Toc459006727'><span style='mso-bookmark:_Toc126037138'></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767952'><span style='mso-bookmark:_Toc418416266'><span
+style='mso-bookmark:_Toc418915220'><span style='mso-bookmark:_Toc454941803'><span
+style='mso-bookmark:_Toc454945627'><span style='mso-bookmark:_Toc458576203'><span
+style='mso-bookmark:_Toc459006727'><span style='mso-bookmark:_Toc126037138'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767952'><span style='mso-bookmark:_Toc418416266'><span style='mso-bookmark:
+_Toc418915220'><span style='mso-bookmark:_Toc454941803'><span style='mso-bookmark:
+_Toc454945627'><span style='mso-bookmark:_Toc458576203'><span style='mso-bookmark:
+_Toc459006727'><span style='mso-bookmark:_Toc126037138'><span
+style='mso-spacerun:yes'> </span>Modes</span></span></span></span></span></span></span></span></h2>
+
+<p class=MsoNormal>At the top of the trigger definition windows there are
+buttons for specifying the flight<!--[if supportFields]><span style='mso-element:
+field-begin'></span> XE &quot;Configuration:Flight Modes&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>modes<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Flight Mode
+Configuration&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-spacerun:yes'> </span>where the
+trigger must be active (see Figure 10.11). The text on the buttons represents
+the flight mode. As the selection of flight modes and the names associated with
+the modes are under the control of the application developer, this item in the
+configuration menu allows the developer to specify the flight modes that are
+defined in this application.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><o:wrapblock><v:shape id="_x0000_s1134"
+  type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+  margin-left:100.8pt;margin-top:0;width:208.5pt;height:238.5pt;z-index:4'
+  o:allowincell="f">
+  <v:imagedata src="IV-ch10-V3.4_files/image036.jpg" o:title=""/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0 align=left>
+  <tr>
+   <td width=134 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=278 height=318 src="IV-ch10-V3.4_files/image036.jpg" v:shapes="_x0000_s1134"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 10.11: Flight Mo<a name="_Toc418915221"></a><a
+name="_Toc418416267"></a><a name="_Toc416767953"><span style='mso-bookmark:
+_Toc418416267'><span style='mso-bookmark:_Toc418915221'>de Configuration
+Window.<o:p></o:p></span></span></a></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:_Toc416767953'><span style='mso-bookmark:_Toc418416267'><span
+style='mso-bookmark:_Toc418915221'><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></span></span></span></p>
+
+<h2 style='margin-left:0in'><span style='mso-bookmark:_Toc416767953'><span
+style='mso-bookmark:_Toc418416267'><span style='mso-bookmark:_Toc418915221'><a
+name="_Toc126037139">packet list</a></span></span></span></h2>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc416767953'><span
+style='mso-bookmark:_Toc418416267'><span style='mso-bookmark:_Toc418915221'>For
+iDMU only.<span style='mso-spacerun:yes'>  </span>For burst busses, labels are
+acquired as packets.<span style='mso-spacerun:yes'>  </span>TCAS is an
+example.<span style='mso-spacerun:yes'>  </span>In this case, a Packet List
+must be defined (see figures 10.11a, b, c).<span style='mso-spacerun:yes'> 
+</span>A start word label and end word label may be specified, as well as
+labels in intermediate words.<span style='mso-spacerun:yes'>  </span>The 429
+bus must be chosen as well as the maximum number of groups per packet and the
+maximum number of packets per second.<span style='mso-spacerun:yes'>  </span></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc416767953'><span style='mso-bookmark:_Toc418416267'><span
+style='mso-bookmark:_Toc418915221'><!--[if gte vml 1]><v:shape id="_x0000_i1038"
+ type="#_x0000_t75" style='width:237pt;height:133.5pt'>
+ <v:imagedata src="IV-ch10-V3.4_files/image038.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=316 height=178
+src="IV-ch10-V3.4_files/image038.jpg" v:shapes="_x0000_i1038"><![endif]></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc416767953'><span style='mso-bookmark:_Toc418416267'><span
+style='mso-bookmark:_Toc418915221'><o:p>&nbsp;</o:p></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc416767953'><span style='mso-bookmark:_Toc418416267'><span
+style='mso-bookmark:_Toc418915221'><b style='mso-bidi-font-weight:normal'>Figure
+10.11a: Packet List Configuration Option<o:p></o:p></b></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc416767953'><span style='mso-bookmark:_Toc418416267'><span
+style='mso-bookmark:_Toc418915221'><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc416767953'><span style='mso-bookmark:_Toc418416267'><span
+style='mso-bookmark:_Toc418915221'><!--[if gte vml 1]><v:shape id="_x0000_i1039"
+ type="#_x0000_t75" style='width:235.5pt;height:211.5pt'>
+ <v:imagedata src="IV-ch10-V3.4_files/image040.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=314 height=282
+src="IV-ch10-V3.4_files/image040.jpg" v:shapes="_x0000_i1039"><![endif]></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc416767953'><span style='mso-bookmark:_Toc418416267'><span
+style='mso-bookmark:_Toc418915221'><o:p>&nbsp;</o:p></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc416767953'><span style='mso-bookmark:_Toc418416267'><span
+style='mso-bookmark:_Toc418915221'><b style='mso-bidi-font-weight:normal'>Figure
+10.11b: Packet List Selection Window<o:p></o:p></b></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc416767953'><span style='mso-bookmark:_Toc418416267'><span
+style='mso-bookmark:_Toc418915221'><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc416767953'><span
+style='mso-bookmark:_Toc418416267'><span style='mso-bookmark:_Toc418915221'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1040" type="#_x0000_t75" style='width:391.5pt;height:242.25pt'>
+ <v:imagedata src="IV-ch10-V3.4_files/image042.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=522 height=323
+src="IV-ch10-V3.4_files/image042.jpg" v:shapes="_x0000_i1040"><![endif]></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc416767953'><span
+style='mso-bookmark:_Toc418416267'><span style='mso-bookmark:_Toc418915221'><o:p>&nbsp;</o:p></span></span></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='mso-bookmark:_Toc416767953'><span style='mso-bookmark:_Toc418416267'><span
+style='mso-bookmark:_Toc418915221'><b style='mso-bidi-font-weight:normal'>Figure
+10.11c: Packet List Configuration<o:p></o:p></b></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc416767953'><span
+style='mso-bookmark:_Toc418416267'><span style='mso-bookmark:_Toc418915221'><o:p>&nbsp;</o:p></span></span></span></p>
+
+<h2 style='margin-left:0in'><span style='mso-bookmark:_Toc416767953'><span
+style='mso-bookmark:_Toc418416267'><span style='mso-bookmark:_Toc418915221'><a
+name="_Toc126037140"></a><a name="_Toc459006728"></a><a name="_Toc458576204"></a><a
+name="_Toc454945628"></a><a name="_Toc454941804"><span style='mso-bookmark:
+_Toc454945628'><span style='mso-bookmark:_Toc458576204'><span style='mso-bookmark:
+_Toc459006728'><span style='mso-bookmark:_Toc126037140'>Passwords</span></span></span></span></a></span></span></span><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Password&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h2>
+
+<p class=MsoNormal>AGS IV allows the developer to implement a password<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Configuration:Password&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Password Configuration&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>protected security<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Security&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>system for the functions of the airborne
+system. This includes the line-select key of any display screen and the uplink
+messages received from the ground. Any line select key on any screen of the
+airborne display unit can be protected (i.e. will not function unless a
+password provides the necessary authorization). This allows the developer the
+capability of limiting the access of the display functions to different groups
+of users or even different individuals. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><o:wrapblock><v:shape
+  id="_x0000_s1135" type="#_x0000_t75" style='position:absolute;left:0;
+  text-align:left;margin-left:14.4pt;margin-top:0;width:387.75pt;height:198.75pt;
+  z-index:5' o:allowincell="f">
+  <v:imagedata src="IV-ch10-V3.4_files/image044.jpg" o:title=""/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0 align=left>
+  <tr>
+   <td width=19 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=517 height=265 src="IV-ch10-V3.4_files/image044.jpg" v:shapes="_x0000_s1135"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+</p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 10.12: Password Configuration Window.<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>In defining<!--[if supportFields]><span style='mso-element:
+field-begin'></span> XE &quot;Password:Definition&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>the functions of the line select keys, if a
+key function of a particular screen is not to be used without the necessary
+authorization, then a two character “Token<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Password:Token&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->” can be assigned to this key
+in the corresponding screen design form. The selection of the two characters
+token is at the developer’s discretion. Other keys in this or other displays
+that require a similar protection can be assigned the same token, keys that
+require a different level of protection should be assigned a different token.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The Uplink<!--[if supportFields]><span style='mso-element:
+field-begin'></span> XE &quot;ACARS:Uplink Commands:Token&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>tab in the <u>A</u>CARS configuration
+selection of the <u>C</u>onfigure menu allows a similar token assignment to
+individual ACARS uplink commands (see Figure 10.6). Commands that do not need
+protection will have no tokens assigned to them. Groups of uplink commands that
+need similar protection will be assigned the same two-character token, as
+defined by the developer.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once tokens are created and assigned to the necessary screen
+line select keys (in the screen design form) and ACARS uplink commands (in the
+ACARS configuration form), then the password configuration screen can be used
+to define passwords and the tokens each password can access (see Figure 10.12).
+</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>To define the password,<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Configuration:Password&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>the <u>P</u>assword option from the <u>C</u>onfigure
+menu must be selected and then the New<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Password:New&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>button pushed. This will cause a form to be
+displayed (Figure 10.13) that allows the definition of a password with up to 8
+characters. The password can be intended for one person such as the developer,
+or a group of people such as the mechanics or crew. </p>
+
+<p class=MsoNormal><!--[if gte vml 1]><o:wrapblock><v:shape id="_x0000_s1136"
+  type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+  margin-left:129.6pt;margin-top:0;width:146.25pt;height:218.25pt;z-index:6'
+  o:allowincell="f">
+  <v:imagedata src="IV-ch10-V3.4_files/image046.jpg" o:title=""/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0 align=left>
+  <tr>
+   <td width=173 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=195 height=291 src="IV-ch10-V3.4_files/image046.jpg" v:shapes="_x0000_s1136"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 10.13: The Password definition window.<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Each password can be assigned an authorization to access up
+to five tokens, i.e. the person who knows this password can select any line
+select key or transmit any uplink command that is protected by any of the
+tokens that it possesses.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>In the case of protected<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Uplink Command
+Protection&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]--><!--[if supportFields]><span style='mso-element:
+field-begin'></span><span style='mso-spacerun:yes'> </span>XE
+&quot;Security:Protected Uplink Commands&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>uplink commands the password is included as
+part of the text with each uplink (see the section on uplinks in this chapter).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>In the case of protected<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Security:Protected Line Select
+Key&quot; <![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>Line Select<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Line Select Key Protection&quot;
+<![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>Keys the following sequence of events occurs.
+If on the aircraft display, a line select key is selected that is protected by
+a token, instead of performing the defined function, the system displays a
+password entry screen. The user must now enter a password that has this token
+among its (up to five) authorized tokens. This being the case, the password
+entry screen disappears and the function of the line select key is performed.
+Otherwise the user must enter another password or return and make another
+selection.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once a password is entered in the password entry screen, the
+tokens that it possesses become known to the system. Thus, if another line
+select key is pressed that requires the same token, the password entry screen
+will not reappear. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The tokens possessed by a password are remembered until one
+of the following events happen:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Another password is entered, in which case the
+tokens of the new password are remembered.</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>The user logs off the display</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>20 minutes passes with no activity at the display
+keyboard.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Note that the tokens of a password uplinked to the system
+are NOT remembered.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The following two examples demonstrate the implementation of
+a hierarchical and a group oriented security system using the token and
+password capabilities of AGS IV.</p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Example 1 - A
+Hierarchical</b><!--[if supportFields]><b style='mso-bidi-font-weight:normal'><span
+style='mso-element:field-begin'></span></b> XE &quot;Hierarchical Security
+System&quot; <![endif]--><!--[if supportFields]><b style='mso-bidi-font-weight:
+normal'><span style='mso-element:field-end'></span></b><![endif]--><!--[if supportFields]><b
+style='mso-bidi-font-weight:normal'><span style='mso-element:field-begin'></span></b><span
+style='mso-spacerun:yes'> </span>XE &quot;Security:Hierarchical&quot; <![endif]--><!--[if supportFields]><b
+style='mso-bidi-font-weight:normal'><span style='mso-element:field-end'></span></b><![endif]--><b
+style='mso-bidi-font-weight:normal'><span
+style='mso-spacerun:yes'> </span>Security System<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Assume the line select keys of the screens of an application
+can be divided into three levels of criticality. Some keys can be selected by
+anyone (level 3), these keys are defined with no tokens assigned. Some keys can
+be selected by mechanics and supervisors (level 2). And, finally, some keys can
+only be selected by the supervisors (level 1). All level two keys can be
+protected by a token, say, P2 and all level one keys can be protected by a
+token, say P1.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Then the password given to the mechanics will be defined to
+possess the token P2 and the password given to the supervisors will be defined
+to possess P2 and P1. Thus if the mechanics password is entered, all level two
+and three keys will function, but if a level one key is selected, then the
+password screen will reappear. Now if the supervisor password is entered then
+all the keys in all screens will be selectable, until the display is logged off,
+or 20 minutes pass with no activity at the keyboard. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Example 2 - A Group</b><!--[if supportFields]><b
+style='mso-bidi-font-weight:normal'><span style='mso-element:field-begin'></span></b>
+XE &quot;Group Oriented Security System&quot; <![endif]--><!--[if supportFields]><b
+style='mso-bidi-font-weight:normal'><span style='mso-element:field-end'></span></b><![endif]--><b
+style='mso-bidi-font-weight:normal'><span
+style='mso-spacerun:yes'> </span>Oriented</b><!--[if supportFields]><b
+style='mso-bidi-font-weight:normal'><span style='mso-element:field-begin'></span></b>
+XE &quot;Security:Group Oriented&quot; <![endif]--><!--[if supportFields]><b
+style='mso-bidi-font-weight:normal'><span style='mso-element:field-end'></span></b><![endif]--><b
+style='mso-bidi-font-weight:normal'><span
+style='mso-spacerun:yes'> </span>Security System<o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='mso-spacerun:yes'> </span></b></p>
+
+<p class=MsoNormal>Assume a group of uplink commands and line select keys is to
+be accessible to the mechanics, a second group of uplink commands and keys is
+to be accessible to the developers, and a third group is still to be password
+protected, but accessible to both mechanics and developers.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>In this case the first group of keys and uplink commands can
+be assigned a token MM, the second group assigned a token DD and the third
+group assigned the token MD. Now the password given to the mechanics will be
+defined with the tokens MM and MD, the password for the developers will be
+defined with the tokens DD and MD.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+border-bottom:none;mso-border-top-alt:solid windowtext .75pt;mso-border-left-alt:
+solid windowtext .75pt;mso-border-right-alt:solid windowtext .75pt;padding:
+5.0pt 5.0pt 0in 5.0pt'>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:solid windowtext .75pt;
+mso-border-left-alt:solid windowtext .75pt;mso-border-right-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 0in 5.0pt'>The password<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Password:Definition&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>definition screen in AGS IV allows the
+definition of an optional four-character text along with each password, called
+Access<!--[if supportFields]><span style='mso-element:field-begin'></span> XE
+&quot;Password:Access&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->. The Access text is used only
+as a reminder of the password that is in effect when the password entry screen
+appears. This, of course, can only happen if a password has previously been
+entered, but the line select key selected has a token that is not possessed by
+the current password and it has become necessary to request a different
+password. In this case the Access text of the previous password is displayed in
+the password entry screen.</p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:solid windowtext .75pt;
+mso-border-left-alt:solid windowtext .75pt;mso-border-right-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 0in 5.0pt'><o:p>&nbsp;</o:p></p>
+
+</div>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+border-top:none;mso-border-left-alt:solid windowtext .75pt;mso-border-bottom-alt:
+solid windowtext .75pt;mso-border-right-alt:solid windowtext .75pt;padding:
+0in 5.0pt 5.0pt 5.0pt'>
+
+<p class=MsoNormal style='border:none;mso-border-left-alt:solid windowtext .75pt;
+mso-border-bottom-alt:solid windowtext .75pt;mso-border-right-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:0in 5.0pt 5.0pt 5.0pt'>As an example, the password
+defined for the supervisors might have the Access text “SUPV”, where the
+password for the mechanics might have the Access text “MECH”. Now if a mechanic
+enters the mechanics password and later tries to select a key that has a token
+not possessed by this password, the password entry screen will reappear, and
+indicate that the current access is “MECH”, thus implying that the mechanics
+password is not authorized to access this new function. In this case another
+password is necessary.<span style='mso-spacerun:yes'>  </span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037141"></a><a name="_Toc459006729"></a><a
+name="_Toc458576205"></a><a name="_Toc454945629"></a><a name="_Toc454941805"></a><a
+name="_Toc418915222"></a><a name="_Toc418416268"></a><a name="_Toc416767954"><span
+style='mso-bookmark:_Toc418416268'><span style='mso-bookmark:_Toc418915222'><span
+style='mso-bookmark:_Toc454941805'><span style='mso-bookmark:_Toc454945629'><span
+style='mso-bookmark:_Toc458576205'><span style='mso-bookmark:_Toc459006729'><span
+style='mso-bookmark:_Toc126037141'>Configuration</span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767954'><span style='mso-bookmark:_Toc418416268'><span
+style='mso-bookmark:_Toc418915222'><span style='mso-bookmark:_Toc454941805'><span
+style='mso-bookmark:_Toc454945629'><span style='mso-bookmark:_Toc458576205'><span
+style='mso-bookmark:_Toc459006729'><span style='mso-bookmark:_Toc126037141'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767954'><span
+style='mso-bookmark:_Toc418416268'><span style='mso-bookmark:_Toc418915222'><span
+style='mso-bookmark:_Toc454941805'><span style='mso-bookmark:_Toc454945629'><span
+style='mso-bookmark:_Toc458576205'><span style='mso-bookmark:_Toc459006729'><span
+style='mso-bookmark:_Toc126037141'> XE &quot;Configuration:Use of Reserved
+Parameter&quot; </span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767954'><span style='mso-bookmark:_Toc418416268'><span
+style='mso-bookmark:_Toc418915222'><span style='mso-bookmark:_Toc454941805'><span
+style='mso-bookmark:_Toc454945629'><span style='mso-bookmark:_Toc458576205'><span
+style='mso-bookmark:_Toc459006729'><span style='mso-bookmark:_Toc126037141'></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767954'><span style='mso-bookmark:_Toc418416268'><span
+style='mso-bookmark:_Toc418915222'><span style='mso-bookmark:_Toc454941805'><span
+style='mso-bookmark:_Toc454945629'><span style='mso-bookmark:_Toc458576205'><span
+style='mso-bookmark:_Toc459006729'><span style='mso-bookmark:_Toc126037141'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767954'><span style='mso-bookmark:_Toc418416268'><span style='mso-bookmark:
+_Toc418915222'><span style='mso-bookmark:_Toc454941805'><span style='mso-bookmark:
+_Toc454945629'><span style='mso-bookmark:_Toc458576205'><span style='mso-bookmark:
+_Toc459006729'><span style='mso-bookmark:_Toc126037141'><span
+style='mso-spacerun:yes'> </span>Through Reserved</span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767954'><span style='mso-bookmark:_Toc418416268'><span
+style='mso-bookmark:_Toc418915222'><span style='mso-bookmark:_Toc454941805'><span
+style='mso-bookmark:_Toc454945629'><span style='mso-bookmark:_Toc458576205'><span
+style='mso-bookmark:_Toc459006729'><span style='mso-bookmark:_Toc126037141'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767954'><span
+style='mso-bookmark:_Toc418416268'><span style='mso-bookmark:_Toc418915222'><span
+style='mso-bookmark:_Toc454941805'><span style='mso-bookmark:_Toc454945629'><span
+style='mso-bookmark:_Toc458576205'><span style='mso-bookmark:_Toc459006729'><span
+style='mso-bookmark:_Toc126037141'> XE &quot;Parameter:Reserved&quot; </span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767954'><span style='mso-bookmark:_Toc418416268'><span
+style='mso-bookmark:_Toc418915222'><span style='mso-bookmark:_Toc454941805'><span
+style='mso-bookmark:_Toc454945629'><span style='mso-bookmark:_Toc458576205'><span
+style='mso-bookmark:_Toc459006729'><span style='mso-bookmark:_Toc126037141'></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767954'><span style='mso-bookmark:_Toc418416268'><span
+style='mso-bookmark:_Toc418915222'><span style='mso-bookmark:_Toc454941805'><span
+style='mso-bookmark:_Toc454945629'><span style='mso-bookmark:_Toc458576205'><span
+style='mso-bookmark:_Toc459006729'><span style='mso-bookmark:_Toc126037141'></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767954'><span style='mso-bookmark:_Toc418416268'><span style='mso-bookmark:
+_Toc418915222'><span style='mso-bookmark:_Toc454941805'><span style='mso-bookmark:
+_Toc454945629'><span style='mso-bookmark:_Toc458576205'><span style='mso-bookmark:
+_Toc459006729'><span style='mso-bookmark:_Toc126037141'><span
+style='mso-spacerun:yes'> </span>Parameters</span></span></span></span></span></span></span></span></h2>
+
+<p class=MsoNormal>Some configuration information, especially that which needs
+to be modifiable during application execution is specified by assigning values
+to reserved parameters (i.e. the parameters names that start with the zero
+character). Although it is possible for the developer to assign values to these
+parameters using the parameter definition screens of AGS IV; being reserved
+parameters, modifications to their definitions is discouraged. Therefore the
+values of these parameters need to be assigned by the first trigger that
+executes after power up of the airborne unit. Therefore, every application has
+a reserved trigger called _INISERV. This trigger is executed only once after
+power up, and this trigger is where the developer can assign configuration
+selections to reserved parameters.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The following are some reserved parameters that can be used
+to specify configuration information, and the possible values that can be
+assigned to them:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>0ACATYPE := “724B”<span style='mso-tab-count:1'>            </span>#
+interface to ARINC 724B ACARS (ACMS only)</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>0ACATYPE := “724”<span style='mso-tab-count:1'>  </span><span
+style='mso-tab-count:1'>            </span># interface to ARINC 724 ACARS (ACMS
+only)</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>0ADLDATR := “HA”<span style='mso-tab-count:2'>               </span>#
+when downloading to the loader, use high speed</p>
+
+<p class=MsoNormal><span style='mso-tab-count:4'>                                                </span>#
+and append to existing data on the diskette</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>0ADLDATR := “HO”<span style='mso-tab-count:2'>              </span>#
+when downloading to the loader, use high speed</p>
+
+<p class=MsoNormal><span style='mso-tab-count:4'>                                                </span>#
+and overwrite existing data on the diskette</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>0ADLDATR := “LA”<span style='mso-tab-count:2'>               </span>#
+when downloading to the loader, use low speed</p>
+
+<p class=MsoNormal><span style='mso-tab-count:4'>                                                </span>#
+and append to existing data on the diskette</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>0ADLDATR := “LO”<span style='mso-tab-count:2'>               </span>#
+when downloading to the loader, use low speed</p>
+
+<p class=MsoNormal><span style='mso-tab-count:4'>                                                </span>#
+and overwrite existing data on the diskette</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>0CPU1SIM := 0<span style='mso-tab-count:2'>                      </span>#
+no CPU1 simulation, normal operation (ACMS only) </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>0CPU1SIM := 1<span style='mso-tab-count:2'>                      </span>#
+CPU1 data to simulated, ignore data from the</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:.5in'># inter-cpu
+buffer (ACMS only) </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>0HCMINUS := “M”<span style='mso-tab-count:2'>                </span>#
+if for a numeric value a CCCC... format is used</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:.5in'># instead of
+NNNN... then for negative values “M”</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:.5in'># will be used
+instead and “-“. Any character can</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:.5in'># be used instead
+of “M”</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>0HCPLUS := “P”<span style='mso-tab-count:2'>                     </span>#
+if for a numeric value a CCCC... format is used</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:.5in'># instead of
+NNNN... then for positive values “P”</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:.5in'># will be used in
+the leftmost position. Any character</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:.5in'># can be used
+instead of “P”</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>0MAXFCNT := 1000<span style='mso-tab-count:2'>              </span>#
+the flight count should reset to 1 when it reaches</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:.5in'># 1000. Any value
+can be used instead of 1000</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>0PROMPT1 := “&lt;ACM”<span style='mso-tab-count:1'>         </span>#
+the first four characters of the prompt on the</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:.5in'># MCDU menu</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>0PROMPT2 := “S”<span style='mso-tab-count:2'>                  </span>#
+the last four characters on the MCDU menu </p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>0QARCCUR := 0<span style='mso-tab-count:2'>                    </span>#
+no concurrent raw data and message data </p>
+
+<p class=MsoNormal><span style='mso-tab-count:4'>                                                </span>#
+output to the recorder. Stop the raw data </p>
+
+<p class=MsoNormal><span style='mso-tab-count:4'>                                                </span>#
+before outputting message data</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>0QARCCUR := 1<span style='mso-tab-count:2'>                    </span>#
+concurrent raw data and message data output to</p>
+
+<p class=MsoNormal><span style='mso-tab-count:4'>                                                </span>#
+the recorder is allowed. Do not stop the raw data</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:.5in'># while
+outputting message data</p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>0PTRTYPE := 740<span style='mso-tab-count:2'>                   </span>#
+output to ARINC 740 or 744 printer</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=left style='text-align:left'>0PTRTYPE := 597<span
+style='mso-tab-count:2'>                   </span># output to ARINC 597 printer</p>
+
+</div>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always;
+mso-break-type:section-break'>
+</span>
+
+<div class=Section2>
+
+<p class=MsoNormal align=left style='text-align:left'><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

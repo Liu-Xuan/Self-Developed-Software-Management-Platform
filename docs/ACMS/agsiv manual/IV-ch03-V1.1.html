@@ -1,0 +1,2532 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="IV-ch03-V1.1_files/filelist.xml">
+<link rel=Edit-Time-Data href="IV-ch03-V1.1_files/editdata.mso">
+<link rel=OLE-Object-Data href="IV-ch03-V1.1_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Chapter 3 - Parameters</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="City"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Site License</o:Author>
+  <o:Template>ch01-V2-f1.dot</o:Template>
+  <o:LastAuthor>dfreedman</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>42</o:TotalTime>
+  <o:LastPrinted>1999-08-03T22:17:00Z</o:LastPrinted>
+  <o:Created>2006-02-03T16:20:00Z</o:Created>
+  <o:LastSaved>2006-02-03T16:20:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>3772</o:Words>
+  <o:Characters>21503</o:Characters>
+  <o:Company>Teledyne Controls</o:Company>
+  <o:Lines>179</o:Lines>
+  <o:Paragraphs>50</o:Paragraphs>
+  <o:CharactersWithSpaces>25225</o:CharactersWithSpaces>
+  <o:Version>11.6568</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="8" DLLVersion="513" NLCheck="0">1</w:ActiveWritingStyle>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Arial Narrow";
+	panose-1:2 11 5 6 2 2 2 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:"Heading 2";
+	margin-top:.5in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:-.8in;
+	page-break-before:always;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	border:none;
+	mso-border-top-alt:solid windowtext .5pt;
+	mso-border-bottom-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 0in 1.0pt 0in;
+	font-size:30.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:-.8in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+p.MsoIndex1, li.MsoIndex1, div.MsoIndex1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex2, li.MsoIndex2, div.MsoIndex2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex3, li.MsoIndex3, div.MsoIndex3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex8, li.MsoIndex8, div.MsoIndex8
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:96.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex9, li.MsoIndex9, div.MsoIndex9
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.5in;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	text-transform:uppercase;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-variant:small-caps;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-element:frame;
+	mso-element-frame-width:303.85pt;
+	mso-element-frame-height:31.4pt;
+	mso-element-frame-hspace:9.0pt;
+	mso-element-wrap:around;
+	mso-element-anchor-vertical:paragraph;
+	mso-element-anchor-horizontal:page;
+	mso-element-left:215.85pt;
+	mso-element-top:.75pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:22.5pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-22.5pt;
+	mso-pagination:widow-orphan;
+	tab-stops:22.5pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-alt:solid windowtext 1.5pt;
+	padding:0in;
+	mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt;
+	mso-border-shadow:yes;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:14.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	mso-bidi-language:AR-SA;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("IV-ch03-V1.1_files/header.html") fs;
+	mso-footnote-continuation-separator:url("IV-ch03-V1.1_files/header.html") fcs;
+	mso-endnote-separator:url("IV-ch03-V1.1_files/header.html") es;
+	mso-endnote-continuation-separator:url("IV-ch03-V1.1_files/header.html") ecs;
+	mso-facing-pages:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-even-header:url("IV-ch03-V1.1_files/header.html") eh2;
+	mso-header:url("IV-ch03-V1.1_files/header.html") h2;
+	mso-even-footer:url("IV-ch03-V1.1_files/header.html") ef2;
+	mso-footer:url("IV-ch03-V1.1_files/header.html") f2;
+	mso-first-footer:url("IV-ch03-V1.1_files/header.html") ff2;
+	mso-paper-source:0;}
+div.Section2
+	{page:Section2;}
+@page Section3
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-even-header:url("IV-ch03-V1.1_files/header.html") eh3;
+	mso-header:url("IV-ch03-V1.1_files/header.html") h3;
+	mso-even-footer:url("IV-ch03-V1.1_files/header.html") ef3;
+	mso-footer:url("IV-ch03-V1.1_files/header.html") f3;
+	mso-first-footer:url("IV-ch03-V1.1_files/header.html") ff3;
+	mso-paper-source:0;}
+div.Section3
+	{page:Section3;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-2;
+	mso-list-type:simple;
+	mso-list-template-ids:-1;}
+@list l0:level1
+	{mso-level-start-at:0;
+	mso-level-text:*;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l1
+	{mso-list-id:602302158;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:778913538;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3
+	{mso-list-id:861430807;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l4
+	{mso-list-id:1746338613;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level1 lfo1
+	{mso-level-start-at:1;
+	mso-level-number-format:bullet;
+	mso-level-numbering:continue;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.15pt;
+	mso-level-legacy-space:0in;
+	margin-left:14.15pt;
+	text-indent:-14.15pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<div style='mso-element:para-border-div;border-top:solid windowtext 1.0pt;
+border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+padding:1.0pt 0in 1.0pt 0in'>
+
+<h1 style='margin-left:0in'><a name="_Toc126037005"></a><a name="_Toc459006571"></a><a
+name="_Toc458576047"></a><a name="_Toc454945469"></a><a name="_Toc454941645"></a><a
+name="_Toc454615577"></a><a name="_Toc454599737"></a><a name="_Toc418915090"></a><a
+name="_Toc418416136"></a><a name="_Toc416767823"><span style='mso-bookmark:
+_Toc418416136'><span style='mso-bookmark:_Toc418915090'><span style='mso-bookmark:
+_Toc454599737'><span style='mso-bookmark:_Toc454615577'><span style='mso-bookmark:
+_Toc454941645'><span style='mso-bookmark:_Toc454945469'><span style='mso-bookmark:
+_Toc458576047'><span style='mso-bookmark:_Toc459006571'><span style='mso-bookmark:
+_Toc126037005'>Chapter 3<br>
+PARAMETERS</span></span></span></span></span></span></span></span></span></a></h1>
+
+</div>
+
+<h2 style='margin-left:0in'><a name="_Toc126037006"></a><a name="_Toc459006572"></a><a
+name="_Toc458576048"></a><a name="_Toc454945470"></a><a name="_Toc454941646"></a><a
+name="_Toc454615578"></a><a name="_Toc454599738"></a><a name="_Toc418915091"></a><a
+name="_Toc418416137"></a><a name="_Toc416767824"><span style='mso-bookmark:
+_Toc418416137'><span style='mso-bookmark:_Toc418915091'><span style='mso-bookmark:
+_Toc454599738'><span style='mso-bookmark:_Toc454615578'><span style='mso-bookmark:
+_Toc454941646'><span style='mso-bookmark:_Toc454945470'><span style='mso-bookmark:
+_Toc458576048'><span style='mso-bookmark:_Toc459006572'><span style='mso-bookmark:
+_Toc126037006'>Overview</span></span></span></span></span></span></span></span></span></a></h2>
+
+<p class=MsoNormal>Parameters<!--[if supportFields]><span style='mso-element:
+field-begin'></span> XE &quot;Parameters&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>are values representing aircraft information
+and conditions such as altitude, oil pressure, and airspeed. They are either
+acquired from sensors<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Sensors&quot;<![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--> and busses<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Buses&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>installed in the aircraft or derived<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Derived&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>from other parameters. Typical derived values
+are flight hours and maximum vertical acceleration. As such, parameters are the
+basic components of ACMS.<span style='mso-spacerun:yes'>  </span>Potential
+sources for obtaining parameters are many, but ACMS is limited to acquiring
+only from those sources that are wired to the airborne units. Once acquired or
+derived, parameters may be recorded on tape, reported to ground stations,
+called up on the flight deck display, etc.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Parameters are usually the first items defined when
+specifying an application. This is done by selecting the Parameter option from
+the Define<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Menu:Define&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>pull down menu or pressing the <i
+style='mso-bidi-font-style:normal'>parameter</i> button from the toolbar.<span
+style='mso-spacerun:yes'>  </span>Portions of an AGS IV window, indicating the
+position of the toolbar<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Toolbar&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>and the <i style='mso-bidi-font-style:normal'>parameter</i>
+button, is shown in Figure 3.1 (Note:<span style='mso-spacerun:yes'> 
+</span>The SAR option is not available for iDMU).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1031" type="#_x0000_t75" style='width:358.5pt;
+ height:135pt'>
+ <v:imagedata src="IV-ch03-V1.1_files/image002.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=478 height=180
+src="IV-ch03-V1.1_files/image002.jpg" v:shapes="_x0000_i1031"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='color:black'>Figure 3.1: AGS IV Main Menu and Toolbar with
+Define Parameter selected.</span><span style='color:red'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once the parameter selection is made, a new window titled
+Parameter Selection is opened, which contains a list of all previously defined
+parameters.<span style='mso-spacerun:yes'>  </span>Figure 3.2 illustrates the
+parameter selection windows.<span style='mso-spacerun:yes'>  </span>A typical
+parameter called N1A1, from a list of parameters already defined, is shown
+selected.<span style='mso-spacerun:yes'>  </span>Next to this list is a set of
+buttons that enable the user to:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span>define<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Define&quot;<![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--> <span style='mso-tab-count:
+1'> </span><!--[if gte vml 1]><v:shape id="_x0000_i1025" type="#_x0000_t75"
+ style='width:50.25pt;height:20.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch03-V1.1_files/image003.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=27
+src="IV-ch03-V1.1_files/image003.gif" v:shapes="_x0000_i1025"><![endif]><span
+style='mso-spacerun:yes'>    </span>parameters<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:New&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->, </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:50.25pt;height:20.25pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch03-V1.1_files/image004.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=27
+src="IV-ch03-V1.1_files/image004.gif" v:shapes="_x0000_i1026"><![endif]><span
+style='mso-spacerun:yes'>    </span>existing<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Open&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>parameters for display or modification<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Modification&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->,</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1027" type="#_x0000_t75" style='width:50.25pt;height:20.25pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch03-V1.1_files/image005.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=27
+src="IV-ch03-V1.1_files/image005.gif" v:shapes="_x0000_i1027"><![endif]><span
+style='mso-spacerun:yes'>   </span><span style='mso-spacerun:yes'> </span>one
+parameter<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Parameter:Copy&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>definition into another, </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1028" type="#_x0000_t75" style='width:49.5pt;height:20.25pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch03-V1.1_files/image006.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=66 height=27
+src="IV-ch03-V1.1_files/image006.gif" v:shapes="_x0000_i1028"><![endif]><span
+style='mso-spacerun:yes'>    </span>a defined parameter<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Delete&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->,</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1029" type="#_x0000_t75" style='width:49.5pt;height:19.5pt' o:ole=""
+ fillcolor="window">
+ <v:imagedata src="IV-ch03-V1.1_files/image007.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=66 height=26
+src="IV-ch03-V1.1_files/image007.gif" v:shapes="_x0000_i1029"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Word.Picture.8" ShapeID="_x0000_i1029"
+  DrawAspect="Content" ObjectID="_1200460006">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>    </span>a parameter<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Find&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>or a group of parameters based on a template,
+or</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=left style='text-align:left'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1160" type="#_x0000_t75" style='position:absolute;margin-left:36pt;
+ margin-top:1.4pt;width:50.4pt;height:18.75pt;z-index:7' o:allowincell="f">
+ <v:imagedata src="IV-ch03-V1.1_files/image009.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:7;margin-left:48px;margin-top:2px;width:67px;height:25px'><img
+width=67 height=25 src="IV-ch03-V1.1_files/image009.jpg" v:shapes="_x0000_s1160"></span><![endif]><b
+style='mso-bidi-font-weight:normal'><span style='mso-spacerun:yes'>       
+</span><span style='mso-spacerun:yes'>                 </span></b>to<span
+style='mso-spacerun:yes'>     </span>Manufacturer Access is required to protect
+parameters.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><o:wrapblock><v:shape id="_x0000_s1154"
+  type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+  margin-left:100.8pt;margin-top:0;width:235.5pt;height:219pt;z-index:1'
+  o:allowincell="f">
+  <v:imagedata src="IV-ch03-V1.1_files/image011.jpg" o:title="Figure32"/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0 align=left>
+  <tr>
+   <td width=134 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=314 height=292 src="IV-ch03-V1.1_files/image011.jpg" v:shapes="_x0000_s1154"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+</p>
+
+<p class=MsoNormal><span
+style='mso-spacerun:yes'>                                      </span><b
+style='mso-bidi-font-weight:normal'>Figure 3.2: Parameter Selection Window.<o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal>Following are explanations of each of the parameter
+definition buttons shown in Figure 3.2:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1030" type="#_x0000_t75"
+ style='width:50.25pt;height:20.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch03-V1.1_files/image003.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=27
+src="IV-ch03-V1.1_files/image003.gif" v:shapes="_x0000_i1030"><![endif]><span
+style='mso-spacerun:yes'> </span><span style='mso-spacerun:yes'>   </span>-
+This selection first inquires for a parameter name<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Name&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>(see Figure 3.3). Parameter names are limited
+to 8 characters, the first being alphabetic and the rest alphanumeric. It is
+advisable to select parameter names that are easy to understand and
+representative of the parameter value. For example DRIFT might be assigned as
+the name of the drift angle.</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal>Each application also contains a group of predefined
+parameter names that start with the digit “0”. These are called <i
+style='mso-bidi-font-style:normal'>reserved</i><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Reserved&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>parameters and in many cases carry information
+about the ACMS system itself (rather than the aircraft). Typical of these
+reserved parameters is the number of reports stored in non-volatile memory,
+etc.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'>For iDMU only, parameter
+names may be optionally followed by a “.” and bus extension<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Bus:Extension&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->. This is to support the
+redundancy of the information that is available on many aircraft systems.</p>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'>In these systems with
+redundant output, the same information is made available on multiple data
+busses. These are usually called “A<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Bus:Extension:’A’&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->” and “B<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Bus:Extension:’B’&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->” bus or “Left<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Bus:Left&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->”, “Right<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Bus:Right&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->” and “Center<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Bus:Center&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->” bus. If more than one of
+these busses are connected to the system then it is necessary to identify the
+different values of the same parameter, obtained from the different busses. In
+this case one of the valid extensions “A”, “B”, “L<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Bus:Extension:’L’&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->”, “R<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Bus:Extension:’R’&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->”, or “C<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Bus:Extension:’C’&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->” is appended to the parameter
+name following the “.” character.</p>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'>AGS IV in conjunction with
+the airborne units also provides a capability for automatically switching from
+one bus to another in case the data on some busses become unavailable. In these
+cases the parameters must be defined with a “.X<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Bus:Extension:’X’&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->” extension if the switching
+is to happen between the left, right and center busses, or equivalently be
+defined with a “.Y<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Bus:Extension:’Y’&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->” extension if the switching
+is to happen between the “A” and “B” busses.</p>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'>As an example, the N1A1
+parameter referred to above might have been defined as N1A1.L to indicate
+acquisition from the left bus. In a similar way, N1A1.X may be used to indicate
+to the system to switch between the left, right or center busses in case there
+is an interruption in the data received from the current bus. The
+specifications of the airborne units further describe the function of automatic<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Bus:Automatic Switching&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>bus switching.</p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once the parameter name is entered, the system allows the
+entry of the parameter attributes, as described later in this chapter.</p>
+
+<p class=MsoNormal><!--[if gte vml 1]><o:wrapblock><v:shape id="_x0000_s1155"
+  type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+  margin-left:64.8pt;margin-top:0;width:272.25pt;height:108.75pt;z-index:2'
+  o:allowincell="f">
+  <v:imagedata src="IV-ch03-V1.1_files/image013.jpg" o:title="Figure33"/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0 align=left>
+  <tr>
+   <td width=86 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=363 height=145 src="IV-ch03-V1.1_files/image013.jpg" v:shapes="_x0000_s1155"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+</p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 3.3: Parameter name inquiry window.<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Applicable to new parameter definition.<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1032" type="#_x0000_t75"
+ style='width:50.25pt;height:20.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch03-V1.1_files/image004.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=27
+src="IV-ch03-V1.1_files/image004.gif" v:shapes="_x0000_i1032"><![endif]><span
+style='mso-spacerun:yes'>    </span>- To open a parameter<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Open&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>for display or modification, the parameter
+must first be selected from the pre-defined list of parameters in the system
+(see Figure 3.2). The list can be scrolled up or down using the scroll bar or
+sorted in ascending (or descending) form using the title bar at the top of the
+list (as described in the Introduction). Once the cursor is positioned in the
+selection list, typing the first two characters of the parameter name also
+positions the list in the vicinity of parameters starting with the typed
+letters.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Once a parameter is selected and opened, the parameter
+attributes can be modified, as described under Parameter Definition later in
+this chapter.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1033" type="#_x0000_t75"
+ style='width:50.25pt;height:20.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch03-V1.1_files/image005.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=27
+src="IV-ch03-V1.1_files/image005.gif" v:shapes="_x0000_i1033"><![endif]><span
+style='mso-spacerun:yes'>     </span>- This function creates a new parameter<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Copy&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->, while copying information
+from an existing parameter. To copy, select the source parameter, then select
+the <!--[if gte vml 1]><v:shape id="_x0000_i1034" type="#_x0000_t75" style='width:50.25pt;
+ height:20.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch03-V1.1_files/image005.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=27
+src="IV-ch03-V1.1_files/image005.gif" v:shapes="_x0000_i1034"><![endif]><span
+style='mso-spacerun:yes'> </span>button and enter the new parameter name when
+prompted (in a fashion similar to the case of defining a new parameter.<span
+style='mso-spacerun:yes'>  </span>(See Figure 3.3). The fields in the new
+parameter can then be modified as desired.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1035" type="#_x0000_t75"
+ style='width:49.5pt;height:20.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch03-V1.1_files/image006.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=66 height=27
+src="IV-ch03-V1.1_files/image006.gif" v:shapes="_x0000_i1035"><![endif]><span
+style='mso-spacerun:yes'>     </span>- To delete a parameter<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Delete&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->, select the parameter, click
+the <!--[if gte vml 1]><v:shape id="_x0000_i1036" type="#_x0000_t75" style='width:49.5pt;
+ height:20.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch03-V1.1_files/image006.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=66 height=27
+src="IV-ch03-V1.1_files/image006.gif" v:shapes="_x0000_i1036"><![endif]><span
+style='mso-spacerun:yes'> </span>button, and confirm the action.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1037" type="#_x0000_t75"
+ style='width:50.25pt;height:19.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch03-V1.1_files/image014.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=26
+src="IV-ch03-V1.1_files/image014.gif" v:shapes="_x0000_i1037"><![endif]><span
+style='mso-spacerun:yes'>      </span>- This function allows searches on
+existing parameters<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Parameter:Find&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>satisfying certain attributes and creates a
+list of such parameters<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Parameter:Search&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->.<span
+style='mso-spacerun:yes'>  </span>Search criteria are specified in the Find
+Parameter form, followed by the <!--[if gte vml 1]><v:shape id="_x0000_i1038"
+ type="#_x0000_t75" style='width:50.25pt;height:19.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch03-V1.1_files/image014.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=26
+src="IV-ch03-V1.1_files/image014.gif" v:shapes="_x0000_i1038"><![endif]><span
+style='mso-spacerun:yes'> </span>button (see Figure 3.4). The fields of this
+form will be explained later in this chapter. The search may find zero or more
+parameters satisfying the criteria. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>By selecting “Contain<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Search:Contain&quot;
+<![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->”
+rather than “Match<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Parameter:Search:Match&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->”, one can enter partial
+fields in the search form (e.g. a few characters of<span
+style='mso-spacerun:yes'>  </span>the parameter description) and find all
+parameters that contain the specified string.<span style='mso-spacerun:yes'> 
+</span>Figure 3.4 illustrates a typical search criteria specification
+form.<span style='mso-spacerun:yes'>  </span>Only the General tab is shown.<span
+style='mso-spacerun:yes'>  </span>Selection of DITS is only typical.</p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><o:wrapblock><v:shape
+  id="_x0000_s1156" type="#_x0000_t75" style='position:absolute;left:0;
+  text-align:left;margin-left:50.4pt;margin-top:0;width:318.75pt;height:249.75pt;
+  z-index:3' o:allowincell="f">
+  <v:imagedata src="IV-ch03-V1.1_files/image016.jpg" o:title="Figure34"/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0 align=left>
+  <tr>
+   <td width=67 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=425 height=333 src="IV-ch03-V1.1_files/image016.jpg" v:shapes="_x0000_s1156"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+</p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 3.4: Parameter Search Window.<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1161" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:0;margin-top:3.95pt;width:50.4pt;height:18.75pt;
+ z-index:8' o:allowincell="f">
+ <v:imagedata src="IV-ch03-V1.1_files/image009.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=0 height=5></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=67 height=25 src="IV-ch03-V1.1_files/image009.jpg" v:shapes="_x0000_s1161"></td>
+ </tr>
+</table>
+
+</span><![endif]><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoBodyText2><span style='mso-spacerun:yes'>  </span>-<span
+style='mso-spacerun:yes'>            </span><span
+style='mso-spacerun:yes'>       </span>-<span style='mso-spacerun:yes'>  
+</span>pressing this button opens a dialogue box and allows the user to protect
+the parameter from modification, deletion, or both.<span
+style='mso-spacerun:yes'>  </span>Manufacturer access is required for the
+Protection button to be enabled.<s><span style='color:red'><o:p></o:p></span></s></p>
+
+<b style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman";text-transform:uppercase;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA'><br clear=all
+style='page-break-before:always'>
+</span></b>
+
+<h2 style='margin-left:0in'><a name="_Toc416767825"></a><a name="_Toc126037007"></a><a
+name="_Toc459006573"></a><a name="_Toc458576049"></a><a name="_Toc454945471"></a><a
+name="_Toc454941647"></a><a name="_Toc454615579"></a><a name="_Toc454599739"></a><a
+name="_Toc418915092"></a><a name="_Toc418416138"><span style='mso-bookmark:
+_Toc418915092'><span style='mso-bookmark:_Toc454599739'><span style='mso-bookmark:
+_Toc454615579'><span style='mso-bookmark:_Toc454941647'><span style='mso-bookmark:
+_Toc454945471'><span style='mso-bookmark:_Toc458576049'><span style='mso-bookmark:
+_Toc459006573'><span style='mso-bookmark:_Toc126037007'><span style='mso-bookmark:
+_Toc416767825'>Parameter Definition</span></span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Definitions&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h2>
+
+<p class=MsoNormal>Once a parameter is opened, a multi-tab Window is presented
+to the user (see Figure 3.5).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><o:wrapblock><v:shape
+  id="_x0000_s1157" type="#_x0000_t75" style='position:absolute;left:0;
+  text-align:left;margin-left:9.45pt;margin-top:0;width:321.75pt;height:212.25pt;
+  z-index:4' o:allowincell="f">
+  <v:imagedata src="IV-ch03-V1.1_files/image018.jpg" o:title="Figure35"/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0 align=left>
+  <tr>
+   <td width=13 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=429 height=283 src="IV-ch03-V1.1_files/image018.jpg" v:shapes="_x0000_s1157"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+</p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 3.5: Parameter Definition Window (General Tab Shown)<o:p></o:p></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal>In what follows, the nature of values for each field to be
+filled is discussed for each of the four tabs: General, Conversion,
+Acquisition, Derivation, and Comments.</p>
+
+<p class=MsoBodyText2><o:p>&nbsp;</o:p></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037008"></a><a name="_Toc459006574"></a><a
+name="_Toc458576050"></a><a name="_Toc454945472"></a><a name="_Toc454941648"></a><a
+name="_Toc454615580"></a><a name="_Toc454599740"></a><a name="_Toc418915093"></a><a
+name="_Toc418416139"></a><a name="_Toc416767826"><span style='mso-bookmark:
+_Toc418416139'><span style='mso-bookmark:_Toc418915093'><span style='mso-bookmark:
+_Toc454599740'><span style='mso-bookmark:_Toc454615580'><span style='mso-bookmark:
+_Toc454941648'><span style='mso-bookmark:_Toc454945472'><span style='mso-bookmark:
+_Toc458576050'><span style='mso-bookmark:_Toc459006574'><span style='mso-bookmark:
+_Toc126037008'>General</span></span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767826'><span style='mso-bookmark:_Toc418416139'><span
+style='mso-bookmark:_Toc418915093'><span style='mso-bookmark:_Toc454599740'><span
+style='mso-bookmark:_Toc454615580'><span style='mso-bookmark:_Toc454941648'><span
+style='mso-bookmark:_Toc454945472'><span style='mso-bookmark:_Toc458576050'><span
+style='mso-bookmark:_Toc459006574'><span style='mso-bookmark:_Toc126037008'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767826'><span
+style='mso-bookmark:_Toc418416139'><span style='mso-bookmark:_Toc418915093'><span
+style='mso-bookmark:_Toc454599740'><span style='mso-bookmark:_Toc454615580'><span
+style='mso-bookmark:_Toc454941648'><span style='mso-bookmark:_Toc454945472'><span
+style='mso-bookmark:_Toc458576050'><span style='mso-bookmark:_Toc459006574'><span
+style='mso-bookmark:_Toc126037008'> XE &quot;Parameter:General Tab&quot; </span></span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767826'><span style='mso-bookmark:_Toc418416139'><span
+style='mso-bookmark:_Toc418915093'><span style='mso-bookmark:_Toc454599740'><span
+style='mso-bookmark:_Toc454615580'><span style='mso-bookmark:_Toc454941648'><span
+style='mso-bookmark:_Toc454945472'><span style='mso-bookmark:_Toc458576050'><span
+style='mso-bookmark:_Toc459006574'><span style='mso-bookmark:_Toc126037008'></span></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767826'><span style='mso-bookmark:_Toc418416139'><span
+style='mso-bookmark:_Toc418915093'><span style='mso-bookmark:_Toc454599740'><span
+style='mso-bookmark:_Toc454615580'><span style='mso-bookmark:_Toc454941648'><span
+style='mso-bookmark:_Toc454945472'><span style='mso-bookmark:_Toc458576050'><span
+style='mso-bookmark:_Toc459006574'><span style='mso-bookmark:_Toc126037008'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767826'><span style='mso-bookmark:_Toc418416139'><span style='mso-bookmark:
+_Toc418915093'><span style='mso-bookmark:_Toc454599740'><span style='mso-bookmark:
+_Toc454615580'><span style='mso-bookmark:_Toc454941648'><span style='mso-bookmark:
+_Toc454945472'><span style='mso-bookmark:_Toc458576050'><span style='mso-bookmark:
+_Toc459006574'><span style='mso-bookmark:_Toc126037008'><span
+style='mso-spacerun:yes'> </span>Tab</span></span></span></span></span></span></span></span></span></span></h2>
+
+<p class=MsoNormal>The parameter definition fields specified under the General
+Tab are shown in Figure 3.5 and are as follows: </p>
+
+<p class=MsoBodyText2><o:p>&nbsp;</o:p></p>
+
+<h3 style='text-align:justify'><a name="_Toc126037009"></a><a
+name="_Toc459006575"></a><a name="_Toc458576051"></a><a name="_Toc454945473"></a><a
+name="_Toc454941649"></a><a name="_Toc454615581"></a><a name="_Toc454599741"></a><a
+name="_Toc418915094"></a><a name="_Toc418416140"></a><a name="_Toc416767827"><span
+style='mso-bookmark:_Toc418416140'><span style='mso-bookmark:_Toc418915094'><span
+style='mso-bookmark:_Toc454599741'><span style='mso-bookmark:_Toc454615581'><span
+style='mso-bookmark:_Toc454941649'><span style='mso-bookmark:_Toc454945473'><span
+style='mso-bookmark:_Toc458576051'><span style='mso-bookmark:_Toc459006575'><span
+style='mso-bookmark:_Toc126037009'>Type</span></span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Types&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal>The parameter types supported by the ACMS system (available
+in a pull-down list) are discussed below. Note that not every parameter type is
+supported by every airborne unit. Based on the type of the airborne unit and
+the intended application, only some of the parameter types described below will
+be available for definition.</p>
+
+<h4 style='text-align:justify'>DITS<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Types:DITS&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h4>
+
+<p class=MsoNormal style='mso-list:skip'>These are the most common parameter
+types, with their values acquired from ARINC 429 busses wired into the airborne
+units. Each ARINC 429 word consists of 32 bits. Bits 1 to 8, called the label,
+identify the word.<span style='mso-spacerun:yes'>  </span>Bits 9 and 10, in
+most cases, are an extension of the label and are called the SDI (Source
+Destination Identifier). When the SDI is not used, bits 9 and 10 may be part of
+the parameter values. Bits 11 to 28<span style='mso-spacerun:yes'>  </span>(or
+9 to 28 if SDI is not used) hold the value of the parameter, and bit 29 holds
+the sign bit if needed. Bits 30 and 31 are sometimes called SSM (Sign Status
+Matri<!--[if supportFields]><span style='mso-element:field-begin'></span> XE
+&quot;SSM&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]-->x) and carry status information of the parameter.
+Bit 32 is a parity bit used for error checking.</p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .75pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+
+<p class=MsoNormal style='mso-list:skip;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'>SDI bits, when used, are
+extensions to the label and allow differentiation between different values that
+are broadcast using the same label. As an example if the Exhaust Gas
+Temperature parameter is available on a single bus, originating from two
+different sensors, both samples might be transmitted with the same label, but
+one might use the SDI 00 and the other might use SDI 11.</p>
+
+<p class=MsoNormal style='mso-list:skip;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'>SSM bits identify status
+information from the source of the DITS data and indicate: normal data, test
+data, or fault at the source. Not all parameter types use the same convention
+for SSM encoding, and in some cases do not use SSM at all.</p>
+
+</div>
+
+<h4 style='text-align:justify'><o:p>&nbsp;</o:p></h4>
+
+<h4 style='text-align:justify'>INTERNAL<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Types:INTERNAL&quot;
+<![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--></h4>
+
+<p class=MsoNormal>These are parameters that are generated inside the ACMS
+system, rather than acquired from outside connections. Examples of such
+parameters are Total Fuel Used (integrated from the instantaneous fuel flow
+parameter), or the CPU Load determined by the software, based on the idle time
+of the processor. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Constant values are another example of internal parameters
+that are given values during data entry.<span style='mso-spacerun:yes'> 
+</span>For example, N1-Limit might be a parameter set to a typical value of
+117.5. This parameter will then be used during the flight to check the over
+limit conditions of, for example, the N1 parameters of each engine. The
+advantage of using a named constant instead of an actual value is the ease by
+which it can be modified in one place.<span style='mso-spacerun:yes'> 
+</span>For example, if it becomes necessary to change the limit to 117.4
+instead of 117.5, then the change needs to be made only in one place (the
+parameter definition point) rather than any number of places where each engine
+N1 is compared with the limit.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h4 style='text-align:justify'>ANALOG<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Types:ANALOG&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h4>
+
+<p class=MsoNormal style='mso-list:skip'>These are 28 single-bit (0 or 1)
+parameters (discretes) wired into most types of DMUs. Examples of such
+parameters might be Recorder Tape Low indicator, or Air Ground Switch. </p>
+
+<h4 style='text-align:justify'><span style='mso-bidi-font-weight:bold'>BURST<o:p></o:p></span></h4>
+
+<p class=MsoNormal>These are acquired parameters that are specifically
+configured using the Packet List option of the Configure menu (see chapter 10).</p>
+
+<p class=MsoNormal><a name="_Toc416767828"><o:p>&nbsp;</o:p></a></p>
+
+<h3 style='text-align:justify'><span style='mso-bookmark:_Toc416767828'><a
+name="_Toc126037010"></a><a name="_Toc459006576"></a><a name="_Toc458576052"></a><a
+name="_Toc454945474"></a><a name="_Toc454941650"></a><a name="_Toc454615582"></a><a
+name="_Toc454599742"></a><a name="_Toc418915095"></a><a name="_Toc418416141"><span
+style='mso-bookmark:_Toc418915095'><span style='mso-bookmark:_Toc454599742'><span
+style='mso-bookmark:_Toc454615582'><span style='mso-bookmark:_Toc454941650'><span
+style='mso-bookmark:_Toc454945474'><span style='mso-bookmark:_Toc458576052'><span
+style='mso-bookmark:_Toc459006576'><span style='mso-bookmark:_Toc126037010'>Reference</span></span></span></span></span></span></span></span></a></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767828'><span style='mso-bookmark:_Toc418416141'><span
+style='mso-bookmark:_Toc418915095'><span style='mso-bookmark:_Toc454599742'><span
+style='mso-bookmark:_Toc454615582'><span style='mso-bookmark:_Toc454941650'><span
+style='mso-bookmark:_Toc454945474'><span style='mso-bookmark:_Toc458576052'><span
+style='mso-bookmark:_Toc459006576'><span style='mso-bookmark:_Toc126037010'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767828'><span
+style='mso-bookmark:_Toc418416141'><span style='mso-bookmark:_Toc418915095'><span
+style='mso-bookmark:_Toc454599742'><span style='mso-bookmark:_Toc454615582'><span
+style='mso-bookmark:_Toc454941650'><span style='mso-bookmark:_Toc454945474'><span
+style='mso-bookmark:_Toc458576052'><span style='mso-bookmark:_Toc459006576'><span
+style='mso-bookmark:_Toc126037010'> XE &quot;Parameter:Reference Number&quot; </span></span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767828'><span style='mso-bookmark:_Toc418416141'><span
+style='mso-bookmark:_Toc418915095'><span style='mso-bookmark:_Toc454599742'><span
+style='mso-bookmark:_Toc454615582'><span style='mso-bookmark:_Toc454941650'><span
+style='mso-bookmark:_Toc454945474'><span style='mso-bookmark:_Toc458576052'><span
+style='mso-bookmark:_Toc459006576'><span style='mso-bookmark:_Toc126037010'></span></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767828'><span style='mso-bookmark:_Toc418416141'><span
+style='mso-bookmark:_Toc418915095'><span style='mso-bookmark:_Toc454599742'><span
+style='mso-bookmark:_Toc454615582'><span style='mso-bookmark:_Toc454941650'><span
+style='mso-bookmark:_Toc454945474'><span style='mso-bookmark:_Toc458576052'><span
+style='mso-bookmark:_Toc459006576'><span style='mso-bookmark:_Toc126037010'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767828'><span style='mso-bookmark:_Toc418416141'><span style='mso-bookmark:
+_Toc418915095'><span style='mso-bookmark:_Toc454599742'><span style='mso-bookmark:
+_Toc454615582'><span style='mso-bookmark:_Toc454941650'><span style='mso-bookmark:
+_Toc454945474'><span style='mso-bookmark:_Toc458576052'><span style='mso-bookmark:
+_Toc459006576'><span style='mso-bookmark:_Toc126037010'><span
+style='mso-spacerun:yes'> </span>Number</span></span></span></span></span></span></span></span></span></span></h3>
+
+<p class=MsoNormal>Some airlines identify parameters by number, rather than by
+name. In such cases the airline identification number for the parameter can be
+entered as the Reference Number. The parameter name is, nevertheless, the main
+identification of the parameter in AGS IV.</p>
+
+<p class=MsoBodyText2><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .75pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+
+<h3 style='text-align:justify;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'><a name="_Toc126037011"></a><a
+name="_Toc459006577"></a><a name="_Toc458576053"></a><a name="_Toc454945475"></a><a
+name="_Toc454941651"></a><a name="_Toc454615583"></a><a name="_Toc454599743"></a><a
+name="_Toc418915096"></a><a name="_Toc418416142"></a><a name="_Toc416767829"><span
+style='mso-bookmark:_Toc418416142'><span style='mso-bookmark:_Toc418915096'><span
+style='mso-bookmark:_Toc454599743'><span style='mso-bookmark:_Toc454615583'><span
+style='mso-bookmark:_Toc454941651'><span style='mso-bookmark:_Toc454945475'><span
+style='mso-bookmark:_Toc458576053'><span style='mso-bookmark:_Toc459006577'><span
+style='mso-bookmark:_Toc126037011'>Seconds</span></span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767829'><span style='mso-bookmark:_Toc418416142'><span
+style='mso-bookmark:_Toc418915096'><span style='mso-bookmark:_Toc454599743'><span
+style='mso-bookmark:_Toc454615583'><span style='mso-bookmark:_Toc454941651'><span
+style='mso-bookmark:_Toc454945475'><span style='mso-bookmark:_Toc458576053'><span
+style='mso-bookmark:_Toc459006577'><span style='mso-bookmark:_Toc126037011'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767829'><span
+style='mso-bookmark:_Toc418416142'><span style='mso-bookmark:_Toc418915096'><span
+style='mso-bookmark:_Toc454599743'><span style='mso-bookmark:_Toc454615583'><span
+style='mso-bookmark:_Toc454941651'><span style='mso-bookmark:_Toc454945475'><span
+style='mso-bookmark:_Toc458576053'><span style='mso-bookmark:_Toc459006577'><span
+style='mso-bookmark:_Toc126037011'> XE &quot;Seconds of History&quot; </span></span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767829'><span style='mso-bookmark:_Toc418416142'><span
+style='mso-bookmark:_Toc418915096'><span style='mso-bookmark:_Toc454599743'><span
+style='mso-bookmark:_Toc454615583'><span style='mso-bookmark:_Toc454941651'><span
+style='mso-bookmark:_Toc454945475'><span style='mso-bookmark:_Toc458576053'><span
+style='mso-bookmark:_Toc459006577'><span style='mso-bookmark:_Toc126037011'></span></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767829'><span style='mso-bookmark:_Toc418416142'><span
+style='mso-bookmark:_Toc418915096'><span style='mso-bookmark:_Toc454599743'><span
+style='mso-bookmark:_Toc454615583'><span style='mso-bookmark:_Toc454941651'><span
+style='mso-bookmark:_Toc454945475'><span style='mso-bookmark:_Toc458576053'><span
+style='mso-bookmark:_Toc459006577'><span style='mso-bookmark:_Toc126037011'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767829'><span style='mso-bookmark:_Toc418416142'><span style='mso-bookmark:
+_Toc418915096'><span style='mso-bookmark:_Toc454599743'><span style='mso-bookmark:
+_Toc454615583'><span style='mso-bookmark:_Toc454941651'><span style='mso-bookmark:
+_Toc454945475'><span style='mso-bookmark:_Toc458576053'><span style='mso-bookmark:
+_Toc459006577'><span style='mso-bookmark:_Toc126037011'><span
+style='mso-spacerun:yes'> </span>of History</span></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:History&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'>When it is necessary to
+have access to values of a parameter prior to the occurrence of certain events,
+the AGS IV automatically computes the history buffer size and uses it in all
+such references and calculations. The value of this field should be explicitly
+specified if such automatic calculations are insufficient for some specialized
+applications. In any case the system will use the greater of the computed value
+and this field.<span style='mso-spacerun:yes'>  </span>It should be noted that
+for DITS parameters, seconds of history corresponds to the number of samples
+per second.<span style='mso-spacerun:yes'>  </span>For example, if a DITS
+parameter is acquired at 4 times a second (see the Acquisition Tab section
+below), and you want to set 10 seconds of history for that parameter, then you
+must input ‘40’ in the seconds of history field, to include all samples over a
+4-second time period.</p>
+
+</div>
+
+<p class=MsoNormal><a name="_Toc416767830"><o:p>&nbsp;</o:p></a></p>
+
+<h3><span style='mso-bookmark:_Toc416767830'><a name="_Toc126037012"></a><a
+name="_Toc459006578"></a><a name="_Toc458576054"></a><a name="_Toc454945476"></a><a
+name="_Toc454941652"></a><a name="_Toc454615584"></a><a name="_Toc454599744"></a><a
+name="_Toc418915097"></a><a name="_Toc418416143"><span style='mso-bookmark:
+_Toc418915097'><span style='mso-bookmark:_Toc454599744'><span style='mso-bookmark:
+_Toc454615584'><span style='mso-bookmark:_Toc454941652'><span style='mso-bookmark:
+_Toc454945476'><span style='mso-bookmark:_Toc458576054'><span style='mso-bookmark:
+_Toc459006578'><span style='mso-bookmark:_Toc126037012'>Default</span></span></span></span></span></span></span></span></a></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767830'><span style='mso-bookmark:_Toc418416143'><span
+style='mso-bookmark:_Toc418915097'><span style='mso-bookmark:_Toc454599744'><span
+style='mso-bookmark:_Toc454615584'><span style='mso-bookmark:_Toc454941652'><span
+style='mso-bookmark:_Toc454945476'><span style='mso-bookmark:_Toc458576054'><span
+style='mso-bookmark:_Toc459006578'><span style='mso-bookmark:_Toc126037012'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767830'><span
+style='mso-bookmark:_Toc418416143'><span style='mso-bookmark:_Toc418915097'><span
+style='mso-bookmark:_Toc454599744'><span style='mso-bookmark:_Toc454615584'><span
+style='mso-bookmark:_Toc454941652'><span style='mso-bookmark:_Toc454945476'><span
+style='mso-bookmark:_Toc458576054'><span style='mso-bookmark:_Toc459006578'><span
+style='mso-bookmark:_Toc126037012'> XE &quot;Parameter:Default Format&quot; </span></span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767830'><span style='mso-bookmark:_Toc418416143'><span
+style='mso-bookmark:_Toc418915097'><span style='mso-bookmark:_Toc454599744'><span
+style='mso-bookmark:_Toc454615584'><span style='mso-bookmark:_Toc454941652'><span
+style='mso-bookmark:_Toc454945476'><span style='mso-bookmark:_Toc458576054'><span
+style='mso-bookmark:_Toc459006578'><span style='mso-bookmark:_Toc126037012'></span></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767830'><span style='mso-bookmark:_Toc418416143'><span
+style='mso-bookmark:_Toc418915097'><span style='mso-bookmark:_Toc454599744'><span
+style='mso-bookmark:_Toc454615584'><span style='mso-bookmark:_Toc454941652'><span
+style='mso-bookmark:_Toc454945476'><span style='mso-bookmark:_Toc458576054'><span
+style='mso-bookmark:_Toc459006578'><span style='mso-bookmark:_Toc126037012'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767830'><span style='mso-bookmark:_Toc418416143'><span style='mso-bookmark:
+_Toc418915097'><span style='mso-bookmark:_Toc454599744'><span style='mso-bookmark:
+_Toc454615584'><span style='mso-bookmark:_Toc454941652'><span style='mso-bookmark:
+_Toc454945476'><span style='mso-bookmark:_Toc458576054'><span style='mso-bookmark:
+_Toc459006578'><span style='mso-bookmark:_Toc126037012'><span
+style='mso-spacerun:yes'> </span>Format</span></span></span></span></span></span></span></span></span></span></h3>
+
+<p class=MsoNormal>Even though AGS IV allows a parameter value to be displayed
+with different formats in different reports or screens, the system requires a
+Default Display format. This is the format that will be used unless it is
+overridden in a report or screen definition. The possible formats are best
+indicated by a set of examples below:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-1.0in'>NNNNN<span
+style='mso-tab-count:1'>         </span>to indicate a six-digit integer
+representation, if the value is negative the sign bit will be counted as one of
+the digits.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>SNNNN<span style='mso-tab-count:1'>          </span>identical
+to the above definition.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>HHHH<span style='mso-tab-count:2'>             </span>to
+indicate a four digit hexadecimal representation.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>OOOOOO<span style='mso-tab-count:1'>      </span>to indicate
+a six digit octal representation.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>BBBB<span style='mso-tab-count:2'>              </span>to
+indicate a four bit binary representation.</p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-1.0in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-1.0in'>N.NN<span
+style='mso-tab-count:1'>              </span>to indicate one digit, followed by
+a decimal point followed by two digits. Note that this is not a large enough
+format to contain a negative value.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>AAA<span style='mso-tab-count:2'>                </span>to
+indicate three ASCII characters</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-1.0in'>TTTTTT<span
+style='mso-tab-count:1'>           </span>to indicate a six character
+translated representation. This format is used for discrete parameters, where
+instead of using the “B” format and displaying a 0 or 1, one of two textual strings
+is displayed, based on the value of discrete. For example 0 might be displayed
+as GROUND and one as AIR. The two textual values are entered in the conversion
+tab of the parameter definition form, in the fields ‘Zero Text’ and ‘Non Zero
+Text’, respectively.</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>  </span></p>
+
+<p class=MsoNormal><span style='color:red'><span
+style='mso-spacerun:yes'> </span></span><span style='color:black'>ZZZZ</span><span
+style='color:red'> <span style='mso-tab-count:2'>             </span></span>indicates
+a four-digit (typical) integer representation where all digits will be
+displayed including leading zeros. For example 23 will be displayed as
+&quot;0023&quot; and 1234 will be displayed as &quot;1234&quot;.<span
+style='color:red'><o:p></o:p></span></p>
+
+<h3><a name="_Toc126037013"></a><a name="_Toc459006579"></a><a
+name="_Toc458576055"></a><a name="_Toc454945477"></a><a name="_Toc454941653"></a><a
+name="_Toc454615585"></a><a name="_Toc454599745"></a><a name="_Toc418915098"></a><a
+name="_Toc418416144"></a><a name="_Toc416767831"><span style='mso-bookmark:
+_Toc418416144'><span style='mso-bookmark:_Toc418915098'><span style='mso-bookmark:
+_Toc454599745'><span style='mso-bookmark:_Toc454615585'><span style='mso-bookmark:
+_Toc454941653'><span style='mso-bookmark:_Toc454945477'><span style='mso-bookmark:
+_Toc458576055'><span style='mso-bookmark:_Toc459006579'><span style='mso-bookmark:
+_Toc126037013'>Initial</span></span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767831'><span style='mso-bookmark:_Toc418416144'><span
+style='mso-bookmark:_Toc418915098'><span style='mso-bookmark:_Toc454599745'><span
+style='mso-bookmark:_Toc454615585'><span style='mso-bookmark:_Toc454941653'><span
+style='mso-bookmark:_Toc454945477'><span style='mso-bookmark:_Toc458576055'><span
+style='mso-bookmark:_Toc459006579'><span style='mso-bookmark:_Toc126037013'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767831'><span
+style='mso-bookmark:_Toc418416144'><span style='mso-bookmark:_Toc418915098'><span
+style='mso-bookmark:_Toc454599745'><span style='mso-bookmark:_Toc454615585'><span
+style='mso-bookmark:_Toc454941653'><span style='mso-bookmark:_Toc454945477'><span
+style='mso-bookmark:_Toc458576055'><span style='mso-bookmark:_Toc459006579'><span
+style='mso-bookmark:_Toc126037013'> XE &quot;Parameter:Initial Value&quot; </span></span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767831'><span style='mso-bookmark:_Toc418416144'><span
+style='mso-bookmark:_Toc418915098'><span style='mso-bookmark:_Toc454599745'><span
+style='mso-bookmark:_Toc454615585'><span style='mso-bookmark:_Toc454941653'><span
+style='mso-bookmark:_Toc454945477'><span style='mso-bookmark:_Toc458576055'><span
+style='mso-bookmark:_Toc459006579'><span style='mso-bookmark:_Toc126037013'></span></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767831'><span style='mso-bookmark:_Toc418416144'><span
+style='mso-bookmark:_Toc418915098'><span style='mso-bookmark:_Toc454599745'><span
+style='mso-bookmark:_Toc454615585'><span style='mso-bookmark:_Toc454941653'><span
+style='mso-bookmark:_Toc454945477'><span style='mso-bookmark:_Toc458576055'><span
+style='mso-bookmark:_Toc459006579'><span style='mso-bookmark:_Toc126037013'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767831'><span style='mso-bookmark:_Toc418416144'><span style='mso-bookmark:
+_Toc418915098'><span style='mso-bookmark:_Toc454599745'><span style='mso-bookmark:
+_Toc454615585'><span style='mso-bookmark:_Toc454941653'><span style='mso-bookmark:
+_Toc454945477'><span style='mso-bookmark:_Toc458576055'><span style='mso-bookmark:
+_Toc459006579'><span style='mso-bookmark:_Toc126037013'><span
+style='mso-spacerun:yes'> </span>Value</span></span></span></span></span></span></span></span></span></span></h3>
+
+<p class=MsoNormal>Internal parameters may be defined to have an initial value.
+The internal parameter is initialized to this value once during power up of the
+airborne unit and again on every new flight, as defined by user. This initial
+value is also used as a sample value for the parameter, when it is necessary to
+display the parameter while doing simulation of the user defined screens.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037014"></a><a name="_Toc459006580"></a><a
+name="_Toc458576056"></a><a name="_Toc454945478"></a><a name="_Toc454941654"></a><a
+name="_Toc454615586"></a><a name="_Toc454599746"></a><a name="_Toc418915099"></a><a
+name="_Toc418416145"></a><a name="_Toc416767832"><span style='mso-bookmark:
+_Toc418416145'><span style='mso-bookmark:_Toc418915099'><span style='mso-bookmark:
+_Toc454599746'><span style='mso-bookmark:_Toc454615586'><span style='mso-bookmark:
+_Toc454941654'><span style='mso-bookmark:_Toc454945478'><span style='mso-bookmark:
+_Toc458576056'><span style='mso-bookmark:_Toc459006580'><span style='mso-bookmark:
+_Toc126037014'>Range</span></span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Range&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span></h3>
+
+<p class=MsoNormal>This is a comment field as far as the airborne system is
+concerned.<span style='mso-spacerun:yes'>  </span>The value, however, is used
+for interface to the Teledyne FLIDRAS system.<span style='mso-spacerun:yes'> 
+</span>It should be noted that a comma in this field will be interpreted by
+FLIDRAS as a decimal.</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span></p>
+
+<h3 style='text-align:justify'><a name="_Toc126037015"></a><a
+name="_Toc459006581"></a><a name="_Toc458576057"></a><a name="_Toc454945479"></a><a
+name="_Toc454941655"></a><a name="_Toc454615587"></a><a name="_Toc454599747"></a><a
+name="_Toc418915100"></a><a name="_Toc418416146"></a><a name="_Toc416767833"><span
+style='mso-bookmark:_Toc418416146'><span style='mso-bookmark:_Toc418915100'><span
+style='mso-bookmark:_Toc454599747'><span style='mso-bookmark:_Toc454615587'><span
+style='mso-bookmark:_Toc454941655'><span style='mso-bookmark:_Toc454945479'><span
+style='mso-bookmark:_Toc458576057'><span style='mso-bookmark:_Toc459006581'><span
+style='mso-bookmark:_Toc126037015'>Description</span></span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Description&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal>This is also a comment field. It may be used to describe
+those characteristics of the parameter that have no fields in the parameter
+form.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037016"></a><a name="_Toc459006582"></a><a
+name="_Toc458576058"></a><a name="_Toc454945480"></a><a name="_Toc454941656"></a><a
+name="_Toc454615588"></a><a name="_Toc454599748"><span style='mso-bookmark:
+_Toc454615588'><span style='mso-bookmark:_Toc454941656'><span style='mso-bookmark:
+_Toc454945480'><span style='mso-bookmark:_Toc458576058'><span style='mso-bookmark:
+_Toc459006582'><span style='mso-bookmark:_Toc126037016'>Internal Parameter
+Attributes</span></span></span></span></span></span></a></h3>
+
+<p class=MsoNormal>For parameters specified as internal, one and only one of
+the following attributes must be selected.</p>
+
+<h4><st1:place w:st="on"><st1:City w:st="on">Normal</st1:City></st1:place></h4>
+
+<p class=MsoNormal>This selection is made when none of the following selections
+apply.</p>
+
+<h4><a name="_Toc418915103"></a><a name="_Toc418416149"></a><a
+name="_Toc416767836"><span style='mso-bookmark:_Toc418416149'><span
+style='mso-bookmark:_Toc418915103'>Fixed Constant</span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Fixed Constant&quot;
+<![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--></h4>
+
+<p class=MsoNormal>Internal parameters marked Fixed Constant are those which
+are not expected to change value during flight. Note that these parameters will
+have no history buffer.</p>
+
+<h4><a name="_Toc418915102"></a><a name="_Toc418416148"></a><a
+name="_Toc416767835"><span style='mso-bookmark:_Toc418416148'><span
+style='mso-bookmark:_Toc418915102'>Modifiable</span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Modifiable&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h4>
+
+<p class=MsoNormal>Internal parameters, marked modifiable, are defined to allow
+the modification of the parameter value through the flight deck display or
+through an ACARS uplink.</p>
+
+<h4><a name="_Toc418915101"></a><a name="_Toc418416147"></a><a
+name="_Toc416767834"><span style='mso-bookmark:_Toc418416147'><span
+style='mso-bookmark:_Toc418915101'>Saved</span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Saved&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h4>
+
+<p class=MsoNormal>If an internal parameter is marked Saved, the value of the
+parameter is retained when the unit is powered off.<span
+style='mso-spacerun:yes'>   </span>Since there is a limited amount of
+non-volatile storage available for this purpose, those parameters that do not
+need to be saved between the flights should not be marked as such. Saved
+parameters will have no history buffer.</p>
+
+<h4><a name="_Toc418915104"></a><a name="_Toc418416150"></a><a
+name="_Toc416767837"><span style='mso-bookmark:_Toc418416150'><span
+style='mso-bookmark:_Toc418915104'>String</span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:String&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h4>
+
+<p class=MsoBodyText3 style='border:none;mso-padding-alt:0in 0in 0in 0in'>Text
+values of up to four characters can be stored in normal parameters. These may
+be acquired or internal. Internal parameters can also be defined to contain
+strings of up to 24 characters. For these parameters the String option should
+be checked.<span style='mso-spacerun:yes'>  </span>In order for a String
+parameter to be used, a function call (“CALL SET_STRING WITH @II_&lt;parameter
+mnemonic&gt;, &quot;&lt;up to 24 characters of text&gt;&quot;) must be used in
+a trigger.<span style='mso-spacerun:yes'>  </span>For example, an Internal
+parameter N2REASON is a String parameter denoting a reason for an exceedance
+that will appear in a report.<span style='mso-spacerun:yes'>  </span>In a
+trigger (see Chapter 8, Triggers), the call ‘CALL SET_STRING with @II_N2REASON,
+“N2 Exceedance”’ will assign the value of “N2 Exceedance” to the N2REASON
+parameter.</p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoBodyText3 style='border:none;mso-padding-alt:0in 0in 0in 0in'><o:p>&nbsp;</o:p></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037017"></a><a name="_Toc459006583"></a><a
+name="_Toc458576059"></a><a name="_Toc454945481"></a><a name="_Toc454941657"></a><a
+name="_Toc454615589"></a><a name="_Toc454599749"></a><a name="_Toc418915105"></a><a
+name="_Toc418416151"></a><a name="_Toc416767838"><span style='mso-bookmark:
+_Toc418416151'><span style='mso-bookmark:_Toc418915105'><span style='mso-bookmark:
+_Toc454599749'><span style='mso-bookmark:_Toc454615589'><span style='mso-bookmark:
+_Toc454941657'><span style='mso-bookmark:_Toc454945481'><span style='mso-bookmark:
+_Toc458576059'><span style='mso-bookmark:_Toc459006583'><span style='mso-bookmark:
+_Toc126037017'>Conversion</span></span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767838'><span style='mso-bookmark:_Toc418416151'><span
+style='mso-bookmark:_Toc418915105'><span style='mso-bookmark:_Toc454599749'><span
+style='mso-bookmark:_Toc454615589'><span style='mso-bookmark:_Toc454941657'><span
+style='mso-bookmark:_Toc454945481'><span style='mso-bookmark:_Toc458576059'><span
+style='mso-bookmark:_Toc459006583'><span style='mso-bookmark:_Toc126037017'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767838'><span
+style='mso-bookmark:_Toc418416151'><span style='mso-bookmark:_Toc418915105'><span
+style='mso-bookmark:_Toc454599749'><span style='mso-bookmark:_Toc454615589'><span
+style='mso-bookmark:_Toc454941657'><span style='mso-bookmark:_Toc454945481'><span
+style='mso-bookmark:_Toc458576059'><span style='mso-bookmark:_Toc459006583'><span
+style='mso-bookmark:_Toc126037017'> XE &quot;Parameter:Conversion Tab&quot; </span></span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767838'><span style='mso-bookmark:_Toc418416151'><span
+style='mso-bookmark:_Toc418915105'><span style='mso-bookmark:_Toc454599749'><span
+style='mso-bookmark:_Toc454615589'><span style='mso-bookmark:_Toc454941657'><span
+style='mso-bookmark:_Toc454945481'><span style='mso-bookmark:_Toc458576059'><span
+style='mso-bookmark:_Toc459006583'><span style='mso-bookmark:_Toc126037017'></span></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767838'><span style='mso-bookmark:_Toc418416151'><span
+style='mso-bookmark:_Toc418915105'><span style='mso-bookmark:_Toc454599749'><span
+style='mso-bookmark:_Toc454615589'><span style='mso-bookmark:_Toc454941657'><span
+style='mso-bookmark:_Toc454945481'><span style='mso-bookmark:_Toc458576059'><span
+style='mso-bookmark:_Toc459006583'><span style='mso-bookmark:_Toc126037017'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767838'><span style='mso-bookmark:_Toc418416151'><span style='mso-bookmark:
+_Toc418915105'><span style='mso-bookmark:_Toc454599749'><span style='mso-bookmark:
+_Toc454615589'><span style='mso-bookmark:_Toc454941657'><span style='mso-bookmark:
+_Toc454945481'><span style='mso-bookmark:_Toc458576059'><span style='mso-bookmark:
+_Toc459006583'><span style='mso-bookmark:_Toc126037017'><span
+style='mso-spacerun:yes'> </span>Tab</span></span></span></span></span></span></span></span></span></span></h2>
+
+<p class=MsoNormal><!--[if gte vml 1]><o:wrapblock><v:shape id="_x0000_s1158"
+  type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+  margin-left:43.2pt;margin-top:0;width:321.75pt;height:212.25pt;z-index:5'
+  o:allowincell="f">
+  <v:imagedata src="IV-ch03-V1.1_files/image020.jpg" o:title="Figure36"/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0>
+  <tr>
+   <td width=58 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=429 height=283 src="IV-ch03-V1.1_files/image020.jpg" v:shapes="_x0000_s1158"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+Parameters arriving at an ACMS system are in binary form (zeros and ones).<span
+style='mso-spacerun:yes'>  </span>This tabbed form (see Figure 3.6) is where
+the interpretation of such patterns is defined.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 3.6: Parameter Definition Window (Conversion Tab Shown).</b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<h3 style='text-align:justify'><a name="_Toc126037018"></a><a
+name="_Toc459006584"></a><a name="_Toc458576060"></a><a name="_Toc454945482"></a><a
+name="_Toc454941658"></a><a name="_Toc454615590"></a><a name="_Toc454599750"></a><a
+name="_Toc418915106"></a><a name="_Toc418416152"></a><a name="_Toc416767839"><span
+style='mso-bookmark:_Toc418416152'><span style='mso-bookmark:_Toc418915106'><span
+style='mso-bookmark:_Toc454599750'><span style='mso-bookmark:_Toc454615590'><span
+style='mso-bookmark:_Toc454941658'><span style='mso-bookmark:_Toc454945482'><span
+style='mso-bookmark:_Toc458576060'><span style='mso-bookmark:_Toc459006584'><span
+style='mso-bookmark:_Toc126037018'>Data Format</span></span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Data Format&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal>The incoming data can be in any of the following forms:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:14.15pt;text-indent:-14.15pt;mso-list:
+l0 level1 lfo1'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>BNR<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Data
+Format:BNR&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-spacerun:yes'> </span>- binary
+representation of the parameter value</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:14.15pt;text-indent:-14.15pt;mso-list:
+l0 level1 lfo1'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>BCD<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Data Format:BCD&quot;
+<![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>- binary coded decimal representation of the
+parameter. In this case, the group of bits representing each digit must be
+identified. This is done by dragging the mouse pointer on the bits representing
+the first digit, releasing the mouse button and then dragging for the next
+digit etc. The system alternates the highlight color to distinguish the BCD
+digits.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:14.15pt;text-indent:-14.15pt;mso-list:
+l0 level1 lfo1'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>DIS<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Data
+Format:DIS&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-spacerun:yes'> </span>- discrete
+parameter, with a zero or one value.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:14.15pt;text-indent:-14.15pt;mso-list:
+l0 level1 lfo1'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>ISO<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Data
+Format:ISO#5&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]-->#5 - a standard for transmitting alphanumeric
+characters in DITS words. In this case, the group of bits representing each
+character must be identified. This is done by dragging the mouse pointer on the
+bits representing the first character, releasing the mouse button and then
+dragging for the next character etc. The system alternates the highlight color
+to distinguish the ISO#5 characters.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Internal parameters can have one of the following formats:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo2;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>INTEGER – In this format,<span
+style='mso-spacerun:yes'>  </span>integer values are saved for the internal
+parameters.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l4 level1 lfo3;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>REAL – In this format, integer and fractional
+values are saved for the internal parameters.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l3 level1 lfo4;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>ASCII – This format is for internal parameters
+that will contain ASCII characters.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3 style='text-align:justify'><a name="_Toc126037019"></a><a
+name="_Toc459006585"></a><a name="_Toc458576061"></a><a name="_Toc454945483"></a><a
+name="_Toc454941659"></a><a name="_Toc454615591"></a><a name="_Toc454599751"></a><a
+name="_Toc418915107"></a><a name="_Toc418416153"></a><a name="_Toc416767840"><span
+style='mso-bookmark:_Toc418416153'><span style='mso-bookmark:_Toc418915107'><span
+style='mso-bookmark:_Toc454599751'><span style='mso-bookmark:_Toc454615591'><span
+style='mso-bookmark:_Toc454941659'><span style='mso-bookmark:_Toc454945483'><span
+style='mso-bookmark:_Toc458576061'><span style='mso-bookmark:_Toc459006585'><span
+style='mso-bookmark:_Toc126037019'>Conversion</span></span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767840'><span style='mso-bookmark:_Toc418416153'><span
+style='mso-bookmark:_Toc418915107'><span style='mso-bookmark:_Toc454599751'><span
+style='mso-bookmark:_Toc454615591'><span style='mso-bookmark:_Toc454941659'><span
+style='mso-bookmark:_Toc454945483'><span style='mso-bookmark:_Toc458576061'><span
+style='mso-bookmark:_Toc459006585'><span style='mso-bookmark:_Toc126037019'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767840'><span
+style='mso-bookmark:_Toc418416153'><span style='mso-bookmark:_Toc418915107'><span
+style='mso-bookmark:_Toc454599751'><span style='mso-bookmark:_Toc454615591'><span
+style='mso-bookmark:_Toc454941659'><span style='mso-bookmark:_Toc454945483'><span
+style='mso-bookmark:_Toc458576061'><span style='mso-bookmark:_Toc459006585'><span
+style='mso-bookmark:_Toc126037019'> XE &quot;Parameter:Conversion Type&quot; </span></span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767840'><span style='mso-bookmark:_Toc418416153'><span
+style='mso-bookmark:_Toc418915107'><span style='mso-bookmark:_Toc454599751'><span
+style='mso-bookmark:_Toc454615591'><span style='mso-bookmark:_Toc454941659'><span
+style='mso-bookmark:_Toc454945483'><span style='mso-bookmark:_Toc458576061'><span
+style='mso-bookmark:_Toc459006585'><span style='mso-bookmark:_Toc126037019'></span></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767840'><span style='mso-bookmark:_Toc418416153'><span
+style='mso-bookmark:_Toc418915107'><span style='mso-bookmark:_Toc454599751'><span
+style='mso-bookmark:_Toc454615591'><span style='mso-bookmark:_Toc454941659'><span
+style='mso-bookmark:_Toc454945483'><span style='mso-bookmark:_Toc458576061'><span
+style='mso-bookmark:_Toc459006585'><span style='mso-bookmark:_Toc126037019'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767840'><span style='mso-bookmark:_Toc418416153'><span style='mso-bookmark:
+_Toc418915107'><span style='mso-bookmark:_Toc454599751'><span style='mso-bookmark:
+_Toc454615591'><span style='mso-bookmark:_Toc454941659'><span style='mso-bookmark:
+_Toc454945483'><span style='mso-bookmark:_Toc458576061'><span style='mso-bookmark:
+_Toc459006585'><span style='mso-bookmark:_Toc126037019'><span
+style='mso-spacerun:yes'> </span>Type</span></span></span></span></span></span></span></span></span></span><span
+style='mso-spacerun:yes'>  </span></h3>
+
+<p class=MsoNormal>The incoming data is usually called “raw data”. Once
+converted to engineering units, it is sometimes called “EU data”.<span
+style='mso-spacerun:yes'>  </span>This field allows the user to specify how the
+raw data is to be converted to the engineering units (EU).<span
+style='mso-spacerun:yes'>  </span>To do this, the user should specify the
+offset and the slope of a linear transformation from the raw data to EU.<span
+style='mso-spacerun:yes'>  </span>Once this is done the conversions will be
+performed on the basis of the data-format of the raw data as follows:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:14.15pt;text-indent:-14.15pt;mso-list:
+l0 level1 lfo1'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>None<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Conversion
+Type:None&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-spacerun:yes'> </span>- Assumes
+the EU value to be the same as the raw,</p>
+
+<p class=MsoNormal style='margin-left:50.15pt;text-indent:-14.15pt;mso-list:
+skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:14.15pt;text-indent:-14.15pt;mso-list:
+l0 level1 lfo1'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Linear<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Conversion
+Type:Linear&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-spacerun:yes'> </span>- uses the
+offset and slope to convert the raw binary bits to a floating point value</p>
+
+<p class=MsoNormal align=center style='text-align:center'>( EU = RAW * Slope +
+Offset ),</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:14.15pt;text-indent:-14.15pt;mso-list:
+l0 level1 lfo1'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>IntLinear<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Conversion
+Type:IntLinear&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-spacerun:yes'> </span>- uses the
+offset and slope to convert the raw binary bits to an integer value</p>
+
+<p class=MsoNormal align=center style='text-align:center'>( EU = integer (RAW *
+Slope + Offset) ),</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:14.15pt;text-indent:-14.15pt;mso-list:
+l0 level1 lfo1'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>BCD<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Conversion
+Type:BCD&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-spacerun:yes'> </span>- uses the
+offset and slope to convert the raw BCD bits to an integer value</p>
+
+<p class=MsoNormal align=center style='text-align:center'>( EU = integer(RAW *
+Slope + Offset ) ),</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:14.15pt;text-indent:-14.15pt;mso-list:
+l0 level1 lfo1'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>BCDLinear<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Conversion
+Type:BCDLinear&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-spacerun:yes'> </span>- uses the
+offset and slope to convert the raw BCD bits to a floating point value</p>
+
+<p class=MsoNormal align=center style='text-align:center'>( EU = (RAW * Slope +
+Offset ),</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:14.15pt;text-indent:-14.15pt;mso-list:
+l0 level1 lfo1'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>ISO#5<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Parameter:Conversion
+Type:ISO#5&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-spacerun:yes'> </span>- converts
+the ISO#5 incoming data to a word containing ASCII characters.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l1 level1 lfo5;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>BACK – Converts internal parameters to raw form
+for raw data recording.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3 style='text-align:justify'><a name="_Toc126037020"></a><a
+name="_Toc459006586"></a><a name="_Toc458576062"></a><a name="_Toc454945484"></a><a
+name="_Toc454941660"></a><a name="_Toc454615592"></a><a name="_Toc454599752"></a><a
+name="_Toc418915108"></a><a name="_Toc418416154"></a><a name="_Toc416767841"><span
+style='mso-bookmark:_Toc418416154'><span style='mso-bookmark:_Toc418915108'><span
+style='mso-bookmark:_Toc454599752'><span style='mso-bookmark:_Toc454615592'><span
+style='mso-bookmark:_Toc454941660'><span style='mso-bookmark:_Toc454945484'><span
+style='mso-bookmark:_Toc458576062'><span style='mso-bookmark:_Toc459006586'><span
+style='mso-bookmark:_Toc126037020'>Zero</span></span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767841'><span style='mso-bookmark:_Toc418416154'><span
+style='mso-bookmark:_Toc418915108'><span style='mso-bookmark:_Toc454599752'><span
+style='mso-bookmark:_Toc454615592'><span style='mso-bookmark:_Toc454941660'><span
+style='mso-bookmark:_Toc454945484'><span style='mso-bookmark:_Toc458576062'><span
+style='mso-bookmark:_Toc459006586'><span style='mso-bookmark:_Toc126037020'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767841'><span
+style='mso-bookmark:_Toc418416154'><span style='mso-bookmark:_Toc418915108'><span
+style='mso-bookmark:_Toc454599752'><span style='mso-bookmark:_Toc454615592'><span
+style='mso-bookmark:_Toc454941660'><span style='mso-bookmark:_Toc454945484'><span
+style='mso-bookmark:_Toc458576062'><span style='mso-bookmark:_Toc459006586'><span
+style='mso-bookmark:_Toc126037020'> XE &quot;Parameter:False Text&quot; </span></span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767841'><span style='mso-bookmark:_Toc418416154'><span
+style='mso-bookmark:_Toc418915108'><span style='mso-bookmark:_Toc454599752'><span
+style='mso-bookmark:_Toc454615592'><span style='mso-bookmark:_Toc454941660'><span
+style='mso-bookmark:_Toc454945484'><span style='mso-bookmark:_Toc458576062'><span
+style='mso-bookmark:_Toc459006586'><span style='mso-bookmark:_Toc126037020'></span></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767841'><span style='mso-bookmark:_Toc418416154'><span
+style='mso-bookmark:_Toc418915108'><span style='mso-bookmark:_Toc454599752'><span
+style='mso-bookmark:_Toc454615592'><span style='mso-bookmark:_Toc454941660'><span
+style='mso-bookmark:_Toc454945484'><span style='mso-bookmark:_Toc458576062'><span
+style='mso-bookmark:_Toc459006586'><span style='mso-bookmark:_Toc126037020'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767841'><span style='mso-bookmark:_Toc418416154'><span style='mso-bookmark:
+_Toc418915108'><span style='mso-bookmark:_Toc454599752'><span style='mso-bookmark:
+_Toc454615592'><span style='mso-bookmark:_Toc454941660'><span style='mso-bookmark:
+_Toc454945484'><span style='mso-bookmark:_Toc458576062'><span style='mso-bookmark:
+_Toc459006586'><span style='mso-bookmark:_Toc126037020'><span
+style='mso-spacerun:yes'> </span>and Non Zero</span></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767841'><span style='mso-bookmark:_Toc418416154'><span
+style='mso-bookmark:_Toc418915108'><span style='mso-bookmark:_Toc454599752'><span
+style='mso-bookmark:_Toc454615592'><span style='mso-bookmark:_Toc454941660'><span
+style='mso-bookmark:_Toc454945484'><span style='mso-bookmark:_Toc458576062'><span
+style='mso-bookmark:_Toc459006586'><span style='mso-bookmark:_Toc126037020'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767841'><span
+style='mso-bookmark:_Toc418416154'><span style='mso-bookmark:_Toc418915108'><span
+style='mso-bookmark:_Toc454599752'><span style='mso-bookmark:_Toc454615592'><span
+style='mso-bookmark:_Toc454941660'><span style='mso-bookmark:_Toc454945484'><span
+style='mso-bookmark:_Toc458576062'><span style='mso-bookmark:_Toc459006586'><span
+style='mso-bookmark:_Toc126037020'> XE &quot;Parameter:True Text&quot; </span></span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767841'><span style='mso-bookmark:_Toc418416154'><span
+style='mso-bookmark:_Toc418915108'><span style='mso-bookmark:_Toc454599752'><span
+style='mso-bookmark:_Toc454615592'><span style='mso-bookmark:_Toc454941660'><span
+style='mso-bookmark:_Toc454945484'><span style='mso-bookmark:_Toc458576062'><span
+style='mso-bookmark:_Toc459006586'><span style='mso-bookmark:_Toc126037020'></span></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767841'><span style='mso-bookmark:_Toc418416154'><span
+style='mso-bookmark:_Toc418915108'><span style='mso-bookmark:_Toc454599752'><span
+style='mso-bookmark:_Toc454615592'><span style='mso-bookmark:_Toc454941660'><span
+style='mso-bookmark:_Toc454945484'><span style='mso-bookmark:_Toc458576062'><span
+style='mso-bookmark:_Toc459006586'><span style='mso-bookmark:_Toc126037020'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767841'><span style='mso-bookmark:_Toc418416154'><span style='mso-bookmark:
+_Toc418915108'><span style='mso-bookmark:_Toc454599752'><span style='mso-bookmark:
+_Toc454615592'><span style='mso-bookmark:_Toc454941660'><span style='mso-bookmark:
+_Toc454945484'><span style='mso-bookmark:_Toc458576062'><span style='mso-bookmark:
+_Toc459006586'><span style='mso-bookmark:_Toc126037020'><span
+style='mso-spacerun:yes'> </span>Text</span></span></span></span></span></span></span></span></span></span></h3>
+
+<p class=MsoNormal>Instead of the “B” format, the “T” format may be used to
+display a textual interpretation of the 0 or 1 value of a discrete parameter.
+In such a case, these two fields must be used to indicate the two text values
+to be used for this particular parameter. The text entered can be up to six
+characters. The Zero text is used when the parameter value is zero, and the Non
+Zero text is used when the value is one. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037021">Units</a></h3>
+
+<p class=MsoNormal>An alphanumeric value can be entered here that will display
+the units of the parameter.<span style='mso-spacerun:yes'>   </span>For
+example, the parameter Total Air Temperature, or TAT, may have the units “DEG
+C” entered in this field.<span style='mso-spacerun:yes'>  </span>When TAT is
+displayed on the flight deck display unit, “DEG C” will display just below the
+mnemonic.</p>
+
+<h2 style='margin-left:0in'><a name="_Toc416767842"></a><a name="_Toc126037022"></a><a
+name="_Toc459006587"></a><a name="_Toc458576063"></a><a name="_Toc454945485"></a><a
+name="_Toc454941661"></a><a name="_Toc454615593"></a><a name="_Toc454599753"></a><a
+name="_Toc418915109"></a><a name="_Toc418416155"><span style='mso-bookmark:
+_Toc418915109'><span style='mso-bookmark:_Toc454599753'><span style='mso-bookmark:
+_Toc454615593'><span style='mso-bookmark:_Toc454941661'><span style='mso-bookmark:
+_Toc454945485'><span style='mso-bookmark:_Toc458576063'><span style='mso-bookmark:
+_Toc459006587'><span style='mso-bookmark:_Toc126037022'><span style='mso-bookmark:
+_Toc416767842'>Acquisition Tab</span></span></span></span></span></span></span></span></span></a><span
+style='mso-bookmark:_Toc416767842'></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767842'></span><span style='mso-element:field-begin'></span><span
+style='mso-bookmark:_Toc416767842'> XE &quot;Parameter:Acquisition Tab&quot; </span><![endif]--><span
+style='mso-bookmark:_Toc416767842'></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767842'></span><span style='mso-element:field-end'></span><![endif]--><span
+style='mso-bookmark:_Toc416767842'></span></h2>
+
+<p class=MsoNormal>This is where the details of how the parameter is to be
+captured are specified based on the parameter type selected. For each parameter
+type, a different data entry form is displayed, as described below. As Internal
+parameters are not acquired (they are derived), no acquisition form for them c<a
+name="_Toc418915110"></a><a name="_Toc418416156"></a><a name="_Toc416767843"><span
+style='mso-bookmark:_Toc418416156'><span style='mso-bookmark:_Toc418915110'>an
+be reached.</span></span></a></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc416767843'><span
+style='mso-bookmark:_Toc418416156'><span style='mso-bookmark:_Toc418915110'><o:p>&nbsp;</o:p></span></span></span></p>
+
+<h3 style='text-align:justify'><span style='mso-bookmark:_Toc416767843'><span
+style='mso-bookmark:_Toc418416156'><span style='mso-bookmark:_Toc418915110'><a
+name="_Toc126037023"></a><a name="_Toc459006589"></a><a name="_Toc458576065"></a><a
+name="_Toc454945487"></a><a name="_Toc454941663"></a><a name="_Toc454615595"></a><a
+name="_Toc454599755"><span style='mso-bookmark:_Toc454615595'><span
+style='mso-bookmark:_Toc454941663'><span style='mso-bookmark:_Toc454945487'><span
+style='mso-bookmark:_Toc458576065'><span style='mso-bookmark:_Toc459006589'><span
+style='mso-bookmark:_Toc126037023'>Analog Discretes</span></span></span></span></span></span></a></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767843'><span style='mso-bookmark:_Toc418416156'><span
+style='mso-bookmark:_Toc418915110'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Toc416767843'><span
+style='mso-bookmark:_Toc418416156'><span style='mso-bookmark:_Toc418915110'> XE
+&quot;Parameter:Acquisition:Analog Discretes&quot; </span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767843'><span style='mso-bookmark:_Toc418416156'><span
+style='mso-bookmark:_Toc418915110'></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767843'><span style='mso-bookmark:_Toc418416156'><span
+style='mso-bookmark:_Toc418915110'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Toc416767843'><span
+style='mso-bookmark:_Toc418416156'><span style='mso-bookmark:_Toc418915110'></span></span></span></h3>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc416767843'><span
+style='mso-bookmark:_Toc418416156'><span style='mso-bookmark:_Toc418915110'>For
+iDMU only:<span style='mso-spacerun:yes'>  </span>The channel number and
+acquisition rate of the parameter, as wired to the iDMU must be selected. This
+information can be found in the specification of the relevant iDMU.</span></span></span></p>
+
+<span style='mso-bookmark:_Toc418915110'></span><span style='mso-bookmark:_Toc418416156'></span><span
+style='mso-bookmark:_Toc416767843'></span>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><!--[if gte vml 1]><v:shape id="_x0000_i1039"
+ type="#_x0000_t75" style='width:321pt;height:210.75pt'>
+ <v:imagedata src="IV-ch03-V1.1_files/image022.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=428 height=281
+src="IV-ch03-V1.1_files/image022.jpg" v:shapes="_x0000_i1039"><![endif]></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 3.6.5: The Acquisition window for Analogue Discrete parameters.<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3 style='text-align:justify'><a name="_Toc126037024"></a><a
+name="_Toc459006593"></a><a name="_Toc458576069"></a><a name="_Toc454945491"></a><a
+name="_Toc454941667"></a><a name="_Toc454615599"></a><a name="_Toc454599759"></a><a
+name="_Toc418915115"></a><a name="_Toc418416161"></a><a name="_Toc416767848"><span
+style='mso-bookmark:_Toc418416161'><span style='mso-bookmark:_Toc418915115'><span
+style='mso-bookmark:_Toc454599759'><span style='mso-bookmark:_Toc454615599'><span
+style='mso-bookmark:_Toc454941667'><span style='mso-bookmark:_Toc454945491'><span
+style='mso-bookmark:_Toc458576069'><span style='mso-bookmark:_Toc459006593'><span
+style='mso-bookmark:_Toc126037024'>DITS</span></span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767848'><span style='mso-bookmark:_Toc418416161'><span
+style='mso-bookmark:_Toc418915115'><span style='mso-bookmark:_Toc454599759'><span
+style='mso-bookmark:_Toc454615599'><span style='mso-bookmark:_Toc454941667'><span
+style='mso-bookmark:_Toc454945491'><span style='mso-bookmark:_Toc458576069'><span
+style='mso-bookmark:_Toc459006593'><span style='mso-bookmark:_Toc126037024'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767848'><span
+style='mso-bookmark:_Toc418416161'><span style='mso-bookmark:_Toc418915115'><span
+style='mso-bookmark:_Toc454599759'><span style='mso-bookmark:_Toc454615599'><span
+style='mso-bookmark:_Toc454941667'><span style='mso-bookmark:_Toc454945491'><span
+style='mso-bookmark:_Toc458576069'><span style='mso-bookmark:_Toc459006593'><span
+style='mso-bookmark:_Toc126037024'> XE &quot;Parameter:Acquisition:DITS&quot; </span></span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767848'><span style='mso-bookmark:_Toc418416161'><span
+style='mso-bookmark:_Toc418915115'><span style='mso-bookmark:_Toc454599759'><span
+style='mso-bookmark:_Toc454615599'><span style='mso-bookmark:_Toc454941667'><span
+style='mso-bookmark:_Toc454945491'><span style='mso-bookmark:_Toc458576069'><span
+style='mso-bookmark:_Toc459006593'><span style='mso-bookmark:_Toc126037024'></span></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767848'><span style='mso-bookmark:_Toc418416161'><span
+style='mso-bookmark:_Toc418915115'><span style='mso-bookmark:_Toc454599759'><span
+style='mso-bookmark:_Toc454615599'><span style='mso-bookmark:_Toc454941667'><span
+style='mso-bookmark:_Toc454945491'><span style='mso-bookmark:_Toc458576069'><span
+style='mso-bookmark:_Toc459006593'><span style='mso-bookmark:_Toc126037024'></span></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767848'><span style='mso-bookmark:_Toc418416161'><span style='mso-bookmark:
+_Toc418915115'><span style='mso-bookmark:_Toc454599759'><span style='mso-bookmark:
+_Toc454615599'><span style='mso-bookmark:_Toc454941667'><span style='mso-bookmark:
+_Toc454945491'><span style='mso-bookmark:_Toc458576069'><span style='mso-bookmark:
+_Toc459006593'><span style='mso-bookmark:_Toc126037024'><span
+style='mso-spacerun:yes'> </span>Parameters</span></span></span></span></span></span></span></span></span></span>
+</h3>
+
+<p class=MsoNormal>In this form, the bus from which the parameter is acquired
+must be selected in the Primary bus field (such as the system one bus). The
+label<!--[if supportFields]><span style='mso-element:field-begin'></span> XE
+&quot;Parameter:Label&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>for the parameter must be entered as an octal
+number and the SDI<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Parameter:SDI&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>of the parameter must be entered for bits 9
+and 10.<span style='mso-spacerun:yes'>  </span>(For example, for FDIMU,
+entering 01 means bit ten is zero and bit nine is one.<span
+style='mso-spacerun:yes'>  </span>For iDMU, entering 01 means bit 9 is zero and
+bit ten is one). </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>If the parameter is to be automatically<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Bus:Automatic Switching&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>bus switched, the Secondary bus must also be
+identified (or Right and Center busses if iDMU), with its corresponding label
+and SDI.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>There are cases where the SDI bits are not used for
+identification, but are used as part of the data. In these cases the parameter
+value must be acquired regardless of the SDI bit values. There are also cases
+where a certain label has a known SDI, but it is also known that no other SDI
+will ever appear with that label on the bus. In the both of these cases where
+the SDI bits are to be ignored, a value of “NA” should be entered for the SDI
+value.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>For iDMU only:<span style='mso-spacerun:yes'> 
+</span>Entering the value “XX” is also accepted by AGS IV. This value is
+different from “NA” and must not be used if the SDI bits are to be ignored. <s><span
+style='color:red'><o:p></o:p></span></s></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><s><span style='color:red'><o:p><span style='text-decoration:
+ none'>&nbsp;</span></o:p></span></s></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1040" type="#_x0000_t75" style='width:318.75pt;height:208.5pt'
+ o:ole="">
+ <v:imagedata src="IV-ch03-V1.1_files/image024.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=425 height=278
+src="IV-ch03-V1.1_files/image024.jpg" v:shapes="_x0000_i1040"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1040"
+  DrawAspect="Content" ObjectID="_1200460008">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 3.7a: The Acquisition window for FDIMU DITS parameters.<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'><!--[if gte vml 1]><v:shape id="_x0000_i1041" type="#_x0000_t75"
+ style='width:321pt;height:211.5pt' fillcolor="window">
+ <v:imagedata src="IV-ch03-V1.1_files/image026.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=428 height=282
+src="IV-ch03-V1.1_files/image026.jpg" v:shapes="_x0000_i1041"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 3.7b: The Acquisition window for iDMU DITS parameters.<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal>The acquisition rate<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE
+&quot;Parameter:Acquisition:Rate&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>specified for a parameter can be entered as 1,
+2, 4, 8, 16 or 32. This rate should be less than or equal to the update rate of
+the parameter on the bus, otherwise no advantage is gained.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The Least Significant Bit (LSB) of the parameter and the
+length in bits must be entered, or equivalently, the relevant bits in the DITS
+word can be highlighted by dragging the mouse pointer on the bits.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The parameter must be specified as signed or unsigned, and
+if signed, the sign bit should be highlighted along with the other bits of the
+parameter.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3 style='text-align:justify'><a name="_Toc126037025"><span style='mso-bidi-font-weight:
+bold'>BURST Parameters</span></a><span style='mso-bidi-font-weight:bold'><o:p></o:p></span></h3>
+
+<p class=MsoNormal>The BUS, label, SDI and bits are defined the same way as in
+a DITS parameter.<span style='mso-spacerun:yes'>  </span>A Packet identifier
+must be defined as either Identifier (for example, a TCAS parameter with this
+option would be ordered by intruder number) or Ordinal (for example, a TCAS
+parameter would be ordered by highest priority, that is, closest
+intruder).<span style='mso-spacerun:yes'>  </span>The Identifier LSB, length,
+and Value must also be specified (see figure 3.7c).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.5in'><!--[if gte vml 1]><v:shape id="_x0000_i1042"
+ type="#_x0000_t75" style='width:318.75pt;height:207pt'>
+ <v:imagedata src="IV-ch03-V1.1_files/image028.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=425 height=276
+src="IV-ch03-V1.1_files/image028.jpg" v:shapes="_x0000_i1042"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Figure 3.7c: The
+Acquisition window for iDMU BURST parameters</b></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037026">Derivation Tab</a><a
+name="_Toc418416162"></a><a name="_Toc416767849"></a><a name="_Toc418915116"><span
+style='mso-bookmark:_Toc416767849'><span style='mso-bookmark:_Toc418416162'></span></span></a></h2>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc418915116'><span
+style='mso-bookmark:_Toc416767849'><span style='mso-bookmark:_Toc418416162'><o:p>&nbsp;</o:p></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc418915116'><span
+style='mso-bookmark:_Toc416767849'><span style='mso-bookmark:_Toc418416162'>This
+tab is used to specify the program for calculation of the corresponding
+internal parameter, using the acquired parameters and/or other internal
+parameters.<span style='mso-spacerun:yes'>  </span>This way one should be
+careful of recursively defining an internal parameter in terms of itself in a
+circular way.</span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc418915116'><span
+style='mso-bookmark:_Toc416767849'><span style='mso-bookmark:_Toc418416162'><o:p>&nbsp;</o:p></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc418915116'><span
+style='mso-bookmark:_Toc416767849'><span style='mso-bookmark:_Toc418416162'>The
+program entered in the white area should be in AMTAL language and often
+consists of a simple AMTAL statement.<span style='mso-spacerun:yes'>  
+</span>In Figure 3.8, B0 is calculated using the ALT and DTA parameters.<span
+style='mso-spacerun:yes'>   </span>Such statements are evaluated once every
+second and the left hand variable (e.g B0) receives a new value at the start of
+that second. </span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc418915116'><span
+style='mso-bookmark:_Toc416767849'><span style='mso-bookmark:_Toc418416162'><o:p>&nbsp;</o:p></span></span></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:_Toc418915116'><span style='mso-bookmark:_Toc416767849'><span
+style='mso-bookmark:_Toc418416162'><!--[if gte vml 1]><v:shape id="_x0000_i1043"
+ type="#_x0000_t75" style='width:318pt;height:207.75pt' o:ole="">
+ <v:imagedata src="IV-ch03-V1.1_files/image030.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=424 height=277
+src="IV-ch03-V1.1_files/image030.jpg" v:shapes="_x0000_i1043"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1043"
+  DrawAspect="Content" ObjectID="_1200460009">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-no-proof:yes'><span
+style='mso-spacerun:yes'> </span></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc418915116'><span
+style='mso-bookmark:_Toc416767849'><span style='mso-bookmark:_Toc418416162'><a
+name="_Toc459006595"></a><a name="_Toc458576071"></a><a name="_Toc454945493"></a><a
+name="_Toc454941669"></a><a name="_Toc454615601"></a><a name="_Toc454599762"><span
+style='mso-bookmark:_Toc454615601'><span style='mso-bookmark:_Toc454941669'><span
+style='mso-bookmark:_Toc454945493'><span style='mso-bookmark:_Toc458576071'><span
+style='mso-bookmark:_Toc459006595'><o:p>&nbsp;</o:p></span></span></span></span></span></a></span></span></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:_Toc418915116'><span style='mso-bookmark:_Toc416767849'><span
+style='mso-bookmark:_Toc418416162'><span style='mso-bookmark:_Toc454599762'><span
+style='mso-bookmark:_Toc454615601'><span style='mso-bookmark:_Toc454941669'><span
+style='mso-bookmark:_Toc454945493'><span style='mso-bookmark:_Toc458576071'><span
+style='mso-bookmark:_Toc459006595'><b>Figure 3.8: Derivation specification
+dialogue box.<o:p></o:p></b></span></span></span></span></span></span></span></span></span></p>
+
+<b><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span></b>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:_Toc418915116'><span style='mso-bookmark:_Toc416767849'><span
+style='mso-bookmark:_Toc418416162'><span style='mso-bookmark:_Toc454599762'><span
+style='mso-bookmark:_Toc454615601'><span style='mso-bookmark:_Toc454941669'><span
+style='mso-bookmark:_Toc454945493'><span style='mso-bookmark:_Toc458576071'><span
+style='mso-bookmark:_Toc459006595'><b><o:p>&nbsp;</o:p></b></span></span></span></span></span></span></span></span></span></p>
+
+<h2 style='margin-left:0in'><span style='mso-bookmark:_Toc418915116'><span
+style='mso-bookmark:_Toc416767849'><span style='mso-bookmark:_Toc418416162'><span
+style='mso-bookmark:_Toc454599762'><span style='mso-bookmark:_Toc454615601'><span
+style='mso-bookmark:_Toc454941669'><span style='mso-bookmark:_Toc454945493'><span
+style='mso-bookmark:_Toc458576071'><span style='mso-bookmark:_Toc459006595'><a
+name="_Toc126037027">Comments Tab</a></span></span></span></span></span></span></span></span></span><span
+style='mso-bookmark:_Toc416767849'><span style='mso-bookmark:_Toc418416162'></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767849'><span style='mso-bookmark:_Toc418416162'></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767849'><span
+style='mso-bookmark:_Toc418416162'> XE &quot;Parameter:Comments Tab&quot; </span></span><![endif]--><span
+style='mso-bookmark:_Toc416767849'><span style='mso-bookmark:_Toc418416162'></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767849'><span style='mso-bookmark:_Toc418416162'></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767849'><span style='mso-bookmark:_Toc418416162'></span></span></h2>
+
+<p class=MsoNormal>Any available information about the parameter that has not
+been entered in the other fields may be entered here. This data will have no
+effect on the airborne application.</p>
+
+<p class=MsoBodyText2><o:p>&nbsp;</o:p></p>
+
+<p class=MsoBodyText2 align=center style='text-align:center'><!--[if gte vml 1]><o:wrapblock><v:shape
+  id="_x0000_s1159" type="#_x0000_t75" style='position:absolute;left:0;
+  text-align:left;margin-left:43.2pt;margin-top:0;width:321.75pt;height:212.25pt;
+  z-index:6' o:allowincell="f">
+  <v:imagedata src="IV-ch03-V1.1_files/image032.jpg" o:title="Figure39"/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0 align=left>
+  <tr>
+   <td width=58 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=429 height=283 src="IV-ch03-V1.1_files/image032.jpg" v:shapes="_x0000_s1159"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+</p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 3.9: Parameter Definition dialogue box (Comments Tab Shown).<o:p></o:p></b></p>
+
+<b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span></b>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<h3><a name="_Toc126037028">Group</a></h3>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'>For FDIMU only.<span
+style='mso-spacerun:yes'>  </span>This is an optional field.<span
+style='mso-spacerun:yes'>  </span>A name of up to 8 characters can be entered
+here.<span style='mso-spacerun:yes'>  </span>When a name, or Alpha Callup
+(ACU), is entered, then that ACU will appear on the flight deck display unit
+with whatever parameters are associated with that group.<span
+style='mso-spacerun:yes'>  </span>For example, two parameters TAT1 and TAT2 are
+both assigned “TAT” in their group field.<span style='mso-spacerun:yes'> 
+</span>When TAT is requested on the flight deck display unit, the values for
+both parameters TAT1 and TAT2 will be displayed.</p>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'>The Group field can be used
+with Internal and DITS parameters.</p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3 style='text-align:justify'><a name="_Toc126037029">Last Update</a><!--[if supportFields]><span
+style='mso-element:field-begin'></span>xe &quot;Parameter:Sample Value&quot;<![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'>This field indicates the
+date when any of the attributes of this particular parameter were modified. </p>
+
+</div>
+
+</div>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:auto;
+mso-break-type:section-break'>
+</span>
+
+<div class=Section2></div>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:auto;
+mso-break-type:section-break'>
+</span>
+
+<div class=Section3>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

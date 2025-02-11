@@ -1,0 +1,1829 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="IV-ch04-V1.2_files/filelist.xml">
+<link rel=Edit-Time-Data href="IV-ch04-V1.2_files/editdata.mso">
+<link rel=OLE-Object-Data href="IV-ch04-V1.2_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Chapter 4 - Raw Data Recording</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Site License</o:Author>
+  <o:Template>ch01-V2-f1.dot</o:Template>
+  <o:LastAuthor>dfreedman</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>44</o:TotalTime>
+  <o:LastPrinted>1999-08-04T19:37:00Z</o:LastPrinted>
+  <o:Created>2006-02-03T16:21:00Z</o:Created>
+  <o:LastSaved>2006-02-03T16:21:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2831</o:Words>
+  <o:Characters>16140</o:Characters>
+  <o:Company>Teledyne Controls</o:Company>
+  <o:Lines>134</o:Lines>
+  <o:Paragraphs>37</o:Paragraphs>
+  <o:CharactersWithSpaces>18934</o:CharactersWithSpaces>
+  <o:Version>11.6568</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="8" DLLVersion="513" NLCheck="0">1</w:ActiveWritingStyle>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:"Heading 2";
+	margin-top:.5in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:-.8in;
+	page-break-before:always;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	border:none;
+	mso-border-top-alt:solid windowtext .5pt;
+	mso-border-bottom-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 0in 1.0pt 0in;
+	font-size:30.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:-.8in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	mso-list:skip;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h6
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	mso-list:skip;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:red;
+	mso-bidi-font-weight:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-element:frame;
+	mso-element-frame-width:303.85pt;
+	mso-element-frame-height:31.4pt;
+	mso-element-frame-hspace:9.0pt;
+	mso-element-wrap:around;
+	mso-element-anchor-vertical:paragraph;
+	mso-element-anchor-horizontal:page;
+	mso-element-left:215.85pt;
+	mso-element-top:.75pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-alt:solid windowtext 1.5pt;
+	padding:0in;
+	mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt;
+	mso-border-shadow:yes;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:14.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	mso-bidi-language:AR-SA;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("IV-ch04-V1.2_files/header.html") fs;
+	mso-footnote-continuation-separator:url("IV-ch04-V1.2_files/header.html") fcs;
+	mso-endnote-separator:url("IV-ch04-V1.2_files/header.html") es;
+	mso-endnote-continuation-separator:url("IV-ch04-V1.2_files/header.html") ecs;
+	mso-facing-pages:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-even-header:url("IV-ch04-V1.2_files/header.html") eh2;
+	mso-header:url("IV-ch04-V1.2_files/header.html") h2;
+	mso-even-footer:url("IV-ch04-V1.2_files/header.html") ef2;
+	mso-footer:url("IV-ch04-V1.2_files/header.html") f2;
+	mso-first-footer:url("IV-ch04-V1.2_files/header.html") ff2;
+	mso-paper-source:0;}
+div.Section2
+	{page:Section2;}
+@page Section3
+	{size:8.5in 11.0in;
+	margin:2.2in .5in .8in 2.3in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-even-header:url("IV-ch04-V1.2_files/header.html") eh3;
+	mso-header:url("IV-ch04-V1.2_files/header.html") h3;
+	mso-even-footer:url("IV-ch04-V1.2_files/header.html") ef3;
+	mso-footer:url("IV-ch04-V1.2_files/header.html") f3;
+	mso-first-header:url("IV-ch04-V1.2_files/header.html") fh3;
+	mso-first-footer:url("IV-ch04-V1.2_files/header.html") ff3;
+	mso-paper-source:0;}
+div.Section3
+	{page:Section3;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-2;
+	mso-list-type:simple;
+	mso-list-template-ids:-1;}
+@list l0:level1
+	{mso-level-start-at:0;
+	mso-level-text:*;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level1 lfo1
+	{mso-level-start-at:1;
+	mso-level-number-format:bullet;
+	mso-level-numbering:continue;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:-.5in;
+	mso-level-legacy-space:0in;
+	margin-left:0in;
+	text-indent:0in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<div style='mso-element:para-border-div;border-top:solid windowtext 1.0pt;
+border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+padding:1.0pt 0in 1.0pt 0in'>
+
+<h1 style='margin-left:0in'><a name="_Toc126037030"></a><a name="_Toc459006598"></a><a
+name="_Toc458576074"></a><a name="_Toc454945496"></a><a name="_Toc454941672"></a><a
+name="_Toc454615604"></a><a name="_Toc418915118"></a><a name="_Toc418416164"></a><a
+name="_Toc416767851"><span style='mso-bookmark:_Toc418416164'><span
+style='mso-bookmark:_Toc418915118'><span style='mso-bookmark:_Toc454615604'><span
+style='mso-bookmark:_Toc454941672'><span style='mso-bookmark:_Toc454945496'><span
+style='mso-bookmark:_Toc458576074'><span style='mso-bookmark:_Toc459006598'><span
+style='mso-bookmark:_Toc126037030'>Chapter 4<br>
+RAW DATA RECORDING</span></span></span></span></span></span></span></span></a></h1>
+
+</div>
+
+<h2 style='margin-left:0in'><a name="_Toc126037031"></a><a name="_Toc459006599"></a><a
+name="_Toc458576075"></a><a name="_Toc454945497"></a><a name="_Toc454941673"></a><a
+name="_Toc454615605"></a><a name="_Toc418915119"></a><a name="_Toc418416165"></a><a
+name="_Toc416767852"><span style='mso-bookmark:_Toc418416165'><span
+style='mso-bookmark:_Toc418915119'><span style='mso-bookmark:_Toc454615605'><span
+style='mso-bookmark:_Toc454941673'><span style='mso-bookmark:_Toc454945497'><span
+style='mso-bookmark:_Toc458576075'><span style='mso-bookmark:_Toc459006599'><span
+style='mso-bookmark:_Toc126037031'>Overview</span></span></span></span></span></span></span></span></a></h2>
+
+<p class=MsoNormal>One of the basic functions of a data acquisition system
+(ACMS) is to record<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Data Record&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>the incoming data without any interpretation.
+In most cases this is the raw<!--[if supportFields]><span style='mso-element:
+field-begin'></span> XE &quot;Raw Data&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>data without conversion to engineering units.
+Since most acquisition systems generate values of their own, called derived or
+internal parameters, it is also possible to record these values.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The recorded raw data is subsequently transcribed on the
+ground for purposes of maintenance and flight operations.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The device onto which this data is recorded varies from one
+installation to another. The most common devices are stand-alone tape or
+optical disk recorders. However, it is also possible to record onto the
+internal ACMS recorders, such as optical disks and PCMCIA<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;PCMCIA&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>cards integrated into data acquisition units.
+Another possibility is to record onto the internal<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;ACMS:Internal Memory&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>memory of the ACMS, during the flight, and
+transfer the data to a floppy disk with one of the following devices after the
+flight:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:14.15pt;text-indent:.5in;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·</span></span><![endif]> Airborne Data
+Loader (ADL<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;ADL&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]-->),</p>
+
+<p class=MsoNormal style='margin-left:14.15pt;text-indent:.5in;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·</span></span><![endif]> Portable Data
+Loader ( PDL<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;PDL&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]-->),</p>
+
+<p class=MsoNormal style='margin-left:14.15pt;text-indent:.5in;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·</span></span><![endif]>
+Multi-Destination Disk Unit (MDDU<!--[if supportFields]><span style='mso-element:
+field-begin'></span> XE &quot;MDDU&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->),</p>
+
+<p class=MsoNormal style='margin-left:14.15pt;text-indent:.5in;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·</span></span><![endif]> Integrated Disk
+Drive IDD<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;IDD&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]-->,</p>
+
+<p class=MsoNormal style='margin-left:14.15pt;text-indent:.5in;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·</span></span><![endif]> Floppy Disk
+Interface FDI<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;FDI&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]--></p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'>Regardless of the recording media, the
+specification of how the data is to be recorded is the same and is described in
+the remainder of this chapter. In cases where data is recorded in memory, for
+later transfer to disk, in addition to this specification, reports must also be
+defined, to act as containers for the raw data, until the transfer to disk. The
+definition of such containers is described in the chapter on Reports.</p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'>Note that recording to the Flight
+Recorder<!--[if supportFields]><span style='mso-element:field-begin'></span> XE
+&quot;Flight Recorder&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->, also referred to as the
+Crash Recorder<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Crash Recorder&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>or Accident Recorder,<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Accident Recorder&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>is NOT a function of an ACMS system and
+therefore not covered in this chapter. </p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037032"></a><a name="_Toc459006600"></a><a
+name="_Toc458576076"></a><a name="_Toc454945498"></a><a name="_Toc454941674"></a><a
+name="_Toc454615606"></a><a name="_Toc418915120"></a><a name="_Toc418416166"></a><a
+name="_Toc416767853"><span style='mso-bookmark:_Toc418416166'><span
+style='mso-bookmark:_Toc418915120'><span style='mso-bookmark:_Toc454615606'><span
+style='mso-bookmark:_Toc454941674'><span style='mso-bookmark:_Toc454945498'><span
+style='mso-bookmark:_Toc458576076'><span style='mso-bookmark:_Toc459006600'><span
+style='mso-bookmark:_Toc126037032'>Recorded Data</span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767853'><span style='mso-bookmark:_Toc418416166'><span
+style='mso-bookmark:_Toc418915120'><span style='mso-bookmark:_Toc454615606'><span
+style='mso-bookmark:_Toc454941674'><span style='mso-bookmark:_Toc454945498'><span
+style='mso-bookmark:_Toc458576076'><span style='mso-bookmark:_Toc459006600'><span
+style='mso-bookmark:_Toc126037032'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767853'><span
+style='mso-bookmark:_Toc418416166'><span style='mso-bookmark:_Toc418915120'><span
+style='mso-bookmark:_Toc454615606'><span style='mso-bookmark:_Toc454941674'><span
+style='mso-bookmark:_Toc454945498'><span style='mso-bookmark:_Toc458576076'><span
+style='mso-bookmark:_Toc459006600'><span style='mso-bookmark:_Toc126037032'> XE
+&quot;Recording:Data Format&quot; </span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767853'><span style='mso-bookmark:_Toc418416166'><span
+style='mso-bookmark:_Toc418915120'><span style='mso-bookmark:_Toc454615606'><span
+style='mso-bookmark:_Toc454941674'><span style='mso-bookmark:_Toc454945498'><span
+style='mso-bookmark:_Toc458576076'><span style='mso-bookmark:_Toc459006600'><span
+style='mso-bookmark:_Toc126037032'></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767853'><span style='mso-bookmark:_Toc418416166'><span
+style='mso-bookmark:_Toc418915120'><span style='mso-bookmark:_Toc454615606'><span
+style='mso-bookmark:_Toc454941674'><span style='mso-bookmark:_Toc454945498'><span
+style='mso-bookmark:_Toc458576076'><span style='mso-bookmark:_Toc459006600'><span
+style='mso-bookmark:_Toc126037032'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767853'><span style='mso-bookmark:_Toc418416166'><span style='mso-bookmark:
+_Toc418915120'><span style='mso-bookmark:_Toc454615606'><span style='mso-bookmark:
+_Toc454941674'><span style='mso-bookmark:_Toc454945498'><span style='mso-bookmark:
+_Toc458576076'><span style='mso-bookmark:_Toc459006600'><span style='mso-bookmark:
+_Toc126037032'><span style='mso-spacerun:yes'> </span>Format</span></span></span></span></span></span></span></span></span></h2>
+
+<h3 style='mso-list:skip'><a name="_Toc126037033"></a><a name="_Toc459006601"></a><a
+name="_Toc458576077"></a><a name="_Toc454945499"></a><a name="_Toc454941675"></a><a
+name="_Toc454615607"></a><a name="_Toc418915121"></a><a name="_Toc418416167"></a><a
+name="_Toc416767854"><span style='mso-bookmark:_Toc418416167'><span
+style='mso-bookmark:_Toc418915121'><span style='mso-bookmark:_Toc454615607'><span
+style='mso-bookmark:_Toc454941675'><span style='mso-bookmark:_Toc454945499'><span
+style='mso-bookmark:_Toc458576077'><span style='mso-bookmark:_Toc459006601'><span
+style='mso-bookmark:_Toc126037033'>Subframes</span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording:Subframes&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Subframes&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal style='mso-list:skip'>Based on ARINC 717 Standard, raw data
+is recorded in packets called subframes. Each subframe represents one second of
+recorded data and consists of a number of 12-bit words. The number of words in
+a subframe can be selected to be 64, 128, 256, 384, 512, or 1024. </p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'>As the size of the subframe (<u>number</u>
+of words per subframe) also determines the transmission rate<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording:Transmission
+Rate&quot; <![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>(number of <u>words per second</u>), it is
+important to take the capabilities and the capacity of the recorder into
+consideration when selecting the subframe size. For example, in-memory
+recording is seldom done with subframes larger than 64 words, while optical
+disk recording can use the largest of subframe sizes.</p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'>Each word in a subframe can hold a
+12-bit parameter or a combination of parameters with fewer bits. If more than
+12 bits of a parameter need to be recorded, then the parameter must be split
+into two or more words. The position of a word in the subframe and the subframe
+sequence in a frame (see Frames) identifies the contents of the word (and thus
+the parameters contained in the word).</p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'>The first word in every subframe does
+not contain any data, but a special bit pattern called the synchronization<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Synchronization Word&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Synchronization Word&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>word. This is used to identify the beginning
+of the subframe. In each recording, four unique synchronization patterns are
+used, each identifying one subframe.</p>
+
+<p class=MsoNormal style='mso-list:skip'><span style='mso-spacerun:yes'> 
+</span></p>
+
+<p class=MsoNormal style='mso-list:skip'>A parameter’s recording rate is
+independent of the acquisition rate, though it does not make sense to record a
+parameter more frequently than it is acquired. If a parameter is to be recorded
+in 12 bits at a once per second rate, then it will require only one word
+position.<span style='mso-spacerun:yes'>  </span>If more samples of the
+parameter are to be recorded, then more words need to be allocated.</p>
+
+<p class=MsoNormal style='mso-list:skip'><span style='mso-spacerun:yes'> 
+</span></p>
+
+<h3 style='mso-list:skip'><a name="_Toc126037034"></a><a name="_Toc459006602"></a><a
+name="_Toc458576078"></a><a name="_Toc454945500"></a><a name="_Toc454941676"></a><a
+name="_Toc454615608"></a><a name="_Toc418915122"></a><a name="_Toc418416168"></a><a
+name="_Toc416767855"><span style='mso-bookmark:_Toc418416168'><span
+style='mso-bookmark:_Toc418915122'><span style='mso-bookmark:_Toc454615608'><span
+style='mso-bookmark:_Toc454941676'><span style='mso-bookmark:_Toc454945500'><span
+style='mso-bookmark:_Toc458576078'><span style='mso-bookmark:_Toc459006602'><span
+style='mso-bookmark:_Toc126037034'>Frames</span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording:Frames&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Frames&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal style='mso-list:skip'>To support parameters that have a slow
+rate of change and do not need once per second recording, the recording format
+also allows the recording of parameters once every two seconds or even once
+every four seconds. This is done by using the same word location for two
+different parameters, alternating the value every other second, or using the
+word for four different parameters each one recorded every fourth second.<span
+style='mso-spacerun:yes'>  </span>This results in a minimum recording rate of
+one sample every four seconds.</p>
+
+<p class=MsoNormal style='mso-list:skip'><span
+style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal style='mso-list:skip'>Regardless of how this alternation is
+done, each subframe will hold the same parameters as the subframe recorded four
+seconds earlier. The sequence of the four, possibly different, subframes is
+called a “frame”.</p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'>This is why a different
+synchronization<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Synchronization Word&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>word (sync word) is used for each of the four
+subframes, to distinguish the four subframes in a frame.</p>
+
+<p class=MsoNormal style='mso-list:skip'><span style='mso-spacerun:yes'>  
+</span></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .75pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+
+<h3 style='mso-list:skip;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'><a name="_Toc418416169"></a><a
+name="_Toc416767856"></a><a name="_Toc126037035"></a><a name="_Toc459006603"></a><a
+name="_Toc458576079"></a><a name="_Toc454945501"></a><a name="_Toc454941677"></a><a
+name="_Toc454615609"></a><a name="_Toc418915123"><span style='mso-bookmark:
+_Toc454615609'><span style='mso-bookmark:_Toc454941677'><span style='mso-bookmark:
+_Toc454945501'><span style='mso-bookmark:_Toc458576079'><span style='mso-bookmark:
+_Toc459006603'><span style='mso-bookmark:_Toc126037035'><span style='mso-bookmark:
+_Toc416767856'><span style='mso-bookmark:_Toc418416169'>Super</span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc418915123'><span style='mso-bookmark:_Toc454615609'><span
+style='mso-bookmark:_Toc454941677'><span style='mso-bookmark:_Toc454945501'><span
+style='mso-bookmark:_Toc458576079'><span style='mso-bookmark:_Toc459006603'><span
+style='mso-bookmark:_Toc126037035'><span style='mso-bookmark:_Toc416767856'><span
+style='mso-bookmark:_Toc418416169'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc418915123'><span
+style='mso-bookmark:_Toc454615609'><span style='mso-bookmark:_Toc454941677'><span
+style='mso-bookmark:_Toc454945501'><span style='mso-bookmark:_Toc458576079'><span
+style='mso-bookmark:_Toc459006603'><span style='mso-bookmark:_Toc126037035'><span
+style='mso-bookmark:_Toc416767856'><span style='mso-bookmark:_Toc418416169'> XE
+&quot;Recording:Super Frame&quot; </span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc418915123'><span style='mso-bookmark:_Toc454615609'><span
+style='mso-bookmark:_Toc454941677'><span style='mso-bookmark:_Toc454945501'><span
+style='mso-bookmark:_Toc458576079'><span style='mso-bookmark:_Toc459006603'><span
+style='mso-bookmark:_Toc126037035'><span style='mso-bookmark:_Toc416767856'><span
+style='mso-bookmark:_Toc418416169'></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc418915123'><span style='mso-bookmark:_Toc454615609'><span
+style='mso-bookmark:_Toc454941677'><span style='mso-bookmark:_Toc454945501'><span
+style='mso-bookmark:_Toc458576079'><span style='mso-bookmark:_Toc459006603'><span
+style='mso-bookmark:_Toc126037035'><span style='mso-bookmark:_Toc416767856'><span
+style='mso-bookmark:_Toc418416169'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc418915123'><span style='mso-bookmark:_Toc454615609'><span style='mso-bookmark:
+_Toc454941677'><span style='mso-bookmark:_Toc454945501'><span style='mso-bookmark:
+_Toc458576079'><span style='mso-bookmark:_Toc459006603'><span style='mso-bookmark:
+_Toc126037035'><span style='mso-bookmark:_Toc416767856'><span style='mso-bookmark:
+_Toc418416169'><span style='mso-spacerun:yes'> </span>Frame Recording</span></span></span></span></span></span></span></span></span><span
+style='mso-bookmark:_Toc416767856'><span style='mso-bookmark:_Toc418416169'></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767856'><span style='mso-bookmark:_Toc418416169'></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767856'><span
+style='mso-bookmark:_Toc418416169'> XE &quot;Super Frame Recording&quot; </span></span><![endif]--><span
+style='mso-bookmark:_Toc416767856'><span style='mso-bookmark:_Toc418416169'></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767856'><span style='mso-bookmark:_Toc418416169'></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767856'><span style='mso-bookmark:_Toc418416169'></span></span></h3>
+
+<p class=MsoNormal style='mso-list:skip;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'>Recording data once every
+four seconds might still be unnecessary and wasteful for parameters that rarely
+change during flight. Examples of such parameters are the departure and
+destination codes, flight date, or aircraft registration. In these cases, one
+may use the trigger logic to multiplex amongst several slowly changing
+parameter and copy them to another (internal) parameter which is actually being
+recorded at regular, four second, intervals.<span style='mso-spacerun:yes'> 
+</span>This form of recording, called Super-Frame recording, though not a
+feature of the recording subsystem of the ACMS, is superimposed on it by the
+help of the trigger logic.</p>
+
+<p class=MsoNormal style='mso-list:skip;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'>As an example, an internal
+parameter called SUPER1 may be recorded once every four seconds (a waste of
+recording resources to do it any more often). For the 1<sup>st</sup> four
+seconds, using the trigger logic, the departure station code might be copied
+into this parameter. During the 2<sup>nd</sup> four seconds, using the trigger
+logic, the destination station code may be copied into SUPER1, and during the 3<sup>rd</sup>
+four seconds, again using the trigger logic, the month and the day may be
+copied, etc. The parameters that are copied into SUPER1 and recorded in such a
+way are called Super Frame parameters. In the above example, if 16 such super
+frame parameters are recorded, then it will take 64 seconds for the cycle to
+repeat; thus, each parameter will be recorded once every 64 seconds. </p>
+
+<p class=MsoNormal style='mso-list:skip;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip;border:none;mso-border-alt:solid windowtext .75pt;
+padding:0in;mso-padding-alt:5.0pt 5.0pt 5.0pt 5.0pt'>There is nothing special
+about the number 16, any number of parameters may be multiplexed into a super
+frame; however, traditionally, the super frame cycle has been set to a power of
+two, such as 16, 32, 64, 128, etc.</p>
+
+</div>
+
+<h2 style='margin-left:0in'><a name="_Toc126037036"></a><a name="_Toc459006604"></a><a
+name="_Toc458576080"></a><a name="_Toc454945502"></a><a name="_Toc454941678"></a><a
+name="_Toc454615610"></a><a name="_Toc418915124"></a><a name="_Toc418416170"></a><a
+name="_Toc416767857"><span style='mso-bookmark:_Toc418416170'><span
+style='mso-bookmark:_Toc418915124'><span style='mso-bookmark:_Toc454615610'><span
+style='mso-bookmark:_Toc454941678'><span style='mso-bookmark:_Toc454945502'><span
+style='mso-bookmark:_Toc458576080'><span style='mso-bookmark:_Toc459006604'><span
+style='mso-bookmark:_Toc126037036'>Incremental</span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767857'><span style='mso-bookmark:_Toc418416170'><span
+style='mso-bookmark:_Toc418915124'><span style='mso-bookmark:_Toc454615610'><span
+style='mso-bookmark:_Toc454941678'><span style='mso-bookmark:_Toc454945502'><span
+style='mso-bookmark:_Toc458576080'><span style='mso-bookmark:_Toc459006604'><span
+style='mso-bookmark:_Toc126037036'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767857'><span
+style='mso-bookmark:_Toc418416170'><span style='mso-bookmark:_Toc418915124'><span
+style='mso-bookmark:_Toc454615610'><span style='mso-bookmark:_Toc454941678'><span
+style='mso-bookmark:_Toc454945502'><span style='mso-bookmark:_Toc458576080'><span
+style='mso-bookmark:_Toc459006604'><span style='mso-bookmark:_Toc126037036'> XE
+&quot;Incremental Recording&quot; </span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767857'><span style='mso-bookmark:_Toc418416170'><span
+style='mso-bookmark:_Toc418915124'><span style='mso-bookmark:_Toc454615610'><span
+style='mso-bookmark:_Toc454941678'><span style='mso-bookmark:_Toc454945502'><span
+style='mso-bookmark:_Toc458576080'><span style='mso-bookmark:_Toc459006604'><span
+style='mso-bookmark:_Toc126037036'></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767857'><span style='mso-bookmark:_Toc418416170'><span
+style='mso-bookmark:_Toc418915124'><span style='mso-bookmark:_Toc454615610'><span
+style='mso-bookmark:_Toc454941678'><span style='mso-bookmark:_Toc454945502'><span
+style='mso-bookmark:_Toc458576080'><span style='mso-bookmark:_Toc459006604'><span
+style='mso-bookmark:_Toc126037036'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767857'><span style='mso-bookmark:_Toc418416170'><span style='mso-bookmark:
+_Toc418915124'><span style='mso-bookmark:_Toc454615610'><span style='mso-bookmark:
+_Toc454941678'><span style='mso-bookmark:_Toc454945502'><span style='mso-bookmark:
+_Toc458576080'><span style='mso-bookmark:_Toc459006604'><span style='mso-bookmark:
+_Toc126037036'><span style='mso-spacerun:yes'> </span>Recording</span></span></span></span></span></span></span></span></span></h2>
+
+<p class=MsoNormal style='mso-list:skip'>Usually raw data recording is started
+a few seconds before the first engine is turned on and continues until a few
+seconds after the last engine is turned off. The switching of the recording, on
+and off, is done by the trigger logic, to be described in a later chapter. In
+situations where the recording media must be conserved, it is possible to turn
+recording on and off also during the flight. This on/off control of recording
+can again be accomplished by the trigger logic. Because parameters can have
+history buffers, it is possible to trigger the recording of data, based on events,
+to appear to start BEFORE the occurrence of that event. As an example, one
+might start recording one frame (four seconds) before the first engine start,
+continue recording until cruise, and then record only if an exceedance is
+detected. In the case of an exceedance, the recording can be specified to start
+two frames (8 seconds) before the exceedance and continue for 4 frames.</p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037037"></a><a name="_Toc459006605"></a><a
+name="_Toc458576081"></a><a name="_Toc454945503"></a><a name="_Toc454941679"></a><a
+name="_Toc454615611"></a><a name="_Toc418915125"></a><a name="_Toc418416171"></a><a
+name="_Toc416767858"><span style='mso-bookmark:_Toc418416171'><span
+style='mso-bookmark:_Toc418915125'><span style='mso-bookmark:_Toc454615611'><span
+style='mso-bookmark:_Toc454941679'><span style='mso-bookmark:_Toc454945503'><span
+style='mso-bookmark:_Toc458576081'><span style='mso-bookmark:_Toc459006605'><span
+style='mso-bookmark:_Toc126037037'>Specifying the Frame</span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767858'><span style='mso-bookmark:_Toc418416171'><span
+style='mso-bookmark:_Toc418915125'><span style='mso-bookmark:_Toc454615611'><span
+style='mso-bookmark:_Toc454941679'><span style='mso-bookmark:_Toc454945503'><span
+style='mso-bookmark:_Toc458576081'><span style='mso-bookmark:_Toc459006605'><span
+style='mso-bookmark:_Toc126037037'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767858'><span
+style='mso-bookmark:_Toc418416171'><span style='mso-bookmark:_Toc418915125'><span
+style='mso-bookmark:_Toc454615611'><span style='mso-bookmark:_Toc454941679'><span
+style='mso-bookmark:_Toc454945503'><span style='mso-bookmark:_Toc458576081'><span
+style='mso-bookmark:_Toc459006605'><span style='mso-bookmark:_Toc126037037'> XE
+&quot;Recording:Frame:Specification&quot; </span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767858'><span style='mso-bookmark:_Toc418416171'><span
+style='mso-bookmark:_Toc418915125'><span style='mso-bookmark:_Toc454615611'><span
+style='mso-bookmark:_Toc454941679'><span style='mso-bookmark:_Toc454945503'><span
+style='mso-bookmark:_Toc458576081'><span style='mso-bookmark:_Toc459006605'><span
+style='mso-bookmark:_Toc126037037'></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767858'><span style='mso-bookmark:_Toc418416171'><span
+style='mso-bookmark:_Toc418915125'><span style='mso-bookmark:_Toc454615611'><span
+style='mso-bookmark:_Toc454941679'><span style='mso-bookmark:_Toc454945503'><span
+style='mso-bookmark:_Toc458576081'><span style='mso-bookmark:_Toc459006605'><span
+style='mso-bookmark:_Toc126037037'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767858'><span style='mso-bookmark:_Toc418416171'><span style='mso-bookmark:
+_Toc418915125'><span style='mso-bookmark:_Toc454615611'><span style='mso-bookmark:
+_Toc454941679'><span style='mso-bookmark:_Toc454945503'><span style='mso-bookmark:
+_Toc458576081'><span style='mso-bookmark:_Toc459006605'><span style='mso-bookmark:
+_Toc126037037'><span style='mso-spacerun:yes'> </span>and the Subframe</span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE
+&quot;recording:Subframe:Specification&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h2>
+
+<p class=MsoNormal style='mso-list:skip'>The ACMS specified by AGS IV support
+the definition of multiple frame layouts; each frame layout definition is
+called a Map<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Recording:Map&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording Map&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Map&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->. Different maps can be used
+for different recording devices, or more than one map can be used for a single
+device, with the maps being switched under different flight conditions. In this
+case, each map should have a unique identifier recorded in the frame, to allow
+for identification and interpretation of the recorded data.</p>
+
+<p class=MsoNormal style='mso-list:skip'><!--[if gte vml 1]><o:wrapblock><v:shapetype
+  id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+  path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+  <v:stroke joinstyle="miter"/>
+  <v:formulas>
+   <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+   <v:f eqn="sum @0 1 0"/>
+   <v:f eqn="sum 0 0 @1"/>
+   <v:f eqn="prod @2 1 2"/>
+   <v:f eqn="prod @3 21600 pixelWidth"/>
+   <v:f eqn="prod @3 21600 pixelHeight"/>
+   <v:f eqn="sum @0 0 1"/>
+   <v:f eqn="prod @6 1 2"/>
+   <v:f eqn="prod @7 21600 pixelWidth"/>
+   <v:f eqn="sum @8 21600 0"/>
+   <v:f eqn="prod @7 21600 pixelHeight"/>
+   <v:f eqn="sum @10 21600 0"/>
+  </v:formulas>
+  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+  <o:lock v:ext="edit" aspectratio="t"/>
+ </v:shapetype><v:shape id="_x0000_s1132" type="#_x0000_t75" style='position:absolute;
+  left:0;text-align:left;margin-left:0;margin-top:0;width:3pt;height:1.5pt;
+  z-index:1' o:allowincell="f">
+  <v:imagedata src="IV-ch04-V1.2_files/image002.jpg" o:title=""/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><img width=4 height=2
+ src="IV-ch04-V1.2_files/image002.jpg" v:shapes="_x0000_s1132"><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+To define a recording<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Recording Map:Definition&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Map:Definition&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>map, (regardless of the recording device),
+from the <u>D</u>efine pull down menu, the Re<u>c</u>ording Map option should
+be selected, or equivalently, the recording button on the toolbar should be pressed
+(see Figure 4.1).<span style='mso-spacerun:yes'>  </span>Note the SAR option is
+not available for iDMU.</p>
+
+<p class=MsoNormal style='mso-list:skip'><span style='font-size:10.0pt;
+mso-no-proof:yes'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-list:skip'><!--[if gte vml 1]><v:shape id="_x0000_i1028"
+ type="#_x0000_t75" style='width:198.75pt;height:141pt' o:ole="">
+ <v:imagedata src="IV-ch04-V1.2_files/image004.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=265 height=188
+src="IV-ch04-V1.2_files/image004.jpg" v:shapes="_x0000_i1028"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1028"
+  DrawAspect="Content" ObjectID="_1200460059">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>  </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1029" type="#_x0000_t75" style='width:192.75pt;height:2in' o:ole="">
+ <v:imagedata src="IV-ch04-V1.2_files/image006.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=257 height=192
+src="IV-ch04-V1.2_files/image006.jpg" v:shapes="_x0000_i1029"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1029"
+  DrawAspect="Content" ObjectID="_1200460060">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal style='mso-list:skip'><span style='mso-no-proof:yes'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-list:skip'><b
+style='mso-bidi-font-weight:normal'>Figure 4.1: Main Menu and Toolbar with <u>D</u>efine
+Re<u>c</u>ording Map selected.<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'>Once this selection is made, a new
+window is opened, containing a list of all maps previously defined (see Figure
+4.2). Next to this list is a set of buttons that enable the user to:</p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'>define<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording Map:New&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Map:New&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-tab-count:
+1'>   </span><!--[if gte vml 1]><v:shape id="_x0000_i1030" type="#_x0000_t75"
+ style='width:50.25pt;height:20.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch04-V1.2_files/image007.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=27
+src="IV-ch04-V1.2_files/image007.gif" v:shapes="_x0000_i1030"><![endif]><span
+style='mso-spacerun:yes'>  </span>maps, </p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'><span style='mso-tab-count:1'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1031" type="#_x0000_t75" style='width:50.25pt;height:20.25pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch04-V1.2_files/image008.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=27
+src="IV-ch04-V1.2_files/image008.gif" v:shapes="_x0000_i1031"><![endif]><span
+style='mso-spacerun:yes'>  </span>existing<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording Map:Open&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Map:Open&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>maps for display or modification of the frame
+content, </p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'><span style='mso-tab-count:1'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1032" type="#_x0000_t75" style='width:50.25pt;height:20.25pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch04-V1.2_files/image009.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=27
+src="IV-ch04-V1.2_files/image009.gif" v:shapes="_x0000_i1032"><![endif]><span
+style='mso-spacerun:yes'>  </span>one map<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording Map:Copy&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Map:Copy&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>definition into another, </p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'><span style='mso-tab-count:1'>            </span><!--[if gte vml 1]><v:shape
+ id="_x0000_i1033" type="#_x0000_t75" style='width:49.5pt;height:20.25pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch04-V1.2_files/image010.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=66 height=27
+src="IV-ch04-V1.2_files/image010.gif" v:shapes="_x0000_i1033"><![endif]><span
+style='mso-spacerun:yes'>   </span>a defined map<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording Map:Delete&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Map:Delete&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->,</p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'>change <!--[if gte vml 1]><v:shape
+ id="_x0000_i1034" type="#_x0000_t75" style='width:53.25pt;height:16.5pt'
+ o:ole="" fillcolor="window">
+ <v:imagedata src="IV-ch04-V1.2_files/image012.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=71 height=22
+src="IV-ch04-V1.2_files/image012.jpg" v:shapes="_x0000_i1034"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1034"
+  DrawAspect="Content" ObjectID="_1200460061">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>   </span>of the map<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording Map:Property&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Map:Property&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->; e.g. the subframe size.</p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-list:skip'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1035" type="#_x0000_t75" style='width:403.5pt;height:210.75pt'
+ o:ole="">
+ <v:imagedata src="IV-ch04-V1.2_files/image014.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=538 height=281
+src="IV-ch04-V1.2_files/image014.jpg" v:shapes="_x0000_i1035"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1035"
+  DrawAspect="Content" ObjectID="_1200460062">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-list:skip'><b
+style='mso-bidi-font-weight:normal'>Figure 4.2: Recording Map Selection Window.<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'>Following are the detailed
+explanations of each of the map manipulation buttons shown in Figure 4.2:</p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'><!--[if gte vml 1]><v:shape id="_x0000_i1036"
+ type="#_x0000_t75" style='width:50.25pt;height:20.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch04-V1.2_files/image007.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=27
+src="IV-ch04-V1.2_files/image007.gif" v:shapes="_x0000_i1036"><![endif]><span
+style='mso-spacerun:yes'>   </span>- This selection first inquires for a map<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording Map:New&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Map:New&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>name (see Figure 4.3). Traditionally numeric
+values have been used to specify map names, but it is more descriptive to use
+alphabetic designations. </p>
+
+<p class=MsoNormal style='mso-list:skip'><!--[if gte vml 1]><o:wrapblock><v:shape
+  id="_x0000_s1133" type="#_x0000_t75" style='position:absolute;left:0;
+  text-align:left;margin-left:86.4pt;margin-top:0;width:241.5pt;height:172.5pt;
+  z-index:2' o:allowincell="f">
+  <v:imagedata src="IV-ch04-V1.2_files/image016.jpg" o:title=""/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0 align=left>
+  <tr>
+   <td width=115 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=322 height=230 src="IV-ch04-V1.2_files/image016.jpg" v:shapes="_x0000_s1133"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+</p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<h5>Figure 4.3: Recording Map Properties Window.</h5>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'>Here is an explanation of the
+remaining fields of Figure 4.3 window:</p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037038"></a><a name="_Toc459006606"></a><a
+name="_Toc458576082"></a><a name="_Toc454945504"></a><a name="_Toc454941680"></a><a
+name="_Toc454615612"></a><a name="_Toc418915126"></a><a name="_Toc418416172"></a><a
+name="_Toc416767859"><span style='mso-bookmark:_Toc418416172'><span
+style='mso-bookmark:_Toc418915126'><span style='mso-bookmark:_Toc454615612'><span
+style='mso-bookmark:_Toc454941680'><span style='mso-bookmark:_Toc454945504'><span
+style='mso-bookmark:_Toc458576082'><span style='mso-bookmark:_Toc459006606'><span
+style='mso-bookmark:_Toc126037038'>Subframe Size</span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Subframe Size&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Subframe Size&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal>The desired subframe size should be selected from the
+available options. This selection should be based on the capacity and the
+capabilities of the recording system, as described before.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037039"></a><a name="_Toc459006607"></a><a
+name="_Toc458576083"></a><a name="_Toc454945505"></a><a name="_Toc454941681"></a><a
+name="_Toc454615613"></a><a name="_Toc418915127"></a><a name="_Toc418416173"></a><a
+name="_Toc416767860"><span style='mso-bookmark:_Toc418416173'><span
+style='mso-bookmark:_Toc418915127'><span style='mso-bookmark:_Toc454615613'><span
+style='mso-bookmark:_Toc454941681'><span style='mso-bookmark:_Toc454945505'><span
+style='mso-bookmark:_Toc458576083'><span style='mso-bookmark:_Toc459006607'><span
+style='mso-bookmark:_Toc126037039'>Seconds of History</span></span></span></span></span></span></span></span></a></h3>
+
+<p class=MsoNormal>This is an integer that must be a multiple of 4. This is the
+maximum number of seconds prior to an event that the recording can be started
+(for example, if this value is set to 12, one can specify, in the trigger
+logic, for the recording to start from 1, 2 or 3 frames before the occurrence
+of an event).<span style='mso-spacerun:yes'>  </span>If continuous<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Continuous Recording&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Continuos&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>recording is to be done during flight, this
+value can be set to 0, as no event<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Event Driven Recording&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Event Driven&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>driven recording is necessary. If event driven
+or “Incremental” recording is anticipated then the value recommended is 20 to
+40, as larger numbers would be wasteful of memory (see section on incremental
+recording).</p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'>Once the Figure 4.3 form is completed,
+a map form will be displayed for data entry. The two variations of the map are
+described later in this chapter.</p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'><!--[if gte vml 1]><v:shape id="_x0000_i1037"
+ type="#_x0000_t75" style='width:50.25pt;height:20.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch04-V1.2_files/image008.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=27
+src="IV-ch04-V1.2_files/image008.gif" v:shapes="_x0000_i1037"><![endif]><span
+style='mso-spacerun:yes'>   </span>- To open<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording Map:Open&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Map:Open&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>a recording map for display or modification,
+the map name (or number) must be selected from the list of maps in the system.
+Once the map is opened, the frame definition can be modified, as described
+later in this chapter.</p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'><!--[if gte vml 1]><v:shape id="_x0000_i1038"
+ type="#_x0000_t75" style='width:49.5pt;height:19.5pt' o:ole="" fillcolor="window">
+ <v:imagedata src="IV-ch04-V1.2_files/image017.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=66 height=26
+src="IV-ch04-V1.2_files/image017.gif" v:shapes="_x0000_i1038"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Word.Picture.8" ShapeID="_x0000_i1038"
+  DrawAspect="Content" ObjectID="_1200460064">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>   </span>- This function
+creates a new map, while copying information from an </p>
+
+<p class=MsoNormal style='mso-list:skip'>existing map. To copy<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording Map:Copy&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Map:Copy&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>a map, first select the existing map.<span
+style='mso-spacerun:yes'>  </span>Next click the <!--[if gte vml 1]><v:shape
+ id="_x0000_i1039" type="#_x0000_t75" style='width:50.25pt;height:20.25pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch04-V1.2_files/image009.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=27
+src="IV-ch04-V1.2_files/image009.gif" v:shapes="_x0000_i1039"><![endif]><span
+style='mso-spacerun:yes'> </span>and enter the new map name when prompted (see
+Figure 4.4). The definition of the new map can be modified as desired.</p>
+
+<p class=MsoNormal style='mso-list:skip'><!--[if gte vml 1]><o:wrapblock><v:shape
+  id="_x0000_s1134" type="#_x0000_t75" style='position:absolute;left:0;
+  text-align:left;margin-left:1in;margin-top:0;width:272.25pt;height:108.75pt;
+  z-index:3' o:allowincell="f">
+  <v:imagedata src="IV-ch04-V1.2_files/image019.jpg" o:title=""/>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0 align=left>
+  <tr>
+   <td width=96 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=363 height=145 src="IV-ch04-V1.2_files/image019.jpg" v:shapes="_x0000_s1134"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+</p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-list:skip'><b
+style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-list:skip'><b
+style='mso-bidi-font-weight:normal'>Figure 4.4: Recording Map Copy<o:p></o:p></b></p>
+
+<p class=MsoNormal style='mso-list:skip'><!--[if gte vml 1]><v:shape id="_x0000_i1040"
+ type="#_x0000_t75" style='width:49.5pt;height:20.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch04-V1.2_files/image010.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=66 height=27
+src="IV-ch04-V1.2_files/image010.gif" v:shapes="_x0000_i1040"><![endif]><span
+style='mso-spacerun:yes'>   </span>- To delete<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording Map:Delete&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Map:Delete&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>a map, select the map name (or number), click
+the <!--[if gte vml 1]><v:shape id="_x0000_i1041" type="#_x0000_t75" style='width:49.5pt;
+ height:20.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch04-V1.2_files/image010.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=66 height=27
+src="IV-ch04-V1.2_files/image010.gif" v:shapes="_x0000_i1041"><![endif]><span
+style='mso-spacerun:yes'> </span>button, and confirm the deletion.</p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'><!--[if gte vml 1]><v:shape id="_x0000_i1042"
+ type="#_x0000_t75" style='width:53.25pt;height:16.5pt' o:ole="" fillcolor="window">
+ <v:imagedata src="IV-ch04-V1.2_files/image012.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=71 height=22
+src="IV-ch04-V1.2_files/image012.jpg" v:shapes="_x0000_i1042"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1042"
+  DrawAspect="Content" ObjectID="_1200460065">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>  </span>- This function
+allows the recording map properties<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording Map:Property&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Map:Property&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>to be modified, i.e. subframe size and history
+buffer size.<span style='mso-spacerun:yes'>   </span>The format of this Window
+is similar to that of Figure 4.3.</p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<h2 style='margin-left:0in'><a name="_Toc126037040"></a><a name="_Toc459006608"></a><a
+name="_Toc458576084"></a><a name="_Toc454945506"></a><a name="_Toc454941682"></a><a
+name="_Toc454615614"></a><a name="_Toc418915128"></a><a name="_Toc418416174"></a><a
+name="_Toc416767861"><span style='mso-bookmark:_Toc418416174'><span
+style='mso-bookmark:_Toc418915128'><span style='mso-bookmark:_Toc454615614'><span
+style='mso-bookmark:_Toc454941682'><span style='mso-bookmark:_Toc454945506'><span
+style='mso-bookmark:_Toc458576084'><span style='mso-bookmark:_Toc459006608'><span
+style='mso-bookmark:_Toc126037040'>Maps and Their Definition</span></span></span></span></span></span></span></span></a></h2>
+
+<p class=MsoNormal style='mso-list:skip'>Once a map<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording:Map:Definition&quot;
+<![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording Maps&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>is selected, it will show one of two possible
+views of the selected map, namely: the Map View or the Table View.<span
+style='mso-spacerun:yes'>  </span>There are also two additional tabs:<span
+style='mso-spacerun:yes'>  </span>General and Trigger. </p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1043" type="#_x0000_t75"
+ style='width:48.75pt;height:14.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch04-V1.2_files/image020.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=65 height=19
+src="IV-ch04-V1.2_files/image020.gif" v:shapes="_x0000_i1043"><![endif]><span
+style='mso-spacerun:yes'>   </span>shows<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording Map:Map View&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Map:Map View&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>four columns, each representing one subframe
+(see Figure 4.5). Each row in a column represents one word of the subframe. The
+parameter name displayed in a word slot is the name of the parameter to be
+recorded in that word.<span style='mso-spacerun:yes'>  </span>If more than one
+parameter has been specified for a word slot, the first parameter name is followed
+by “...”. If the cursor is moved to a word slot that shows “...”, after a short
+pause, a temporary box appears listing the names of all parameters recorded in
+that word slot.<span style='mso-spacerun:yes'>  </span>A word slot can be ‘cut’
+or ‘copied’ by clicking once on the word slot, then choosing ‘Cut’ or ‘Copy’
+from the Edit menu.<span style='mso-spacerun:yes'>  </span>The contents of the
+word slot can then be ‘pasted’ into a new empty word slot by choosing ‘Paste’
+from the Edit menu.<span style='mso-spacerun:yes'>  </span>By double clicking
+on a word slot, a window will appear<span style='mso-spacerun:yes'> 
+</span>(see Figure 4.7) that allows the entry or modification of data recorded
+in that word slot.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:skip'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1044" type="#_x0000_t75" style='width:357.75pt;height:334.5pt'>
+ <v:imagedata src="IV-ch04-V1.2_files/image022.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=477 height=446
+src="IV-ch04-V1.2_files/image022.jpg" v:shapes="_x0000_i1044"><![endif]></p>
+
+<p class=MsoNormal align=center style='margin-left:.25in;text-align:center;
+text-indent:-.25in;mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='margin-left:.25in;text-align:center;
+text-indent:-.25in;mso-list:skip'><b style='mso-bidi-font-weight:normal'>Figure
+4.5: Recording Map (Map View Shown)<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='margin-left:.25in;text-align:center;
+text-indent:-.25in;mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='margin-left:.25in;text-align:center;
+text-indent:-.25in;mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1045" type="#_x0000_t75"
+ style='width:48pt;height:14.25pt' fillcolor="window">
+ <v:imagedata src="IV-ch04-V1.2_files/image023.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=64 height=19
+src="IV-ch04-V1.2_files/image023.gif" v:shapes="_x0000_i1045"><![endif]><span
+style='mso-spacerun:yes'>   </span>shows<!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording Map:Table View&quot;
+<![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Map:Table View&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><span
+style='mso-spacerun:yes'> </span>a list of all parameters to be recorded in the
+map, and their detailed specification, in alphabetic order (see Figure 4.6). By
+clicking on a parameter, a window appears (see Figure 4.7) allowing changes to
+the specification for the word that contains that parameter.</p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-list:skip'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1046" type="#_x0000_t75" style='width:359.25pt;height:333pt'>
+ <v:imagedata src="IV-ch04-V1.2_files/image025.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=479 height=444
+src="IV-ch04-V1.2_files/image025.jpg" v:shapes="_x0000_i1046"><![endif]></p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-list:skip'><b
+style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-list:skip'><b
+style='mso-bidi-font-weight:normal'>Figure 4.6: Recording Map (Table View
+Shown)<o:p></o:p></b></p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'>Once a word is selected, either from
+the Map View or the Table View, a word definition form appears (see Figure 4.7)
+where the parameters (already) defined for that word are displayed. Other
+parameters may now be added by selecting a name from a pop up list, or any of
+the specified parameters may be deleted from the word.</p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-list:skip'><b
+style='mso-bidi-font-weight:normal'><!--[if gte vml 1]><v:shape id="_x0000_i1047"
+ type="#_x0000_t75" style='width:350.25pt;height:279.75pt'>
+ <v:imagedata src="IV-ch04-V1.2_files/image027.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=467 height=373
+src="IV-ch04-V1.2_files/image027.jpg" v:shapes="_x0000_i1047"><![endif]><o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-list:skip'><b
+style='mso-bidi-font-weight:normal'><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;mso-list:skip'><b
+style='mso-bidi-font-weight:normal'>Figure 4.7: Recorded Parameter Properties
+Window. Bits <span style='color:black'>15 to 26</span> of the DITS Frame are
+recorded in bits 1-12 of the subframe word. <s><o:p></o:p></s></b></p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'>For each parameter in the list of
+parameters recorded in a word, the following information must be completed:</p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037041">Add Button</a></h3>
+
+<p class=MsoNormal>&quot;Add&quot; is used to add a parameter to that
+particular word.</p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037042">Delete Button</a></h3>
+
+<p class=MsoNormal align=left style='text-align:left'>&quot;Delete&quot; is
+used to delete a parameter from the word.<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]></p>
+
+<h3><a name="_Toc126037043">Edit Button</a></h3>
+
+<p class=MsoNormal align=left style='text-align:left'>&quot;Edit&quot; is used
+to modify the definition of the displayed parameter.<br style='mso-special-character:
+line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]></p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037044"></a><a name="_Toc459006609"></a><a
+name="_Toc458576085"></a><a name="_Toc454945507"></a><a name="_Toc454941683"></a><a
+name="_Toc454615615"></a><a name="_Toc418915129"></a><a name="_Toc418416175"></a><a
+name="_Toc416767862"><span style='mso-bookmark:_Toc418416175'><span
+style='mso-bookmark:_Toc418915129'><span style='mso-bookmark:_Toc454615615'><span
+style='mso-bookmark:_Toc454941683'><span style='mso-bookmark:_Toc454945507'><span
+style='mso-bookmark:_Toc458576085'><span style='mso-bookmark:_Toc459006609'><span
+style='mso-bookmark:_Toc126037044'>Subframes Selection</span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording Map:Subframes
+Selection&quot; <![endif]--><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]--><!--[if supportFields]><span style='mso-element:
+field-begin'></span><span style='mso-spacerun:yes'> </span>XE
+&quot;Recording:Map:Subframes Selection&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal>This is a drop-down list box. If the “All” option is
+selected, the corresponding parameter will be recorded in this word location in
+all subframes (this leads to once per second recording). If subframes 1, 2, 3,
+or 4 are selected, the parameter will be recorded in the word location of the
+corresponding (i.e. 1, 2, 3, or 4) subframe, once every four seconds. If
+subframes “1&amp;3” or “2&amp;4” are selected, the parameter will be recorded
+in this word location, every other second in the specified subframes. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037045"></a><a name="_Toc459006610"></a><a
+name="_Toc458576086"></a><a name="_Toc454945508"></a><a name="_Toc454941684"></a><a
+name="_Toc454615616"></a><a name="_Toc418915130"></a><a name="_Toc418416176"></a><a
+name="_Toc416767863"><span style='mso-bookmark:_Toc418416176'><span
+style='mso-bookmark:_Toc418915130'><span style='mso-bookmark:_Toc454615616'><span
+style='mso-bookmark:_Toc454941684'><span style='mso-bookmark:_Toc454945508'><span
+style='mso-bookmark:_Toc458576086'><span style='mso-bookmark:_Toc459006610'><span
+style='mso-bookmark:_Toc126037045'>Age Index</span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording Map:Age Index&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Map:Age Index&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal>An integer representing the sample number of the parameter
+acquired in the current second. Parameters acquired once per second have only
+one sample available for recording, but parameters acquired more frequently can
+have 2, 4 or more samples available for recording in each subframe.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>For parameters that are recorded once per second or less
+frequently, this field can be left blank (or a zero entered) which indicates
+the current sample<!--[if supportFields]><span style='mso-element:field-begin'></span>
+XE &quot;Recording:Current Sample&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]-->. For parameters that are to
+be recorded more than once per second, say 8 times per second, the parameter
+must be called out 8 times, and assigned to different word locations (multiple
+samples of parameters needing only a few bits can be packed in a single word).
+In the case of different locations, the first location could hold the 8<sup>th</sup>
+oldest sample or a sample with an age index of 7.<span
+style='mso-spacerun:yes'>  </span>The second word allocated to this parameter
+will be specified with an age index of 6, and so on until the last word
+location will hold the current sample of the parameter, which will have an age
+index of zero.</p>
+
+<p class=MsoNormal style='margin-left:20.8pt;text-indent:-.25in;mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037046"></a><a name="_Toc459006611"></a><a
+name="_Toc458576087"></a><a name="_Toc454945509"></a><a name="_Toc454941685"></a><a
+name="_Toc454615617"></a><a name="_Toc418915131"></a><a name="_Toc418416177"></a><a
+name="_Toc416767864"><span style='mso-bookmark:_Toc418416177'><span
+style='mso-bookmark:_Toc418915131'><span style='mso-bookmark:_Toc454615617'><span
+style='mso-bookmark:_Toc454941685'><span style='mso-bookmark:_Toc454945509'><span
+style='mso-bookmark:_Toc458576087'><span style='mso-bookmark:_Toc459006611'><span
+style='mso-bookmark:_Toc126037046'>Sign Bit</span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording:Map:Sign Bit&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording Map:Sign Bit&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal>Bit 12 of the recorded word is reserved for the sign bit of
+the signed parameters. Checking the Sign Bit box assures that the sign of the
+parameter is copied to bit 12.<span style='mso-spacerun:yes'>  </span>Other
+data may be recorded on bit 12 if it is not used for sign bit recording.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037047">SSM</a></h3>
+
+<p class=MsoNormal>For FDIMU only.<span style='mso-spacerun:yes'> 
+</span>Checking the SSM box assures that the parameter SSM (bits 31-30) will be
+recorded in two consecutive bits of the subframe word (there must be two
+available bits for recording.</p>
+
+<p class=MsoNormal style='margin-left:20.8pt;text-indent:-.25in;mso-list:skip'><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037048"></a><a name="_Toc459006612"></a><a
+name="_Toc458576088"></a><a name="_Toc454945510"></a><a name="_Toc454941686"></a><a
+name="_Toc454615618"></a><a name="_Toc418915132"></a><a name="_Toc418416178"></a><a
+name="_Toc416767865"><span style='mso-bookmark:_Toc418416178'><span
+style='mso-bookmark:_Toc418915132'><span style='mso-bookmark:_Toc454615618'><span
+style='mso-bookmark:_Toc454941686'><span style='mso-bookmark:_Toc454945510'><span
+style='mso-bookmark:_Toc458576088'><span style='mso-bookmark:_Toc459006612'><span
+style='mso-bookmark:_Toc126037048'>Comments</span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording:Comments&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal>This is used for documentation purposes and has no effect on
+the airborne application. This field can be used, say, to justify why not all
+significant bits of the parameter are recorded.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037049"></a><a name="_Toc459006613"></a><a
+name="_Toc458576089"></a><a name="_Toc454945511"></a><a name="_Toc454941687"></a><a
+name="_Toc454615619"></a><a name="_Toc418915133"></a><a name="_Toc418416179"></a><a
+name="_Toc416767866"><span style='mso-bookmark:_Toc418416179'><span
+style='mso-bookmark:_Toc418915133'><span style='mso-bookmark:_Toc454615619'><span
+style='mso-bookmark:_Toc454941687'><span style='mso-bookmark:_Toc454945511'><span
+style='mso-bookmark:_Toc458576089'><span style='mso-bookmark:_Toc459006613'><span
+style='mso-bookmark:_Toc126037049'>DITS Frame</span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767866'><span style='mso-bookmark:_Toc418416179'><span
+style='mso-bookmark:_Toc418915133'><span style='mso-bookmark:_Toc454615619'><span
+style='mso-bookmark:_Toc454941687'><span style='mso-bookmark:_Toc454945511'><span
+style='mso-bookmark:_Toc458576089'><span style='mso-bookmark:_Toc459006613'><span
+style='mso-bookmark:_Toc126037049'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767866'><span
+style='mso-bookmark:_Toc418416179'><span style='mso-bookmark:_Toc418915133'><span
+style='mso-bookmark:_Toc454615619'><span style='mso-bookmark:_Toc454941687'><span
+style='mso-bookmark:_Toc454945511'><span style='mso-bookmark:_Toc458576089'><span
+style='mso-bookmark:_Toc459006613'><span style='mso-bookmark:_Toc126037049'> XE
+&quot;DITS Frame&quot; </span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767866'><span style='mso-bookmark:_Toc418416179'><span
+style='mso-bookmark:_Toc418915133'><span style='mso-bookmark:_Toc454615619'><span
+style='mso-bookmark:_Toc454941687'><span style='mso-bookmark:_Toc454945511'><span
+style='mso-bookmark:_Toc458576089'><span style='mso-bookmark:_Toc459006613'><span
+style='mso-bookmark:_Toc126037049'></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767866'><span style='mso-bookmark:_Toc418416179'><span
+style='mso-bookmark:_Toc418915133'><span style='mso-bookmark:_Toc454615619'><span
+style='mso-bookmark:_Toc454941687'><span style='mso-bookmark:_Toc454945511'><span
+style='mso-bookmark:_Toc458576089'><span style='mso-bookmark:_Toc459006613'><span
+style='mso-bookmark:_Toc126037049'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767866'><span style='mso-bookmark:_Toc418416179'><span style='mso-bookmark:
+_Toc418915133'><span style='mso-bookmark:_Toc454615619'><span style='mso-bookmark:
+_Toc454941687'><span style='mso-bookmark:_Toc454945511'><span style='mso-bookmark:
+_Toc458576089'><span style='mso-bookmark:_Toc459006613'><span style='mso-bookmark:
+_Toc126037049'></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767866'><span style='mso-bookmark:_Toc418416179'><span
+style='mso-bookmark:_Toc418915133'><span style='mso-bookmark:_Toc454615619'><span
+style='mso-bookmark:_Toc454941687'><span style='mso-bookmark:_Toc454945511'><span
+style='mso-bookmark:_Toc458576089'><span style='mso-bookmark:_Toc459006613'><span
+style='mso-bookmark:_Toc126037049'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767866'><span
+style='mso-bookmark:_Toc418416179'><span style='mso-bookmark:_Toc418915133'><span
+style='mso-bookmark:_Toc454615619'><span style='mso-bookmark:_Toc454941687'><span
+style='mso-bookmark:_Toc454945511'><span style='mso-bookmark:_Toc458576089'><span
+style='mso-bookmark:_Toc459006613'><span style='mso-bookmark:_Toc126037049'><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:DITS Frame&quot; </span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767866'><span style='mso-bookmark:_Toc418416179'><span
+style='mso-bookmark:_Toc418915133'><span style='mso-bookmark:_Toc454615619'><span
+style='mso-bookmark:_Toc454941687'><span style='mso-bookmark:_Toc454945511'><span
+style='mso-bookmark:_Toc458576089'><span style='mso-bookmark:_Toc459006613'><span
+style='mso-bookmark:_Toc126037049'></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767866'><span style='mso-bookmark:_Toc418416179'><span
+style='mso-bookmark:_Toc418915133'><span style='mso-bookmark:_Toc454615619'><span
+style='mso-bookmark:_Toc454941687'><span style='mso-bookmark:_Toc454945511'><span
+style='mso-bookmark:_Toc458576089'><span style='mso-bookmark:_Toc459006613'><span
+style='mso-bookmark:_Toc126037049'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767866'><span style='mso-bookmark:_Toc418416179'><span style='mso-bookmark:
+_Toc418915133'><span style='mso-bookmark:_Toc454615619'><span style='mso-bookmark:
+_Toc454941687'><span style='mso-bookmark:_Toc454945511'><span style='mso-bookmark:
+_Toc458576089'><span style='mso-bookmark:_Toc459006613'><span style='mso-bookmark:
+_Toc126037049'><span style='mso-spacerun:yes'> </span>and Recording Map Entry</span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording:Map:Entry&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording Map:Entry&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording Map Entry&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal>These two lines allow the specification of bits that are to
+be selected from the acquired parameter (first line) and where in the recorded
+word are these bits to be positioned (second line). To do this, first the
+parameter bits should be selected by dragging the cursor on the desired bits.
+Next, the position of the least significant bit should be marked in the
+recorded word. Once this is done, the remainder of the bits will be automatically
+highlighted. The bits selected in the parameter or their position in the
+recorded word can be changed as desired.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc126037050"></a><a name="_Toc459006614"></a><a
+name="_Toc458576090"></a><a name="_Toc454945512"></a><a name="_Toc454941688"></a><a
+name="_Toc454615620"></a><a name="_Toc418915134"></a><a name="_Toc418416180"></a><a
+name="_Toc416767867"><span style='mso-bookmark:_Toc418416180'><span
+style='mso-bookmark:_Toc418915134'><span style='mso-bookmark:_Toc454615620'><span
+style='mso-bookmark:_Toc454941688'><span style='mso-bookmark:_Toc454945512'><span
+style='mso-bookmark:_Toc458576090'><span style='mso-bookmark:_Toc459006614'><span
+style='mso-bookmark:_Toc126037050'>Recording Length</span></span></span></span></span></span></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767867'><span style='mso-bookmark:_Toc418416180'><span
+style='mso-bookmark:_Toc418915134'><span style='mso-bookmark:_Toc454615620'><span
+style='mso-bookmark:_Toc454941688'><span style='mso-bookmark:_Toc454945512'><span
+style='mso-bookmark:_Toc458576090'><span style='mso-bookmark:_Toc459006614'><span
+style='mso-bookmark:_Toc126037050'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767867'><span
+style='mso-bookmark:_Toc418416180'><span style='mso-bookmark:_Toc418915134'><span
+style='mso-bookmark:_Toc454615620'><span style='mso-bookmark:_Toc454941688'><span
+style='mso-bookmark:_Toc454945512'><span style='mso-bookmark:_Toc458576090'><span
+style='mso-bookmark:_Toc459006614'><span style='mso-bookmark:_Toc126037050'> XE
+&quot;Recording:Length&quot; </span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767867'><span style='mso-bookmark:_Toc418416180'><span
+style='mso-bookmark:_Toc418915134'><span style='mso-bookmark:_Toc454615620'><span
+style='mso-bookmark:_Toc454941688'><span style='mso-bookmark:_Toc454945512'><span
+style='mso-bookmark:_Toc458576090'><span style='mso-bookmark:_Toc459006614'><span
+style='mso-bookmark:_Toc126037050'></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767867'><span style='mso-bookmark:_Toc418416180'><span
+style='mso-bookmark:_Toc418915134'><span style='mso-bookmark:_Toc454615620'><span
+style='mso-bookmark:_Toc454941688'><span style='mso-bookmark:_Toc454945512'><span
+style='mso-bookmark:_Toc458576090'><span style='mso-bookmark:_Toc459006614'><span
+style='mso-bookmark:_Toc126037050'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767867'><span style='mso-bookmark:_Toc418416180'><span style='mso-bookmark:
+_Toc418915134'><span style='mso-bookmark:_Toc454615620'><span style='mso-bookmark:
+_Toc454941688'><span style='mso-bookmark:_Toc454945512'><span style='mso-bookmark:
+_Toc458576090'><span style='mso-bookmark:_Toc459006614'><span style='mso-bookmark:
+_Toc126037050'></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767867'><span style='mso-bookmark:_Toc418416180'><span
+style='mso-bookmark:_Toc418915134'><span style='mso-bookmark:_Toc454615620'><span
+style='mso-bookmark:_Toc454941688'><span style='mso-bookmark:_Toc454945512'><span
+style='mso-bookmark:_Toc458576090'><span style='mso-bookmark:_Toc459006614'><span
+style='mso-bookmark:_Toc126037050'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767867'><span
+style='mso-bookmark:_Toc418416180'><span style='mso-bookmark:_Toc418915134'><span
+style='mso-bookmark:_Toc454615620'><span style='mso-bookmark:_Toc454941688'><span
+style='mso-bookmark:_Toc454945512'><span style='mso-bookmark:_Toc458576090'><span
+style='mso-bookmark:_Toc459006614'><span style='mso-bookmark:_Toc126037050'><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording Length&quot; </span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767867'><span style='mso-bookmark:_Toc418416180'><span
+style='mso-bookmark:_Toc418915134'><span style='mso-bookmark:_Toc454615620'><span
+style='mso-bookmark:_Toc454941688'><span style='mso-bookmark:_Toc454945512'><span
+style='mso-bookmark:_Toc458576090'><span style='mso-bookmark:_Toc459006614'><span
+style='mso-bookmark:_Toc126037050'></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767867'><span style='mso-bookmark:_Toc418416180'><span
+style='mso-bookmark:_Toc418915134'><span style='mso-bookmark:_Toc454615620'><span
+style='mso-bookmark:_Toc454941688'><span style='mso-bookmark:_Toc454945512'><span
+style='mso-bookmark:_Toc458576090'><span style='mso-bookmark:_Toc459006614'><span
+style='mso-bookmark:_Toc126037050'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767867'><span style='mso-bookmark:_Toc418416180'><span style='mso-bookmark:
+_Toc418915134'><span style='mso-bookmark:_Toc454615620'><span style='mso-bookmark:
+_Toc454941688'><span style='mso-bookmark:_Toc454945512'><span style='mso-bookmark:
+_Toc458576090'><span style='mso-bookmark:_Toc459006614'><span style='mso-bookmark:
+_Toc126037050'>, Corresponding LSB</span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767867'><span style='mso-bookmark:_Toc418416180'><span
+style='mso-bookmark:_Toc418915134'><span style='mso-bookmark:_Toc454615620'><span
+style='mso-bookmark:_Toc454941688'><span style='mso-bookmark:_Toc454945512'><span
+style='mso-bookmark:_Toc458576090'><span style='mso-bookmark:_Toc459006614'><span
+style='mso-bookmark:_Toc126037050'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767867'><span
+style='mso-bookmark:_Toc418416180'><span style='mso-bookmark:_Toc418915134'><span
+style='mso-bookmark:_Toc454615620'><span style='mso-bookmark:_Toc454941688'><span
+style='mso-bookmark:_Toc454945512'><span style='mso-bookmark:_Toc458576090'><span
+style='mso-bookmark:_Toc459006614'><span style='mso-bookmark:_Toc126037050'> XE
+&quot;Corresponding LSB&quot; </span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767867'><span style='mso-bookmark:_Toc418416180'><span
+style='mso-bookmark:_Toc418915134'><span style='mso-bookmark:_Toc454615620'><span
+style='mso-bookmark:_Toc454941688'><span style='mso-bookmark:_Toc454945512'><span
+style='mso-bookmark:_Toc458576090'><span style='mso-bookmark:_Toc459006614'><span
+style='mso-bookmark:_Toc126037050'></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767867'><span style='mso-bookmark:_Toc418416180'><span
+style='mso-bookmark:_Toc418915134'><span style='mso-bookmark:_Toc454615620'><span
+style='mso-bookmark:_Toc454941688'><span style='mso-bookmark:_Toc454945512'><span
+style='mso-bookmark:_Toc458576090'><span style='mso-bookmark:_Toc459006614'><span
+style='mso-bookmark:_Toc126037050'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767867'><span style='mso-bookmark:_Toc418416180'><span style='mso-bookmark:
+_Toc418915134'><span style='mso-bookmark:_Toc454615620'><span style='mso-bookmark:
+_Toc454941688'><span style='mso-bookmark:_Toc454945512'><span style='mso-bookmark:
+_Toc458576090'><span style='mso-bookmark:_Toc459006614'><span style='mso-bookmark:
+_Toc126037050'></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767867'><span style='mso-bookmark:_Toc418416180'><span
+style='mso-bookmark:_Toc418915134'><span style='mso-bookmark:_Toc454615620'><span
+style='mso-bookmark:_Toc454941688'><span style='mso-bookmark:_Toc454945512'><span
+style='mso-bookmark:_Toc458576090'><span style='mso-bookmark:_Toc459006614'><span
+style='mso-bookmark:_Toc126037050'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Toc416767867'><span
+style='mso-bookmark:_Toc418416180'><span style='mso-bookmark:_Toc418915134'><span
+style='mso-bookmark:_Toc454615620'><span style='mso-bookmark:_Toc454941688'><span
+style='mso-bookmark:_Toc454945512'><span style='mso-bookmark:_Toc458576090'><span
+style='mso-bookmark:_Toc459006614'><span style='mso-bookmark:_Toc126037050'><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording:Corresponding LSB&quot; </span></span></span></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc416767867'><span style='mso-bookmark:_Toc418416180'><span
+style='mso-bookmark:_Toc418915134'><span style='mso-bookmark:_Toc454615620'><span
+style='mso-bookmark:_Toc454941688'><span style='mso-bookmark:_Toc454945512'><span
+style='mso-bookmark:_Toc458576090'><span style='mso-bookmark:_Toc459006614'><span
+style='mso-bookmark:_Toc126037050'></span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc416767867'><span style='mso-bookmark:_Toc418416180'><span
+style='mso-bookmark:_Toc418915134'><span style='mso-bookmark:_Toc454615620'><span
+style='mso-bookmark:_Toc454941688'><span style='mso-bookmark:_Toc454945512'><span
+style='mso-bookmark:_Toc458576090'><span style='mso-bookmark:_Toc459006614'><span
+style='mso-bookmark:_Toc126037050'></span></span></span></span></span></span></span></span></span><span
+style='mso-element:field-end'></span><![endif]--><span style='mso-bookmark:
+_Toc416767867'><span style='mso-bookmark:_Toc418416180'><span style='mso-bookmark:
+_Toc418915134'><span style='mso-bookmark:_Toc454615620'><span style='mso-bookmark:
+_Toc454941688'><span style='mso-bookmark:_Toc454945512'><span style='mso-bookmark:
+_Toc458576090'><span style='mso-bookmark:_Toc459006614'><span style='mso-bookmark:
+_Toc126037050'><span style='mso-spacerun:yes'> </span>and Recording LSB</span></span></span></span></span></span></span></span></span><!--[if supportFields]><span
+style='mso-element:field-begin'></span> XE &quot;Recording:Recording LSB&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>XE &quot;Recording LSB&quot; <![endif]--><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--></h3>
+
+<p class=MsoNormal>An alternative to the highlighting method is to specify the
+Recording Length, the Corresponding LSB, and the Recording LSB respectively in
+the fields provided on the form.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span>The Word<b
+style='mso-bidi-font-weight:normal'> </b>position of the parameter can also be
+changed from this screen.</p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal>Once all the parameters of the word are defined, the <!--[if gte vml 1]><v:shape
+ id="_x0000_i1048" type="#_x0000_t75" style='width:56.25pt;height:20.25pt'
+ fillcolor="window">
+ <v:imagedata src="IV-ch04-V1.2_files/image028.gif" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=75 height=27
+src="IV-ch04-V1.2_files/image028.gif" v:shapes="_x0000_i1048"><![endif]><span
+style='mso-spacerun:yes'> </span>button can be used to exit the screen. If any
+conflicts are detected because of overlapping words or bits, the system will
+indicate them with pop-up boxes. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1049" type="#_x0000_t75"
+ style='width:39pt;height:12pt'>
+ <v:imagedata src="IV-ch04-V1.2_files/image030.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=52 height=16
+src="IV-ch04-V1.2_files/image030.jpg" v:shapes="_x0000_i1049"><![endif]><span
+style='mso-spacerun:yes'> </span>displays the properties of the recording map,
+which can be changed.<span style='mso-spacerun:yes'>  </span>Included are Map
+Name, Seconds of History, Subframe Size, and whether to record parameters with
+NoUpdate status as ones or zeros.<span style='mso-spacerun:yes'>  </span>See
+Figure 4.9.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><!--[if gte vml 1]><v:shape id="_x0000_i1027"
+ type="#_x0000_t75" style='width:357.75pt;height:330.75pt'>
+ <v:imagedata src="IV-ch04-V1.2_files/image032.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=477 height=441
+src="IV-ch04-V1.2_files/image032.jpg" v:shapes="_x0000_i1027"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 4.9: General Tab of a Recording Map.</b></p>
+
+</div>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always;
+mso-break-type:section-break'>
+</span>
+
+<div class=Section2>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_i1025" type="#_x0000_t75"
+ style='width:36.75pt;height:16.5pt'>
+ <v:imagedata src="IV-ch04-V1.2_files/image034.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=49 height=22
+src="IV-ch04-V1.2_files/image034.jpg" v:shapes="_x0000_i1025"><![endif]><span
+style='mso-spacerun:yes'> </span>displays any AMTAL code associated with the
+recording map.<span style='mso-spacerun:yes'>  </span>Rather than using a
+separate trigger for recording control, this tab can be used for quicker
+access.<span style='mso-spacerun:yes'>  </span>See Figure 4.10.</p>
+
+<p class=MsoNormal style='margin-left:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.5in'><!--[if gte vml 1]><v:shape id="_x0000_i1026"
+ type="#_x0000_t75" style='width:357pt;height:331.5pt'>
+ <v:imagedata src="IV-ch04-V1.2_files/image036.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=476 height=442
+src="IV-ch04-V1.2_files/image036.jpg" v:shapes="_x0000_i1026"><![endif]></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>Figure 4.10: Trigger Tab of a Recording Map<o:p></o:p></b></p>
+
+</div>
+
+<b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always;
+mso-break-type:section-break'>
+</span></b>
+
+<div class=Section3>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

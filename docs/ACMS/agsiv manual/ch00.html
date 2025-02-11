@@ -1,0 +1,517 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="ch00_files/filelist.xml">
+<title>AGS IV: A User's Manual</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="country-region"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PostalCode"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="State"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="City"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Site License</o:Author>
+  <o:Template>ch01-V2-f1.dot</o:Template>
+  <o:LastAuthor>dfreedman</o:LastAuthor>
+  <o:Revision>10</o:Revision>
+  <o:TotalTime>25</o:TotalTime>
+  <o:LastPrinted>1999-06-24T00:26:00Z</o:LastPrinted>
+  <o:Created>2002-09-10T21:33:00Z</o:Created>
+  <o:LastSaved>2006-02-03T14:52:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>523</o:Words>
+  <o:Characters>2982</o:Characters>
+  <o:Company>Teledyne Controls</o:Company>
+  <o:Lines>24</o:Lines>
+  <o:Paragraphs>6</o:Paragraphs>
+  <o:CharactersWithSpaces>3499</o:CharactersWithSpaces>
+  <o:Version>11.6568</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="8" DLLVersion="513" NLCheck="0">1</w:ActiveWritingStyle>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129279 0;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129023 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:"Heading 2";
+	margin-top:.5in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:-.8in;
+	page-break-before:always;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	border:none;
+	mso-border-top-alt:solid windowtext .5pt;
+	mso-border-bottom-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 0in 1.0pt 0in;
+	font-size:30.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:-.8in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:7;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:-.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-element:frame;
+	mso-element-frame-width:303.85pt;
+	mso-element-frame-height:31.4pt;
+	mso-element-frame-hspace:9.0pt;
+	mso-element-wrap:around;
+	mso-element-anchor-vertical:paragraph;
+	mso-element-anchor-horizontal:page;
+	mso-element-left:215.85pt;
+	mso-element-top:.75pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";}
+ /* Page Definitions */
+ @page
+	{mso-facing-pages:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:.25in .25in .25in .25in;
+	mso-header-margin:1.3in;
+	mso-footer-margin:.5in;
+	mso-page-numbers:1;
+	mso-title-page:yes;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:18.0pt'>AGSIV: A User's Manual</span> <br>
+<span style='font-size:18.0pt'>Teledyne Controls</span><span style='mso-bidi-font-size:
+12.0pt;font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><span style='font-size:16.0pt;
+mso-bidi-font-size:13.5pt;font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><span style='font-size:16.0pt;
+mso-bidi-font-size:13.5pt;font-family:"Times New Roman"'><a
+href="IV-ch01-V1.1.html">Chapter 1</a> -<span style='mso-spacerun:yes'>  
+</span>Introduction</span><span style='font-size:16.0pt;mso-bidi-font-size:
+12.0pt;font-family:"Times New Roman"'> <br>
+</span><span style='font-size:16.0pt;mso-bidi-font-size:13.5pt;font-family:
+"Times New Roman"'><a href="IV-ch02-V1.2.html">Chapter 2</a> -<span
+style='mso-spacerun:yes'>   </span>Installation &amp; Backup</span><span
+style='font-size:16.0pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'>
+<br>
+</span><span style='font-size:16.0pt;mso-bidi-font-size:13.5pt;font-family:
+"Times New Roman"'><a href="IV-ch03-V1.1.html">Chapter 3</a> -<span
+style='mso-spacerun:yes'>   </span>Parameters</span><span style='font-size:
+16.0pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'> <br>
+</span><span style='font-size:16.0pt;mso-bidi-font-size:13.5pt;font-family:
+"Times New Roman"'><a href="IV-ch04-V1.2.html">Chapter 4</a> -<span
+style='mso-spacerun:yes'>   </span>Raw Data Recording</span><span
+style='font-size:16.0pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'>
+<br>
+</span><span style='font-size:16.0pt;mso-bidi-font-size:13.5pt;font-family:
+"Times New Roman"'><a href="IV-ch05-V1.2.html">Chapter 5</a> -<span
+style='mso-spacerun:yes'>   </span>Screens</span><span style='font-size:16.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'> <br>
+</span><span style='font-size:16.0pt;mso-bidi-font-size:13.5pt;font-family:
+"Times New Roman"'><a href="IV-ch06-V1.2.html">Chapter 6</a> -<span
+style='mso-spacerun:yes'>   </span>Reports</span><span style='font-size:16.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'> <br>
+</span><span style='font-size:16.0pt;mso-bidi-font-size:13.5pt;font-family:
+"Times New Roman"'><a href="IV-Ch07-V1.3.html">Chapter 7</a> -<span
+style='mso-spacerun:yes'>   </span>SAR Recording</span><span style='font-size:
+16.0pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'> <br>
+</span><span style='font-size:16.0pt;mso-bidi-font-size:13.5pt;font-family:
+"Times New Roman"'><a href="IV-Ch08-V1.2.html">Chapter 8</a> -<span
+style='mso-spacerun:yes'>   </span>Triggers</span><span style='font-size:16.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'> <br>
+</span><span style='font-size:16.0pt;mso-bidi-font-size:13.5pt;font-family:
+"Times New Roman"'><a href="IV-ch09-V1.2.html">Chapter 9</a> -<span
+style='mso-spacerun:yes'>   </span>Build</span><span style='font-size:16.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'> <br>
+</span><span style='font-size:16.0pt;mso-bidi-font-size:13.5pt;font-family:
+"Times New Roman"'><a href="IV-ch10-V3.4.html">Chapter 10</a> - Configuration</span><span
+style='font-size:16.0pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'>
+<br>
+</span><span style='font-size:16.0pt;mso-bidi-font-size:13.5pt;font-family:
+"Times New Roman"'><a href="IV-ch11-V1.1.html">Chapter 11</a> - Merged Reports</span><span
+style='font-size:16.0pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'>
+<br>
+</span><span style='font-size:16.0pt;mso-bidi-font-size:13.5pt;font-family:
+"Times New Roman"'><a href="IV-ch12-V1.1.html">Chapter 12</a> - Tools</span><span
+style='font-size:16.0pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'>
+<br>
+</span><span style='font-size:16.0pt;mso-bidi-font-size:13.5pt;font-family:
+"Times New Roman"'><a href="IV-ch13-V1.1.html">Chapter 13</a> - Advanced
+Maintenance</span><span style='font-size:16.0pt;mso-bidi-font-size:12.0pt;
+font-family:"Times New Roman"'> <o:p></o:p></span></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><span style='font-size:16.0pt;
+mso-bidi-font-size:13.5pt;font-family:"Times New Roman"'><a
+href="IV-ch14-V1.1.html">Chapter 14</a> - Disk Utilities</span><span
+style='font-size:16.0pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Explanation of Limited Rights<o:p></o:p></span></p>
+
+<p class=MsoNormal><u><span style='font-size:10.0pt'><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></span></u></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>This technical data,
+indicated as limited rights data, shall not, without the written permission of
+Teledyne Controls, be either (a) used, released or disclosed in whole or in
+part outside the Buyer (b) used in whole or in part by the Buyer for
+manufacture, or in the case of computer software documentation, for preparing
+the same or similar computer software, or (c) used by a party other than the
+Buyer, except for emergency repair or overhaul work only, by or for the Buyer
+where the item or process concerned is not otherwise reasonably available to
+enable timely performance of work, provided that the release or disclosure
+hereof outside the Buyer shall be made subject to a prohibition against further
+use, release or disclosure.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>This legend shall be included
+on any reproduction hereof which includes any part of the portions subject to
+such limitations.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Disclaimers:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>1) <span style='mso-tab-count:
+1'>            </span>Teledyne Controls' products are of a commercial nature,
+are appropriate for commercial use, and are only sold under commercial terms
+and conditions.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>2)<span style='mso-tab-count:
+1'>             </span>Seller expressly disclaims any fitness of these products
+for military purposes.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoHeading7>Proprietary Notice</p>
+
+<p class=MsoNormal><u><span style='font-size:10.0pt'><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></span></u></p>
+
+<p class=MsoBodyText3>THIS IS CONFIDENTIAL AND PROPRIETARY INFORMATION OF
+TELEDYNE CONTROLS AND MAY NOT BE USED OR DISCLOSED BY THE RECIPIENT WITHOUT THE
+PRIOR WRITTEN CONSENT OF TELEDYNE CONTROLS AND THEN ONLY IN ACCORDANCE WITH
+SPECIFIC WRITTEN INSTRUCTIONS OF TELEDYNE CONTROLS. BY RECEIPT HEREOF, IN
+ADDITION TO ANY OBLIGATION THE RECIPIENT HAS UNDER ANY CONFIDENTIALITY
+AGREEMENT, CONTRACT, OR LICENSE WITH TELEDYNE CONTROLS, NEITHER RECIPIENT NOR
+ITS AGENTS, REPRESENTATIVES OR EMPLOYEES WILL COPY, REPRODUCE OR DISTRIBUTE
+THIS INFORMATION, IN WHOLE OR IN PART, AT ANY TIME, WITHOUT THE PRIOR WRITTEN
+CONSENT OF TELEDYNE CONTROLS AND THAT IT WILL KEEP CONFIDENTIAL ALL INFORMATION
+CONTAINED HEREIN.</p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'>© 2006 Teledyne Controls.<span
+style='mso-spacerun:yes'>  </span>All rights reserved.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'>Teledyne Controls<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'>12333 West Olympic Boulevard<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><st1:City w:st="on"><span
+ style='font-size:10.0pt'>West Los Angeles</span></st1:City><span
+style='font-size:10.0pt'>, <st1:State w:st="on">CA</st1:State> <st1:PostalCode
+w:st="on">90065</st1:PostalCode> - <st1:country-region w:st="on"><st1:place
+ w:st="on">USA</st1:place></st1:country-region><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoHeading7>Trademarks</p>
+
+<p class=MsoNormal><u><span style='font-size:10.0pt'><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></span></u></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Microsoft, Windows, Windows 95
+and Windows 98 are registered trademarks, and Microsoft,<span
+style='mso-spacerun:yes'>  </span>Windows 95 and Windows 98 logo are trademarks
+of Microsoft Corporation.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Trademarks of other companies
+mentioned in this document appear for identification purposes only and are the
+property of their respective companies.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'>First Printing: September 2002<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'>Second Printing: March 2003<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'>Third Printing: January 2006<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'>Printed in the <st1:place w:st="on"><st1:country-region
+ w:st="on">USA</st1:country-region></st1:place><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'>Document No. UGP-709444-1 Revision B<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal>This help file created and compiled by David Freedman, <a
+href="mailto:david_freedman@teledyne.com">david_freedman@teledyne.com</a></p>
+
+</div>
+
+</body>
+
+</html>

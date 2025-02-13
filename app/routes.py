@@ -6,6 +6,7 @@ from app.models import Software, File, ProcessDocument, SystemLog
 from app.utils import PDFTemplate
 from app.utils.markdown_processor import MarkdownProcessor
 from datetime import datetime
+from app.utils.html_processor import process_html_file
 
 # 系统管理密码（后续会替换为权限管理模块）
 ADMIN_PASSWORD = "admin123"
@@ -508,12 +509,13 @@ def delete_software(software_id):
 def add_security_headers(response):
     """添加安全性和缓存控制头"""
     response.headers['X-Content-Type-Options'] = 'nosniff'
-    response.headers['Content-Type'] = 'text/html; charset=utf-8'
     
-    # 对静态资源添加缓存控制
-    if request.path.startswith(('/static/', '/docs/')):
-        response.headers['Cache-Control'] = 'public, max-age=31536000, immutable'
-    else:
+    # 根据文件扩展名设置正确的Content-Type
+    if request.path.endswith('.css'):
+        response.headers['Content-Type'] = 'text/css; charset=utf-8'
+        response.headers['Cache-Control'] = 'public, max-age=31536000'
+    elif request.path.endswith('.html'):
+        response.headers['Content-Type'] = 'text/html; charset=utf-8'
         response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, max-age=0'
     
     return response
@@ -531,12 +533,20 @@ def serve_agsiv_manual(filename):
                 break
         
         if actual_filename:
-            response = send_from_directory(
-                docs_dir,
-                actual_filename,
-                mimetype='text/html' if actual_filename.lower().endswith('.html') else None
-            )
-            return response
+            file_path = os.path.join(docs_dir, actual_filename)
+            try:
+                # 使用html_processor处理文件
+                content, encoding = process_html_file(file_path)
+                
+                # 返回处理后的内容
+                response = current_app.response_class(
+                    content,
+                    mimetype=f'text/html; charset=utf-8'
+                )
+                return response
+            except Exception as e:
+                app.logger.error(f'处理HTML文件失败: {str(e)}')
+                return f'处理HTML文件失败: {str(e)}', 500
         else:
             app.logger.error(f'文件不存在: {filename}')
             return f'文件不存在: {filename}', 404

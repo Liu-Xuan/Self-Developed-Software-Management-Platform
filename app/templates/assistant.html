@@ -2,10 +2,10 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="row">
+    <div class="row vh-100">
         <!-- 左侧目录树 -->
-        <div class="col-md-2">
-            <div class="card">
+        <div class="col-2 p-2">
+            <div class="card h-100">
                 <div class="card-header">
                     <h5 class="card-title mb-0">软件制作流程</h5>
                 </div>
@@ -18,20 +18,20 @@
         </div>
         
         <!-- 中间内容区 -->
-        <div class="col-md-7">
-            <div class="card">
+        <div class="col-8 p-2">
+            <div class="card h-100">
                 <div class="card-header">
                     <h5 class="card-title mb-0" id="doc_title">请选择文档</h5>
                 </div>
-                <div class="card-body">
-                    <div id="doc_content" class="markdown-body"></div>
+                <div class="card-body doc-container">
+                    <div id="doc_content" class="markdown-content markdown-body"></div>
                 </div>
             </div>
         </div>
 
         <!-- 右侧对话模块 -->
-        <div class="col-md-3">
-            <div class="card">
+        <div class="col-2 p-2">
+            <div class="card h-100">
                 <div class="card-header">
                     <h5 class="card-title mb-0">智能助手</h5>
                 </div>
@@ -82,7 +82,7 @@ $(document).ready(function() {
             
             // 创建iframe来显示HTML文档
             const iframe = document.createElement('iframe');
-            iframe.src = '/docs/ACMS/agsiv manual/welcome.html';  // 修改为welcome.html作为入口
+            iframe.src = '/docs/ACMS/agsiv manual/ch00.html';
             iframe.title = 'AGSiv手册内容';
             iframe.className = 'doc-frame';
             
@@ -103,8 +103,11 @@ $(document).ready(function() {
                 }
             };
             
-            // 清空内容区并添加iframe
-            $('#doc_content').empty().append(iframe);
+            // 清空内容区并添加iframe包装器
+            const iframeWrapper = document.createElement('div');
+            iframeWrapper.className = 'iframe-content';
+            iframeWrapper.appendChild(iframe);
+            $('#doc_content').empty().append(iframeWrapper);
             
             // 更新右侧iframe
             const rightIframe = document.querySelector('.chat-frame');
@@ -128,7 +131,7 @@ $(document).ready(function() {
             
             // 加载文档内容
             $.get('/api/document', params, function(response) {
-                $('#doc_content').html(response.content);
+                $('#doc_content').empty().addClass('markdown-content').html(response.content);
             });
             
             // 恢复默认的右侧iframe
